@@ -1,0 +1,552 @@
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <link rel="stylesheet" type="text/css" href="../frank/frank.css">
+   <meta name="CVS" content="$Id$">
+   <meta name="description" content="GIICM">
+   <title>GIICM</title>
+</head><body><h1>7400 series TTL IC's:  744000...744999</h1>
+<p>
+High speed CMOS copies of popular 4000-series IC's.
+<p>
+<hr>
+<a name="744002"></a>
+<h2>744002</h2>
+Dual 4-input NOR gates.
+<pre>
+    +---+--+---+             +---+---+---+---*---+       _________
+/1Y |1  +--+ 14| VCC         | A | B | C | D |/Y |  /Y = (A+B+C+D)
+ 1A |2       13| /2Y         +===+===+===+===*===+
+ 1B |3       12| 2D          | 0 | 0 | 0 | 0 | 1 |
+ 1C |4  4002 11| 2C          | 0 | 0 | 0 | 1 | 0 |
+ 1D |5       10| 2B          | 0 | 0 | 1 | X | 0 |
+    |6        9| 2A          | 0 | 1 | X | X | 0 |
+GND |7        8|             | 1 | X | X | X | 0 |
+    +----------+             +---+---+---+---*---+
+</pre>
+<p>
+<a name="744015"></a>
+<h2>744015</h2>
+Dual 4-bit serial-in parallel-out shift register with asynchronous reset.
+<pre>
+     +---+--+---+
+2CLK |1  +--+ 16| VCC
+ 2Q3 |2       15| 2D
+ 1Q2 |3       14| 2RST
+ 1Q1 |4       13| 2Q0
+ 1Q0 |5  4015 12| 2Q1
+1RST |6       11| 2Q2
+  1D |7       10| 1Q3
+ GND |8        9| 1CLK
+     +----------+
+</pre>
+<p>
+<a name="744016"></a>
+<h2>744016</h2>
+Quad analog switches.
+<pre>
+     +---+--+---+
+  1X |1  +--+ 14| VCC
+  1Y |2       13| 1EN
+  2Y |3       12| 4EN
+  2X |4  4016 11| 4X
+ 2EN |5  4066 10| 4Y
+ 3EN |6        9| 3Y
+ GND |7        8| 3X
+     +----------+
+</pre>
+<p>
+<a name="744017"></a>
+<h2>744017</h2>
+4-bit asynchronous decade counter with fully decoded outputs, reset and both
+active high and active low clocks.
+<pre>
+    +---+--+---+
+ Q5 |1  +--+ 16| VCC
+ Q1 |2       15| RST
+ Q0 |3       14| CLK1
+ Q2 |4       13| /CLK2
+ Q6 |5  4017 12| RCO
+ Q7 |6       11| Q9
+ Q3 |7       10| Q4
+GND |8        9| Q8
+    +----------+
+</pre>
+<p>
+<a name="744020"></a>
+<h2>744020</h2>
+14-bit asynchronous binary counter with reset.
+<br>
+Q1 and Q2 outputs missing.
+<pre>
+    +---+--+---+
+Q11 |1  +--+ 16| VCC
+Q12 |2       15| Q10
+Q13 |3       14| Q9
+ Q5 |4       13| Q7
+ Q4 |5  4020 12| Q8
+ Q6 |6       11| RST
+ Q3 |7       10| /CLK
+GND |8        9| Q0
+    +----------+
+</pre>
+<p>
+<a name="744024"></a>
+<h2>744024</h2>
+7-bit asynchronous binary counter with reset.
+<pre>
+     +---+--+---+
+/CLK |1  +--+ 14| VCC
+ RST |2       13|
+  Q6 |3       12| Q0
+  Q5 |4  4024 11| Q1
+  Q4 |5       10|
+  Q3 |6        9| Q2
+ GND |7        8|
+     +----------+
+</pre>
+<p>
+<a name="744040"></a>
+<h2>744040</h2>
+12-bit asynchronous binary counter with reset.
+<pre>
+    +---+--+---+
+Q11 |1  +--+ 16| VCC
+ Q5 |2       15| Q10
+ Q4 |3       14| Q9
+ Q6 |4       13| Q7
+ Q3 |5  4040 12| Q8
+ Q2 |6       11| RST
+ Q1 |7       10| /CLK
+GND |8        9| Q0
+    +----------+
+</pre>
+<p>
+<a name="744046"></a>
+<h2>744046</h2>
+Phase Locked Loop.
+<pre>
+       +---+--+---+
+PCPout |1  +--+ 16| VCC
+PC1out |2       15| Zener
+ PCinB |3       14| PCinA
+VCOout |4       13| PC2out
+   /EN |5  4046 12| R2
+   C1A |6       11| R1
+   C1B |7       10| SFout
+   GND |8        9| VCOin
+       +----------+
+</pre>
+<p>
+<a name="744049"></a>
+<h2>744049</h2>
+Hex inverters with high-to-low level shifter inputs.
+<pre>
+    +---+--+---+             +---*---+               _
+VCC |1  +--+ 16|             | A |/Y |          /Y = A
+/Y1 |2       15| /Y6         +===*===+
+ A1 |3       14| A6          | 0 | 1 |
+/Y2 |4       13|             | 1 | 0 |
+ A2 |5  4049 12| /Y5         +---*---+
+/Y3 |6       11| A5
+ A3 |7       10| /Y4
+GND |8        9| A4
+    +----------+
+</pre>
+<p>
+<a name="744050"></a>
+<h2>744050</h2>
+Hex buffers with high-to-low level shifter inputs.
+<pre>
+    +---+--+---+             +---*---+
+VCC |1  +--+ 16|             | A | Y |           Y = A
+ Y1 |2       15| Y6          +===*===+
+ A1 |3       14| A6          | 0 | 0 |
+ Y2 |4       13|             | 1 | 1 |
+ A2 |5  4050 12| Y5          +---*---+
+ Y3 |6       11| A5
+ A3 |7       10| Y4
+GND |8        9| A4
+    +----------+
+</pre>
+<p>
+<a name="744051"></a>
+<h2>744051</h2>
+8-to-1 line analog multiplexer/demultiplexer with dual power supply.
+<br>
+VEE supply may not be more positive than GND.
+<pre>
+    +---+--+---+
+ X4 |1  +--+ 16| VCC
+ X6 |2       15| X2
+  Y |3       14| X1
+ X7 |4       13| X0
+ X5 |5  4051 12| X3
+/EN |6       11| S0
+VEE |7       10| S1
+GND |8        9| S2
+    +----------+
+</pre>
+<p>
+<a name="744052"></a>
+<h2>744052</h2>
+8-to-2 line analog multiplexer/demultiplexer with dual power supply.
+<br>
+VEE supply may not be more positive than GND.
+<pre>
+    +---+--+---+
+1X0 |1  +--+ 16| VCC
+1X2 |2       15| 2X2
+ 1Y |3       14| 2X1
+1X3 |4       13| 2Y
+1X1 |5  4052 12| 2X0
+/EN |6       11| 2X3
+VEE |7       10| S0
+GND |8        9| S1
+    +----------+
+</pre>
+<p>
+<a name="744053"></a>
+<h2>744053</h2>
+Triple 2-to-1 line analog multiplexer/demultiplexer with dual power supply.
+<br>
+VEE supply may not be more positive than GND.
+<pre>
+    +---+--+---+
+1X0 |1  +--+ 16| VCC
+1X1 |2       15| 1Y
+2X1 |3       14| 3Y
+ 2Y |4       13| 3X1
+2X0 |5  4053 12| 3X0
+/EN |6       11| 3S
+VEE |7       10| 1S
+GND |8        9| 2S
+    +----------+
+</pre>
+<p>
+<a name="744060"></a>
+<h2>744060</h2>
+14-bit asynchronous binary counter with oscillator and reset input.
+<br>
+Q0,Q1,Q2 and Q10 outputs are missing.
+<pre>
+    +---+--+---+
+Q11 |1  +--+ 16| VCC
+Q12 |2       15| Q9
+Q13 |3       14| Q7
+ Q5 |4       13| Q8
+ Q4 |5  4060 12| RST
+ Q6 |6       11| X1
+ Q3 |7       10| X0
+GND |8        9| X2
+    +----------+
+</pre>
+<p>
+<a name="744066"></a>
+<h2>744066</h2>
+Quad analog switches.
+<pre>
+     +---+--+---+
+  1X |1  +--+ 14| VCC
+  1Y |2       13| 1EN
+  2Y |3       12| 4EN
+  2X |4  4016 11| 4X
+ 2EN |5  4066 10| 4Y
+ 3EN |6        9| 3Y
+ GND |7        8| 3X
+     +----------+
+</pre>
+<p>
+<a name="744067"></a>
+<h2>744067</h2>
+16-to-1 line analog multiplexer/demultiplexer.
+<pre>
+    +-----+--+-----+
+  Y |1    +--+   24| VCC
+ X7 |2           23| X8
+ X6 |3           22| X9
+ X5 |4           21| X10
+ X4 |5           20| X11
+ X3 |6           19| X12
+ X2 |7    4067   18| X13
+ X1 |8           17| X14
+ X0 |9           16| X15
+ S0 |10          15| /EN
+ S1 |11          14| S2
+GND |12          13| S3
+    +--------------+
+</pre>
+<p>
+<a name="744075"></a>
+<h2>744075</h2>
+Triple 3-input OR gates.
+<pre>
+    +---+--+---+             +---+---+---*---+
+ 1A |1  +--+ 14| VCC         | A | B | C | Y |   Y = A+B+C
+ 1B |2       13| 3A          +===+===+===*===+
+ 2A |3       12| 3B          | 0 | 0 | 0 | 0 |
+ 2B |4  4075 11| 3C          | 0 | 0 | 1 | 1 |
+ 2C |5       10| 3Y          | 0 | 1 | X | 1 |
+ 2Y |6        9| 1Y          | 1 | X | X | 1 |
+GND |7        8| 1C          +---+---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="744078"></a>
+<h2>744078</h2>
+8-input OR/NOR gate with complementary outputs.
+<pre>
+    +---+--+---+
+  Y |1  +--+ 14| VCC         Y=A+B+C+D+E+F+G+H
+  A |2       13| /Y
+  B |3       12| H
+  C |4  4078 11| G
+  D |5       10| F
+    |6        9| E
+GND |7        8|
+    +----------+
+</pre>
+<p>
+<a name="744316"></a>
+<h2>744316</h2>
+Quad analog switches with enable input and dual power supply.
+<br>
+VEE supply may not be more positive than GND.
+<pre>
+    +---+--+---+
+ 1X |1  +--+ 16| VCC
+ 1Y |2       15| 1EN
+ 2Y |3       14| 4EN
+ 2X |4       13| 4X
+2EN |5  4316 12| 4Y
+3EN |6       11| 3Y
+ EN |7       10| 3X
+GND |8        9| VEE
+    +----------+
+</pre>
+<p>
+<a name="744351"></a>
+<h2>744351</h2>
+8-to-1 line analog multiplexer/demultiplexer with address latch and dual
+power supply.
+<br>
+VEE supply may not be more positive than GND.
+<pre>
+    +---+--+---+
+1X0 |1  +--+ 18| VCC
+1X1 |2       17| X2
+2X1 |3       16| X1
+ 2Y |4       15| X0
+2X0 |5  4351 14| X3
+/EN |6       13| S0
+ EN |7       12| S1
+VEE |8       11| S2
+GND |9       10| LE
+    +----------+
+</pre>
+<p>
+<a name="744352"></a>
+<h2>744352</h2>
+8-to-2 line analog multiplexer/demultiplexer with address latch and dual
+power supply.
+<br>
+VEE supply may not be more positive than GND.
+<pre>
+    +---+--+---+
+1X0 |1  +--+ 18| VCC
+1X2 |2       17| 2X2
+ 1Y |3       16| 2X1
+1X3 |4       15| 2Y
+1X1 |5  4352 14| 2X0
+/EN |6       13| 2X3
+ EN |7       12| S0
+VEE |8       11| S1
+GND |9       10| LE
+    +----------+
+</pre>
+<p>
+<a name="744353"></a>
+<h2>744353</h2>
+Triple 2-to-1 line analog multiplexer/demultiplexer with address latch and
+dual power supply.
+<br>
+VEE supply may not be more positive than GND.
+<pre>
+    +---+--+---+
+1X0 |1  +--+ 18| VCC
+1X1 |2       17| 1Y
+2X1 |3       16| 3Y
+ 2Y |4       15| 3X1
+2X0 |5  4353 14| 3X0
+/EN |6       13| 3S
+ EN |7       12| 1S
+VEE |8       11| 2S
+GND |9       10| LE
+    +----------+
+</pre>
+<p>
+<a name="744511"></a>
+<h2>744511</h2>
+BCD to 7-segment decoder/common-cathode LED driver.
+<pre>
+    +---+--+---+
+ A1 |1  +--+ 16| VCC
+ A2 |2       15| YF
+/LT |3       14| YG
+/BI |4       13| YA
+/LE |5  4511 12| YB
+ A3 |6       11| YC
+ A0 |7       10| YD
+GND |8        9| YE
+    +----------+
+</pre>
+<p>
+<a name="744514"></a>
+<h2>744514</h2>
+1-of-16 noninverting decoder/demultiplexer with address latches.
+<pre>
+    +---+--+---+
+ LE |1  +--+ 24| VCC
+ S0 |2       23| /EN
+ S1 |3       22| S3
+ Y7 |4       21| S2
+ Y6 |5       20| Y10
+ Y5 |6       19| Y11
+ Y4 |7  4514 18| Y8
+ Y3 |8       17| Y9
+ Y2 |9       16| Y15
+ Y1 |10      15| Y14
+ Y0 |11      14| Y13
+GND |12      13| Y12
+    +----------+
+</pre>
+<p>
+<a name="744515"></a>
+<h2>744515</h2>
+1-of-16 inverting decoder/demultiplexer with address latches.
+<pre>
+    +---+--+---+
+ LE |1  +--+ 24| VCC
+ S0 |2       23| /EN
+ S1 |3       22| S3
+/Y7 |4       21| S2
+/Y6 |5       20| /Y10
+/Y5 |6       19| /Y11
+/Y4 |7  4515 18| /Y8
+/Y3 |8       17| /Y9
+/Y1 |9       16| /Y15
+/Y2 |10      15| /Y14
+/Y0 |11      14| /Y12
+GND |12      13| /Y13
+    +----------+
+</pre>
+<p>
+<a name="744518"></a>
+<h2>744518</h2>
+Dual 4-bit asynchronous decade counters with reset and both active high and
+active low clocks.
+<pre>
+      +---+--+---+
+ 1CLK |1  +--+ 16| VCC
+/1CLK |2       15| 2RST
+  1Q0 |3       14| 2Q3
+  1Q1 |4       13| 2Q2
+  1Q2 |5  4518 12| 2Q1
+  1Q3 |6       11| 2Q0
+ 1RST |7       10| /2CLK
+  GND |8        9| 2CLK
+      +----------+
+</pre>
+<p>
+<a name="744520"></a>
+<h2>744520</h2>
+Dual 4-bit asynchronous binary counters with reset and both active high and
+active low clocks.
+<pre>
+      +---+--+---+
+ 1CLK |1  +--+ 16| VCC
+/1CLK |2       15| 2RST
+  1Q0 |3       14| 2Q3
+  1Q1 |4       13| 2Q2
+  1Q2 |5  4520 12| 2Q1
+  1Q3 |6       11| 2Q0
+ 1RST |7       10| /2CLK
+  GND |8        9| 2CLK
+      +----------+
+</pre>
+<p>
+<a name="744538"></a>
+<h2>744538</h2>
+Dual precision monostable multivibrator with Schmitt-trigger inputs.
+<br>
+Retriggerable, resettable.
+For 74HC4538 the Cext pins may be grounded.
+<pre>
+       +---+--+---+
+ 1Cext |1  +--+ 16| VCC
+1RCext |2       15| 2Cext
+  1RST |3       14| 2RCext
+   1TR |4       13| 2RST
+  /1TR |5  4538 12| 2TR
+    1Q |6       11| /2TR
+   /1Q |7       10| 2Q
+   GND |8        9| /2Q
+       +----------+
+</pre>
+<p>
+<a name="744543"></a>
+<h2>744543</h2>
+BCD to 7-segment decoder/LCD driver with input latch.
+<br>
+The P (phase) input should be connected to the backplane of the LCD.
+<pre>
+    +---+--+---+
+ LE |1  +--+ 16| VCC
+ A2 |2       15| YF
+ A1 |3       14| YG
+ A3 |4       13| YE
+ A0 |5  4543 12| YD
+  P |6       11| YC
+ BI |7       10| YB
+GND |8        9| YA
+    +----------+
+</pre>
+<p>
+<a name="7440102"></a>
+<h2>7440102</h2>
+8-bit (2-digit) synchronous decade down counter with synchronous and
+asynchronous load and reset.  Counter outputs only internally connected but
+ripple carry and zero detect outputs available.
+<pre>
+       +---+--+---+
+   CLK |1  +--+ 16| VCC
+  /RST |2       15| /SLD
+/CLKEN |3       14| /RCO
+    P0 |4       13| P7
+    P1 |5 40102 12| P6
+    P2 |6       11| P5
+    P3 |7       10| P4
+   GND |8        9| /ALD
+       +----------+
+</pre>
+<p>
+<a name="7440103"></a>
+<h2>7440103</h2>
+8-bit synchronous binary down counter with synchronous and asynchronous load
+and reset.  Counter outputs only internally connected but ripple carry and
+zero detect outputs available.
+<pre>
+       +---+--+---+
+   CLK |1  +--+ 16| VCC
+  /RST |2       15| /SLD
+/CLKEN |3       14| /RCO
+    P0 |4       13| P7
+    P1 |5 40103 12| P6
+    P2 |6       11| P5
+    P3 |7       10| P4
+   GND |8        9| /ALD
+       +----------+
+</pre>
+<p>
+<hr><a href="index.html">Back to the GIICM index.</a>
+</body>
+</html>

@@ -1,0 +1,1622 @@
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <link rel="stylesheet" type="text/css" href="../frank/frank.css">
+   <meta name="CVS" content="$Id$">
+   <meta name="description" content="GIICM">
+   <title>GIICM</title>
+</head><body><h1>7411 series fast TTL IC's with center power:  7411xxx</h1>
+<p>
+Extra-fast (ACT etc.) versions of common 7400 series TTL, with
+double VCC and GND pins in the middle of the package for minimum
+ground bounce and buffered outputs.
+<br>
+For example, the 14-pin 7432 becomes the 16-pin 7411032.
+<p>
+<hr>
+<a name="7411000"></a>
+<h2>7411000</h2>
+Quad 2-input NAND gates with buffered output.
+<pre>
+    +---+--+---+             +---+---*---+           __
+ 1A |1  +--+ 16| 1B          | A | B |/Y |      /Y = AB
+/1Y |2       15| 2A          +===+===*===+
+/2Y |3       14| 2B          | 0 | 0 | 1 |
+GND |4  7411 13| VCC         | 0 | 1 | 1 |
+GND |5   000 12| VCC         | 1 | 0 | 1 |
+/3Y |6       11| 3A          | 1 | 1 | 0 |
+/4Y |7       10| 3B          +---+---*---+
+ 4B |8        9| 4A
+    +----------+
+</pre>
+<p>
+<a name="7411002"></a>
+<h2>7411002</h2>
+Quad 2-input NOR gates with buffered output.
+<pre>
+    +---+--+---+             +---+---*---+           ___
+ 1A |1  +--+ 16| 1B          | A | B |/Y |      /Y = A+B
+/1Y |2       15| 2A          +===+===*===+
+/2Y |3       14| 2B          | 0 | 0 | 1 |
+GND |4  7411 13| VCC         | 0 | 1 | 0 |
+GND |5   002 12| VCC         | 1 | 0 | 0 |
+/3Y |6       11| 3A          | 1 | 1 | 0 |
+/4Y |7       10| 3B          +---+---*---+
+ 4B |8        9| 4A
+    +----------+
+</pre>
+<p>
+<a name="7411004"></a>
+<h2>7411004</h2>
+Hex inverters with buffered output.
+<pre>
+    +---+--+---+             +---*---+               _
+/1Y |1  +--+ 20| 1A          | A |/Y |          /Y = A
+/2Y |2       19| 2A          +===*===+
+/3Y |3       18| 3A          | 0 | 1 |
+GND |4       17|             | 1 | 0 |
+GND |5  7411 16| VCC         +---*---+
+GND |6   004 15| VCC
+GND |7       14|
+/4Y |8       13| 4A
+/5Y |9       12| 5A
+/6Y |10      11| 6A
+    +----------+
+</pre>
+<p>
+<a name="7411008"></a>
+<h2>7411008</h2>
+Quad 2-input AND gates with buffered output.
+<pre>
+    +---+--+---+             +---+---*---+
+ 1A |1  +--+ 16| 1B          | A | B | Y |       Y = AB
+ 1Y |2       15| 2A          +===+===*===+
+ 2Y |3       14| 2B          | 0 | 0 | 0 |
+GND |4  7411 13| VCC         | 0 | 1 | 0 |
+GND |5   008 12| VCC         | 1 | 0 | 0 |
+ 3Y |6       11| 3A          | 1 | 1 | 1 |
+ 4Y |7       10| 3B          +---+---*---+
+ 4B |8        9| 4A
+    +----------+
+</pre>
+<p>
+<a name="7411010"></a>
+<h2>7411010</h2>
+Triple 3-input NAND gates with buffered output.
+<pre>
+    +---+--+---+             +---+---+---*---+       ___
+ 1A |1  +--+ 16| 1B          | A | B | C |/Y |  /Y = ABC
+/1Y |2       15| 1C          +===+===+===*===+
+/2Y |3       14| 2A          | 0 | X | X | 1 |
+GND |4  7411 13| VCC         | 1 | 0 | X | 1 |
+GND |5   010 12| VCC         | 1 | 1 | 0 | 1 |
+/3Y |6       11| 2B          | 1 | 1 | 1 | 0 |
+ 3C |7       10| 2C          +---+---+---*---+
+ 3B |8        9| 3A
+    +----------+
+</pre>
+<p>
+<a name="7411011"></a>
+<h2>7411011</h2>
+Triple 3-input AND gates with buffered output.
+<pre>
+    +---+--+---+             +---+---+---*---+
+ 1A |1  +--+ 16| 1B          | A | B | C | Y |   Y = ABC
+ 1Y |2       15| 1C          +===+===+===*===+
+ 2Y |3       14| 2A          | 0 | X | X | 0 |
+GND |4  7411 13| VCC         | 1 | 0 | X | 0 |
+GND |5   011 12| VCC         | 1 | 1 | 0 | 0 |
+ 3Y |6       11| 2B          | 1 | 1 | 1 | 1 |
+ 3C |7       10| 2C          +---+---+---*---+
+ 3B |8        9| 3A
+    +----------+
+</pre>
+<p>
+<a name="7411013"></a>
+<h2>7411013</h2>
+Dual 4-input NAND gates with schmitt-trigger inputs and buffered output.
+<br>
+0.8V typical input hysteresis at VCC=+5V.
+<pre>
+    +---+--+---+             +---+---+---+---*---+        ____
+ 1B |1  +--+ 14|             | A | B | C | D |/Y |   /Y = ABCD
+ 1A |2       13| 1C          +===+===+===+===*===+
+/1Y |3  7411 12| 1D          | 0 | X | X | X | 1 |
+GND |4   013 11| VCC         | 1 | 0 | X | X | 1 |
+/2Y |5       10| 2A          | 1 | 1 | 0 | X | 1 |
+ 2D |6        9| 2B          | 1 | 1 | 1 | 0 | 1 |
+ 2C |7        8|             | 1 | 1 | 1 | 1 | 0 |
+    +----------+             +---+---+---+---*---+
+</pre>
+<p>
+<a name="7411014"></a>
+<h2>7411014</h2>
+Hex inverters with schmitt-trigger inputs and buffered output.
+<br>
+0.8V typical input hysteresis at VCC=+5V.
+<pre>
+    +---+--+---+             +---*---+               _
+/1Y |1  +--+ 20| 1A          | A |/Y |          /Y = A
+/2Y |2       19| 2A          +===*===+
+/3Y |3       18| 3A          | 0 | 1 |
+GND |4       17|             | 1 | 0 |
+GND |5  7411 16| VCC         +---*---+
+GND |6   014 15| VCC
+GND |7       14|
+/4Y |8       13| 4A
+/5Y |9       12| 5A
+/6Y |10      11| 6A
+    +----------+
+</pre>
+<p>
+<a name="7411020"></a>
+<h2>7411020</h2>
+Dual 4-input NAND gates with buffered output.
+<pre>
+    +---+--+---+             +---+---+---+---*---+        ____
+ 1B |1  +--+ 14|             | A | B | C | D |/Y |   /Y = ABCD
+ 1A |2       13| 1C          +===+===+===+===*===+
+/1Y |3       12| 1D          | 0 | X | X | X | 1 |
+GND |4  7411 11| VCC         | 1 | 0 | X | X | 1 |
+/2Y |5   020 10| 2A          | 1 | 1 | 0 | X | 1 |
+ 2D |6        9| 2B          | 1 | 1 | 1 | 0 | 1 |
+ 2C |7        8|             | 1 | 1 | 1 | 1 | 0 |
+    +----------+             +---+---+---+---*---+
+</pre>
+<p>
+<a name="7411021"></a>
+<h2>7411021</h2>
+Dual 4-input AND gates with buffered output.
+<pre>
+    +---+--+---+             +---+---+---+---*---+
+ 1B |1  +--+ 14|             | A | B | C | D | Y |    Y = ABCD
+ 1A |2       13| 1C          +===+===+===+===*===+
+ 1Y |3       12| 1D          | 0 | X | X | X | 0 |
+GND |4  7411 11| VCC         | 1 | 0 | X | X | 0 |
+ 2Y |5   021 10| 2A          | 1 | 1 | 0 | X | 0 |
+ 2D |6        9| 2B          | 1 | 1 | 1 | 0 | 0 |
+ 2C |7        8|             | 1 | 1 | 1 | 1 | 1 |
+    +----------+             +---+---+---+---*---+
+</pre>
+<p>
+<a name="7411027"></a>
+<h2>7411027</h2>
+Triple 3-input NOR gates with buffered output.
+<pre>
+    +---+--+---+             +---+---+---*---+       _____
+ 1A |1  +--+ 16| 1B          | A | B | C |/Y |  /Y = A+B+C
+/1Y |2       15| 1C          +===+===+===*===+
+/2Y |3       14| 2A          | 0 | 0 | 0 | 1 |
+GND |4 7411  13| VCC         | 0 | 0 | 1 | 0 |
+GND |5  027  12| VCC         | 0 | 1 | X | 0 |
+/3Y |6       11| 2B          | 1 | X | X | 0 |
+ 3C |7       10| 2C          +---+---+---*---+
+ 3B |8        9| 3A
+    +----------+
+</pre>
+<p>
+<a name="7411030"></a>
+<h2>7411030</h2>
+8-input NAND gate with buffered output.
+<pre>
+    +---+--+---+                 ________
+  C |1  +--+ 14| D          /Y = ABCDEFGH
+  B |2       13| E
+  A |3 7411  12| F
+GND |4  030  11| VCC
+ /Y |5       10|
+    |6        9| G
+    |7        8| H
+    +----------+
+</pre>
+<p>
+<a name="7411032"></a>
+<h2>7411032</h2>
+Quad 2-input OR gates with buffered output.
+<pre>
+    +---+--+---+             +---+---*---+
+ 1A |1  +--+ 16| 1B          | A | B | Y |       Y = A+B
+ 1Y |2       15| 2A          +===+===*===+
+ 2Y |3       14| 2B          | 0 | 0 | 0 |
+GND |4 7411  13| VCC         | 0 | 1 | 1 |
+GND |5  032  12| VCC         | 1 | 0 | 1 |
+ 3Y |6       11| 3A          | 1 | 1 | 1 |
+ 4Y |7       10| 3B          +---+---*---+
+ 4B |8        9| 4A
+    +----------+
+</pre>
+<p>
+<a name="7411034"></a>
+<h2>7411034</h2>
+Hex buffers.
+<pre>
+    +---+--+---+             +---*---+
+ 1Y |1  +--+ 20| 1A          | A | Y |           Y = A
+ 2Y |2       19| 2A          +===*===+
+ 3Y |3       18| 3A          | 0 | 0 |
+GND |4       17|             | 1 | 1 |
+GND |5 7411  16| VCC         +---*---+
+GND |6  034  15| VCC
+GND |7       14|
+ 4Y |8       13| 4A
+ 5Y |9       12| 5A
+ 6Y |10      11| 6A
+    +----------+
+</pre>
+<p>
+<a name="7411074"></a>
+<h2>7411074</h2>
+Dual D flip-flops with set and reset.
+<pre>
+      +---+--+---+           +---+---+----+----*---+---+
+/1SET |1  +--+ 14| 1CLK      | D |CLK|/SET|/RST| Q |/Q |
+   1Q |2       13| 1D        +===+===+====+====*===+===+
+  /1Q |3 7411  12| /1RST     | X | X |  0 |  0 | 1 | 1 |
+  GND |4  074  11| VCC       | X | X |  0 |  1 | 1 | 0 |
+  /2Q |5       10| /2RST     | X | X |  1 |  0 | 0 | 1 |
+   2Q |6        9| 2D        | 0 | / |  1 |  1 | 0 | 1 |
+/2SET |7        8| 2CLK      | 1 | / |  1 |  1 | 1 | 1 |
+      +----------+           | X |!/ |  1 |  1 | - | - |
+                             +---+---+----+----*---+---+
+</pre>
+<p>
+<a name="7411086"></a>
+<h2>7411086</h2>
+Quad 2-input XOR gates with buffered output.
+<pre>
+    +---+--+---+             +---+---*---+                    _   _
+ 1A |1  +--+ 16| 1B          | A | B | Y |       Y = A$B = (A.B)+(A.B)
+ 1Y |2       15| 2B          +===+===*===+
+ 2Y |3       14| 2A          | 0 | 0 | 0 |
+GND |4 7411  13| VCC         | 0 | 1 | 1 |
+GND |5  086  12| VCC         | 1 | 0 | 1 |
+ 3Y |6       11| 3B          | 1 | 1 | 0 |
+ 4Y |7       10| 3A          +---+---*---+
+ 4A |8        9| 4B
+    +----------+
+</pre>
+<p>
+<a name="7411109"></a>
+<h2>7411109</h2>
+Dual J-/K flip-flops with set and reset.
+<pre>
+      +---+--+---+           +---+---+---+----+----*---+---+
+/1SET |1  +--+ 16| 1CLK      | J |/K |CLK|/SET|/RST| Q |/Q |
+   1Q |2       15| /1K       +===+===+===+====+====*===+===+
+  /1Q |3       14| 1J        | X | X | X |  0 |  0 | 1 | 1 |
+  GND |4 7411  13| /1RST     | X | X | X |  0 |  1 | 1 | 0 |
+  /2Q |5  109  12| VCC       | X | X | X |  1 |  0 | 0 | 1 |
+   2Q |6       11| /2RST     | 0 | 0 | / |  1 |  1 | 0 | 1 |
+/2SET |7       10| 2J        | 0 | 1 | / |  1 |  1 | - | - |
+ 2CLK |8        9| /2K       | 1 | 0 | / |  1 |  1 |/Q | Q |
+      +----------+           | 1 | 1 | / |  1 |  1 | 1 | 0 |
+                             | X | X |!/ |  1 |  1 | - | - |
+                             +---+---+---+----+----*---+---+
+</pre>
+<p>
+<a name="7411112"></a>
+<h2>7411112</h2>
+Dual negative-edge-triggered J-K flip-flops with set and reset.
+<pre>
+      +---+--+---+           +---+---+----+----+----*---+---+
+/1SET |1  +--+ 16| 1J        | J | K |/CLK|/SET|/RST| Q |/Q |
+   1Q |2       15| 1K        +===+===+====+====+====*===+===+
+  /1Q |3       14| /1CLK     | X | X |  X |  0 |  0 | 0 | 0 |
+  GND |4 7411  13| /1RST     | X | X |  X |  0 |  1 | 1 | 0 |
+  /2Q |5  112  12| VCC       | X | X |  X |  1 |  0 | 0 | 1 |
+   2Q |6       11| /2RST     | 0 | 0 |  \ |  1 |  1 | - | - |
+/2SET |7       10| /2CLK     | 0 | 1 |  \ |  1 |  1 | 0 | 1 |
+   2J |8        9| 2K        | 1 | 0 |  \ |  1 |  1 | 1 | 0 |
+      +----------+           | 1 | 1 |  \ |  1 |  1 |/Q | Q |
+                             | X | X | !\ |  1 |  1 | - | - |
+                             +---+---+----+----+----*---+---+
+</pre>
+<p>
+<a name="7411132"></a>
+<h2>7411132</h2>
+Quad 2-input NAND gates with schmitt-trigger inputs and buffered output.
+<br>
+0.8V typical input hysteresis at VCC=+5V.
+<pre>
+    +---+--+---+             +---+---*---+           __
+ 1A |1  +--+ 16| 1B          | A | B |/Y |      /Y = AB
+/1Y |2       15| 2A          +===+===*===+
+/2Y |3       14| 2B          | 0 | 0 | 1 |
+GND |4  7411 13| VCC         | 0 | 1 | 1 |
+GND |5   132 12| VCC         | 1 | 0 | 1 |
+/3Y |6       11| 3A          | 1 | 1 | 0 |
+/4Y |7       10| 3B          +---+---*---+
+ 4B |8        9| 4A
+    +----------+
+</pre>
+<p>
+<a name="7411138"></a>
+<h2>7411138</h2>
+1-of-8 inverting decoder/demultiplexer.
+<pre>
+    +---+--+---+             +---+----+----+---+---+---*---+---+---+---+
+/Y1 |1  +--+ 16| /Y0         |EN1|/EN2|/EN3| S2| S1| S0|/Y0|/Y1|...|/Y7|
+/Y2 |2       15| S0          +===+====+====+===+===+===*===+===+===+===+
+/Y3 |3       14| S1          | 0 | X  |  X | X | X | X | 1 | 1 | 1 | 1 |
+GND |4 7411  13| S2          | 1 | 1  |  X | X | X | X | 1 | 1 | 1 | 1 |
+/Y4 |5  138  12| VCC         | 1 | 0  |  1 | X | X | X | 1 | 1 | 1 | 1 |
+/Y5 |6       11| EN1         | 1 | 0  |  0 | 0 | 0 | 0 | 0 | 1 | 1 | 1 |
+/Y6 |7       10| /EN2        | 1 | 0  |  0 | 0 | 0 | 1 | 1 | 0 | 1 | 1 |
+/Y7 |8        9| /EN3        | 1 | 0  |  0 | . | . | . | 1 | 1 | . | 1 |
+    +----------+             | 1 | 0  |  0 | 1 | 1 | 1 | 1 | 1 | 1 | 0 |
+                             +---+----+----+---+---+---*---+---+---+---+
+</pre>
+<p>
+<a name="7411139"></a>
+<h2>7411139</h2>
+Dual 1-of-4 inverting decoder/demultiplexer.
+<pre>
+     +---+--+---+            +---+---+---*---+---+---+---+
+/1Y1 |1  +--+ 16| /1Y0       |/EN| S1| S0|/Y0|/Y1|/Y2|/Y3|
+/1Y2 |2       15| 1S0        +===+===+===*===+===+===+===+
+/1Y3 |3       14| 1S1        | 1 | X | X | 1 | 1 | 1 | 1 |
+ GND |4 7411  13| /1EN       | 0 | 0 | 0 | 0 | 1 | 1 | 1 |
+/2Y0 |5  139  12| VCC        | 0 | 0 | 1 | 1 | 0 | 1 | 1 |
+/2Y1 |6       11| /2EN       | 0 | 1 | 0 | 1 | 1 | 0 | 1 |
+/2Y2 |7       10| 2S0        | 0 | 1 | 1 | 1 | 1 | 1 | 0 |
+/2Y3 |8        9| 2S1        +---+---+---*---+---+---+---+
+     +----------+
+</pre>
+<p>
+<a name="7411151"></a>
+<h2>7411151</h2>
+8-to-1 line data selector/multiplexer with complementary outputs.
+<pre>
+    +---+--+---+
+ A0 |1  +--+ 16| A1
+/EN |2       15| A2
+  Y |3       14| A3
+GND |4 7411  13| A4
+ /Y |5  151  12| VCC
+ S0 |6       11| A5
+ S1 |7       10| A6
+ S2 |8        9| A7
+    +----------+
+</pre>
+<p>
+<a name="7411153"></a>
+<h2>7411153</h2>
+8-to-2 line noninverting data selector/multiplexer with separate enables.
+<pre>
+     +---+--+---+
+  S0 |1  +--+ 16| 1A0
+  S1 |2       15| 1A1
+  1Y |3       14| 1A2
+ GND |4 7411  13| 1A3
+  2Y |5  153  12| VCC
+/1EN |6       11| 2A0
+/2EN |7       10| 2A1
+ 2A3 |8        9| 2A2
+     +----------+
+</pre>
+<p>
+<a name="7411157"></a>
+<h2>7411157</h2>
+8-to-4 line noninverting data selector/multiplexer.
+<pre>
+    +---+--+---+
+  S |1  +--+ 20| 1A0
+ 1Y |2       19| 1A1
+ 2Y |3       18| 2A0
+GND |4       17| 2A1
+GND |5 7411  16| VCC
+GND |6  157  15| VCC
+GND |7       14| 3A0
+ 3Y |8       13| 3A1
+ 4Y |9       12| 4A0
+/EN |10      11| 4A1
+    +----------+
+</pre>
+<p>
+<a name="7411158"></a>
+<h2>7411158</h2>
+8-to-4 line inverting data selector/multiplexer.
+<pre>
+    +---+--+---+
+  S |1  +--+ 20| 1A0
+/1Y |2       19| 1A1
+/2Y |3       18| 2A0
+GND |4       17| 2A1
+GND |5 7411  16| VCC
+GND |6  158  15| VCC
+GND |7       14| 3A0
+/3Y |8       13| 3A1
+/4Y |9       12| 4A0
+/EN |10      11| 4A1
+    +----------+
+</pre>
+<p>
+<a name="7411160"></a>
+<h2>7411160</h2>
+4-bit synchronous decade counter with load, asynchronous reset, and ripple
+carry output.
+<pre>
+      +---+--+---+
+  RCO |1  +--+ 20| /RST
+   Q0 |2       19| CLK
+   Q1 |3       18| P0
+  GND |4       17| P1
+  GND |5 7411  16| VCC
+  GND |6  160  15| VCC
+  GND |7       14| P2
+   Q2 |8       13| P3
+   Q3 |9       12| ENP
+/LOAD |10      11| ENT
+      +----------+
+</pre>
+<p>
+<a name="7411161"></a>
+<h2>7411161</h2>
+4-bit synchronous binary counter with load, asynchronous reset, and ripple
+carry output.
+<pre>
+      +---+--+---+
+  RCO |1  +--+ 20| /RST
+   Q0 |2       19| CLK
+   Q1 |3       18| P0
+  GND |4       17| P1
+  GND |5 7411  16| VCC
+  GND |6  161  15| VCC
+  GND |7       14| P2
+   Q2 |8       13| P3
+   Q3 |9       12| ENP
+/LOAD |10      11| ENT
+      +----------+
+</pre>
+<p>
+<a name="7411162"></a>
+<h2>7411162</h2>
+4-bit synchronous decade counter with load, reset, and ripple carry output.
+<pre>
+      +---+--+---+
+  RCO |1  +--+ 20| /RST
+   Q0 |2       19| CLK
+   Q1 |3       18| P0
+  GND |4       17| P1
+  GND |5 7411  16| VCC
+  GND |6  162  15| VCC
+  GND |7       14| P2
+   Q2 |8       13| P3
+   Q3 |9       12| ENP
+/LOAD |10      11| ENT
+      +----------+
+</pre>
+<p>
+<a name="7411163"></a>
+<h2>7411163</h2>
+4-bit synchronous binary counter with load, reset, and ripple carry output.
+<pre>
+      +---+--+---+
+  RCO |1  +--+ 20| /RST
+   Q0 |2       19| CLK
+   Q1 |3       18| P0
+  GND |4       17| P1
+  GND |5 7411  16| VCC
+  GND |6  163  15| VCC
+  GND |7       14| P2
+   Q2 |8       13| P3
+   Q3 |9       12| ENP
+/LOAD |10      11| ENT
+      +----------+
+</pre>
+<p>
+<a name="7411169"></a>
+<h2>7411169</h2>
+4-bit synchronous binary up/down counter with load and ripple carry output.
+<pre>
+      +---+--+---+
+ /RCO |1  +--+ 20| U//D
+   Q0 |2       19| CLK
+   Q1 |3       18| P0
+  GND |4       17| P1
+  GND |5 7411  16| VCC
+  GND |6  169  15| VCC
+  GND |7       14| P2
+   Q2 |8       13| P3
+   Q3 |9       12| /ENP
+/LOAD |10      11| /ENT
+      +----------+
+</pre>
+<p>
+<a name="7411174"></a>
+<h2>7411174</h2>
+6-bit D flip-flop with reset.
+<pre>
+    +---+--+---+             +----+---+---*---+
+ Q1 |1  +--+ 20| /RST        |/RST|CLK| D | Q |
+ Q2 |2       19| D1          +====+===+===*===+
+ Q3 |3       18| D2          |  0 | X | X | 0 |
+GND |4       17| D3          |  1 | / | 0 | 0 |
+GND |5 7411  16| VCC         |  1 | / | 1 | 1 |
+GND |6  174  15| VCC         |  1 |!/ | X | - |
+GND |7       14| D4          +----+---+---*---+
+ Q4 |8       13| D5
+ Q5 |9       12| D6
+ Q6 |10      11| CLK
+    +----------+
+</pre>
+<p>
+<a name="7411175"></a>
+<h2>7411175</h2>
+4-bit D flip-flop with complementary outputs and reset.
+<pre>
+    +---+--+---+             +----+---+---*---+---+
+/Q1 |1  +--+ 20| Q1          |/RST|CLK| D | Q |/Q |
+ Q2 |2       19| /RST        +====+===+===*===+===+
+/Q2 |3       18| D1          |  0 | X | X | 0 | 1 |
+GND |4       17| D2          |  1 | / | 0 | 0 | 1 |
+GND |5 7411  16| VCC         |  1 | / | 1 | 1 | 0 |
+GND |6  175  15| VCC         |  1 |!/ | X | - | - |
+GND |7       14| D3          +----+---+---*---+---+
+ Q3 |8       13| D4
+/Q3 |9       12| CLK
+ Q4 |10      11| /Q4
+    +----------+
+</pre>
+<p>
+<a name="7411181"></a>
+<h2>7411181</h2>
+4-bit 16-function arithmetic logic unit (ALU)
+<pre>
+     +---+--+---+
+ CIN |1  +--+ 28| /A0
+   M |2       27| /A1
+ A=B |3       26| /A2
+ /F0 |4       25| /A3
+ /F1 |5       24| /B0
+ GND |6       23| /B1
+ GND |7  7411 22| VCC
+ GND |8   181 21| VCC
+ GND |9       20| /B2
+ /F2 |10      19| /B3
+ /F3 |11      18| S0
+  /P |12      17| S1
+  /G |13      16| S2
+COUT |14      15| S3
+     +----------+
+</pre>
+<p>
+<a name="7411190"></a>
+<h2>7411190</h2>
+4-bit synchronous decade up/down counter with load and both carry out and
+ripple clock outputs.
+<pre>
+      +---+--+---+
+/RCLK |1  +--+ 20| U//D
+   Q0 |2       19| CLK
+   Q1 |3       18| P0
+  GND |4       17| P1
+  GND |5 7411  16| VCC
+  GND |6  190  15| VCC
+  GND |7       14| P2
+   Q2 |8       13| P3
+   Q3 |9       12| /CLKEN
+ /RCO |10      11| /LOAD
+      +----------+
+</pre>
+<p>
+<a name="7411191"></a>
+<h2>7411191</h2>
+4-bit synchronous binary up/down counter with load and both carry out and
+ripple clock outputs.
+<pre>
+      +---+--+---+
+/RCLK |1  +--+ 20| U//D
+   Q0 |2       19| CLK
+   Q1 |3       18| P0
+  GND |4       17| P1
+  GND |5 7411  16| VCC
+  GND |6  191  15| VCC
+  GND |7       14| P2
+   Q2 |8       13| P3
+   Q3 |9       12| /CLKEN
+ /RCO |10      11| /LOAD
+      +----------+
+</pre>
+<p>
+<a name="7411194"></a>
+<h2>7411194</h2>
+4-bit bidirectional universal shift register with asynchronous reset.
+<pre>
+    +---+--+---+             +---+---*---------------+
+  D |1  +--+ 20| S0          | S1| S0| Function      |
+ Q0 |2       19| S1          +===+===*===============+
+ Q1 |3       18| P0          | 0 | 0 | Hold          |
+GND |4       17| P1          | 0 | 1 | Shift right   |
+GND |5 7411  16| VCC         | 1 | 0 | Shift left    |
+GND |6  194  15| VCC         | 1 | 1 | Parallel load |
+GND |7       14| P2          +---+---*---------------+
+ Q2 |8       13| P3
+ Q3 |9       12| /RST
+  L |10      11| CLK
+    +----------+
+</pre>
+<p>
+<a name="7411238"></a>
+<h2>7411238</h2>
+1-of-8 noninverting decoder/demultiplexer.
+<pre>
+    +---+--+---+             +---+----+----+---+---+---*---+---+---+---+
+ Y1 |1  +--+ 16| Y0          |EN1|/EN2|/EN3| S2| S1| S0|/Y0|/Y1|...|/Y7|
+ Y2 |2       15| S0          +===+====+====+===+===+===*===+===+===+===+
+ Y3 |3       14| S1          | 0 | X  |  X | X | X | X | 0 | 0 | 0 | 0 |
+GND |4 7411  13| S2          | 1 | 1  |  X | X | X | X | 0 | 0 | 0 | 0 |
+ Y4 |5  238  12| VCC         | 1 | 0  |  1 | X | X | X | 0 | 0 | 0 | 0 |
+ Y5 |6       11| EN1         | 1 | 0  |  0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
+ Y6 |7       10| /EN2        | 1 | 0  |  0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 |
+ Y7 |8        9| /EN3        | 1 | 0  |  0 | . | . | . | 0 | 0 | . | 0 |
+    +----------+             | 1 | 0  |  0 | 1 | 1 | 1 | 0 | 0 | 0 | 1 |
+                             +---+----+----+---+---+---*---+---+---+---+
+</pre>
+<p>
+<a name="7411239"></a>
+<h2>7411239</h2>
+Dual 1-of-4 noninverting decoder/demultiplexer.
+<pre>
+    +---+--+---+             +---+---+---*---+---+---+---+
+1Y1 |1  +--+ 16| 1Y0         |/EN| S1| S0| Y0| Y1| Y2| Y3|
+1Y2 |2       15| 1S0         +===+===+===*===+===+===+===+
+1Y3 |3       14| 1S1         | 1 | X | X | 0 | 0 | 0 | 0 |
+GND |4 7411  13| /1EN        | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
+2Y0 |5  239  12| VCC         | 0 | 0 | 1 | 0 | 1 | 0 | 0 |
+2Y1 |6       11| /2EN        | 0 | 1 | 0 | 0 | 0 | 1 | 0 |
+2Y2 |7       10| 2S0         | 0 | 1 | 1 | 0 | 0 | 0 | 1 |
+2Y3 |8        9| 2S1         +---+---+---*---+---+---+---+
+    +----------+
+</pre>
+<p>
+<a name="7411240"></a>
+<h2>7411240</h2>
+Dual 4-bit 3-state inverting buffer/line driver.
+<pre>
+     +---+--+---+
+/1Y1 |1  +--+ 24| /1OE
+/1Y2 |2       23| 1A1
+/1Y3 |3       22| 1A2
+/1Y4 |4       21| 1A3
+ GND |5       20| 1A4
+ GND |6  7411 19| VCC
+ GND |7  240  18| VCC
+ GND |8       17| 2A1
+/2Y1 |9       16| 2A2
+/2Y2 |10      15| 2A3
+/2Y3 |11      14| 2A4
+/2Y4 |12      13| /2OE
+     +----------+
+</pre>
+<p>
+<a name="7411241"></a>
+<h2>7411241</h2>
+Dual 4-bit 3-state noninverting buffer/line driver.
+<br>
+One active low, one active high output enable.
+<pre>
+    +---+--+---+
+1Y1 |1  +--+ 24| /1OE
+1Y2 |2       23| 1A1
+1Y3 |3       22| 1A2
+1Y4 |4       21| 1A3
+GND |5       20| 1A4
+GND |6  7411 19| VCC
+GND |7  241  18| VCC
+GND |8       17| 2A1
+2Y1 |9       16| 2A2
+2Y2 |10      15| 2A3
+2Y3 |11      14| 2A4
+2Y4 |12      13| 2OE
+    +----------+
+</pre>
+<p>
+<a name="7411244"></a>
+<h2>7411244</h2>
+Dual 4-bit 3-state noninverting buffer/line driver.
+<pre>
+    +---+--+---+
+1Y1 |1  +--+ 24| /1OE
+1Y2 |2       23| 1A1
+1Y3 |3       22| 1A2
+1Y4 |4       21| 1A3
+GND |5       20| 1A4
+GND |6  7411 19| VCC
+GND |7  244  18| VCC
+GND |8       17| 2A1
+2Y1 |9       16| 2A2
+2Y2 |10      15| 2A3
+2Y3 |11      14| 2A4
+2Y4 |12      13| /2OE
+    +----------+
+</pre>
+<p>
+<a name="7411245"></a>
+<h2>7411245</h2>
+8-bit 3-state noninverting bus transceiver.
+<br>
+Enable and direction pins control output enables.
+<pre>
+    +---+--+---+             +---+---*---+---+
+ A1 |1  +--+ 24| DIR         |/EN|DIR| A | B |
+ A2 |2       23| B1          +===+===*===+===+
+ A3 |3       22| B2          | 1 | X | Z | Z |
+ A4 |4       21| B3          | 0 | 0 | B | Z |
+GND |5       20| B4          | 0 | 1 | Z | A |
+GND |6  7411 19| VCC         +---+---*---+---+
+GND |7  245  18| VCC
+GND |8       17| B5
+ A5 |9       16| B6
+ A6 |10      15| B7
+ A7 |11      14| B8
+ A8 |12      13| /EN
+    +----------+
+</pre>
+<p>
+<a name="7411251"></a>
+<h2>7411251</h2>
+8-to-1 line 3-state data selector/multiplexer with complementary outputs.
+<pre>
+    +---+--+---+
+ A0 |1  +--+ 16| A1
+/OE |2       15| A2
+  Y |3       14| A3
+GND |4 7411  13| A4
+ /Y |5  251  12| VCC
+ S0 |6       11| A5
+ S1 |7       10| A6
+ S2 |8        9| A7
+    +----------+
+</pre>
+<p>
+<a name="7411253"></a>
+<h2>7411253</h2>
+8-to-2 line 3-state noninverting data selector/multiplexer.
+<pre>
+     +---+--+---+
+  S0 |1  +--+ 16| 1A0
+  S1 |2       15| 1A1
+  1Y |3       14| 1A2
+ GND |4 7411  13| 1A3
+  2Y |5  253  12| VCC
+/1EN |6       11| 2A0
+/2EN |7       10| 2A1
+ 2A3 |8        9| 2A2
+     +----------+
+</pre>
+<p>
+<a name="7411257"></a>
+<h2>7411257</h2>
+8-to-4 line 3-state noninverting data selector/multiplexer.
+<pre>
+    +---+--+---+
+  S |1  +--+ 20| 1A0
+ 1Y |2       19| 1A1
+ 2Y |3       18| 2A0
+GND |4       17| 2A1
+GND |5 7411  16| VCC
+GND |6  257  15| VCC
+GND |7       14| 3A0
+ 3Y |8       13| 3A1
+ 4Y |9       12| 4A0
+/EN |10      11| 4A1
+    +----------+
+</pre>
+<p>
+<a name="7411258"></a>
+<h2>7411258</h2>
+8-to-4 line 3-state inverting data selector/multiplexer.
+<pre>
+    +---+--+---+
+  S |1  +--+ 20| 1A0
+/1Y |2       19| 1A1
+/2Y |3       18| 2A0
+GND |4       17| 2A1
+GND |5 7411  16| VCC
+GND |6  258  15| VCC
+GND |7       14| 3A0
+/3Y |8       13| 3A1
+/4Y |9       12| 4A0
+/EN |10      11| 4A1
+    +----------+
+</pre>
+<p>
+<a name="7411273"></a>
+<h2>7411273</h2>
+8-bit D flip-flop with reset.
+<pre>
+    +---+--+---+             +----+---+---*---+
+ Q1 |1  +--+ 24| /RST        |/RST|CLK| D | Q |
+ Q2 |2       23| D1          +====+===+===*===+
+ Q3 |3       22| D2          |  0 | X | X | 0 |
+ Q4 |4       21| D3          |  1 | / | 0 | 0 |
+GND |5       20| D4          |  1 | / | 1 | 1 |
+GND |6 7411  19| VCC         |  1 |!/ | X | - |
+GND |7  273  18| VCC         +----+---+---*---+
+GND |8       17| D5
+ Q5 |9       16| D6
+ Q6 |10      15| D7
+ Q7 |11      14| D8
+ Q8 |12      13| CLK
+    +----------+
+</pre>
+<p>
+<a name="7411280"></a>
+<h2>7411280</h2>
+9-bit odd/even parity generator/checker.
+<pre>
+     +---+--+---+
+  A0 |1  +--+ 14| A8
+  A1 |2       13| A7
+ ODD |3 7411  12| A6
+ GND |4  280  11| VCC
+EVEN |5       10| A5
+     |6        9| A4
+  A2 |7        8| A3
+     +----------+
+</pre>
+<p>
+<a name="7411286"></a>
+<h2>7411286</h2>
+9-bit odd/even parity generator/checker with bus driver parity I/O port.
+<pre>
+      +---+--+---+
+   A0 |1  +--+ 14| A8
+   A1 |2       13| A7
+ PI/O |3 7411  12| A6
+  GND |4  286  11| VCC
+ERROR |5       10| A5
+/XMIT |6        9| A4
+   A2 |7        8| A3
+      +----------+
+</pre>
+<p>
+<a name="7411299"></a>
+<h2>7411299</h2>
+8-bit 3-state bidirectional universal shift register with asynchronous
+reset and with separate shift left and shift right serial inputs.  Multiplexed
+parallel I/O.
+<pre>
+    +---+--+---+
+ P0 |1  +--+ 24| Q7
+ P1 |2       23| S0
+ P2 |3       22| S1
+ P3 |4       21| /OE1
+GND |5       20| /OE2
+GND |6 7411  19| VCC
+GND |7  299  18| VCC
+GND |8       17| L
+ P4 |9       16| D
+ P5 |10      15| CLK
+ P6 |11      14| /RST
+ P7 |12      13| Q7
+    +----------+
+</pre>
+<p>
+<a name="7411323"></a>
+<h2>7411323</h2>
+8-bit 3-state bidirectional universal shift register with reset and
+with separate shift left and shift right serial inputs.  Multiplexed
+parallel I/O.
+<pre>
+    +---+--+---+
+ P0 |1  +--+ 24| Q7
+ P1 |2       23| S0
+ P2 |3       22| S1
+ P3 |4       21| /OE1
+GND |5       20| /OE2
+GND |6 7411  19| VCC
+GND |7  323  18| VCC
+GND |8       17| L
+ P4 |9       16| D
+ P5 |10      15| CLK
+ P6 |11      14| /RST
+ P7 |12      13| Q7
+    +----------+
+</pre>
+<p>
+<a name="7411352"></a>
+<h2>7411352</h2>
+8-to-2 line inverting data selector/multiplexer with separate enables.
+<pre>
+     +---+--+---+
+  S0 |1  +--+ 16| 1A0
+  S1 |2       15| 1A1
+ /1Y |3       14| 1A2
+ GND |4 7411  13| 1A3
+ /2Y |5  352  12| VCC
+/1EN |6       11| 2A0
+/2EN |7       10| 2A1
+ 2A3 |8        9| 2A2
+     +----------+
+</pre>
+<p>
+<a name="7411353"></a>
+<h2>7411353</h2>
+8-to-2 line 3-state inverting data selector/multiplexer with separate enables.
+<pre>
+     +---+--+---+
+  S0 |1  +--+ 16| 1A0
+  S1 |2       15| 1A1
+ /1Y |3       14| 1A2
+ GND |4 7411  13| 1A3
+ /2Y |5  353  12| VCC
+/1EN |6       11| 2A0
+/2EN |7       10| 2A1
+ 2A3 |8        9| 2A2
+     +----------+
+</pre>
+<p>
+<a name="7411373"></a>
+<h2>7411373</h2>
+8-bit 3-state transparent latch.
+<pre>
+    +---+--+---+             +---+---+---*---+
+ Q1 |1  +--+ 24| /OE         |/OE| LE| D | Q |
+ Q2 |2       23| D1          +===+===+===*===+
+ Q3 |3       22| D2          | 1 | X | X | Z |
+ Q4 |4       21| D3          | 0 | 0 | X | - |
+GND |5       20| D4          | 0 | 1 | 0 | 0 |
+GND |6 7411  19| VCC         | 0 | 1 | 1 | 1 |
+GND |7  373  18| VCC         +---+---+---*---+
+GND |8       17| D5
+ Q5 |9       16| D6
+ Q6 |10      15| D7
+ Q7 |11      14| D8
+ Q8 |12      13| LE
+    +----------+
+</pre>
+<p>
+<a name="7411374"></a>
+<h2>7411374</h2>
+8-bit 3-state D flip-flop.
+<pre>
+    +---+--+---+             +---+---+---*---+
+ Q1 |1  +--+ 24| /OE         |/OE|CLK| D | Q |
+ Q2 |2       23| D1          +===+===+===*===+
+ Q3 |3       22| D2          | 1 | X | X | Z |
+ Q4 |4       21| D3          | 0 | / | 0 | 0 |
+GND |5       20| D4          | 0 | / | 1 | 1 |
+GND |6 7411  19| VCC         | 0 |!/ | X | - |
+GND |7  374  18| VCC         +---+---+---*---+
+GND |8       17| D5
+ Q5 |9       16| D6
+ Q6 |10      15| D7
+ Q7 |11      14| D8
+ Q8 |12      13| CLK
+    +----------+
+</pre>
+<p>
+<a name="7411377"></a>
+<h2>7411377</h2>
+8-bit D flip-flop with clock enable.
+<pre>
+    +---+--+---+             +----+---+---*---+
+ Q1 |1  +--+ 24| /CLKEN      |/CEN|CLK| D | Q |
+ Q2 |2       23| D1          +====+===+===*===+
+ Q3 |3       22| D2          |  1 | X | X | - |
+ Q4 |4       21| D3          |  0 | / | 0 | 0 |
+GND |5       20| D4          |  0 | / | 1 | 1 |
+GND |6 7411  19| VCC         |  0 |!/ | X | - |
+GND |7  377  18| VCC         +----+---+---*---+
+GND |8       17| D5
+ Q5 |9       16| D6
+ Q6 |10      15| D7
+ Q7 |11      14| D8
+ Q8 |12      13| CLK
+    +----------+
+</pre>
+<p>
+<a name="7411378"></a>
+<h2>7411378</h2>
+6-bit D flip-flop with clock enable.
+<pre>
+    +---+--+---+             +----+---+---*---+
+ Q1 |1  +--+ 20| /CLKEN      |/CEN|CLK| D | Q |
+ Q2 |2       19| D1          +====+===+===*===+
+ Q3 |3       18| D2          |  1 | X | X | - |
+GND |4       17| D3          |  0 | / | 0 | 0 |
+GND |5 7411  16| VCC         |  0 | / | 1 | 1 |
+GND |6  378  15| VCC         |  0 |!/ | X | - |
+GND |7       14| D4          +----+---+---*---+
+ Q4 |8       13| D5
+ Q5 |9       12| D6
+ Q6 |10      11| CLK
+    +----------+
+</pre>
+<p>
+<a name="7411379"></a>
+<h2>7411379</h2>
+4-bit D flip-flop with complementary outputs and clock enable.
+<pre>
+    +---+--+---+             +----+---+---*---+---+
+/Q1 |1  +--+ 20| Q1          |/CEN|CLK| D | Q |/Q |
+ Q2 |2       19| /CLKEN      +====+===+===*===+===+
+/Q2 |3       18| D1          |  1 | X | X | - | - |
+GND |4       17| D2          |  0 | / | 0 | 0 | 1 |
+GND |5 7411  16| VCC         |  0 | / | 1 | 1 | 0 |
+GND |6  379  15| VCC         |  0 |!/ | X | - | - |
+GND |7       14| D3          +----+---+---*---+---+
+ Q3 |8       13| D4
+/Q3 |9       12| CLK
+ Q4 |10      11| /Q4
+    +----------+
+</pre>
+<p>
+<a name="7411478"></a>
+<h2>7411478</h2>
+8-bit 3-state dual-ranking D flip-flop.
+<br>
+Designed to prevent metastable conditions in data synchronization
+applications in which setup and hold times may be violated.
+<pre>
+    +---+--+---+
+ Q1 |1  +--+ 24| /OE
+ Q2 |2       23| D1
+ Q3 |3       22| D2
+ Q4 |4       21| D3
+GND |5       20| D4
+GND |6 7411  19| VCC
+GND |7  478  18| VCC
+GND |8       17| D5
+ Q5 |9       16| D6
+ Q6 |10      15| D7
+ Q7 |11      14| D8
+ Q8 |12      13| CLK
+    +----------+
+</pre>
+<p>
+<a name="7411520"></a>
+<h2>7411520</h2>
+8-bit inverting identity comparator with integrated 20k pull-up resistors
+and enable.
+<pre>
+     +---+--+---+
+  B1 |1  +--+ 20| /EN
+  A1 |2       19| A2
+  B0 |3       18| B2
+  A0 |4       17| A3
+ GND |5  7411 16| B3
+/A=B |6  520  15| VCC
+  B7 |7       14| A4
+  A7 |8       13| B4
+  B6 |9       12| A5
+  A6 |10      11| B5
+     +----------+
+</pre>
+<p>
+<a name="7411521"></a>
+<h2>7411521</h2>
+8-bit inverting identity comparator with enable.
+<pre>
+     +---+--+---+
+  B1 |1  +--+ 20| EN
+  A1 |2       19| A2
+  B0 |3       18| B2
+  A0 |4       17| A3
+ GND |5  7411 16| B3
+/A=B |6  521  15| VCC
+  B7 |7       14| A4
+  A7 |8       13| B4
+  B6 |9       12| A5
+  A6 |10      11| B5
+     +----------+
+</pre>
+<p>
+<a name="7411533"></a>
+<h2>7411533</h2>
+8-bit 3-state inverting transparent latch.
+<pre>
+    +---+--+---+             +---+---+---*---+
+/Q1 |1  +--+ 24| /OE         |/OE| LE| D |/Q |
+/Q2 |2       23| D1          +===+===+===*===+
+/Q3 |3       22| D2          | 1 | X | X | Z |
+/Q4 |4       21| D3          | 0 | 0 | X | - |
+GND |5       20| D4          | 0 | 1 | 0 | 1 |
+GND |6 7411  19| VCC         | 0 | 1 | 1 | 0 |
+GND |7  533  18| VCC         +---+---+---*---+
+GND |8       17| D5
+/Q5 |9       16| D6
+/Q6 |10      15| D7
+/Q7 |11      14| D8
+/Q8 |12      13| CLK
+    +----------+
+</pre>
+<p>
+<a name="7411534"></a>
+<h2>7411534</h2>
+8-bit 3-state inverting D flip-flop.
+<pre>
+    +---+--+---+             +---+---+---*---+
+/Q1 |1  +--+ 24| /OE         |/OE|CLK| D |/Q |
+/Q2 |2       23| D1          +===+===+===*===+
+/Q3 |3       22| D2          | 1 | X | X | Z |
+/Q4 |4       21| D3          | 0 | / | 0 | 1 |
+GND |5       20| D4          | 0 | / | 1 | 0 |
+GND |6 7411  19| VCC         | 0 |!/ | X | - |
+GND |7  534  18| VCC         +---+---+---*---+
+GND |8       17| D5
+/Q5 |9       16| D6
+/Q6 |10      15| D7
+/Q7 |11      14| D8
+/Q8 |12      13| CLK
+    +----------+
+</pre>
+<p>
+<a name="7411543"></a>
+<h2>7411543</h2>
+8-bit 3-state noninverting registered transceiver.
+<pre>
+      +---+--+---+
+/CEBA |1  +--+ 28| /GBA
+   A1 |2       27| /LEBA
+   A2 |3       26| B1
+   A3 |4       25| B2
+   A4 |5       24| B3
+  GND |6       23| B4
+  GND |7  7411 22| VCC
+  GND |8  543  21| VCC
+  GND |9       20| B5
+   A5 |10      19| B6
+   A6 |11      18| B7
+   A7 |12      17| B8
+   A8 |13      16| /LEAB
+/CEAB |14      15| /GAB
+      +----------+
+</pre>
+<p>
+<a name="7411544"></a>
+<h2>7411544</h2>
+8-bit 3-state inverting registered transceiver.
+<pre>
+      +---+--+---+
+/CEBA |1  +--+ 28| /GBA
+   A1 |2       27| /LEBA
+   A2 |3       26| B1
+   A3 |4       25| B2
+   A4 |5       24| B3
+  GND |6       23| B4
+  GND |7  7411 22| VCC
+  GND |8  544  21| VCC
+  GND |9       20| B5
+   A5 |10      19| B6
+   A6 |11      18| B7
+   A7 |12      17| B8
+   A8 |13      16| /LEAB
+/CEAB |14      15| /GAB
+      +----------+
+</pre>
+<p>
+<a name="7411590"></a>
+<h2>7411590</h2>
+8-bit 3-state synchronous binary counter with reset and output registers.
+<br>
+Separate clocks for both counter and storage register, ripple carry output.
+<pre>
+    +---+--+---+
+ Q1 |1  +--+ 20| Q0
+ Q2 |2       19| CCLK
+ Q3 |3       18| /CLKEN
+GND |4       17| /RST
+GND |5 7411  16| VCC
+GND |6  590  15| VCC
+GND |7       14| /OE
+ Q4 |8       13| RCLK
+ Q5 |9       12| /RCO
+ Q6 |10      11| Q7
+    +----------+
+</pre>
+<p>
+<a name="7411620"></a>
+<h2>7411620</h2>
+8-bit 3-state inverting bus transceiver.
+<br>
+Two enable pins control output enables, one active high and one active low.
+<pre>
+    +---+--+---+
+ A1 |1  +--+ 24| GAB
+ A2 |2       23| B1
+ A3 |3       22| B2
+ A4 |4       21| B3
+GND |5       20| B4
+GND |6  7411 19| VCC
+GND |7  620  18| VCC
+GND |8       17| B5
+ A5 |9       16| B6
+ A6 |10      15| B7
+ A7 |11      14| B8
+ A8 |12      13| /GBA
+    +----------+
+</pre>
+<p>
+<a name="7411623"></a>
+<h2>7411623</h2>
+8-bit 3-state noninverting bus transceiver.
+<br>
+Two enable pins control output enables, one active high and one active low.
+<pre>
+    +---+--+---+
+ A1 |1  +--+ 24| GAB
+ A2 |2       23| B1
+ A3 |3       22| B2
+ A4 |4       21| B3
+GND |5       20| B4
+GND |6  7411 19| VCC
+GND |7  623  18| VCC
+GND |8       17| B5
+ A5 |9       16| B6
+ A6 |10      15| B7
+ A7 |11      14| B8
+ A8 |12      13| /GBA
+    +----------+
+</pre>
+<p>
+<a name="7411640"></a>
+<h2>7411640</h2>
+8-bit 3-state inverting bus transceiver.
+<br>
+Enable and direction pins control output enables.
+<pre>
+    +---+--+---+             +---+---*---+---+
+ A1 |1  +--+ 24| DIR         |/EN|DIR| A | B |
+ A2 |2       23| B1          +===+===*===+===+
+ A3 |3       22| B2          | 1 | X | Z | Z |
+ A4 |4       21| B3          | 0 | 0 |/B | Z |
+GND |5       20| B4          | 0 | 1 | Z |/A |
+GND |6  7411 19| VCC         +---+---*---+---+
+GND |7  640  18| VCC
+GND |8       17| B5
+ A5 |9       16| B6
+ A6 |10      15| B7
+ A7 |11      14| B8
+ A8 |12      13| /EN
+    +----------+
+</pre>
+<p>
+<a name="7411643"></a>
+<h2>7411643</h2>
+8-bit 3-state inverting/noninverting bus transceiver.
+<br>
+Enable and direction pins control output enables.
+A to B transfer is inverted, B to A transfer is not inverted.
+<pre>
+    +---+--+---+
+ A1 |1  +--+ 24| DIR
+ A2 |2       23| B1
+ A3 |3       22| B2
+ A4 |4       21| B3
+GND |5       20| B4
+GND |6  7411 19| VCC
+GND |7  643  18| VCC
+GND |8       17| B5
+ A5 |9       16| B6
+ A6 |10      15| B7
+ A7 |11      14| B8
+ A8 |12      13| /OE
+    +----------+
+</pre>
+<p>
+<a name="7411646"></a>
+<h2>7411646</h2>
+8-bit 3-state noninverting registered transceiver.
+<pre>
+    +---+--+---+
+/OE |1  +--+ 28| CAB
+ A1 |2       27| SAB
+ A2 |3       26| B1
+ A3 |4       25| B2
+ A4 |5       24| B3
+GND |6       23| B4
+GND |7  7411 22| VCC
+GND |8  646  21| VCC
+GND |9       20| B5
+ A5 |10      19| B6
+ A6 |11      18| B7
+ A7 |12      17| B8
+ A8 |13      16| CBA
+DIR |14      15| SBA
+    +----------+
+</pre>
+<p>
+<a name="7411648"></a>
+<h2>7411648</h2>
+8-bit 3-state inverting registered transceiver.
+<pre>
+    +---+--+---+
+/OE |1  +--+ 28| CAB
+ A1 |2       27| SAB
+ A2 |3       26| B1
+ A3 |4       25| B2
+ A4 |5       24| B3
+GND |6       23| B4
+GND |7  7411 22| VCC
+GND |8  648  21| VCC
+GND |9       20| B5
+ A5 |10      19| B6
+ A6 |11      18| B7
+ A7 |12      17| B8
+ A8 |13      16| CBA
+DIR |14      15| SBA
+    +----------+
+</pre>
+<p>
+<a name="7411651"></a>
+<h2>7411651</h2>
+8-bit 3-state inverting registered transceiver.
+<pre>
+     +---+--+---+
+ GAB |1  +--+ 28| CAB
+  A1 |2       27| SAB
+  A2 |3       26| B1
+  A3 |4       25| B2
+  A4 |5       24| B3
+ GND |6       23| B4
+ GND |7  7411 22| VCC
+ GND |8  651  21| VCC
+ GND |9       20| B5
+  A5 |10      19| B6
+  A6 |11      18| B7
+  A7 |12      17| B8
+  A8 |13      16| CBA
+/GBA |14      15| SBA
+     +----------+
+</pre>
+<p>
+<a name="7411652"></a>
+<h2>7411652</h2>
+8-bit 3-state noninverting registered transceiver.
+<pre>
+     +---+--+---+
+ GAB |1  +--+ 28| CAB
+  A1 |2       27| SAB
+  A2 |3       26| B1
+  A3 |4       25| B2
+  A4 |5       24| B3
+ GND |6       23| B4
+ GND |7  7411 22| VCC
+ GND |8  652  21| VCC
+ GND |9       20| B5
+  A5 |10      19| B6
+  A6 |11      18| B7
+  A7 |12      17| B8
+  A8 |13      16| CBA
+/GBA |14      15| SBA
+     +----------+
+</pre>
+<p>
+<a name="7411657"></a>
+<h2>7411657</h2>
+8-bit 3-state noninverting bus transceiver with parity generator/checker.
+<br>
+Enable and direction pins control output enables.
+<pre>
+       +---+--+---+
+  P/B8 |1  +--+ 28| /OE
+    A0 |2       27|
+    A1 |3       26| B0
+    A2 |4       25| B1
+    A3 |5       24| B2
+   GND |6       23| B3
+   GND |7 7411  22| VCC
+   GND |8  657  21| VCC
+   GND |9       20| B4
+    A4 |10      19| B5
+    A5 |11      18| B6
+    A6 |12      17| B7
+    A7 |13      16| E//O
+/ERROR |14      15| DIR
+       +----------+
+</pre>
+<p>
+<a name="7411802"></a>
+<h2>7411802</h2>
+Triple 4-input OR/NOR gates with buffered complementary outputs.
+<pre>
+    +---+--+---+             +---+---+---+---*---+---+
+ 1A |1  +--+ 24| 1B          | A | B | C | D | Y |/Y |     Y = A+B+C+D
+ 1Y |2       23| 1C          +===+===+===+===*===+===+
+/1Y |3       22| 1D          | 0 | 0 | 0 | 0 | 0 | 1 |
+ 2Y |4       21| 2A          | 0 | 0 | 0 | 1 | 1 | 0 |
+GND |5       20| 2B          | 0 | 0 | 1 | X | 1 | 0 |
+GND |6 7411  19| VCC         | 0 | 1 | X | X | 1 | 0 |
+GND |7  802  18| VCC         | 1 | X | X | X | 1 | 0 |
+GND |8       17| 2C          +---+---+---+---*---+---+
+/2Y |9       16| 2D
+ 3Y |10      15| 3A
+/3Y |11      14| 3B
+ 3D |12      13| 3C
+    +----------+
+</pre>
+<p>
+<a name="7411810"></a>
+<h2>7411810</h2>
+Quad 2-input XNOR gates with buffered output.
+<pre>
+    +---+--+---+             +---+---*---+           _     _ _
+ 1A |1  +--+ 16| 1B          | A | B |/Y |      Y = A$B = (A.B)+(A.B)
+/1Y |2       15| 2A          +===+===*===+
+/2Y |3       14| 2B          | 0 | 0 | 1 |
+GND |4  7411 13| VCC         | 0 | 1 | 0 |
+GND |5   810 12| VCC         | 1 | 0 | 0 |
+/3Y |6       11| 3A          | 1 | 1 | 1 |
+/4Y |7       10| 3B          +---+---*---+
+ 4B |8        9| 4A
+    +----------+
+</pre>
+<p>
+<a name="7411821"></a>
+<h2>7411821</h2>
+10-bit 3-state D flip-flop.
+<pre>
+    +---+--+---+             +---+---+---*---+
+ Q1 |1  +--+ 28| /OE         |/OE|CLK| D | Q |
+ Q2 |2       27| D1          +===+===+===*===+
+ Q3 |3       26| D2          | 1 | X | X | Z |
+ Q4 |4       25| D3          | 0 | / | 0 | 0 |
+ Q5 |5       24| D4          | 0 | / | 1 | 1 |
+GND |6       23| D5          | 0 |!/ | X | - |
+GND |7 7411  22| VCC         +---+---+---*---+
+GND |8  821  21| VCC
+GND |9       20| D6
+ Q6 |10      19| D7
+ Q7 |11      18| D8
+ Q8 |12      17| D9
+ Q9 |13      16| D10
+Q10 |14      15| CLK
+    +----------+
+</pre>
+<p>
+<a name="7411825"></a>
+<h2>7411825</h2>
+8-bit 3-state D flip-flop with three output enables, clock enable and reset.
+<pre>
+     +---+--+---+
+/OE1 |1  +--+ 28| /OE2
+  Q1 |2       27| /OE3
+  Q2 |3       26| D1
+  Q3 |4       25| D2
+  Q4 |5       24| D3
+ GND |6       23| D4
+ GND |7 7411  22| VCC
+ GND |8  825  21| VCC
+ GND |9       20| D5
+  Q5 |10      19| D6
+  Q6 |11      18| D7
+  Q7 |12      17| D8
+  Q8 |13      16| /CLKEN
+/RST |14      15| CLK
+     +----------+
+</pre>
+<p>
+<a name="7411827"></a>
+<h2>7411827</h2>
+10-bit 3-state noninverting buffer/line driver.
+<pre>
+    +---+--+---+
+ Y1 |1  +--+ 28| /OE1
+ Y2 |2       27| A1
+ Y3 |3       26| A2
+ Y4 |4       25| A3
+ Y5 |5       24| A4
+GND |6       23| A5
+GND |7  7411 22| VCC
+GND |8  827  21| VCC
+GND |9       20| A6
+ Y6 |10      19| A7
+ Y7 |11      18| A8
+ Y8 |12      17| A9
+ Y9 |13      16| A10
+Y10 |14      15| /OE2
+    +----------+
+</pre>
+<p>
+<a name="7411828"></a>
+<h2>7411828</h2>
+10-bit 3-state inverting buffer/line driver.
+<pre>
+     +---+--+---+
+ /Y1 |1  +--+ 28| /OE1
+ /Y2 |2       27| A1
+ /Y3 |3       26| A2
+ /Y4 |4       25| A3
+ /Y5 |5       24| A4
+ GND |6       23| A5
+ GND |7  7411 22| VCC
+ GND |8  828  21| VCC
+ GND |9       20| A6
+ /Y6 |10      19| A7
+ /Y7 |11      18| A8
+ /Y8 |12      17| A9
+ /Y9 |13      16| A10
+/Y10 |14      15| /OE2
+     +----------+
+</pre>
+<p>
+<a name="7411862"></a>
+<h2>7411862</h2>
+8-bit 3-state inverting bus transceiver.
+<pre>
+    +---+--+---+
+ A1 |1  +--+ 28| /GAB
+ A2 |2       27| B1
+ A3 |3       26| B2
+ A4 |4       25| B3
+ A5 |5       24| B4
+GND |6       23| B5
+GND |7  7411 22| VCC
+GND |8  862  21| VCC
+GND |9       20| B6
+ A6 |10      19| B7
+ A7 |11      18| B8
+ A8 |12      17| B9
+ A9 |13      16| B10
+A10 |14      15| /GBA
+    +----------+
+</pre>
+<p>
+<a name="7411873"></a>
+<h2>7411873</h2>
+Dual 4-bit 3-state transparent latch with reset.
+<pre>
+    +---+--+---+             +----+---+---+---*---+
+1LE |1  +--+ 28| /1OE        |/RST|/OE| LE| D | Q |
+1Q1 |2       27| /1RST       +====+===+===+===*===+
+1Q2 |3       26| 1D1         |  0 | 0 | X | X | 0 |
+1Q3 |4       25| 1D2         |  X | 1 | X | X | Z |
+1Q4 |5       24| 1D3         |  1 | 0 | 0 | X | - |
+GND |6       23| 1D4         |  1 | 0 | 1 | 0 | 0 |
+GND |7 7411  22| VCC         |  1 | 0 | 1 | 1 | 1 |
+GND |8  873  21| VCC         +----+---+---+---*---+
+GND |9       20| 2D1
+2Q1 |10      19| 2D2
+2Q2 |11      18| 2D3
+2Q3 |12      17| 2D4
+2Q4 |13      16| /2RST
+2LE |14      15| /2OE
+    +----------+
+</pre>
+<p>
+<a name="7411874"></a>
+<h2>7411874</h2>
+Dual 4-bit 3-state D flip-flop with reset.
+<pre>
+     +---+--+---+            +----+---+---+---*---+
+1CLK |1  +--+ 28| /1OE       |/RST|/OE|CLK| D | Q |
+ 1Q1 |2       27| /1RST      +====+===+===+===*===+
+ 1Q2 |3       26| 1D1        |  0 | 1 | X | X | Z |
+ 1Q3 |4       25| 1D2        |  X | 0 | X | X | 0 |
+ 1Q4 |5       24| 1D3        |  1 | 0 | / | 0 | 0 |
+ GND |6       23| 1D4        |  1 | 0 | / | 1 | 1 |
+ GND |7 7411  22| VCC        |  1 | 0 |!/ | X | - |
+ GND |8  873  21| VCC        +----+---+---+---*---+
+ GND |9       20| 2D1
+ 2Q1 |10      19| 2D2
+ 2Q2 |11      18| 2D3
+ 2Q3 |12      17| 2D4
+ 2Q4 |13      16| /2RST
+2CLK |14      15| /2OE
+     +----------+
+</pre>
+<p>
+<a name="7411898"></a>
+<h2>7411898</h2>
+10-bit serial-in parallel-out shift register with asynchronous reset
+and two AND gated serial inputs.
+<pre>
+    +---+--+---+
+ Q2 |1  +--+ 20| Q1
+ Q3 |2       19| Q0
+ Q4 |3       18| /RST
+GND |4       17| D
+GND |5 7411  16| VCC
+GND |6  898  15| VCC
+GND |7       14| E
+ Q5 |8       13| CLK
+ Q6 |9       12| Q9
+ Q7 |10      11| Q8
+    +----------+
+</pre>
+<p>
+<hr><a href="index.html">Back to the GIICM index.</a>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <link rel="stylesheet" type="text/css" href="../frank/frank.css">
+   <meta name="CVS" content="$Id$">
+   <meta name="description" content="GIICM">
+   <title>GIICM</title>
+</head><body><h1>Optoelectronics.</h1>
+<p>
+<hr>
+<a name="CNY17"></a>
+<h2>CNY17</h2>
+Optocoupler.
+<pre>
+  +---+--+---+
+A |1  +--+  6| B
+K |2 CNY17  5| C
+  |3        4| E
+  +----------+
+</pre>
+<p>
+<a name="HDSP-L101"></a>
+<a name="HDSP-L201"></a>
+<a name="HDSP-5401"></a>
+<a name="TC07-11"></a>
+<h2>HDSP-L101, HDSP-L201, HDSP-5401, TC07-11</h2>
+Common row anode 5x7 dot matrix LED display.
+<pre>
+     +---+--+---+
+Col1 |1  +--+ 12| Row1
+Row3 |2       11| Row2
+Col2 |3  5x7  10| Col3
+Row5 |4  LED   9| Row4
+Row6 |5        8| Col5
+Row7 |6        7| Col4
+     +----------+
+</pre>
+<p>
+<a name="HDSP-L103"></a>
+<a name="HDSP-L203"></a>
+<a name="HDSP-5403"></a>
+<h2>HDSP-L103, HDSP-L203, HDSP-5403</h2>
+Common row cathode 5x7 dot matrix LED display.
+<pre>
+     +---+--+---+
+Row1 |1  +--+ 12| Col5
+Row2 |2       11| Row3
+Col2 |3  5x7  10| Row4
+Col1 |4  LED   9| Col4
+Row6 |5        8| Row5
+Row7 |6        7| Col3
+     +----------+
+</pre>
+<p>
+<a name="TIL111"></a>
+<a name="TIL112"></a>
+<a name="TIL116"></a>
+<a name="TIL117"></a>
+<a name="TIL118"></a>
+<a name="TIL124"></a>
+<a name="TIL125"></a>
+<a name="TIL126"></a>
+<h2>TIL111, TIL112, TIL116, TIL117, TIL118, TIL124, TIL125, TIL126</h2>
+Optocoupler.
+<pre>
+  +---+--+---+
+A |1  +--+  6| B
+K |2        5| C
+  |3        4| E
+  +----------+
+</pre>
+<p>
+<a name="TIL113"></a>
+<a name="TIL119"></a>
+<h2>TIL113, TIL119</h2>
+Optocoupler with darlington transistor output configuration.
+<pre>
+  +---+--+---+
+A |1  +--+  6| B
+K |2        5| C
+  |3        4| E
+  +----------+
+</pre>
+<p>
+<a name="TIL192"></a>
+<h2>TIL192</h2>
+Dual optocouplers.
+<pre>
+   +---+--+---+
+1A |1  +--+  8| 1C
+1K |2        7| 1E
+2A |3 TIL192 6| 2C
+2K |4        5| 2E
+   +----------+
+</pre>
+<p>
+<a name="TIL193"></a>
+<h2>TIL193</h2>
+Quad optocouplers.
+<pre>
+   +---+--+---+
+1A |1  +--+ 16| 1C
+1K |2       15| 1E
+2A |3       14| 2C
+2K |4  TIL  13| 2E
+3A |5  193  12| 3C
+3K |6       11| 3E
+4A |7       10| 4C
+4K |8        9| 4E
+   +----------+
+</pre>
+<p>
+<a name="TIL198"></a>
+<h2>TIL198</h2>
+Dual optocouplers with darlington outputs.
+<pre>
+   +---+--+---+
+1A |1  +--+  8| 1C
+1K |2        7| 1E
+2A |3 TIL198 6| 2C
+2K |4        5| 2E
+   +----------+
+</pre>
+<p>
+<a name="TIL199"></a>
+<h2>TIL199</h2>
+Quad optocouplers with darlington outputs.
+<pre>
+   +---+--+---+
+1A |1  +--+ 16| 1C
+1K |2       15| 1E
+2A |3       14| 2C
+2K |4  TIL  13| 2E
+3A |5  199  12| 3C
+3K |6       11| 3E
+4A |7       10| 4C
+4K |8        9| 4E
+   +----------+
+</pre>
+<p>
+<a name="TIL308"></a>
+<h2>TIL308</h2>
+7-segment display with built-in latch and driver, left hand decimal point.
+<br>
+Displays 0-9,A,C,E,F with D as blank, and B as dash/minus sign.
+<pre>
+    +---+--+---+
+ Qb |1  +--+ 16| VCC
+ Qc |2       15| D0
+ Qd |3       14| Qdp
+ Qa |4  TIL  13| /LT
+/LE |5  308  12| Ddp
+ D2 |6       11| /BL
+ D3 |7       10| D1
+GND |8        9|
+    +----------+
+</pre>
+<p>
+<a name="TIL311"></a>
+<h2>TIL311</h2>
+Dot-matrix hexadecimal display with built-in latch and driver, left and
+right hand decimal point.
+<br>
+VDD is the LED supply, usually the same as VCC and must be 5V.
+DPL and DPR are direct connections to the catodes of the decimal points
+(no drivers, no current limiter in between).
+<pre>
+    +---+--+---+
+VCC |1  +--+ 14| VDD
+ D1 |2       13| D2
+ D0 |3       12| D3
+DPL |4  TIL    |
+/LE |5  311  10| DPR
+    |          |
+GND |7        8| BL
+    +----------+
+</pre>
+<p>
+<a name="HDSP-M401"></a>
+<a name="HDSP-4501"></a>
+<a name="HDSP-5101"></a>
+<h2>HDSP-M401, HDSP-4501, HDSP-5101</h2>
+Common row anode 5x7 dot matrix LED display.
+<pre>
+     +-----+--+-----+
+Col1 |1    +--+   18| Row1
+     |              |
+Row3 |3           16| Row2
+Col2 |4           15| Col4
+     |   5x7 LED    |
+Row5 |6  matrix   13| Row4
+     |              |
+Row6 |8           11| Col5
+Row7 |9           10| Col3
+     +--------------+
+</pre>
+<p>
+<a name="HDSP-M403"></a>
+<a name="HDSP-4503"></a>
+<a name="HDSP-5103"></a>
+<h2>HDSP-M403, HDSP-4503, HDSP-5103</h2>
+Common row cathode 5x7 dot matrix LED display.
+<pre>
+     +-----+--+-----+
+Row1 |1    +--+   18| Col5
+     |              |
+Col3 |3           16| Row2
+Row3 |4           15| Row4
+     |   5x7 LED    |
+Col1 |6  matrix   13| Row5
+     |              |
+Col2 |8           11| Col4
+Row7 |9           10| Row6
+     +--------------+
+</pre>
+<p>
+<a name="4N25"></a>
+<h2>4N25</h2>
+Optocoupler.
+<pre>
+  +---+--+---+
+A |1  +--+  6| B
+K |2  4N25  5| C
+  |3        4| E
+  +----------+
+</pre>
+<p>
+<a name="CNY74-2"></a>
+<h2>CNY74-2</h2>
+Dual optocouplers.
+<pre>
+   +---+--+---+
+1A |1  +--+  8| 1E
+1K |2  CNY   7| 1C
+2K |3  74-2  6| 2C
+2A |4        5| 2E
+   +----------+
+</pre>
+<p>
+<a name="CNY74-4"></a>
+<h2>CNY74-4</h2>
+Quad optocouplers.
+<pre>
+   +---+--+---+
+1A |1  +--+ 16| 1E
+1K |2       15| 1C
+2K |3       14| 2C
+2A |4  CNY  13| 2E
+3A |5  74-4 12| 3E
+3K |6       11| 3C
+4K |7       10| 4C
+4A |8        9| 4E
+   +----------+
+</pre>
+<p>
+<a name="HDSP-4401"></a>
+<a name="HDSP-M401"></a>
+<a name="HDSP-4501"></a>
+<a name="HDSP-5101"></a>
+<h2>HDSP-4401, HDSP-M401, HDSP-4501, HDSP-5101</h2>
+Common row anode 5x7 dot matrix LED display.
+<pre>
+     +-----+--+-----+
+Col1 |1    +--+   18| Row1
+     |              |
+Row3 |3           16| Row2
+Col2 |4           15| Col4
+     |   5x7 LED    |
+Row5 |6  matrix   13| Row4
+     |              |
+Row6 |8           11| Col5
+Row7 |9           10| Col3
+     +--------------+
+</pre>
+<p>
+<a name="HDSP-4403"></a>
+<a name="HDSP-M403"></a>
+<a name="HDSP-4503"></a>
+<a name="HDSP-5103"></a>
+<h2>HDSP-4403, HDSP-M403, HDSP-4503, HDSP-5103</h2>
+Common row cathode 5x7 dot matrix LED display.
+<pre>
+     +-----+--+-----+
+Row1 |1    +--+   18| Col5
+     |              |
+Col3 |3           16| Row2
+Row3 |4           15| Row4
+     |   5x7 LED    |
+Col1 |6  matrix   13| Row5
+     |              |
+Col2 |8           11| Col4
+Row7 |9           10| Row6
+     +--------------+
+</pre>
+<p>
+<a name="HDSP-4701"></a>
+<a name="HDSP-L101"></a>
+<a name="HDSP-L201"></a>
+<a name="HDSP-5401"></a>
+<a name="TC07-11"></a>
+<h2>HDSP-4701, HDSP-L101, HDSP-L201, HDSP-5401, TC07-11</h2>
+Common row anode 5x7 dot matrix LED display.
+<pre>
+     +---+--+---+
+Col1 |1  +--+ 12| Row1
+Row3 |2       11| Row2
+Col2 |3  5x7  10| Col3
+Row5 |4  LED   9| Row4
+Row6 |5        8| Col5
+Row7 |6        7| Col4
+     +----------+
+</pre>
+<p>
+<a name="HDSP-4703"></a>
+<a name="HDSP-L103"></a>
+<a name="HDSP-L203"></a>
+<a name="HDSP-5403"></a>
+<h2>HDSP-4703, HDSP-L103, HDSP-L203, HDSP-5403</h2>
+Common row cathode 5x7 dot matrix LED display.
+<pre>
+     +---+--+---+
+Row1 |1  +--+ 12| Col5
+Row2 |2       11| Row3
+Col2 |3  5x7  10| Row4
+Col1 |4  LED   9| Col4
+Row6 |5        8| Row5
+Row7 |6        7| Col3
+     +----------+
+</pre>
+<p>
+<a name="MOC5010"></a>
+<h2>MOC5010</h2>
+Linear amplifier optocoupler.
+<pre>
+  +---+--+---+
+A |1  +--+  6| VCC
+K |2  5010  5| GND
+  |3        4| OUT
+  +----------+
+</pre>
+<p>
+<a name="6N135"></a>
+<h2>6N135</h2>
+Optocoupler with IR diode and transistor output configuration.
+<pre>
+  +---+--+---+
+  |1  +--+  8| VCC
+A |2        7| B
+K |3  6N135 6| C
+  |4        5| E
+  +----------+
+</pre>
+<p>
+<a name="6N138"></a>
+<a name="6N139"></a>
+<h2>6N138, 6N139</h2>
+Optocoupler with IR diode and darlington transistor output configuration.
+<pre>
+  +---+--+---+
+  |1  +--+  8| VCC
+A |2        7| B
+K |3  6N138 6| C
+  |4        5| GND
+  +----------+
+</pre>
+<p>
+<a name="MCT9001"></a>
+<h2>MCT9001</h2>
+Dual optocouplers.
+<pre>
+   +---+--+---+
+1A |1  +--+  8| 1C
+1K |2  MCT   7| 1E
+2A |3  9001  6| 2C
+2K |4        5| 2E
+   +----------+
+</pre>
+<p>
+<hr><a href="index.html">Back to the GIICM index.</a>
+</body>
+</html>

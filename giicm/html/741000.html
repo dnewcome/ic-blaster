@@ -1,0 +1,153 @@
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <link rel="stylesheet" type="text/css" href="../frank/frank.css">
+   <meta name="CVS" content="$Id$">
+   <meta name="description" content="GIICM">
+   <title>GIICM</title>
+</head><body><h1>7400 series TTL IC's:  741000...743999</h1>
+<p>
+<hr>
+<a name="741000"></a>
+<h2>741000</h2>
+Quad 2-input NAND gates with buffered output.
+<pre>
+    +---+--+---+             +---+---*---+           __
+ 1A |1  +--+ 14| VCC         | A | B |/Y |      /Y = AB
+ 1B |2       13| 4B          +===+===*===+
+/1Y |3  7410 12| 4A          | 0 | 0 | 1 |
+ 2A |4   00  11| /4Y         | 0 | 1 | 1 |
+ 2B |5       10| 3B          | 1 | 0 | 1 |
+/2Y |6        9| 3A          | 1 | 1 | 0 |
+GND |7        8| /3Y         +---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="741004"></a>
+<h2>741004</h2>
+Hex inverters with buffered output.
+<pre>
+    +---+--+---+             +---*---+               _
+ 1A |1  +--+ 14| VCC         | A |/Y |          /Y = A
+/1Y |2       13| 6A          +===*===+
+ 2A |3  7410 12| /6Y         | 0 | Z |
+/2Y |4   04  11| 5A          | 1 | 0 |
+ 3A |5       10| /5Y         +---*---+
+/3Y |6        9| 4A
+GND |7        8| /4Y
+    +----------+
+</pre>
+<p>
+<a name="741005"></a>
+<h2>741005</h2>
+Hex open-collector inverters with buffered output.
+<pre>
+    +---+--+---+             +---*---+               _
+ 1A |1  +--+ 14| VCC         | A |/Y |          /Y = A
+/1Y |2       13| 6A          +===*===+
+ 2A |3  7410 12| /6Y         | 0 | Z |
+/2Y |4   05  11| 5A          | 1 | 0 |
+ 3A |5       10| /5Y         +---*---+
+/3Y |6        9| 4A
+GND |7        8| /4Y
+    +----------+
+</pre>
+<p>
+<a name="741032"></a>
+<h2>741032</h2>
+Quad 2-input OR gates with buffered output.
+<pre>
+    +---+--+---+             +---+---*---+
+ 1A |1  +--+ 14| VCC         | A | B | Y |       Y = A+B
+ 1B |2       13| 4B          +===+===*===+
+ 1Y |3  7410 12| 4A          | 0 | 0 | 0 |
+ 2A |4   32  11| 4Y          | 0 | 1 | 1 |
+ 2B |5       10| 3B          | 1 | 0 | 1 |
+ 2Y |6        9| 3A          | 1 | 1 | 1 |
+GND |7        8| 3Y          +---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="743351"></a>
+<h2>743351</h2>
+10-tap noninverting delay lines (20, 50 or 100ns total delay).
+<pre>
+    +---+--+---+
+  A |1  +--+ 16| VCC
+    |2       15|
+    |3       14| Y1
+ Y2 |4  743  13| Y3
+ Y4 |5  351  12| Y5
+ Y6 |6       11| Y7
+ Y8 |7       10| Y9
+GND |8        9| Y10
+    +----------+
+</pre>
+<p>
+<a name="744374"></a>
+<h2>744374</h2>
+8-bit 3-state dual-ranking D flip flop.
+<br>
+Designed to prevent metastable conditions in data synchronization
+applications in which setup and hold times may be violated.
+<pre>
+    +---+--+---+
+ Q1 |1  +--+ 20| D1
+ Q2 |2       19| D2
+ Q3 |3       18| D3
+ Q4 |4       17| D4
+GND |5  744  16| VCC
+ Q5 |6  374  15| D5
+ Q6 |7       14| D6
+ Q7 |8       13| D7
+ Q8 |9       12| D8
+/OE |10      11| CLK
+    +----------+
+</pre>
+<p>
+<a name="747001"></a>
+<h2>747001</h2>
+Quad 2-input AND gates with schmitt-trigger inputs.
+<br>
+0.8V typical input hysteresis at VCC=+5V.
+<pre>
+    +---+--+---+             +---+---*---+
+ 1A |1  +--+ 14| VCC         | A | B | Y |       Y = AB
+ 1B |2       13| 4B          +===+===*===+
+ 1Y |3  747  12| 4A          | 0 | 0 | 0 |
+ 2A |4  001  11| 4Y          | 0 | 1 | 0 |
+ 2B |5       10| 3B          | 1 | 0 | 0 |
+ 2Y |6        9| 3A          | 1 | 1 | 1 |
+GND |7        8| 3Y          +---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="747266"></a>
+<h2>747266</h2>
+Quad 2-input XNOR gates.
+<pre>
+    +---+--+---+             +---+---*---+          _     _ _
+ 1A |1  +--+ 14| VCC         | A | B |/Y |     Y = A$B = (A.B)+(A.B)
+ 1B |2       13| 4B          +===+===*===+
+/1Y |3  747  12| 4A          | 0 | 0 | 1 |
+ 2A |4  266  11| /4Y         | 0 | 1 | 0 |
+ 2B |5       10| 3B          | 1 | 0 | 0 |
+/2Y |6        9| 3A          | 1 | 1 | 1 |
+GND |7        8| /3Y         +---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="748003"></a>
+<h2>748003</h2>
+Dual 2-input NAND gates.
+<pre>
+    +---+--+---+                 __
+ 1A |1  +--+  8| VCC        /Y = AB
+ 1B |2  748   7| 2B
+/1Y |3  003   6| 2A
+GND |4        5| /2Y
+    +----------+
+</pre>
+<p>
+<hr><a href="index.html">Back to the GIICM index.</a>
+</body>
+</html>

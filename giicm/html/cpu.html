@@ -1,0 +1,1227 @@
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <link rel="stylesheet" type="text/css" href="../frank/frank.css">
+   <meta name="CVS" content="$Id$">
+   <meta name="description" content="GIICM">
+   <title>GIICM</title>
+</head><body><h1>Central Processing Units and Microcontrollers</h1>
+<p>
+Most common microprocessors and microcontrollers used in home-designed
+computers.
+<p>
+<hr>
+<a name="Z80CPU"></a>
+<a name="Z8400"></a>
+<h2>Z80CPU, Z8400</h2>
+Zilog Z80 CPU.
+<pre>
+      +-----+--+-----+
+  A11 |1    +--+   40| A10
+  A12 |2           39| A9
+  A13 |3           38| A8
+  A14 |4           37| A7
+  A15 |5           36| A6
+  CLK |6           35| A5
+   D4 |7           34| A4
+   D3 |8           33| A3
+   D5 |9           32| A2
+   D6 |10   Z8400  31| A1
+  VCC |11    CPU   30| A0
+   D2 |12          29| GND
+   D7 |13          28| /RFSH
+   D0 |14          27| /M1
+   D1 |15          26| /RST
+ /INT |16          25| /BUSRQ
+ /NMI |17          24| /WAIT
+/HALT |18          23| /BUSAK
+/MREQ |19          22| /WR
+/IORQ |20          21| /RD
+      +--------------+
+</pre>
+<p>
+<a name="Z180"></a>
+<h2>Z180</h2>
+Integrated Z80-series microprocessor.
+<pre>
+PLCC68
++---------------+---------------+---------------+---------------+
+| 10 /INT0      | 27 A12        | 44 D7         | 61 /RFSH      |
+| 11 /INT1      | 28 A13        | 45 /RTS0      | 62 /IORQ      |
+| 12 /INT2      | 29 A14        | 46 /CTS0      | 63 /MREQ      |
+| 13 ST         | 30 A15        | 47 /DCD0      | 64 E          |
+| 14 A0         | 31 A16        | 48 TxD0       | 65 /M1        |
+| 15 A1         | 32 A17        | 49 RxD0       | 66 /WR        |
+| 16 A2         | 33 A18 TOUT   | 50 CLK0 /DREQ0| 67 /RD        |
+| 17 A3         | 34 VCC        | 51 TxD1       | 68 CLK        |
+| 18            | 35            | 52            |  1 GND        |
+| 19 A4         | 36 GND        | 53 RxD1       |  2 GND        |
+| 20 A5         | 37 D0         | 54 CLK1 /TEND0|  3 X0         |
+| 21 A6         | 38 D1         | 55 TxDS       |  4 X1         |
+| 22 A7         | 39 D2         | 56 RxDS /CTS1 |  5 /WAIT      |
+| 23 A8         | 40 D3         | 57 CLKS       |  6 /BUSACK    |
+| 24 A9         | 41 D4         | 58 /DREQ1     |  7 /BUSREQ    |
+| 25 A10        | 42 D5         | 59 /TEND1     |  8 /RST       |
+| 26 A11        | 43 D6         | 60 /HALT      |  9 /NMI       |
++---------------+---------------+---------------+---------------+
+</pre>
+<p>
+<a name="PIC1652"></a>
+<a name="PIC1654"></a>
+<a name="PIC1656"></a>
+<a name="PIC1658"></a>
+<h2>PIC1652, PIC1654, PIC1656, PIC1658 (SSOP)</h2>
+MicroChip PIC microcontrollers.
+<pre>
+      +---+--+---+
+  RA2 |1  +--+ 20| RA1
+  RA3 |2       19| RA0
+T0CKI |3       18| X1
+ /RST |4  PIC  17| X0
+  GND |5 16C52 16| VCC
+  GND |6 16C54 15| VCC
+  RB0 |7 16C55 14| RB7
+  RB1 |8 16C58 13| RB6
+  RB2 |9       12| RB5
+  RB3 |10      11| RB4
+      +----------+
+</pre>
+<p>
+<a name="PIC1652"></a>
+<a name="PIC1654"></a>
+<a name="PIC1656"></a>
+<a name="PIC1658"></a>
+<h2>PIC1652, PIC1654, PIC1656, PIC1658 (DIP,SO)</h2>
+MicroChip PIC microcontrollers.
+<pre>
+      +---+--+---+
+  RA2 |1  +--+ 18| RA1
+  RA3 |2       17| RA0
+T0CKI |3  PIC  16| X1
+ /RST |4 16C52 15| X0
+  GND |5 16C54 14| VCC
+  RB0 |6 16C56 13| RB7
+  RB1 |7 16C58 12| RB6
+  RB2 |8       11| RB5
+  RB3 |9       10| RB4
+      +----------+
+</pre>
+<p>
+<a name="PIC1655"></a>
+<a name="PIC1657"></a>
+<h2>PIC1655, PIC1657 (SSOP)</h2>
+MicroChip PIC microcontrollers.
+<pre>
+      +---+--+---+
+  GND |1  +--+ 28| /RST
+T0CKI |2       27| X1
+  VCC |3       26| X0
+  VCC |4       25| RC7
+  RA0 |5       24| RC6
+  RA1 |6  PIC  23| RC5
+  RA2 |7 16C55 22| RC4
+  RA3 |8 16C57 21| RC3
+  RB0 |9       20| RC2
+  RB1 |10      19| RC1
+  RB2 |11      18| RC0
+  RB3 |12      17| RB7
+  RB4 |13      16| RB6
+  GND |14      15| RB5
+      +----------+
+</pre>
+<p>
+<a name="PIC1655"></a>
+<a name="PIC1657"></a>
+<h2>PIC1655, PIC1657 (DIP,SO)</h2>
+MicroChip PIC microcontrollers.
+<pre>
+      +---+--+---+
+T0CKI |1  +--+ 28| /RST
+  VCC |2       27| X1
+      |3       26| X0
+  GND |4       25| RC7
+      |5       24| RC6
+  RA0 |6  PIC  23| RC5
+  RA1 |7 16C55 22| RC4
+  RA2 |8 16C57 21| RC3
+  RA3 |9       20| RC2
+  RB0 |10      19| RC1
+  RB1 |11      18| RC0
+  RB2 |12      17| RB7
+  RB3 |13      16| RB6
+  RB4 |14      15| RB5
+      +----------+
+</pre>
+<p>
+<a name="PIC1661"></a>
+<h2>PIC1661 (DIP,SO)</h2>
+MicroChip PIC microcontrollers.
+<pre>
+     +---+--+---+
+ RA2 |1  +--+ 18| RA1
+ RA3 |2       17| RA0
+ RA4 |3       16| X1
+/RST |4  PIC  15| X0
+ GND |5 16C61 14| VCC
+ RB0 |6 16C71 13| RB7
+ RB1 |7 16C84 12| RB6
+ RB2 |8       11| RB5
+ RB3 |9       10| RB4
+     +----------+
+</pre>
+<p>
+<a name="PIC1662"></a>
+<a name="PIC1663"></a>
+<a name="PIC1673"></a>
+<h2>PIC1662, PIC1663, PIC1673 (DIP,SO)</h2>
+MicroChip PIC microcontrollers.
+<pre>
+     +---+--+---+
+/RST |1  +--+ 28| RB7
+ RA0 |2       27| RB6
+ RA1 |3       26| RB5
+ RA2 |4       25| RB4
+ RA3 |5       24| RB3
+ RA4 |6  PIC  23| RB2
+ RA5 |7 16C62 22| RB1
+ GND |8 16C63 21| RB0
+  X1 |9 16C73 20| VCC
+  X0 |10      19| GND
+ RC0 |11      18| RC7
+ RC1 |12      17| RC6
+ RC2 |13      16| RC5
+ RC3 |14      15| RC4
+     +----------+
+</pre>
+<p>
+<a name="PIC1664"></a>
+<a name="PIC1665"></a>
+<a name="PIC1674"></a>
+<h2>PIC1664, PIC1665, PIC1674 (DIP)</h2>
+MicroChip PIC microcontrollers.
+<pre>
+     +-----+--+-----+
+/RST |1    +--+   40| RB7
+ RA0 |2           39| RB6
+ RA1 |3           38| RB5
+ RA2 |4           37| RB4
+ RA3 |5           36| RB3
+ RA4 |6           35| RB2
+ RA5 |7           34| RB1
+ RE0 |8           33| RB0
+ RE1 |9    PIC    32| VCC
+ RE2 |10  16C64   31| GND
+ VCC |11  16C65   30| RD7
+ GND |12  16C74   29| RD6
+  X1 |13          28| RD5
+  X0 |14          27| RD4
+ RC0 |15          26| RC7
+ RC1 |16          25| RC6
+ RC2 |17          24| RC5
+ RC3 |18          23| RC4
+ RD0 |19          22| RD3
+ RD1 |20          21| RD2
+     +--------------+
+</pre>
+<p>
+<a name="PIC16C64"></a>
+<a name="PIC16C65"></a>
+<a name="PIC16C74"></a>
+<h2>PIC16C64, PIC16C65, PIC16C74 (PLCC)</h2>
+MicroChip PIC microcontrollers.
+<pre>
+PLCC44
++---------------+---------------+---------------+---------------+
+|  7 RA4        | 18 RC1        | 29 RC7        | 40            |
+|  8 RA5        | 19 RC2        | 30 RD4        | 41 RB4        |
+|  9 RE0        | 20 RC3        | 31 RD5        | 42 RB5        |
+| 10 RE1        | 21 RD0        | 32 RD6        | 43 RB6        |
+| 11 RE2        | 22 RD1        | 33 RD7        | 44 RB7        |
+| 12 VCC        | 23 RD2        | 34 GND        |  1            |
+| 13 GND        | 24 RD3        | 35 VCC        |  2 /RST       |
+| 14 X1         | 25 RC4        | 36 RB0        |  3 RA0        |
+| 15 X0         | 26 RC5        | 37 RB1        |  4 RA1        |
+| 16 RC0        | 27 RC6        | 38 RB2        |  5 RA2        |
+| 17            | 28            | 39 RB3        |  6 RA3        |
++---------------+---------------+---------------+---------------+
+</pre>
+<p>
+<a name="PIC16C64"></a>
+<a name="PIC16C65"></a>
+<a name="PIC16C74"></a>
+<h2>PIC16C64, PIC16C65, PIC16C74 (MQFP)</h2>
+MicroChip PIC microcontrollers.
+<pre>
+MQFP44
++---------------+---------------+---------------+---------------+
+|  1 RC7        | 12            | 23 RA4        | 34            |
+|  2 RD4        | 13            | 24 RA5        | 35 RC1        |
+|  3 RD5        | 14 RB4        | 25 RE0        | 36 RC2        |
+|  4 RD6        | 15 RB5        | 26 RE1        | 37 RC3        |
+|  5 RD7        | 16 RB6        | 27 RE2        | 38 RD0        |
+|  6 GND        | 17 RB7        | 28 VCC        | 39 RD1        |
+|  7 VCC        | 18 /RST       | 29 GND        | 40 RD2        |
+|  8 RB0        | 19 RA0        | 30 X1         | 41 RD3        |
+|  9 RB1        | 20 RA1        | 31 X0         | 42 RC4        |
+| 10 RB2        | 21 RA2        | 32 RC0        | 43 RC5        |
+| 11 RB3        | 22 RA3        | 33            | 44 RC6        |
++---------------+---------------+---------------+---------------+
+</pre>
+<p>
+<a name="PIC1671"></a>
+<a name="PIC1684"></a>
+<h2>PIC1671, PIC1684 (DIP,SO)</h2>
+MicroChip PIC microcontrollers.
+<pre>
+     +---+--+---+
+ RA2 |1  +--+ 18| RA1
+ RA3 |2       17| RA0
+ RA4 |3       16| X1
+/RST |4  PIC  15| X0
+ GND |5 16C61 14| VCC
+ RB0 |6 16C71 13| RB7
+ RB1 |7 16C84 12| RB6
+ RB2 |8       11| RB5
+ RB3 |9       10| RB4
+     +----------+
+</pre>
+<p>
+<a name="6309"></a>
+<a name="6809"></a>
+<a name="6809"></a>
+<h2>6309, 6809, 6809</h2>
+Motorola 6809 and Hitachi 63C09 CPU.
+<pre>
+      +-----+--+-----+
+  GND |1    +--+   40| /HALT
+ /NMI |2           39| X1
+ /IRQ |3           38| X0
+/FIRQ |4           37| /RST
+   BS |5           36| MRDY
+   BA |6           35| Q
+  VCC |7           34| E
+   A0 |8           33| /BREQ
+   A1 |9           32| R//W
+   A2 |10  MC6809  31| D0
+   A3 |11  H63C09  30| D1
+   A4 |12          29| D2
+   A5 |13          28| D3
+   A6 |14          27| D4
+   A7 |15          26| D5
+   A8 |16          25| D6
+   A9 |17          24| D7
+  A10 |18          23| A15
+  A11 |19          22| A14
+  A12 |20          21| A13
+      +--------------+
+</pre>
+<p>
+<a name="6502"></a>
+<a name="65SC02"></a>
+<h2>6502, 65SC02</h2>
+MOS Technologies 6502 CPU.
+<pre>
+      +-----+--+-----+
+  GND |1    +--+   40| /RST
+  RDY |2           39| P2
+   P1 |3           38| /SO
+ /IRQ |4           37| P0 (in)
+      |5           36|
+ /NMI |6           35|
+ SYNC |7           34| R//W
+  VCC |8           33| D0
+   A0 |9           32| D1
+   A1 |10   6502   31| D2
+   A2 |11  65SC02  30| D3
+   A3 |12          29| D4
+   A4 |13          28| D5
+   A5 |14          27| D6
+   A6 |15          26| D7
+   A7 |16          25| A15
+   A8 |17          24| A14
+   A9 |18          23| A13
+  A10 |19          22| A12
+  A11 |20          21| GND
+      +--------------+
+</pre>
+<p>
+<a name="6802"></a>
+<h2>6802</h2>
+Motorola 6802 CPU.
+<pre>
+      +-----+--+-----+
+  GND |1    +--+   40| /RST
+/HALT |2           39| X1
+   MR |3           38| X0
+ /IRQ |4           37| E
+  VMA |5           36| RAMEN
+ /NMI |6           35| VCC_RAM
+   BA |7           34| R//W
+  VCC |8           33| D0
+   A0 |9           32| D1
+   A1 |10    MC    31| D2
+   A2 |11   6802   30| D3
+   A3 |12          29| D4
+   A4 |13          28| D5
+   A5 |14          27| D6
+   A6 |15          26| D7
+   A7 |16          25| A15
+   A8 |17          24| A14
+   A9 |18          23| A13
+  A10 |19          22| A12
+  A11 |20          21| GND
+      +--------------+
+</pre>
+<p>
+<a name="8031"></a>
+<a name="8032"></a>
+<h2>8031, 8032 (PLCC)</h2>
+Intel 8051-series microcontroller.
+<pre>
+PLCC44
++---------------+---------------+---------------+---------------+
+|  7 P1.5 CEX2  | 18 P3.6 /WR   | 29 P2.5 A13   | 40 P0.3 AD3   |
+|  8 P1.6 CEX3  | 19 P3.7 /RD   | 30 P2.6 A14   | 41 P0.2 AD2   |
+|  9 P1.7 CEX4  | 20 X0         | 31 P2.7 A15   | 42 P0.1 AD1   |
+| 10 RST        | 21 X1         | 32 /PSEN      | 43 P0.0 AD0   |
+| 11 P3.0 RxD   | 22 GND        | 33 ALE /PROG  | 44 VCC        |
+| 12            | 23            | 34            |  1            |
+| 13 P3.1 TxD   | 24 P2.0 A8    | 35 /EA VPP    |  2 P1.0 T2    |
+| 14 P3.2 /INT0 | 25 P2.1 A9    | 36 P0.7 AD7   |  3 P1.1 T2EX  |
+| 15 P3.3 /INT1 | 26 P2.2 A10   | 37 P0.6 AD6   |  4 P1.2 ECI   |
+| 16 P3.4 T0    | 27 P2.3 A11   | 38 P0.5 AD5   |  5 P1.3 CEX0  |
+| 17 P3.5 T1    | 28 P2.4 A12   | 39 P0.4 AD4   |  6 P1.4 CEX1  |
++---------------+---------------+---------------+---------------+
+</pre>
+<p>
+<a name="8031"></a>
+<a name="8032"></a>
+<h2>8031, 8032 (DIP)</h2>
+Intel 8051-series microcontroller.
+<pre>
+           +-----+--+-----+
+   T2 P1.0 |1    +--+   40| VCC
+ T2EX P1.1 |2           39| P0.0 AD0
+  ECI P1.2 |3           38| P0.1 AD1
+ CEX0 P1.3 |4           37| P0.2 AD2
+ CEX1 P1.4 |5           36| P0.3 AD3
+ CEX2 P1.5 |6           35| P0.4 AD4
+ CEX3 P1.6 |7           34| P0.5 AD5
+ CEX4 P1.7 |8           33| P0.6 AD6
+       RST |9           32| P0.7 AD7
+  RxD P3.0 |10   8051   31| /EA VPP
+  TxD P3.1 |11  series  30| ALE /PROG
+/INT0 P3.2 |12          29| /PSEN
+/INT1 P3.3 |13          28| P2.7 A15
+   T0 P3.4 |14          27| P2.6 A14
+   T1 P3.5 |15          26| P2.5 A13
+  /WR P3.6 |16          25| P2.4 A12
+  /RD P3.7 |17          24| P2.3 A11
+        X0 |18          23| P2.2 A10
+        X1 |19          22| P2.1 A9
+       GND |20          21| P2.0 A8
+           +--------------+
+</pre>
+<p>
+<a name="8035"></a>
+<a name="8039"></a>
+<a name="8040"></a>
+<a name="8048"></a>
+<a name="8049"></a>
+<a name="8050"></a>
+<h2>8035, 8039, 8040, 8048, 8049, 8050 (PLCC)</h2>
+Intel 8048-series microcontroller.
+<pre>
+PLCC44
++---------------+---------------+---------------+---------------+
+|  7 /INT       | 18 DB4        | 29 VCCRAM VPP | 40 P2.5       |
+|  8 EA         | 19 DB5        | 30 P1.0       | 41 P2.6       |
+|  9 /RD        | 20 DB6        | 31 P1.1       | 42 P2.7       |
+| 10 /PSEN      | 21 DB7        | 32 P1.2       | 43 T1         |
+| 11 /WR        | 22 GND        | 33 P1.3       | 44 VCC        |
+| 12            | 23            | 34            |  1            |
+| 13 ALE        | 24 P2.0       | 35 P1.4       |  2 T0         |
+| 14 DB0        | 25 P2.1       | 36 P1.5       |  3 X1         |
+| 15 DB1        | 26 P2.2       | 37 P1.6       |  4 X0         |
+| 16 DB2        | 27 P2.3       | 38 P1.7       |  5 /RST       |
+| 17 DB3        | 28 PROG       | 39 P2.4       |  6 /SS        |
++---------------+---------------+---------------+---------------+
+</pre>
+<p>
+<a name="8035"></a>
+<a name="8039"></a>
+<a name="8040"></a>
+<a name="8048"></a>
+<a name="8049"></a>
+<a name="8050"></a>
+<h2>8035, 8039, 8040, 8048, 8049, 8050 (DIP)</h2>
+Intel 8048-series microcontroller.
+<pre>
+      +-----+--+-----+
+   T0 |1    +--+   40| VCC
+   X1 |2           39| T1
+   X0 |3           38| P2.7
+ /RST |4           37| P2.6
+  /SS |5           36| P2.5
+ /INT |6           35| P2.4
+   EA |7           34| P1.7
+  /RD |8           33| P1.6
+/PSEN |9           32| P1.5
+  /WR |10   8048   31| P1.4
+  ALE |11  series  30| P1.3
+  DB0 |12          29| P1.2
+  DB1 |13          28| P1.1
+  DB2 |14          27| P1.0
+  DB3 |15          26| VCC_RAM VPP
+  DB4 |16          25| PROG
+  DB5 |17          24| P2.3
+  DB6 |18          23| P2.2
+  DB7 |19          22| P2.1
+  GND |20          21| P2.0
+      +--------------+
+</pre>
+<p>
+<a name="8051"></a>
+<a name="8052"></a>
+<a name="8054"></a>
+<a name="8058"></a>
+<h2>8051, 8052, 8054, 8058 (DIP)</h2>
+Intel 8051-series microcontroller.
+<pre>
+           +-----+--+-----+
+   T2 P1.0 |1    +--+   40| VCC
+ T2EX P1.1 |2           39| P0.0 AD0
+  ECI P1.2 |3           38| P0.1 AD1
+ CEX0 P1.3 |4           37| P0.2 AD2
+ CEX1 P1.4 |5           36| P0.3 AD3
+ CEX2 P1.5 |6           35| P0.4 AD4
+ CEX3 P1.6 |7           34| P0.5 AD5
+ CEX4 P1.7 |8           33| P0.6 AD6
+       RST |9           32| P0.7 AD7
+  RxD P3.0 |10   8051   31| /EA VPP
+  TxD P3.1 |11  series  30| ALE /PROG
+/INT0 P3.2 |12          29| /PSEN
+/INT1 P3.3 |13          28| P2.7 A15
+   T0 P3.4 |14          27| P2.6 A14
+   T1 P3.5 |15          26| P2.5 A13
+  /WR P3.6 |16          25| P2.4 A12
+  /RD P3.7 |17          24| P2.3 A11
+        X0 |18          23| P2.2 A10
+        X1 |19          22| P2.1 A9
+       GND |20          21| P2.0 A8
+           +--------------+
+</pre>
+<p>
+<a name="8051"></a>
+<a name="8052"></a>
+<h2>8051, 8052 (PLCC)</h2>
+Intel 8051-series microcontroller.
+<pre>
+PLCC44
++---------------+---------------+---------------+---------------+
+|  7 P1.5 CEX2  | 18 P3.6 /WR   | 29 P2.5 A13   | 40 P0.3 AD3   |
+|  8 P1.6 CEX3  | 19 P3.7 /RD   | 30 P2.6 A14   | 41 P0.2 AD2   |
+|  9 P1.7 CEX4  | 20 X0         | 31 P2.7 A15   | 42 P0.1 AD1   |
+| 10 RST        | 21 X1         | 32 /PSEN      | 43 P0.0 AD0   |
+| 11 P3.0 RxD   | 22 GND        | 33 ALE /PROG  | 44 VCC        |
+| 12            | 23            | 34            |  1            |
+| 13 P3.1 TxD   | 24 P2.0 A8    | 35 /EA VPP    |  2 P1.0 T2    |
+| 14 P3.2 /INT0 | 25 P2.1 A9    | 36 P0.7 AD7   |  3 P1.1 T2EX  |
+| 15 P3.3 /INT1 | 26 P2.2 A10   | 37 P0.6 AD6   |  4 P1.2 ECI   |
+| 16 P3.4 T0    | 27 P2.3 A11   | 38 P0.5 AD5   |  5 P1.3 CEX0  |
+| 17 P3.5 T1    | 28 P2.4 A12   | 39 P0.4 AD4   |  6 P1.4 CEX1  |
++---------------+---------------+---------------+---------------+
+</pre>
+<p>
+<a name="8054"></a>
+<a name="8058"></a>
+<h2>8054, 8058 (PLCC)</h2>
+Intel 8051-series microcontroller.
+<pre>
+PLCC44
++---------------+---------------+---------------+---------------+
+|  7 P1.5 CEX2  | 18 P3.6 /WR   | 29 P2.5 A13   | 40 P0.3 AD3   |
+|  8 P1.6 CEX3  | 19 P3.7 /RD   | 30 P2.6 A14   | 41 P0.2 AD2   |
+|  9 P1.7 CEX4  | 20 X0         | 31 P2.7 A15   | 42 P0.1 AD1   |
+| 10 RST        | 21 X1         | 32 /PSEN      | 43 P0.0 AD0   |
+| 11 P3.0 RxD   | 22 GND        | 33 ALE /PROG  | 44 VCC        |
+| 12            | 23            | 34            |  1 GND        |
+| 13 P3.1 TxD   | 24 P2.0 A8    | 35 /EA VPP    |  2 P1.0 T2    |
+| 14 P3.2 /INT0 | 25 P2.1 A9    | 36 P0.7 AD7   |  3 P1.1 T2EX  |
+| 15 P3.3 /INT1 | 26 P2.2 A10   | 37 P0.6 AD6   |  4 P1.2 ECI   |
+| 16 P3.4 T0    | 27 P2.3 A11   | 38 P0.5 AD5   |  5 P1.3 CEX0  |
+| 17 P3.5 T1    | 28 P2.4 A12   | 39 P0.4 AD4   |  6 P1.4 CEX1  |
++---------------+---------------+---------------+---------------+
+</pre>
+<p>
+<a name="8085"></a>
+<h2>8085</h2>
+Intel 8085 CPU.
+<pre>
+       +-----+--+-----+
+    X1 |1    +--+   40| VCC
+    X2 |2           39| HOLD
+RSTOUT |3           38| HLDA
+   SOD |4           37| CLK
+   SID |5           36| /RSTIN
+  TRAP |6           35| RDY
+ RST75 |7           34| IO//M
+ RST65 |8           33| S1
+ RST55 |9           32| /RD
+  INTR |10   8085   31| /WR
+ /INTA |11          30| ALE
+   AD0 |12          29| S0
+   AD1 |13          28| A15
+   AD2 |14          27| A14
+   AD3 |15          26| A13
+   AD4 |16          25| A12
+   AD5 |17          24| A11
+   AD6 |18          23| A10
+   AD7 |19          22| A9
+   GND |20          21| A8
+       +--------------+
+</pre>
+<p>
+<a name="8086"></a>
+<h2>8086</h2>
+Intel 8086 CPU.
+<pre>
+     +-----+--+-----+
+ GND |1    +--+   40| VCC
+AD14 |2           39| AD15
+AD13 |3           38| A16  S3
+AD12 |4           37| A17  S4
+AD11 |5           36| A18  S5
+AD10 |6           35| A19  S6
+ AD9 |7           34| /BHE S7
+ AD8 |8           33| MN//MX
+ AD7 |9           32| /RD
+ AD6 |10          31| HOLD  /RQ//GT0
+ AD5 |11   8086   30| HLDA  /RQ//GT1
+ AD4 |12          29| /WR   /LOCK
+ AD3 |13          28| M//IO /S2
+ AD2 |14          27| DT//R /S1
+ AD1 |15          26| /DEN  /S0
+ AD0 |16          25| ALE   QS0
+ NMI |17          24| /INTA QS1
+INTR |18          23| /TEST
+ CLK |19          22| READY
+ GND |20          21| RST
+     +--------------+
+</pre>
+<p>
+<a name="8088"></a>
+<h2>8088</h2>
+Intel 8088 CPU.
+<pre>
+     +-----+--+-----+
+ GND |1    +--+   40| VCC
+ A14 |2           39| A15
+ A13 |3           38| A16 S3
+ A12 |4           37| A17 S4
+ A11 |5           36| A18 S5
+ A10 |6           35| A19 S6
+  A9 |7           34| /SSO
+  A8 |8           33| MN//MX
+ AD7 |9           32| /RD
+ AD6 |10          31| HOLD  /RQ//GT0
+ AD5 |11   8088   30| HLDA  /RQ//GT1
+ AD4 |12          29| /WR   /LOCK
+ AD3 |13          28| M//IO /S2
+ AD2 |14          27| DT//R /S1
+ AD1 |15          26| /DEN  /S0
+ AD0 |16          25| ALE   QS0
+ NMI |17          24| /INTA QS1
+INTR |18          23| /TEST
+ CLK |19          22| READY
+ GND |20          21| RST
+     +--------------+
+</pre>
+<p>
+<a name="8096"></a>
+<a name="8396"></a>
+<a name="8796"></a>
+<a name="8797"></a>
+<h2>8096, 8396, 8796, 8797</h2>
+Intel 8096-series 16-bit microcontrollers.
+<pre>
+PLCC68
++---------------+---------------+---------------+---------------+
+| 10 P0.5 ACH5  | 27 HSI3 HSO5  | 44 P2.3 T2CLK | 61 /RD        |
+| 11 P0.4 ACH4  | 28 HSO0 /PACT | 45 P4.7 AD15  | 62 ALE /ADV   |
+| 12 AGND       | 29 HSO1       | 46 P4.6 AD14  | 63 INST       |
+| 13 Vref       | 30 P1.5 /BREQ | 47 P4.5 AD13  | 64 BUSWIDTH   |
+| 14 Vpd        | 31 P1.6 /HLDA | 48 P4.4 AD12  | 65 CLK        |
+| 15 P2.2 EXTINT| 32 P1.7 /HOLD | 49 P4.3 AD11  | 66 X0         |
+| 16 /RST       | 33 P2.6       | 50 P4.2 AD10  | 67 X1         |
+| 17 P2.1 RxD   | 34 HSO2       | 51 P4.1 AD9   | 68 GND        |
+| 18 P2.0 TxD   | 35 HSO3       | 52 P4.0 AD8   |  1 VCC        |
+| 19 P1.0       | 36 GND        | 53 P3.7 AD7   |  2 /EA        |
+| 20 P1.1       | 37 VPP        | 54 P3.6 AD6   |  3 NMI        |
+| 21 P1.2       | 38 P2.7 T2CAP | 55 P3.5 AD5   |  4 P0.3 ACH3  |
+| 22 P1.3       | 39 P2.5 PWM   | 56 P3.4 AD4   |  5 P0.1 ACH1  |
+| 23 P1.4       | 40 /WRL /WR   | 57 P3.3 AD3   |  6 P0.0 ACH0  |
+| 24 HSI0       | 41 /WRH /BHE  | 58 P3.2 AD2   |  7 P0.2 ACH2  |
+| 25 HSI1       | 42 P2.4 T2RST | 59 P3.1 AD1   |  8 P0.6 ACH6  |
+| 26 HSI2 HSO4  | 43 READY      | 60 P3.0 AD0   |  9 P0.7 ACH7  |
++---------------+---------------+---------------+---------------+
+</pre>
+<p>
+<a name="8097"></a>
+<a name="8397"></a>
+<a name="8797"></a>
+<h2>8097, 8397, 8797</h2>
+Intel 8096-series 16-bit microcontrollers.
+<pre>
+PLCC68
++---------------+---------------+---------------+---------------+
+| 10 P0.5 ACH5  | 27 HSI3 HSO5  | 44 P2.3 T2CLK | 61 /RD        |
+| 11 P0.4 ACH4  | 28 HSO0 /PACT | 45 P4.7 AD15  | 62 ALE /ADV   |
+| 12 AGND       | 29 HSO1       | 46 P4.6 AD14  | 63 INST       |
+| 13 Vref       | 30 P1.5 /BREQ | 47 P4.5 AD13  | 64 BUSWIDTH   |
+| 14 Vpd        | 31 P1.6 /HLDA | 48 P4.4 AD12  | 65 CLK        |
+| 15 P2.2 EXTINT| 32 P1.7 /HOLD | 49 P4.3 AD11  | 66 X0         |
+| 16 /RST       | 33 P2.6       | 50 P4.2 AD10  | 67 X1         |
+| 17 P2.1 RxD   | 34 HSO2       | 51 P4.1 AD9   | 68 GND        |
+| 18 P2.0 TxD   | 35 HSO3       | 52 P4.0 AD8   |  1 VCC        |
+| 19 P1.0       | 36 GND        | 53 P3.7 AD7   |  2 /EA        |
+| 20 P1.1       | 37 VPP        | 54 P3.6 AD6   |  3 NMI        |
+| 21 P1.2       | 38 P2.7 T2CAP | 55 P3.5 AD5   |  4 P0.3 ACH3  |
+| 22 P1.3       | 39 P2.5 PWM   | 56 P3.4 AD4   |  5 P0.1 ACH1  |
+| 23 P1.4       | 40 /WRL /WR   | 57 P3.3 AD3   |  6 P0.0 ACH0  |
+| 24 HSI0       | 41 /WRH /BHE  | 58 P3.2 AD2   |  7 P0.2 ACH2  |
+| 25 HSI1       | 42 P2.4 T2RST | 59 P3.1 AD1   |  8 P0.6 ACH6  |
+| 26 HSI2 HSO4  | 43 READY      | 60 P3.0 AD0   |  9 P0.7 ACH7  |
++---------------+---------------+---------------+---------------+
+</pre>
+<p>
+<a name="MAB8401"></a>
+<a name="MAB8411"></a>
+<a name="MAB8421"></a>
+<a name="MAB8441"></a>
+<a name="MAB8461"></a>
+<h2>MAB8401, MAB8411, MAB8421, MAB8441, MAB8461</h2>
+Philips 8-bit microcontrollers (based on 8051 series).
+<br>
+The MAB8401 has a 28-pin piggyback socket for a 2732/2764 EPROM.
+<pre>
+         +-----+--+-----+
+    P2.2 |1    +--+   28| VCC
+    P2.3 |2           27| P2.1
+    SCLK |3           26| P2.0
+    P0.0 |4           25| P1.7
+    P0.1 |5           24| P1.6
+    P0.2 |6           23| P1.5
+    P0.3 |7           22| P1.4
+    P0.4 |8  MAB84x1  21| P1.3
+    P0.5 |9           20| P1.2
+    P0.6 |10          19| P1.1
+    P0.7 |11          18| P1.0
+/INT /T0 |12          17| RESET
+      T1 |13          16| X2
+     GND |14          15| X1
+         +--------------+
+</pre>
+<p>
+<a name="Z8600"></a>
+<h2>Z8600</h2>
+Zilog Z8-series microcontroller.
+<pre>
+       +-----+--+-----+
+   VCC |1    +--+   28| P3.6
+    X2 |2           27| P3.1
+    X1 |3           26| P2.5
+  /RST |4           25| P2.4
+   /DS |5           24| P2.3
+  P3.5 |6           23| P2.2
+   GND |7           22| P2.1
+  P0.0 |8   Z8600   21| P1.7
+  P0.1 |9           20| P1.6
+  P0.2 |10          19| P1.5
+  P0.3 |11          18| P1.4
+  P0.4 |12          17| P1.3
+  P0.5 |13          16| P1.2
+  P1.0 |14          15| P1.1
+       +--------------+
+</pre>
+<p>
+<a name="8748"></a>
+<a name="8749"></a>
+<h2>8748, 8749 (DIP)</h2>
+Intel 8048-series microcontroller.
+<pre>
+      +-----+--+-----+
+   T0 |1    +--+   40| VCC
+   X1 |2           39| T1
+   X0 |3           38| P2.7
+ /RST |4           37| P2.6
+  /SS |5           36| P2.5
+ /INT |6           35| P2.4
+   EA |7           34| P1.7
+  /RD |8           33| P1.6
+/PSEN |9           32| P1.5
+  /WR |10   8048   31| P1.4
+  ALE |11  series  30| P1.3
+  DB0 |12          29| P1.2
+  DB1 |13          28| P1.1
+  DB2 |14          27| P1.0
+  DB3 |15          26| VCC_RAM VPP
+  DB4 |16          25| PROG
+  DB5 |17          24| P2.3
+  DB6 |18          23| P2.2
+  DB7 |19          22| P2.1
+  GND |20          21| P2.0
+      +--------------+
+</pre>
+<p>
+<a name="8748"></a>
+<a name="8749"></a>
+<h2>8748, 8749 (PLCC)</h2>
+Intel 8048-series microcontroller.
+<pre>
+PLCC44
++---------------+---------------+---------------+---------------+
+|  7 /INT       | 18 DB4        | 29 VCCRAM VPP | 40 P2.5       |
+|  8 EA         | 19 DB5        | 30 P1.0       | 41 P2.6       |
+|  9 /RD        | 20 DB6        | 31 P1.1       | 42 P2.7       |
+| 10 /PSEN      | 21 DB7        | 32 P1.2       | 43 T1         |
+| 11 /WR        | 22 GND        | 33 P1.3       | 44 VCC        |
+| 12            | 23            | 34            |  1            |
+| 13 ALE        | 24 P2.0       | 35 P1.4       |  2 T0         |
+| 14 DB0        | 25 P2.1       | 36 P1.5       |  3 X1         |
+| 15 DB1        | 26 P2.2       | 37 P1.6       |  4 X0         |
+| 16 DB2        | 27 P2.3       | 38 P1.7       |  5 /RST       |
+| 17 DB3        | 28 PROG       | 39 P2.4       |  6 /SS        |
++---------------+---------------+---------------+---------------+
+</pre>
+<p>
+<a name="8751"></a>
+<a name="8752"></a>
+<h2>8751, 8752 (PLCC)</h2>
+Intel 8051-series microcontroller.
+<pre>
+PLCC44
++---------------+---------------+---------------+---------------+
+|  7 P1.5 CEX2  | 18 P3.6 /WR   | 29 P2.5 A13   | 40 P0.3 AD3   |
+|  8 P1.6 CEX3  | 19 P3.7 /RD   | 30 P2.6 A14   | 41 P0.2 AD2   |
+|  9 P1.7 CEX4  | 20 X0         | 31 P2.7 A15   | 42 P0.1 AD1   |
+| 10 RST        | 21 X1         | 32 /PSEN      | 43 P0.0 AD0   |
+| 11 P3.0 RxD   | 22 GND        | 33 ALE /PROG  | 44 VCC        |
+| 12            | 23            | 34            |  1            |
+| 13 P3.1 TxD   | 24 P2.0 A8    | 35 /EA VPP    |  2 P1.0 T2    |
+| 14 P3.2 /INT0 | 25 P2.1 A9    | 36 P0.7 AD7   |  3 P1.1 T2EX  |
+| 15 P3.3 /INT1 | 26 P2.2 A10   | 37 P0.6 AD6   |  4 P1.2 ECI   |
+| 16 P3.4 T0    | 27 P2.3 A11   | 38 P0.5 AD5   |  5 P1.3 CEX0  |
+| 17 P3.5 T1    | 28 P2.4 A12   | 39 P0.4 AD4   |  6 P1.4 CEX1  |
++---------------+---------------+---------------+---------------+
+</pre>
+<p>
+<a name="8751"></a>
+<a name="8752"></a>
+<a name="8754"></a>
+<a name="8758"></a>
+<h2>8751, 8752, 8754, 8758 (DIP)</h2>
+Intel 8051-series microcontroller.
+<pre>
+           +-----+--+-----+
+   T2 P1.0 |1    +--+   40| VCC
+ T2EX P1.1 |2           39| P0.0 AD0
+  ECI P1.2 |3           38| P0.1 AD1
+ CEX0 P1.3 |4           37| P0.2 AD2
+ CEX1 P1.4 |5           36| P0.3 AD3
+ CEX2 P1.5 |6           35| P0.4 AD4
+ CEX3 P1.6 |7           34| P0.5 AD5
+ CEX4 P1.7 |8           33| P0.6 AD6
+       RST |9           32| P0.7 AD7
+  RxD P3.0 |10   8051   31| /EA VPP
+  TxD P3.1 |11  series  30| ALE /PROG
+/INT0 P3.2 |12          29| /PSEN
+/INT1 P3.3 |13          28| P2.7 A15
+   T0 P3.4 |14          27| P2.6 A14
+   T1 P3.5 |15          26| P2.5 A13
+  /WR P3.6 |16          25| P2.4 A12
+  /RD P3.7 |17          24| P2.3 A11
+        X0 |18          23| P2.2 A10
+        X1 |19          22| P2.1 A9
+       GND |20          21| P2.0 A8
+           +--------------+
+</pre>
+<p>
+<a name="8754"></a>
+<a name="8758"></a>
+<h2>8754, 8758 (PLCC)</h2>
+Intel 8051-series microcontroller.
+<pre>
+PLCC44
++---------------+---------------+---------------+---------------+
+|  7 P1.5 CEX2  | 18 P3.6 /WR   | 29 P2.5 A13   | 40 P0.3 AD3   |
+|  8 P1.6 CEX3  | 19 P3.7 /RD   | 30 P2.6 A14   | 41 P0.2 AD2   |
+|  9 P1.7 CEX4  | 20 X0         | 31 P2.7 A15   | 42 P0.1 AD1   |
+| 10 RST        | 21 X1         | 32 /PSEN      | 43 P0.0 AD0   |
+| 11 P3.0 RxD   | 22 GND        | 33 ALE /PROG  | 44 VCC        |
+| 12            | 23            | 34            |  1 GND        |
+| 13 P3.1 TxD   | 24 P2.0 A8    | 35 /EA VPP    |  2 P1.0 T2    |
+| 14 P3.2 /INT0 | 25 P2.1 A9    | 36 P0.7 AD7   |  3 P1.1 T2EX  |
+| 15 P3.3 /INT1 | 26 P2.2 A10   | 37 P0.6 AD6   |  4 P1.2 ECI   |
+| 16 P3.4 T0    | 27 P2.3 A11   | 38 P0.5 AD5   |  5 P1.3 CEX0  |
+| 17 P3.5 T1    | 28 P2.4 A12   | 39 P0.4 AD4   |  6 P1.4 CEX1  |
++---------------+---------------+---------------+---------------+
+</pre>
+<p>
+<a name="PIC12508"></a>
+<a name="PIC12509"></a>
+<h2>PIC12508, PIC12509 (DIP,SO)</h2>
+MicroChip PIC microcontrollers.
+<pre>
+         +---+--+---+
+     VCC |1  +--+  8| GND
+  X1/GP5 |2 12C508 7| GP0
+  X0/GP4 |3 12C509 6| GP1
+/RST/GP3 |4        5| GP2/T0CKI
+         +----------+
+</pre>
+<p>
+<a name="PIC16620"></a>
+<a name="PIC16621"></a>
+<a name="PIC16622"></a>
+<h2>PIC16620, PIC16621, PIC16622 (SSOP)</h2>
+MicroChip PIC microcontrollers.
+<pre>
+     +---+--+---+
+ RA2 |1  +--+ 20| RA1
+ RA3 |2       19| RA0
+ RA4 |3       18| X1
+/RST |4  PIC  17| X0
+ GND |5 16620 16| VCC
+ GND |6 16621 15| VCC
+ RB0 |7 16622 14| RB7
+ RB1 |8       13| RB6
+ RB2 |9       12| RB5
+ RB3 |10      11| RB4
+     +----------+
+</pre>
+<p>
+<a name="PIC16620"></a>
+<a name="PIC16621"></a>
+<a name="PIC16622"></a>
+<h2>PIC16620, PIC16621, PIC16622 (DIP,SO)</h2>
+MicroChip PIC microcontrollers.
+<pre>
+     +---+--+---+
+ RA2 |1  +--+ 18| RA1
+ RA3 |2       17| RA0
+ RA4 |3       16| X1
+/RST |4  PIC  15| X0
+ GND |5 16620 14| VCC
+ RB0 |6 16621 13| RB7
+ RB1 |7 16622 12| RB6
+ RB2 |8       11| RB5
+ RB3 |9       10| RB4
+     +----------+
+</pre>
+<p>
+<a name="64180"></a>
+<h2>64180</h2>
+Integrated Z80-series microprocessor.
+<pre>
+PLCC68
++---------------+---------------+---------------+---------------+
+| 10 /INT0      | 27 A12        | 44 D7         | 61 /RFSH      |
+| 11 /INT1      | 28 A13        | 45 /RTS0      | 62 /IORQ      |
+| 12 /INT2      | 29 A14        | 46 /CTS0      | 63 /MREQ      |
+| 13 ST         | 30 A15        | 47 /DCD0      | 64 E          |
+| 14 A0         | 31 A16        | 48 TxD0       | 65 /M1        |
+| 15 A1         | 32 A17        | 49 RxD0       | 66 /WR        |
+| 16 A2         | 33 A18 TOUT   | 50 CLK0 /DREQ0| 67 /RD        |
+| 17 A3         | 34 VCC        | 51 TxD1       | 68 CLK        |
+| 18            | 35            | 52            |  1 GND        |
+| 19 A4         | 36 GND        | 53 RxD1       |  2 GND        |
+| 20 A5         | 37 D0         | 54 CLK1 /TEND0|  3 X0         |
+| 21 A6         | 38 D1         | 55 TxDS       |  4 X1         |
+| 22 A7         | 39 D2         | 56 RxDS /CTS1 |  5 /WAIT      |
+| 23 A8         | 40 D3         | 57 CLKS       |  6 /BUSACK    |
+| 24 A9         | 41 D4         | 58 /DREQ1     |  7 /BUSREQ    |
+| 25 A10        | 42 D5         | 59 /TEND1     |  8 /RST       |
+| 26 A11        | 43 D6         | 60 /HALT      |  9 /NMI       |
++---------------+---------------+---------------+---------------+
+</pre>
+<p>
+<a name="68000"></a>
+<a name="68010"></a>
+<h2>68000, 68010 (PLCC)</h2>
+Motorola 16/32-bit microprocessor.
+<pre>
+PLCC68
++---------------+---------------+---------------+---------------+
+| 10 /DTACK     | 27 /IPL0      | 44 A13        | 61 D12        |
+| 11 /BG        | 28 FC2        | 45 A14        | 62 D11        |
+| 12 /BGACK     | 29 FC1        | 46 A15        | 63 D10        |
+| 13 /BR        | 30 FC0        | 47 A16        | 64 D9         |
+| 14 VCC        | 31            | 48 A17        | 65 D8         |
+| 15 CLK        | 32 A1         | 49 A18        | 66 D7         |
+| 16 GND        | 33 A2         | 50 A19        | 67 D6         |
+| 17 GND        | 34 A3         | 51 A20        | 68 D5         |
+| 18            | 35 A4         | 52 VCC        |  1 D4         |
+| 19 /HALT      | 36 A5         | 53 A21        |  2 D3         |
+| 20 /RST       | 37 A6         | 54 A22        |  3 D2         |
+| 21 /VMA       | 38 A7         | 55 A23        |  4 D1         |
+| 22 E          | 39 A8         | 56 GND        |  5 D0         |
+| 23 /VPA       | 40 A9         | 57 GND        |  6 /AS        |
+| 24 /BERR      | 41 A10        | 58 D15        |  7 /UDS       |
+| 25 /IPL2      | 42 A11        | 59 D14        |  8 /LDS       |
+| 26 /IPL1      | 43 A12        | 60 D13        |  9 R//W       |
++---------------+---------------+---------------+---------------+
+</pre>
+<p>
+<a name="68000"></a>
+<a name="68010"></a>
+<h2>68000, 68010 (DIP)</h2>
+Motorola 16/32-bit microprocessor.
+<pre>
+       +-----+--+-----+
+    D4 |1    +--+   64| D5
+    D3 |2           63| D6
+    D2 |3           62| D7
+    D1 |4           61| D8
+    D0 |5           60| D9
+   /AS |6           59| D10
+  /UDS |7           58| D11
+  /LDS |8           57| D12
+  R//W |9           56| D13
+/DTACK |10          55| D14
+   /BG |11          54| D15
+/BGACK |12          53| GND
+   /BR |13          52| A23
+   VCC |14          51| A22
+   CLK |15          50| A21
+   GND |16  68000   49| VCC
+ /HALT |17  68010   48| A20
+  /RST |18          47| A19
+  /VMA |19          46| A18
+     E |20          45| A17
+  /VPA |21          44| A16
+ /BERR |22          43| A15
+ /IPL2 |23          42| A14
+ /IPL1 |24          41| A13
+ /IPL0 |25          40| A12
+   FC2 |26          39| A11
+   FC1 |27          38| A10
+   FC0 |28          37| A9
+    A1 |29          36| A8
+    A2 |30          35| A7
+    A3 |31          34| A6
+    A4 |32          33| A5
+       +--------------+
+</pre>
+<p>
+<a name="68008"></a>
+<h2>68008 (DIP)</h2>
+Motorola 16-bit microprocessor with 8-bit data bus.
+<pre>
+    +-----+--+-----+
+ A3 |1    +--+   48| A2
+ A4 |2           47| A1
+ A5 |3           46| A0
+ A6 |4           45| FC0
+ A7 |5           44| FC1
+ A8 |6           43| FC2
+ A9 |7           42| /IPL02
+A10 |8           41| /IPL1
+A11 |9           40| /BERR
+A12 |10          39| /VPA
+A13 |11          38| E
+A14 |12          37| /RST
+VCC |13  68008   36| /HALT
+A15 |14          35| GND
+GND |15          34| CLK
+A16 |16          33| /BR
+A17 |17          32| /BG
+A18 |18          31| /DTACK
+A19 |19          30| R//W
+ D7 |20          29| /DS
+ D6 |21          28| /AS
+ D5 |22          27| D0
+ D4 |23          26| D1
+ D3 |24          25| D2
+    +--------------+
+</pre>
+<p>
+<a name="68008"></a>
+<h2>68008 (PLCC)</h2>
+Motorola 16-bit microprocessor with 8-bit data bus.
+<pre>
+PLCC52
++---------------+---------------+---------------+---------------+
+|  8 A9         | 21 A19        | 34 /DTACK     | 47 /IPL0      |
+|  9 A10        | 22 A20        | 35 /BG        | 48 FC2        |
+| 10 A11        | 23 D7         | 36 /BGACK     | 49 FC1        |
+| 11 A12        | 24 D6         | 37 /BR        | 50 FC0        |
+| 12 A13        | 25 D5         | 38 CLK        | 51 A0         |
+| 13 A21        | 26 D4         | 39 GND        | 52 A1         |
+| 14 A14        | 27 D3         | 40 /HALT      |  1 A2         |
+| 15 VCC        | 28 D2         | 41 /RST       |  2 A3         |
+| 16 A15        | 29 D1         | 42 E          |  3 A4         |
+| 17 GND        | 30 D0         | 43 /VPA       |  4 A5         |
+| 18 A16        | 31 /AS        | 44 /BERR      |  5 A6         |
+| 19 A17        | 32 /DS        | 45 /IPL1      |  6 A7         |
+| 20 A18        | 33 R//W       | 46 /IPL2      |  7 A8         |
++---------------+---------------+---------------+---------------+
+</pre>
+<p>
+<a name="68070"></a>
+<h2>68070</h2>
+Integrated 68000-series 16/32-bit microprocessor.
+<pre>
+PLCC84
++---------------+---------------+---------------+---------------+
+| 12 /REQ1      | 33 A2         | 54 A22        | 75 SCL        |
+| 13 /ACK1      | 34 A3         | 55 A23        | 76 D15        |
+| 14 /REQ2      | 35 A4         | 56 /IACK7     | 77 D14        |
+| 15 /ACK2      | 36 A5         | 57 /NMI       | 78 D13        |
+| 16 /DONE      | 37 A6         | 58 /IACK5     | 79 D12        |
+| 17 /DTC       | 38 A7         | 59 /IN5       | 80 D11        |
+| 18 /RDY       | 39 A8         | 60 /INT2      | 81 D10        |
+| 19 /AS        | 40 A9         | 61 /INT1      | 82 D9         |
+| 20 /UDS       | 41 A10        | 62 /IACK4     | 83 D8         |
+| 21 /LDS       | 42 A11        | 63 /IN4       | 84 D7         |
+| 22 GND        | 43 VCC        | 64 GND        |  1 VCC        |
+| 23 R//W       | 44 A12        | 65 /IACK2     |  2 D6         |
+| 24 /DTACK     | 45 A13        | 66 /IN2       |  3 D5         |
+| 25 /AV        | 46 A14        | 67 T2         |  4 D4         |
+| 26 /BERR      | 47 A15        | 68 T1         |  5 D3         |
+| 27 /HALT      | 48 A16        | 69 XCKI       |  6 D2         |
+| 28 /RST       | 49 A17        | 70 /CTS       |  7 D1         |
+| 29 CLKOUT     | 50 A18        | 71 /RTS       |  8 D0         |
+| 30 X1         | 51 A19        | 72 RxD        |  9 /BG        |
+| 31 X2         | 52 A20        | 73 TxD        | 10 /BGACK     |
+| 32 A1         | 53 A21        | 74 SDA        | 11 /BR        |
++---------------+---------------+---------------+---------------+
+</pre>
+<p>
+<a name="80186"></a>
+<a name="80C186"></a>
+<a name="80C186XL"></a>
+<h2>80186, 80C186, 80C186XL</h2>
+Integrated 8086-series 16-bit microprocessors.
+<pre>
+PLCC68i
++---------------+---------------+---------------+---------------+
+|  1 AD15       | 18 DRQ0       | 35 /MCS3 /INPS| 52 /S0        |
+|  2 AD7        | 19 DRQ1       | 36 /MCS2      | 53 /S1        |
+|  3 AD14       | 20 TMRIN0     | 37 /MCS1 /ERR | 54 /S2        |
+|  4 AD6        | 21 TMRIN1     | 38 /MCS0 /PERQ| 55 ARDY       |
+|  5 AD13       | 22 TMROUT0    | 39 /DEN       | 56 CLKOUT     |
+|  6 AD5        | 23 TMROUT1    | 40 DT//R      | 57 RESET      |
+|  7 AD12       | 24 /RST       | 41 INT3 /INTA1| 58 X0         |
+|  8 AD4        | 25 /PCS0      | 42 INT2 /INTA0| 59 X1         |
+|  9 VCC        | 26 GND        | 43 VCC        | 60 GND        |
+| 10 AD11       | 27 /PCS1      | 44 INT1       | 61 ALE  QS0   |
+| 11 AD3        | 28 /PCS2      | 45 INT0       | 62 /RD  /QSMD |
+| 12 AD10       | 29 /PCS3      | 46 NMI        | 63 /WR  QS1   |
+| 13 AD2        | 30 /PCS4      | 47 /TEST BUSY | 64 /BHE       |
+| 14 AD9        | 31 /PCS5 A1   | 48 /LOCK      | 65 A19 S6     |
+| 15 AD1        | 32 /PCS6 A2   | 49 SRDY       | 66 A18 S5     |
+| 16 AD8        | 33 /LCS       | 50 HOLD       | 67 A17 S4     |
+| 17 AD0        | 34 /UCS       | 51 HLDA       | 68 A16 S3     |
++---------------+---------------+---------------+---------------+
+</pre>
+<p>
+<a name="80188"></a>
+<a name="80C188"></a>
+<a name="80C188XL"></a>
+<h2>80188, 80C188, 80C188XL</h2>
+Integrated 8086-series 8/16-bit microprocessors.
+<pre>
+PLCC68i
++---------------+---------------+---------------+---------------+
+|  1 A15        | 18 DRQ0       | 35 /MCS3 /INPS| 52 /S0        |
+|  2 AD7        | 19 DRQ1       | 36 /MCS2      | 53 /S1        |
+|  3 A14        | 20 TMRIN0     | 37 /MCS1 /ERR | 54 /S2        |
+|  4 AD6        | 21 TMRIN1     | 38 /MCS0 /PERQ| 55 ARDY       |
+|  5 A13        | 22 TMROUT0    | 39 /DEN       | 56 CLKOUT     |
+|  6 AD5        | 23 TMROUT1    | 40 DT//R      | 57 RESET      |
+|  7 A12        | 24 /RST       | 41 INT3 /INTA1| 58 X0         |
+|  8 AD4        | 25 /PCS0      | 42 INT2 /INTA0| 59 X1         |
+|  9 VCC        | 26 GND        | 43 VCC        | 60 GND        |
+| 10 A11        | 27 /PCS1      | 44 INT1       | 61 ALE  QS0   |
+| 11 AD3        | 28 /PCS2      | 45 INT0       | 62 /RD  /QSMD |
+| 12 A10        | 29 /PCS3      | 46 NMI        | 63 /WR  QS1   |
+| 13 AD2        | 30 /PCS4      | 47 /TEST BUSY | 64 /BHE /RFSH |
+| 14 A9         | 31 /PCS5 A1   | 48 /LOCK      | 65 A19 S6     |
+| 15 AD1        | 32 /PCS6 A2   | 49 SRDY       | 66 A18 S5     |
+| 16 A8         | 33 /LCS       | 50 HOLD       | 67 A17 S4     |
+| 17 AD0        | 34 /UCS       | 51 HLDA       | 68 A16 S3     |
++---------------+---------------+---------------+---------------+
+</pre>
+<p>
+<a name="80196KB"></a>
+<a name="83196KB"></a>
+<a name="87196KB"></a>
+<h2>80196KB, 83196KB, 87196KB</h2>
+Intel 8096-series 16-bit microcontrollers.
+<pre>
+PLCC68
++---------------+---------------+---------------+---------------+
+| 10 P0.5 ACH5  | 27 HSI3 HSO5  | 44 P2.3 T2CLK | 61 /RD        |
+| 11 P0.4 ACH4  | 28 HSO0 /PACT | 45 P4.7 AD15  | 62 ALE /ADV   |
+| 12 AGND       | 29 HSO1       | 46 P4.6 AD14  | 63 INST       |
+| 13 Vref       | 30 P1.5 /BREQ | 47 P4.5 AD13  | 64 BUSWIDTH   |
+| 14 Vpd        | 31 P1.6 /HLDA | 48 P4.4 AD12  | 65 CLK        |
+| 15 P2.2 EXTINT| 32 P1.7 /HOLD | 49 P4.3 AD11  | 66 X0         |
+| 16 /RST       | 33 P2.6       | 50 P4.2 AD10  | 67 X1         |
+| 17 P2.1 RxD   | 34 HSO2       | 51 P4.1 AD9   | 68 GND        |
+| 18 P2.0 TxD   | 35 HSO3       | 52 P4.0 AD8   |  1 VCC        |
+| 19 P1.0       | 36 GND        | 53 P3.7 AD7   |  2 /EA        |
+| 20 P1.1       | 37 VPP        | 54 P3.6 AD6   |  3 NMI        |
+| 21 P1.2       | 38 P2.7 T2CAP | 55 P3.5 AD5   |  4 P0.3 ACH3  |
+| 22 P1.3       | 39 P2.5 PWM   | 56 P3.4 AD4   |  5 P0.1 ACH1  |
+| 23 P1.4       | 40 /WRL /WR   | 57 P3.3 AD3   |  6 P0.0 ACH0  |
+| 24 HSI0       | 41 /WRH /BHE  | 58 P3.2 AD2   |  7 P0.2 ACH2  |
+| 25 HSI1       | 42 P2.4 T2RST | 59 P3.1 AD1   |  8 P0.6 ACH6  |
+| 26 HSI2 HSO4  | 43 READY      | 60 P3.0 AD0   |  9 P0.7 ACH7  |
++---------------+---------------+---------------+---------------+
+</pre>
+<p>
+<a name="SC80C451"></a>
+<a name="SC83C451"></a>
+<h2>SC80C451, SC83C451</h2>
+Philips 8-bit microcontrollers (based on 8051 series).
+<pre>
+           +-----+--+-----+
+       /EA |1    +--+   64| ALE
+  A8  P2.0 |2           63| /PSEN
+  A9  P2.1 |3           62| P6.7
+  A10 P2.2 |4           61| P6.6
+  A11 P2.3 |5           60| P6.5
+  A12 P2.4 |6           59| P6.4
+  A13 P2.5 |7           58| P6.3
+  A14 P2.6 |8           57| P6.2
+  A15 P2.7 |9           56| P6.1
+  AD7 P0.7 |10          55| P6.0
+  AD6 P0.6 |11          54| AFLAG
+  AD5 P0.5 |12          53| BFLAG
+  AD4 P0.4 |13          52| /IDS
+  AD3 P0.3 |14          51| /ODS
+  AD2 P0.2 |15          50| GND
+  AD1 P0.1 |16  80C451  49| X1
+  AD0 P0.0 |17  83C451  48| X2
+       VCC |18          47| P5.7
+      P4.3 |19          46| P5.6
+      P4.2 |20          45| P5.5
+      P4.1 |21          44| P5.4
+      P4.0 |22          43| P5.3
+      P1.0 |23          42| P5.2
+      P1.1 |24          41| P5.1
+      P1.2 |25          40| P5.0
+      P1.3 |26          39| P3.7 /RD
+      P1.4 |27          38| P3.6 /WR
+      P1.5 |28          37| P3.5 T1
+      P1.6 |29          36| P3.4 T0
+      P1.7 |30          35| P3.3 /INT1
+       RST |31          34| P3.2 /INT0
+  P3.0 RxD |32          33| P3.1 TxD
+           +--------------+
+</pre>
+<p>
+<hr><a href="index.html">Back to the GIICM index.</a>
+</body>
+</html>

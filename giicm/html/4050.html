@@ -1,0 +1,601 @@
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <link rel="stylesheet" type="text/css" href="../frank/frank.css">
+   <meta name="CVS" content="$Id$">
+   <meta name="description" content="GIICM">
+   <title>GIICM</title>
+</head><body><h1>4000 series CMOS IC's:  4050...4099</h1>
+<p>
+The old but still much-used 4000 series logic IC's.
+
+<p>
+<hr>
+<a name="4016"></a>
+<h2>4016</h2>
+Quad analog switches.
+<pre>
+     +---+--+---+
+  1X |1  +--+ 14| VCC
+  1Y |2       13| 1EN
+  2Y |3       12| 4EN
+  2X |4  4016 11| 4X
+ 2EN |5  4066 10| 4Y
+ 3EN |6        9| 3Y
+ GND |7        8| 3X
+     +----------+
+</pre>
+<p>
+<a name="4050"></a>
+<h2>4050</h2>
+Hex buffers with high-to-low level shifter inputs.
+<pre>
+    +---+--+---+             +---*---+
+VCC |1  +--+ 16|             | A | Y |           Y = A
+ Y1 |2       15| Y6          +===*===+
+ A1 |3       14| A6          | 0 | 0 |
+ Y2 |4       13|             | 1 | 1 |
+ A2 |5  4050 12| Y5          +---*---+
+ Y3 |6       11| A5
+ A3 |7       10| Y4
+GND |8        9| A4
+    +----------+
+</pre>
+<p>
+<a name="4051"></a>
+<h2>4051</h2>
+8-to-1 line analog multiplexer/demultiplexer with dual power supply.
+<br>
+VEE supply may not be more positive than GND.
+<pre>
+    +---+--+---+
+ X4 |1  +--+ 16| VCC
+ X6 |2       15| X2
+  Y |3       14| X1
+ X7 |4       13| X0
+ X5 |5  4051 12| X3
+/EN |6       11| S0
+VEE |7       10| S1
+GND |8        9| S2
+    +----------+
+</pre>
+<p>
+<a name="4052"></a>
+<h2>4052</h2>
+8-to-2 line analog multiplexer/demultiplexer with dual power supply.
+<br>
+VEE supply may not be more positive than GND.
+<pre>
+    +---+--+---+
+1X0 |1  +--+ 16| VCC
+1X2 |2       15| 2X2
+ 1Y |3       14| 2X1
+1X3 |4       13| 2Y
+1X1 |5  4052 12| 2X0
+/EN |6       11| 2X3
+VEE |7       10| S0
+GND |8        9| S1
+    +----------+
+</pre>
+<p>
+<a name="4053"></a>
+<h2>4053</h2>
+Triple 2-to-1 line analog multiplexer/demultiplexer with dual power supply.
+<br>
+VEE supply may not be more positive than GND.
+<pre>
+    +---+--+---+
+1X0 |1  +--+ 16| VCC
+1X1 |2       15| 1Y
+2X1 |3       14| 3Y
+ 2Y |4       13| 3X1
+2X0 |5  4053 12| 3X0
+/EN |6       11| 3S
+VEE |7       10| 1S
+GND |8        9| 2S
+    +----------+
+</pre>
+<p>
+<a name="4054"></a>
+<h2>4054</h2>
+Quad level shifters/LCD drivers with input latches.
+<br>
+A level-shifted inverse of the P (phase) input should be connected to the
+backplane of the LCD; this can be done by using one section of the 4054
+with A=0 and LE=1.
+<pre>
+    +---+--+---+             +---+---*---+            _
+1LE |1  +--+ 16| VCC         | LE| A | R |       Y = R$P
+  P |2       15| 1A          +===+===*===+
+ 1Y |3       14| 2LE         | 0 | X | - |
+ 2Y |4       13| 2A          | 1 | 0 | 0 |
+ 3Y |5  4054 12| 3LE         | 1 | 1 | 1 |
+ 4Y |6       11| 3A          +---+---*---+
+VEE |7       10| 4LE
+GND |8        9| 4A
+    +----------+
+</pre>
+<p>
+<a name="4055"></a>
+<h2>4055</h2>
+BCD to 7-segment decoder/LCD driver.
+<br>
+The Po (phase) output should be connected to the backplane of the LCD.
+<pre>
+    +---+--+---+
+ Po |1  +--+ 16| VCC
+ A2 |2       15| YF
+ A1 |3       14| YG
+ A3 |4       13| YE
+ A0 |5  4055 12| YD
+ Pi |6       11| YC
+VEE |7       10| YB
+GND |8        9| YA
+    +----------+
+</pre>
+<p>
+<a name="4056"></a>
+<h2>4056</h2>
+BCD to 7-segment decoder/LCD driver with input latches.
+<br>
+A level-shifted inverse of the P (phase) input should be connected to the
+backplane of the LCD.
+<pre>
+    +---+--+---+
+ LE |1  +--+ 16| VCC
+ A2 |2       15| YF
+ A1 |3       14| YG
+ A3 |4       13| YE
+ A0 |5  4056 12| YD
+  P |6       11| YC
+VEE |7       10| YB
+GND |8        9| YA
+    +----------+
+</pre>
+<p>
+<a name="4059"></a>
+<h2>4059</h2>
+Divide by N counter.
+<br>
+Ka, Kb, Kc are the modulus (divide by number) of the 1st and last
+counting sections. N can range from 3 to 15999.  The down-counter
+is preset by 15 jam inputs.
+<pre>
+    +-----+--+-----+
+CLK |1    +--+   24| VCC
+ LD |2           23| Q
+ J1 |3           22| J5
+ J2 |4           21| J6
+ J3 |5           20| J7
+ J4 |6           19| J8
+J16 |7    4059   18| J9
+J15 |8           17| J10
+J14 |9           16| J11
+J13 |10          15| J12
+ Kc |11          14| Ka
+GND |12          13| Kb
+    +--------------+
+</pre>
+<p>
+<a name="4060"></a>
+<h2>4060</h2>
+14-bit asynchronous binary counter with oscillator and reset input.
+<br>
+Q0,Q1,Q2 and Q10 outputs are missing.
+<pre>
+    +---+--+---+
+Q11 |1  +--+ 16| VCC
+Q12 |2       15| Q9
+Q13 |3       14| Q7
+ Q5 |4       13| Q8
+ Q4 |5  4060 12| RST
+ Q6 |6       11| X1
+ Q3 |7       10| X0
+GND |8        9| X2
+    +----------+
+</pre>
+<p>
+<a name="4063"></a>
+<h2>4063</h2>
+4-bit noninverting magnitude comparator with cascade inputs.
+<pre>
+     +---+--+---+
+  B3 |1  +--+ 16| VCC
+IA&lt;B |2       15| A3
+IA=B |3       14| B2
+IA&gt;B |4       13| A2
+OA&gt;B |5  4063 12| A1
+OA=B |6       11| B1
+OA&lt;B |7       10| A0
+ GND |8        9| B0
+     +----------+
+</pre>
+<p>
+<a name="4066"></a>
+<h2>4066</h2>
+Quad analog switches.
+<pre>
+     +---+--+---+
+  1X |1  +--+ 14| VCC
+  1Y |2       13| 1EN
+  2Y |3       12| 4EN
+  2X |4  4016 11| 4X
+ 2EN |5  4066 10| 4Y
+ 3EN |6        9| 3Y
+ GND |7        8| 3X
+     +----------+
+</pre>
+<p>
+<a name="4067"></a>
+<h2>4067</h2>
+16-to-1 line analog multiplexer/demultiplexer.
+<pre>
+    +-----+--+-----+
+  Y |1    +--+   24| VCC
+ X7 |2           23| X8
+ X6 |3           22| X9
+ X5 |4           21| X10
+ X4 |5           20| X11
+ X3 |6           19| X12
+ X2 |7    4067   18| X13
+ X1 |8           17| X14
+ X0 |9           16| X15
+ S0 |10          15| /EN
+ S1 |11          14| S2
+GND |12          13| S3
+    +--------------+
+</pre>
+<p>
+<a name="4068"></a>
+<h2>4068</h2>
+8-input AND/NAND gate with complementary outputs.
+<pre>
+    +---+--+---+
+  Y |1  +--+ 14| VCC         Y = ABCDEFGH
+  A |2       13| /Y
+  B |3       12| H
+  C |4  4068 11| G
+  D |5       10| F
+    |6        9| E
+GND |7        8|
+    +----------+
+</pre>
+<p>
+<a name="4069"></a>
+<h2>4069</h2>
+Hex inverters.
+<pre>
+    +---+--+---+             +---*---+               _
+ 1A |1  +--+ 14| VCC         | A |/Y |          /Y = A
+/1Y |2       13| 6A          +===*===+
+ 2A |3       12| /6Y         | 0 | 1 |
+/2Y |4  4069 11| 5A          | 1 | 0 |
+ 3A |5       10| /5Y         +---*---+
+/3Y |6        9| 4A
+GND |7        8| /4Y
+    +----------+
+</pre>
+<p>
+<a name="4070"></a>
+<h2>4070</h2>
+Quad 2-input XOR gates.
+<pre>
+    +---+--+---+             +---+---*---+                    _   _
+ 1A |1  +--+ 14| VCC         | A | B | Y |       Y = A$B = (A.B)+(A.B)
+ 1B |2       13| 4B          +===+===*===+
+ 1Y |3       12| 4A          | 0 | 0 | 0 |
+ 2Y |4  4070 11| 4Y          | 0 | 1 | 1 |
+ 2A |5       10| 3Y          | 1 | 0 | 1 |
+ 2B |6        9| 3B          | 1 | 1 | 0 |
+GND |7        8| 3A          +---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="4071"></a>
+<h2>4071</h2>
+Quad 2-input OR gates.
+<pre>
+    +---+--+---+             +---+---*---+
+ 1A |1  +--+ 14| VCC         | A | B | Y |       Y = A+B
+ 1B |2       13| 4B          +===+===*===+
+/1Y |3       12| 4A          | 0 | 0 | 0 |
+/2Y |4  4071 11| /4Y         | 0 | 1 | 1 |
+ 2A |5       10| /3Y         | 1 | 0 | 1 |
+ 2B |6        9| 3B          | 1 | 1 | 1 |
+GND |7        8| 3A          +---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="4072"></a>
+<h2>4072</h2>
+Dual 4-input OR gates.
+<pre>
+    +---+--+---+             +---+---+---+---*---+
+ 1Y |1  +--+ 14| VCC         | A | B | C | D |/Y |   Y = A+B+C+D
+ 1A |2       13| 2Y          +===+===+===+===*===+
+ 1B |3       12| 2D          | 0 | 0 | 0 | 0 | 0 |
+ 1C |4  4072 11| 2C          | 0 | 0 | 0 | 1 | 1 |
+ 1D |5       10| 2B          | 0 | 0 | 1 | X | 1 |
+    |6        9| 2A          | 0 | 1 | X | X | 1 |
+GND |7        8|             | 1 | X | X | X | 1 |
+    +----------+             +---+---+---+---*---+
+</pre>
+<p>
+<a name="4073"></a>
+<h2>4073</h2>
+Triple 3-input AND gates.
+<pre>
+    +---+--+---+             +---+---+---*---+
+ 1A |1  +--+ 14| VCC         | A | B | C | Y |   Y = ABC
+ 1B |2       13| 3A          +===+===+===*===+
+ 2A |3       12| 3B          | 0 | X | X | 0 |
+ 2B |4  4073 11| 3C          | 1 | 0 | X | 0 |
+ 2C |5       10| 3Y          | 1 | 1 | 0 | 0 |
+ 2Y |6        9| 1Y          | 1 | 1 | 1 | 1 |
+GND |7        8| 1C          +---+---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="4075"></a>
+<h2>4075</h2>
+Triple 3-input OR gates.
+<pre>
+    +---+--+---+             +---+---+---*---+
+ 1A |1  +--+ 14| VCC         | A | B | C | Y |   Y = A+B+C
+ 1B |2       13| 3A          +===+===+===*===+
+ 2A |3       12| 3B          | 0 | 0 | 0 | 0 |
+ 2B |4  4075 11| 3C          | 0 | 0 | 1 | 1 |
+ 2C |5       10| 3Y          | 0 | 1 | X | 1 |
+ 2Y |6        9| 1Y          | 1 | X | X | 1 |
+GND |7        8| 1C          +---+---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="4076"></a>
+<h2>4076</h2>
+4-bit 3-state D flip-flop with reset, dual clock enables and dual
+output enables.
+<pre>
+     +---+--+---+
+/OE1 |1  +--+ 16| VCC
+/OE2 |2       15| RST
+  Q0 |3       14| D0
+  Q1 |4       13| D1
+  Q2 |5  4076 12| D2
+  Q3 |6       11| D3
+ CLK |7       10| /CLKEN1
+ GND |8        9| /CLKEN2
+     +----------+
+</pre>
+<p>
+<a name="4077"></a>
+<h2>4077</h2>
+Quad 2-input XNOR gates.
+<pre>
+    +---+--+---+             +---+---*---+            _     _ _
+ 1A |1  +--+ 14| VCC         | A | B |/Y |       Y = A$B = (A.B)+(A.B)
+ 1B |2       13| 4B          +===+===*===+
+/1Y |3       12| 4A          | 0 | 0 | 1 |
+/2Y |4  4077 11| /4Y         | 0 | 1 | 0 |
+ 2A |5       10| /3Y         | 1 | 0 | 0 |
+ 2B |6        9| 3B          | 1 | 1 | 1 |
+GND |7        8| 3A          +---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="4078"></a>
+<h2>4078</h2>
+8-input OR/NOR gate with complementary outputs.
+<pre>
+    +---+--+---+
+  Y |1  +--+ 14| VCC         Y=A+B+C+D+E+F+G+H
+  A |2       13| /Y
+  B |3       12| H
+  C |4  4078 11| G
+  D |5       10| F
+    |6        9| E
+GND |7        8|
+    +----------+
+</pre>
+<p>
+<a name="4081"></a>
+<h2>4081</h2>
+Quad 2-input AND gates.
+<pre>
+    +---+--+---+             +---+---*---+
+ 1A |1  +--+ 14| VCC         | A | B | Y |       Y = AB
+ 1B |2       13| 4B          +===+===*===+
+ 1Y |3       12| 4A          | 0 | 0 | 0 |
+ 2Y |4  4081 11| 4Y          | 0 | 1 | 0 |
+ 2A |5       10| 3Y          | 1 | 0 | 0 |
+ 2B |6        9| 3B          | 1 | 1 | 1 |
+GND |7        8| 3A          +---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="4082"></a>
+<h2>4082</h2>
+Dual 4-input AND gates.
+<pre>
+    +---+--+---+             +---+---+---+---*---+
+ 1Y |1  +--+ 14| VCC         | A | B | C | D | Y |    Y = ABCD
+ 1A |2       13| 2Y          +===+===+===+===*===+
+ 1B |3       12| 2D          | 0 | X | X | X | 0 |
+ 1C |4  4082 11| 2C          | 1 | 0 | X | X | 0 |
+ 1D |5       10| 2B          | 1 | 1 | 0 | X | 0 |
+    |6        9| 2A          | 1 | 1 | 1 | 0 | 0 |
+GND |7        8|             | 1 | 1 | 1 | 1 | 1 |
+    +----------+             +---+---+---+---*---+
+</pre>
+<p>
+<a name="4085"></a>
+<h2>4085</h2>
+Dual 3-wide 2/1-input AND-NOR gates.
+<pre>
+    +---+--+---+                 _______
+ 1A |1  +--+ 14| VCC        /Y = AB+CD+E
+ 1B |2       13| 1D
+/1Y |3       12| 1C
+/2Y |4  4085 11| 1E
+ 2A |5       10| 2E
+ 2B |6        9| 2D
+GND |7        8| 2C
+    +----------+
+</pre>
+<p>
+<a name="4086"></a>
+<h2>4086</h2>
+6-wide 2/1-input AND-NOR gate.
+<pre>
+    +---+--+---+                 ________________
+  A |1  +--+ 14| VCC        /Y = AB+CD+EF+GH+J+/K
+  B |2       13| H
+ /Y |3       12| G
+    |4  4086 11| K
+  C |5       10| J
+  D |6        9| F
+GND |7        8| E
+    +----------+
+</pre>
+<p>
+<a name="4089"></a>
+<h2>4089</h2>
+4-bit synchronous binary rate multiplier.
+<pre>
+     +---+--+---+
+ Q15 |1  +--+ 16| VCC
+  D2 |2       15| D1
+  D3 |3       14| D0
+ SET |4       13| RST
+  /Q |5  4089 12| CASC
+   Q |6       11| CIN
+COUT |7       10| STB
+ GND |8        9| CLK
+     +----------+
+</pre>
+<p>
+<a name="4093"></a>
+<h2>4093</h2>
+Quad 2-input NAND gates with schmitt-trigger inputs.
+<br>
+0.9V typical input hysteresis at VCC=+5V and 2.3V at VCC=+10V.
+<pre>
+    +---+--+---+             +---+---*---+           __
+ 1A |1  +--+ 14| VCC         | A | B |/Y |      /Y = AB
+ 1B |2       13| 4B          +===+===*===+
+/1Y |3       12| 4A          | 0 | 0 | 1 |
+/2Y |4  4093 11| /4Y         | 0 | 1 | 1 |
+ 2A |5       10| /3Y         | 1 | 0 | 1 |
+ 2B |6        9| 3B          | 1 | 1 | 0 |
+GND |7        8| 3A          +---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="4094"></a>
+<h2>4094</h2>
+8-bit 3-state serial-in parallel-out shift register with output latches.
+<br>
+Q7' is Q7 delayed by half a cycle (i.e. clocked on falling edge).
+<pre>
+    +---+--+---+
+ LE |1  +--+ 16| VCC
+  D |2       15| OE
+CLK |3       14| Y4
+ Y0 |4       13| Y5
+ Y1 |5  4094 12| Y6
+ Y2 |6       11| Y7
+ Y3 |7       10| Q7
+GND |8        9| Q7'
+    +----------+
+</pre>
+<p>
+<a name="4095"></a>
+<h2>4095</h2>
+J-K flip-flop with triple ANDed J an K inputs, set and reset.
+<pre>
+     +---+--+---+            +--------+--------+---+---+---*---+---+
+     |1  +--+ 14| VCC        |J1.J2.J3|K1.K2.K3|CLK|SET|RST| Q |/Q |
+ RST |2       13| SET        +========+========+===+===+===*===+===+
+  J1 |3       12| CLK        |    X   |    X   | X | 1 | 1 | 0 | 0 |
+  J2 |4  4095 11| K3         |    X   |    X   | X | 1 | 0 | 1 | 0 |
+  J3 |5       10| K2         |    X   |    X   | X | 0 | 1 | 0 | 1 |
+  /Q |6        9| K1         |    0   |    0   | / | 0 | 0 | - | - |
+ GND |7        8| Q          |    0   |    1   | / | 0 | 0 | 0 | 1 |
+     +----------+            |    1   |    0   | / | 0 | 0 | 1 | 0 |
+                             |    1   |    1   | / | 0 | 0 |/Q | Q |
+                             |    X   |    X   |!/ | 0 | 0 | - | - |
+                             +--------+--------+---+---+---*---+---+
+</pre>
+<p>
+<a name="4096"></a>
+<h2>4096</h2>
+J-K flip-flop with triple ANDed J an K inputs (one inverted), set and reset.
+<pre>
+     +---+--+---+            +---------+---------+---+---+---*---+---+
+     |1  +--+ 14| VCC        |J1.J2./J3|K1.K2./K3|CLK|SET|RST| Q |/Q |
+ RST |2       13| SET        +=========+=========+===+===+===*===+===+
+  J1 |3       12| CLK        |    X    |    X    | X | 1 | 1 | 0 | 0 |
+  J2 |4  4096 11| K1         |    X    |    X    | X | 1 | 0 | 1 | 0 |
+ /J3 |5       10| K2         |    X    |    X    | X | 0 | 1 | 0 | 1 |
+  /Q |6        9| /K3        |    0    |    0    | / | 0 | 0 | - | - |
+ GND |7        8| Q          |    0    |    1    | / | 0 | 0 | 0 | 1 |
+     +----------+            |    1    |    0    | / | 0 | 0 | 1 | 0 |
+                             |    1    |    1    | / | 0 | 0 |/Q | Q |
+                             |    X    |    X    |!/ | 0 | 0 | - | - |
+                             +---------+---------+---+---+---*---+---+
+</pre>
+<p>
+<a name="4097"></a>
+<h2>4097</h2>
+16-to-2 line analog multiplexer/demultiplexer.
+<pre>
+    +-----+--+-----+
+ 1Y |1    +--+   24| VCC
+1X7 |2           23| 2X0
+1X6 |3           22| 2X1
+1X5 |4           21| 2X2
+1X4 |5           20| 2X3
+1X3 |6           19| 2X4
+1X2 |7    4097   18| 2X5
+1X1 |8           17| 2Y
+1X0 |9           16| 2X6
+ S0 |10          15| 2X7
+ S1 |11          14| S2
+GND |12          13| /EN
+    +--------------+
+</pre>
+<p>
+<a name="4098"></a>
+<h2>4098</h2>
+Dual monostable multivibrator, retriggerable, resettable.
+<pre>
+       +---+--+---+
+ 1Cext |1  +--+ 16| VCC
+1RCext |2       15| 2Cext
+  1RST |3       14| 2RCext
+   1TR |4       13| 2RST
+  /1TR |5  4098 12| 2TR
+    1Q |6       11| /2TR
+   /1Q |7       10| 2Q
+   GND |8        9| /2Q
+       +----------+
+</pre>
+<p>
+<a name="4099"></a>
+<h2>4099</h2>
+1-of-8 addressable latch with reset.
+<pre>
+    +---+--+---+
+ Q7 |1  +--+ 16| VCC
+RST |2       15| Q6
+  D |3       14| Q5
+/WR |4       13| Q4
+ A0 |5  4099 12| Q3
+ A1 |6       11| Q2
+ A2 |7       10| Q1
+GND |8        9| Q0
+    +----------+
+</pre>
+<p>
+<hr><a href="index.html">Back to the GIICM index.</a>
+</body>
+</html>

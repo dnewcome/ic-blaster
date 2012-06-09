@@ -1,0 +1,196 @@
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <link rel="stylesheet" type="text/css" href="../frank/frank.css">
+   <meta name="CVS" content="$Id$">
+   <meta name="description" content="GIICM">
+   <title>GIICM</title>
+</head><body><h1>7400 series fast TTL IC's with center power:  7418xx 7454xx</h1>
+<p>
+<hr>
+<a name="741804"></a>
+<h2>741804</h2>
+Hex 2-input NAND gates/line drivers.
+<pre>
+    +---+--+---+             +---+---*---+           ___
+ 5B |1  +--+ 20| 5A          | A | B |/Y |      /Y = A+B
+/6Y |2       19| /5Y         +===+===*===+
+ 6A |3       18| 4B          | 0 | 0 | 1 |
+ 6B |4       17| 4A          | 0 | 1 | 1 |
+VCC |5  741  16| /4Y         | 1 | 0 | 1 |
+ 1A |6  804  15| GND         | 1 | 1 | 0 |
+ 1B |7       14| /3Y         +---+---*---+
+/1Y |8       13| 3B
+ 2A |9       12| 3A
+ 2B |10      11| /2Y
+    +----------+
+</pre>
+<p>
+<a name="741805"></a>
+<h2>741805</h2>
+Hex 2-input NOR gates/line drivers.
+<pre>
+    +---+--+---+             +---+---*---+           ___
+ 5B |1  +--+ 20| 5A          | A | B |/Y |      /Y = A+B
+/6Y |2       19| /5Y         +===+===*===+
+ 6A |3       18| 4B          | 0 | 0 | 1 |
+ 6B |4       17| 4A          | 0 | 1 | 0 |
+VCC |5  741  16| /4Y         | 1 | 0 | 0 |
+ 1A |6  805  15| GND         | 1 | 1 | 0 |
+ 1B |7       14| /3Y         +---+---*---+
+/1Y |8       13| 3B
+ 2A |9       12| 3A
+ 2B |10      11| /2Y
+    +----------+
+</pre>
+<p>
+<a name="741808"></a>
+<h2>741808</h2>
+Hex 2-input AND gates/line drivers.
+<pre>
+    +---+--+---+             +---+---*---+
+ 5B |1  +--+ 20| 5A          | A | B | Y |       Y = AB
+ 6Y |2       19| 5Y          +===+===*===+
+ 6A |3       18| 4B          | 0 | 0 | 0 |
+ 6B |4       17| 4A          | 0 | 1 | 0 |
+VCC |5  741  16| 4Y          | 1 | 0 | 0 |
+ 1A |6  808  15| GND         | 1 | 1 | 1 |
+ 1B |7       14| 3Y          +---+---*---+
+ 1Y |8       13| 3B
+ 2A |9       12| 3A
+ 2B |10      11| 2Y
+    +----------+
+</pre>
+<p>
+<a name="741821"></a>
+<h2>741821</h2>
+10-bit 3-state D flip-flop/bus driver.
+<pre>
+    +---+--+---+             +---+---+---*---+
+ Q5 |1  +--+ 24| Q6          |/OE|CLK| D | Q |
+ Q4 |2       23| Q7          +===+===+===*===+
+ Q3 |3       22| Q8          | 1 | X | X | Z |
+ Q2 |4       21| Q9          | 0 | / | 0 | 0 |
+ Q1 |5       20| Q10         | 0 | / | 1 | 1 |
+VCC |6  741  19| CLK         | 0 |!/ | X | - |
+/OE |7  821  18| GND         +---+---+---*---+
+ D1 |8       17| D10
+ D2 |9       16| D9
+ D3 |10      15| D8
+ D4 |11      14| D7
+ D5 |12      13| D6
+    +----------+
+</pre>
+<p>
+<a name="741832"></a>
+<h2>741832</h2>
+Hex 2-input OR gates/line drivers.
+<pre>
+    +---+--+---+             +---+---*---+
+ 5B |1  +--+ 20| 5A          | A | B | Y |       Y = A+B
+ 6Y |2       19| 5Y          +===+===*===+
+ 6A |3       18| 4B          | 0 | 0 | 0 |
+ 6B |4       17| 4A          | 0 | 1 | 1 |
+VCC |5  741  16| 4Y          | 1 | 0 | 1 |
+ 1A |6  832  15| GND         | 1 | 1 | 1 |
+ 1B |7       14| 3Y          +---+---*---+
+ 1Y |8       13| 3B
+ 2A |9       12| 3A
+ 2B |10      11| 2Y
+    +----------+
+</pre>
+<p>
+<a name="745400"></a>
+<h2>745400</h2>
+11-bit 3-state noninverting buffer/MOS driver with integrated 25R series
+output resistors.
+<pre>
+     +---+--+---+
+  Y1 |1  +--+ 28| A1
+  Y2 |2       27| A2
+  Y3 |3       26| A3
+  Y4 |4       25| A4
+  Y5 |5       24| A5
+  Y6 |6       23| A6
+ GND |7   74  22| VCC
+ GND |8  5400 21| VCC
+  Y7 |9       20| A7
+  Y8 |10      19| A8
+  Y9 |11      18| A9
+ Y10 |12      17| A10
+ Y11 |13      16| A11
+/OE1 |14      15| /OE2
+     +----------+
+</pre>
+<p>
+<a name="745401"></a>
+<h2>745401</h2>
+11-bit 3-state inverting buffer/MOS driver with integrated 25R series
+output resistors.
+<pre>
+     +---+--+---+
+ /Y1 |1  +--+ 28| A1
+ /Y2 |2       27| A2
+ /Y3 |3       26| A3
+ /Y4 |4       25| A4
+ /Y5 |5       24| A5
+ /Y6 |6       23| A6
+ GND |7   74  22| VCC
+ GND |8  5401 21| VCC
+ /Y7 |9       20| A7
+ /Y8 |10      19| A8
+ /Y9 |11      18| A9
+/Y10 |12      17| A10
+/Y11 |13      16| A11
+/OE1 |14      15| /OE2
+     +----------+
+</pre>
+<p>
+<a name="745402"></a>
+<h2>745402</h2>
+12-bit 3-state noninverting buffer/MOS driver with integrated 25R series
+output resistors.
+<pre>
+     +---+--+---+
+  Y1 |1  +--+ 28| A1
+  Y2 |2       27| A2
+  Y3 |3       26| A3
+  Y4 |4       25| A4
+  Y5 |5       24| A5
+  Y6 |6       23| A6
+ GND |7   74  22| A7
+  Y7 |8  5402 21| VCC
+  Y8 |9       20| A8
+  Y9 |10      19| A9
+ Y10 |11      18| A10
+ Y11 |12      17| A11
+ Y12 |13      16| A12
+/OE1 |14      15| /OE2
+     +----------+
+</pre>
+<p>
+<a name="745403"></a>
+<h2>745403</h2>
+12-bit 3-state inverting buffer/MOS driver with integrated 25R series
+output resistors.
+<pre>
+     +---+--+---+
+ /Y1 |1  +--+ 28| A1
+ /Y2 |2       27| A2
+ /Y3 |3       26| A3
+ /Y4 |4       25| A4
+ /Y5 |5       24| A5
+ /Y6 |6       23| A6
+ GND |7   74  22| A7
+ /Y7 |8  5402 21| VCC
+ /Y8 |9       20| A8
+ /Y9 |10      19| A9
+/Y10 |11      18| A10
+/Y11 |12      17| A11
+/Y12 |13      16| A12
+/OE1 |14      15| /OE2
+     +----------+
+</pre>
+<p>
+<hr><a href="index.html">Back to the GIICM index.</a>
+</body>
+</html>

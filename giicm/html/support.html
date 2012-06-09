@@ -1,0 +1,1080 @@
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <link rel="stylesheet" type="text/css" href="../frank/frank.css">
+   <meta name="CVS" content="$Id$">
+   <meta name="description" content="GIICM">
+   <title>GIICM</title>
+</head><body><h1>Microprocessor support IC's.</h1>
+<p>
+<hr>
+<a name="Z80CTC"></a>
+<a name="Z8430"></a>
+<h2>Z80CTC, Z8430</h2>
+Z80 Counter-Timer Circuit.
+<pre>
+        +-----+--+-----+
+     D4 |1    +--+   28| D3
+     D5 |2           27| D2
+     D6 |3           26| D1
+     D7 |4           25| D0
+    GND |5           24| VCC
+    /RD |6           23| CLK0 TRG0
+ZC0 TO0 |7   Z8430   22| CLK1 TRG1
+ZC1 TO1 |8    CTC    21| CLK2 TRG2
+ZC2 TO2 |9           20| CLK3 TRG3
+  /IORQ |10          19| A1
+    IEO |11          18| A0
+   /INT |12          17| /RST
+    IEI |13          16| /CE
+    /M1 |14          15| CLK
+        +--------------+
+</pre>
+<p>
+<a name="Z80DART"></a>
+<a name="Z8470"></a>
+<h2>Z80DART, Z8470</h2>
+Z80 dual async/sync serial I/O.
+<br>
+Z8470 (DART) has no synchronous capabilities.
+<pre>
+        +-----+--+-----+
+     D1 |1    +--+   40| D0
+     D3 |2           39| D2
+     D5 |3           38| D4
+     D7 |4           37| D6
+   /INT |5           36| /IORQ
+    IEI |6           35| /CE
+    IEO |7           34| A0 B/A
+    /M1 |8           33| A1 C/D
+    VCC |9           32| /RD
+/W_RDYA |10   Z8440  31| GND
+ /SYNCA |11   SIO-0  30| /W_RDYB
+   RxDA |12          29| /SYNCB
+  /RxCA |13          28| RxDB
+  /TxCA |14          27| /RxTxCB
+   TxDA |15          26| TxDB
+  /DTRA |16          25| /DTRB
+  /RTSA |17          24| /RTSB
+  /CTSA |18          23| /CTSB
+  /DCDA |19          22| /DCDB
+    CLK |20          21| /RST
+        +--------------+
+</pre>
+<p>
+<a name="Z80DMA"></a>
+<a name="Z8410"></a>
+<h2>Z80DMA, Z8410</h2>
+Z80 DMA controller.
+<pre>
+          +-----+--+-----+
+       A5 |1    +--+   40| A6
+       A4 |2           39| A7
+       A3 |3           38| IEI
+       A2 |4           37| /INT /PULSE
+       A1 |5           36| IEO
+       A0 |6           35| D0
+      CLK |7           34| D1
+      /WR |8           33| D2
+      /RD |9           32| D3
+    /IORQ |10   Z8410  31| D4
+      VCC |11    DMA   30| GND
+    /MREQ |12          29| D5
+     /BAO |13          28| D6
+     /BAI |14          27| D7
+   /BUSRQ |15          26| /M1
+/CE /WAIT |16          25| RDY
+      A15 |17          24| A8
+      A14 |18          23| A9
+      A13 |19          22| A10
+      A12 |20          21| A11
+          +--------------+
+</pre>
+<p>
+<a name="Z80PIO"></a>
+<a name="Z8420"></a>
+<h2>Z80PIO, Z8420</h2>
+Z80 parallel I/O.
+<pre>
+       +-----+--+-----+
+    D2 |1    +--+   40| D3
+    D7 |2           39| D4
+    D6 |3           38| D5
+   /CE |4           37| /M1
+C/D A1 |5           36| /IORQ
+B/A A0 |6           35| /RD
+   PA7 |7           34| PB7
+   PA6 |8           33| PB6
+   PA5 |9           32| PB5
+   PA4 |10   Z8420  31| PB4
+   GND |11    PIO   30| PB3
+   PA3 |12          29| PB2
+   PA2 |13          28| PB1
+   PA1 |14          27| PB0
+   PA0 |15          26| VCC
+ /ASTB |16          25| CLK
+ /BSTB |17          24| IEI
+  ARDY |18          23| /INT
+    D0 |19          22| IEO
+    D1 |20          21| BRDY
+       +--------------+
+</pre>
+<p>
+<a name="Z80SIO"></a>
+<a name="Z80SIO0"></a>
+<a name="Z8440"></a>
+<a name="Z8470"></a>
+<h2>Z80SIO, Z80SIO0, Z8440, Z8470</h2>
+Z80 dual async/sync serial I/O.
+<br>
+Z8470 (DART) has no synchronous capabilities.
+<pre>
+        +-----+--+-----+
+     D1 |1    +--+   40| D0
+     D3 |2           39| D2
+     D5 |3           38| D4
+     D7 |4           37| D6
+   /INT |5           36| /IORQ
+    IEI |6           35| /CE
+    IEO |7           34| A0 B/A
+    /M1 |8           33| A1 C/D
+    VCC |9           32| /RD
+/W_RDYA |10   Z8440  31| GND
+ /SYNCA |11   SIO-0  30| /W_RDYB
+   RxDA |12          29| /SYNCB
+  /RxCA |13          28| RxDB
+  /TxCA |14          27| /RxTxCB
+   TxDA |15          26| TxDB
+  /DTRA |16          25| /DTRB
+  /RTSA |17          24| /RTSB
+  /CTSA |18          23| /CTSB
+  /DCDA |19          22| /DCDB
+    CLK |20          21| /RST
+        +--------------+
+</pre>
+<p>
+<a name="MAX703"></a>
+<h2>MAX703</h2>
+uP supervisor circuit with battery backup.
+<br>
+/RST remains low for 200ms after VCC exceeds 4.65V.  On power failure
+VCCo is connected to VBAT, PFI and /MR are disabled, /RST and /PFO are low.
+<pre>
+     +---+--+---+
+VCCo |1  +--+  8| VBAT
+ VCC |2  MAX   7| /RST
+ GND |3  703   6| /MR
+ PFI |4        5| /PFO
+     +----------+
+</pre>
+<p>
+<a name="765"></a>
+<h2>765</h2>
+Floppy disk controller.
+<pre>
+       +-----+--+-----+
+   RST |1    +--+   40| VCC
+   /RD |2           39| /RW SEEK
+   /WR |3           38| LCT DIR
+   /CE |4           37| FR  STEP
+D/S A0 |5           36| HDL
+    D0 |6           35| RDY
+    D1 |7           34| WP  TS
+    D2 |8           33| FLT TR00
+    D3 |9           32| PS0
+    D4 |10   765    31| PS1
+    D5 |11   FDC    30| WDA
+    D6 |12          29| US0
+    D7 |13          28| US1
+   DRQ |14          27| HD
+ /DACK |15          26| MFM
+    TC |16          25| WE
+   IDX |17          24| VCO SYNC
+   INT |18          23| RDD
+   CLK |19          22| RDW
+   GND |20          21| WCLK
+       +--------------+
+</pre>
+<p>
+<a name="Z80SIO1"></a>
+<a name="Z8441"></a>
+<h2>Z80SIO1, Z8441</h2>
+Z80 dual async/sync serial I/O (bonding option #1).
+<pre>
+        +-----+--+-----+
+     D1 |1    +--+   40| D0
+     D3 |2           39| D2
+     D5 |3           38| D4
+     D7 |4           37| D6
+   /INT |5           36| /IORQ
+    IEI |6           35| /CE
+    IEO |7           34| A0 B/A
+    /M1 |8           33| A1 C/D
+    VCC |9           32| /RD
+/W_RDYA |10   Z8441  31| GND
+ /SYNCA |11   SIO-1  30| /W_RDYB
+   RxDA |12          29| /SYNCB
+  /RxCA |13          28| RxDB
+  /TxCA |14          27| /RxCB
+   TxDA |15          26| /TxCB
+  /DTRA |16          25| TxDB
+  /RTSA |17          24| /RTSB
+  /CTSA |18          23| /CTSB
+  /DCDA |19          22| /DCDB
+    CLK |20          21| /RST
+        +--------------+
+</pre>
+<p>
+<a name="Z80SIO2"></a>
+<a name="Z8442"></a>
+<h2>Z80SIO2, Z8442</h2>
+Z80 dual async/sync serial I/O (bonding option #2).
+<pre>
+         +-----+--+-----+
+      D1 |1    +--+   40| D0
+      D3 |2           39| D2
+      D5 |3           38| D4
+      D7 |4           37| D6
+    /INT |5           36| /IORQ
+     IEI |6           35| /CE
+     IEO |7           34| A0 B/A
+     /M1 |8           33| A1 C/D
+     VCC |9           32| /RD
+ /W_RDYA |10   Z8442  31| GND
+  /SYNCA |11   SIO-2  30| /W_RDYB
+    RxDA |12          29| RxDB
+   /RxCA |13          28| /RxCB
+   /TxCA |14          27| /TxCB
+    TxDA |15          26| TxDB
+   /DTRA |16          25| /DTRB
+   /RTSA |17          24| /RTSB
+   /CTSA |18          23| /CTSB
+   /DCDA |19          22| /DCDB
+     CLK |20          21| /RST
+         +--------------+
+</pre>
+<p>
+<a name="SAA1064"></a>
+<h2>SAA1064</h2>
+I2C 4 digit common-anode LED driver.
+<br>
+I2C address is 01110xx where xx can be specified by the voltage on
+the ADR input (GND=00 3/8VCC=01 5/8VCC=10 VCC=11).
+<pre>
+     +---+--+---+
+ ADR |1  +--+ 24| SCL
+Cext |2       23| SDA
+ 1Y8 |3       22| 2Y8
+ 1Y7 |4       21| 2Y7
+ 1Y6 |5       20| 2Y6
+ 1Y5 |6       19| 2Y5
+ 1Y4 |7  1064 18| 2Y4
+ 1Y3 |8       17| 2Y3
+ 1Y2 |9       16| 2Y2
+ 1Y1 |10      15| 2Y1
+ MX1 |11      14| MX2
+ GND |12      13| VCC
+     +----------+
+</pre>
+<p>
+<a name="DS1202"></a>
+<h2>DS1202</h2>
+Real-time clock with 3-wire serial interface and 24 bytes RAM.
+<pre>
+    +---+--+---+
+    |1  +--+  8| VCC
+ X1 |2   DS   7| CLK
+ X2 |3  1202  6| DQ
+GND |4        5| /RST
+    +----------+
+</pre>
+<p>
+<a name="DS1210"></a>
+<h2>DS1210</h2>
+Nonvolatile SRAM controller chip.
+<br>
+TOL selects power-fail VCC level, based on 5% tolerance when 0 or
+10% tolerance when 1.
+<pre>
+      +---+--+---+           +---+----*---+
+ VCCo |1  +--+  8| VCC       |/EN|VCC |/Y |
+VBAT1 |2   DS   7| VBAT2     +===+====*===+
+  TOL |3  1210  6| /Y        | 1 | OK | 1 |
+  GND |4        5| /EN       | 0 | OK | 0 |
+      +----------+           | X | LO | 1 |
+                             +---+----*---+
+</pre>
+<p>
+<a name="DS1211"></a>
+<h2>DS1211</h2>
+1-of-8 inverting decoder/nonvolatile SRAM controller chip.
+<br>
+TOL selects power-fail VCC level, based on 5% tolerance when 0 or
+10% tolerance when 1.
+The Dallas Semi data book suggests this is actually a repackaged DS1212.
+<pre>
+      +---+--+---+           +---+---+---+---+----*---+---+---+---+---+
+VBAT1 |1  +--+ 20| VCC       |/EN| S2| S1| S0|VCC |/Y0|/Y1|...|/Y7|/PF|
+ VCCo |2       19| VBAT2     +===+===+===+===+====*===+===+===+===+===+
+  TOL |3       18| /EN       | X | X | X | X | LO | 1 | 1 | 1 | 1 | 0 |
+  /PF |4       17| /Y0       | 1 | 0 | 0 | 0 | OK | 0 | 1 | 1 | 1 | 1 |
+  /Y7 |5   DS  16| /Y1       | 0 | 0 | 0 | 1 | OK | 1 | 0 | 1 | 1 | 1 |
+  /Y6 |6  1211 15| /Y2       | 0 | . | . | . | OK | 1 | 1 | . | 1 | 1 |
+   S2 |7       14| /Y3       | 0 | 1 | 1 | 1 | OK | 1 | 1 | 1 | 0 | 1 |
+   S1 |8       13|           +---+---+---+---+----*---+---+---+---+---+
+   S0 |9       12| /Y4
+  GND |10      11| /Y5
+      +----------+
+</pre>
+<p>
+<a name="DS1212"></a>
+<h2>DS1212</h2>
+1-of-16 inverting decoder/nonvolatile SRAM controller chip.
+<br>
+TOL selects power-fail VCC level, based on 5% tolerance when 0 or
+10% tolerance when 1.
+<pre>
+      +-----+--+-----+        +---+---+---+---+---+----*---+---+---+----+---+
+VBAT1 |1    +--+   28| VCC    |/EN| S3| S2| S1| S0|VCC |/Y0|/Y1|...|/Y15|/PF|
+ VCCo |2           27| VBAT2  +===+===+===+===+===+====*===+===+===+====+===+
+  TOL |3           26| /EN    | X | X | X | X | X | LO | 1 | 1 | 1 | 1  | 0 |
+  /PF |4           25| /Y0    | 1 | 0 | 0 | 0 | 0 | OK | 0 | 1 | 1 | 1  | 1 |
+ /Y15 |5           24| /Y1    | 0 | 0 | 0 | 0 | 1 | OK | 1 | 0 | 1 | 1  | 1 |
+ /Y14 |6           23| /Y2    | 0 | . | . | . | . | OK | 1 | 1 | . | 1  | 1 |
+ /Y13 |7     DS    22| /Y3    | 0 | 1 | 1 | 1 | 1 | OK | 1 | 1 | 1 | 0  | 1 |
+ /Y12 |8    1212   21| /Y4    +---+---+---+---+---+----*---+---+---+----+---+
+ /Y11 |9           20| /Y5
+   S3 |10          19| /Y6
+   S2 |11          18| /Y7
+   S1 |12          17| /Y8
+   S0 |13          16| /Y9
+  GND |14          15| /Y10
+      +--------------+
+</pre>
+<p>
+<a name="DS1285"></a>
+<a name="DS1287"></a>
+<a name="DS1287A"></a>
+<h2>DS1285, DS1287, DS1287A</h2>
+Real-time clock with 50 bytes RAM.
+<br>
+DS1287(A) has built-in quartz crystal and lihium battery, and therefore
+the X1, X2 and VBAT pins are no-connect.  On the (older) DS1287 the /RCLR
+pin is no-connect as well.
+<pre>
+    +-----+--+-----+
+MOT |1    +--+   24| VCC
+ X1 |2           23| SQW
+ X2 |3           22|
+AD0 |4           21| /RCLR
+AD1 |5           20| VBAT
+AD2 |6   DS1285  19| /INT
+AD3 |7           18| /RST
+AD4 |8           17| DS
+AD5 |9           16| GND
+AD6 |10          15| R//W
+AD7 |11          14| AS
+GND |12          13| /CE
+    +--------------+
+</pre>
+<p>
+<a name="Z16C30"></a>
+<h2>Z16C30</h2>
+Dual universal serial controller.
+<pre>
+PLCC68
++---------------+---------------+---------------+---------------+
+| 10 /RxACKA    | 27 /TxREQA    | 44 /RxREQB    | 61 /TxACKB    |
+| 11 /INTA      | 28 /RxCA      | 45 VCC        | 62 /PITACK    |
+| 12 IEIA       | 29 RxDA       | 46 GND        | 63 R//W       |
+| 13 IEOA       | 30 /DCDA      | 47 AD15       | 64 /WR        |
+| 14 GND        | 31 /TxCA      | 48 AD14       | 65 /RD        |
+| 15 VCC        | 32 TxDA       | 49 AD13       | 66 /DS        |
+| 16 AD0        | 33 /CTSA      | 50 AD12       | 67 /AS        |
+| 17 AD1        | 34 GND        | 51 AD11       | 68 VCC        |
+| 18 AD2        | 35 GND        | 52 AD10       |  1 VCC        |
+| 19 AD3        | 36 GND        | 53 AD9        |  2 VCC        |
+| 20 AD4        | 37 /CTSB      | 54 AD8        |  3 /RST       |
+| 21 AD5        | 38 TxDB       | 55 VCC        |  4 /CE        |
+| 22 AD6        | 39 /TxCB      | 56 GND        |  5 D//C       |
+| 23 AD7        | 40 /DCDB      | 57 IEOB       |  6 A//B       |
+| 24 GND        | 41 RxDB       | 58 IEIB       |  7 /SITACK    |
+| 25 VCC        | 42 /RxCB      | 59 /INTB      |  8 /WAIT//RDY |
+| 26 /RxREQA    | 43 /TxREQB    | 60 /RxACKB    |  9 /TxACKA    |
++---------------+---------------+---------------+---------------+
+</pre>
+<p>
+<a name="Z16C33"></a>
+<h2>Z16C33</h2>
+Mono universal serial controller with ISDN time slot assigner.
+<pre>
+PLCC68
++---------------+---------------+---------------+---------------+
+| 10 /RxACK     | 27 /TxREQ     | 44 PORT7      | 61            |
+| 11 /INT       | 28 /RxC       | 45 VCC        | 62 /PITACK    |
+| 12 IEI        | 29 RxD        | 46 GND        | 63 R//W       |
+| 13 IEO        | 30 /DCD       | 47 AD15       | 64 /WR        |
+| 14 GND        | 31 /TxC       | 48 AD14       | 65 /RD        |
+| 15 VCC        | 32 TxD        | 49 AD13       | 66 /DS        |
+| 16 AD0        | 33 /CTS       | 50 AD12       | 67 /AS        |
+| 17 AD1        | 34 GND        | 51 AD11       | 68 VCC        |
+| 18 AD2        | 35 GND        | 52 AD10       |  1 VCC        |
+| 19 AD3        | 36 GND        | 53 AD9        |  2 VCC        |
+| 20 AD4        | 37 PORT0      | 54 AD8        |  3 /RST       |
+| 21 AD5        | 38 PORT1      | 55 VCC        |  4 /CE        |
+| 22 AD6        | 39 PORT2      | 56 GND        |  5 D//C       |
+| 23 AD7        | 40 PORT3      | 57            |  6 PS         |
+| 24 GND        | 41 PORT4      | 58            |  7 /SITACK    |
+| 25 VCC        | 42 PORT5      | 59            |  8 /WAIT//RDY |
+| 26 /RxREQ     | 43 PORT6      | 60            |  9 /TxACK     |
++---------------+---------------+---------------+---------------+
+</pre>
+<p>
+<a name="6520"></a>
+<a name="6821"></a>
+<h2>6520, 6821</h2>
+6800 and 6502 families peripheral interface adapters.
+<pre>
+      +-----+--+-----+
+  GND |1    +--+   40| CA1
+  PA0 |2           39| CA2
+  PA1 |3           38| /IRQA
+  PA2 |4           37| /IRQB
+  PA3 |5           36| RS0
+  PA4 |6           35| RS1
+  PA5 |7           34| /RST
+  PA6 |8           33| D0
+  PA7 |9           32| D1
+  PB0 |10  MC6821  31| D2
+  PB1 |11   6520   30| D3
+  PB2 |12          29| D4
+  PB3 |13          28| D5
+  PB4 |14          27| D6
+  PB5 |15          26| D7
+  PB6 |16          25| E (P2)
+  PB7 |17          24| CE1
+  CB1 |18          23| /CE2
+  CB2 |19          22| CE0
+  VCC |20          21| R//W
+      +--------------+
+</pre>
+<p>
+<a name="6530"></a>
+<h2>6530</h2>
+6502 family versatile interface adapter.
+<pre>
+         +-----+--+-----+
+     GND |1    +--+   40| PA1
+     PA0 |2           39| PA2
+  E (P2) |3           38| PA3
+      RS |4           37| PA4
+      A9 |5           36| PA5
+      A8 |6           35| PA6
+      A7 |7           34| PA7
+      A6 |8           33| DB0
+     R/W |9           32| DB1
+      A5 |10   6530   31| DB2
+      A4 |11          30| DB3
+      A3 |12          29| DB4
+      A2 |13          28| DB5
+      A1 |14          27| DB6
+      A0 |15          26| DB7
+    /RST |16          25| PB0
+/IRQ PB7 |17          24| PB1
+ CS1 PB6 |18          23| PB2
+ CS2 PB5 |19          22| PB3
+     VCC |20          21| PB4
+         +--------------+
+</pre>
+<p>
+<a name="6551"></a>
+<h2>6551</h2>
+6502 family asynchronous serial interface controller.
+<pre>
+     +-----+--+-----+
+ GND |1    +--+   28| R//W
+ CE0 |2           27| CLK
+/CE1 |3           26| /IRQ
+/RST |4           25| D7
+ RxC |5           24| D6
+  X1 |6           23| D5
+  X0 |7    6551   22| D4
+/RTS |8           21| D3
+/CTS |9           20| D2
+ TxD |10          19| D1
+/DTR |11          18| D0
+ RxD |12          17| /DSR
+ RS0 |13          16| /DCD
+ RS1 |14          15| VCC
+     +--------------+
+</pre>
+<p>
+<a name="6818"></a>
+<h2>6818</h2>
+Real-time clock with 50 bytes RAM.
+<pre>
+    +-----+--+-----+
+    |1    +--+   24| VCC
+ X1 |2           23| SQW
+ X2 |3           22|
+AD0 |4           21| /RCLR
+AD1 |5           20| VBAT
+AD2 |6   146818  19| /INT
+AD3 |7           18| /RST
+AD4 |8           17| DS
+AD5 |9           16| GND
+AD6 |10          15| R//W
+AD7 |11          14| AS
+GND |12          13| /CE
+    +--------------+
+</pre>
+<p>
+<a name="6845"></a>
+<h2>6845</h2>
+6800 family CRT Controller.
+<pre>
+       +-----+--+-----+
+   GND |1    +--+   40| VSYNC
+  /RST |2           39| HSYNC
+ LPSTB |3           38| RA0
+   MA0 |4           37| RA1
+   MA1 |5           36| RA2
+   MA2 |6           35| RA3
+   MA3 |7           34| RA4
+   MA4 |8           33| D0
+   MA5 |9           32| D1
+   MA6 |10   6845   31| D2
+   MA7 |11   CRTC   30| D3
+   MA8 |12          29| D4
+   MA9 |13          28| D5
+  MA10 |14          27| D6
+  MA11 |15          26| D7
+  MA12 |16          25| /CE
+  MA13 |17          24| A0
+DISPEN |18          23| IORQ
+CURSOR |19          22| R/W
+   VCC |20          21| CLK
+       +--------------+
+</pre>
+<p>
+<a name="6850"></a>
+<h2>6850</h2>
+6800 family asynchronous communications interface.
+<pre>
+      +-----+--+-----+
+  GND |1    +--+   24| /CTS
+  RxD |2           23| /DCD
+RxCLK |3           22| D0
+TxCLK |4           21| D1
+ /RTS |5           20| D2
+  TxD |6           19| D3
+ /IRQ |7    6850   18| D4
+  CE0 |8           17| D5
+ /CE2 |9           16| D6
+  CE1 |10          15| D7
+   RS |11          14| E
+  VCC |12          13| R//W
+      +--------------+
+</pre>
+<p>
+<a name="6852"></a>
+<h2>6852</h2>
+6800 family synchronous serial data adapter.
+<pre>
+        +-----+--+-----+
+    GND |1    +--+   24| /CTS
+    RxD |2           23| /DCD
+  RxCLK |3           22| D0
+  TxCLK |4           21| D1
+SM /DTR |5           20| D2
+    TxD |6           19| D3
+   /IRQ |7    6852   18| D4
+    TUF |8           17| D5
+   /RST |9           16| D6
+    /CE |10          15| D7
+     RS |11          14| E
+    VCC |12          13| R//W
+        +--------------+
+</pre>
+<p>
+<a name="8243"></a>
+<h2>8243</h2>
+8048 Port expander.
+<pre>
+     +-----+--+-----+
+P5.0 |1    +--+   24| VCC
+P4.0 |2           23| P5.1
+P4.1 |3           22| P5.2
+P4.2 |4           21| P5.3
+P4.3 |5           20| P6.0
+ /CE |6           19| P6.1
+PROG |7    8243   18| P6.2
+P2.3 |8           17| P6.3
+P2.2 |9           16| P7.3
+P2.1 |10          15| P7.2
+P2.0 |11          14| P7.1
+ GND |12          13| P7.0
+     +--------------+
+</pre>
+<p>
+<a name="8250"></a>
+<h2>8250</h2>
+Asynchronous serial interface controller.
+<pre>
+        +-----+--+-----+
+     D0 |1    +--+   40| VCC
+     D1 |2           39| /RI
+     D2 |3           38| /DCD
+     D3 |4           37| /DSR
+     D4 |5           36| /CTS
+     D5 |6           35| MR
+     D6 |7           34| /OUT1
+     D7 |8           33| /DTR
+   RCLK |9           32| /RTS
+    RxD |10  16450   31| /OUT2
+    TxD |11   8250   30| INTR
+    CE0 |12          29|
+    CE1 |13          28| A0
+   /CE2 |14          27| A1
+/CLKOUT |15          26| A2
+     X1 |16          25| /ADS
+     X0 |17          24| CSOUT
+    /WR |18          23| DDIS
+     WR |19          22| RD
+    GND |20          21| /RD
+        +--------------+
+</pre>
+<p>
+<a name="8251"></a>
+<h2>8251</h2>
+Universal asynchronous receiver/transmitter.
+<pre>
+      +-----+--+-----+
+   D2 |1    +--+   28| D1
+   D3 |2           27| D0
+  RxD |3           26| VCC
+  GND |4           25| /RxC
+   D4 |5           24| /DTR
+   D5 |6           23| /RTS
+   D6 |7    8251   22| /DSR
+   D7 |8           21| RST
+ /TxC |9           20| CLK
+  /WR |10          19| TxD
+  /CE |11          18| TxEMPTY
+ C//D |12          17| /CTS
+  /RD |13          16| SYCDET BD
+RxRDY |14          15| TXRDY
+      +--------------+
+</pre>
+<p>
+<a name="8253"></a>
+<a name="8254"></a>
+<h2>8253, 8254</h2>
+Programmable interval timer/counter.
+<pre>
+     +-----+--+-----+
+  D7 |1    +--+   24| VCC
+  D6 |2           23| /WR
+  D5 |3           22| /RD
+  D4 |4           21| /CE
+  D3 |5           20| A1
+  D2 |6    8253   19| A0
+  D1 |7    8254   18| CLK2
+  D0 |8           17| OUT2
+CLK0 |9           16| G2
+OUT0 |10          15| CLK1
+  G0 |11          14| G1
+ GND |12          13| OUT1
+     +--------------+
+</pre>
+<p>
+<a name="8255"></a>
+<h2>8255</h2>
+Parallel Peripheral Interface.
+<pre>
+    +-----+--+-----+
+PA3 |1    +--+   40| PA4
+PA2 |2           39| PA5
+PA1 |3           38| PA6
+PA0 |4           37| PA7
+/RD |5           36| /WR
+/CE |6           35| RST
+GND |7           34| D0
+ A1 |8           33| D1
+ A0 |9           32| D2
+PC7 |10   8255   31| D3
+PC6 |11          30| D4
+PC5 |12          29| D5
+PC4 |13          28| D6
+PC0 |14          27| D7
+PC1 |15          26| VCC
+PC2 |16          25| PB7
+PC3 |17          24| PB6
+PB0 |18          23| PB5
+PB1 |19          22| PB4
+PB2 |20          21| PB3
+    +--------------+
+</pre>
+<p>
+<a name="Z8530"></a>
+<a name="Z8531"></a>
+<h2>Z8530, Z8531</h2>
+Zilog Serial Communications Controller.
+<br>
+Z8531 has no synchronous capabilities.
+<pre>
+          +-----+--+-----+
+       D1 |1    +--+   40| D0
+       D3 |2           39| D2
+       D5 |3           38| D4
+       D7 |4           37| D6
+     /INT |5           36| /RD
+      IEO |6           35| /WR
+      IEI |7           34| A0 A/B
+   /INTAK |8           33| /CE
+      VCC |9           32| A1 D/C
+  /W_REQA |10   Z8530  31| GND
+   /SYNCA |11    SCC   30| /W_REQB
+   /RTxCA |12          29| /SYNCB
+     RxDA |13          28| /RTxCB
+   /TRxCA |14          27| RxDB
+     TxDA |15          26| /TRxCB
+/DTR_REQA |16          25| TxDB
+    /RTSA |17          24| /DTR_REQB
+    /CTSA |18          23| /RTSB
+    /DCDA |19          22| /CTSB
+      CLK |20          21| /DCDB
+          +--------------+
+</pre>
+<p>
+<a name="8574"></a>
+<a name="8574A"></a>
+<h2>8574, 8574A</h2>
+I2C parallel I/O expander.
+<br>
+I2C address is 0100xxx for the 8574 and 0111xxx for the 8574A, where
+xxx can be specified by the A0-2 inputs.
+<pre>
+    +---+--+---+
+ A0 |1  +--+ 16| VCC
+ A1 |2       15| SDA
+ A2 |3       14| SCL
+ P0 |4       13| /INT
+ P1 |5  8574 12| P7
+ P2 |6       11| P6
+ P3 |7       10| P5
+GND |8        9| P4
+    +----------+
+</pre>
+<p>
+<a name="8584"></a>
+<h2>8584</h2>
+I2C bus controller.
+<br>
+Bus controller ties to either Z80-style bus or to 68000-style bus,
+and determines the mode from the first few cycles.
+<pre>
+           +---+--+---+
+       CLK |1  +--+ 20| VCC
+SDAo   SDA |2       19| /RST /STB
+SCLo   SCL |3       18| /WR  R//W
+SDAi /IACK |4       17| /CS
+SCLi  /INT |5       16| /RD  /DTACK
+        A0 |6  8584 15| D7
+        D0 |7       14| D6
+        D1 |8       13| D5
+        D2 |9       12| D4
+       GND |10      11| D3
+           +----------+
+</pre>
+<p>
+<a name="16450"></a>
+<h2>16450</h2>
+Asynchronous serial interface controller.
+<pre>
+        +-----+--+-----+
+     D0 |1    +--+   40| VCC
+     D1 |2           39| /RI
+     D2 |3           38| /DCD
+     D3 |4           37| /DSR
+     D4 |5           36| /CTS
+     D5 |6           35| MR
+     D6 |7           34| /OUT1
+     D7 |8           33| /DTR
+   RCLK |9           32| /RTS
+    RxD |10  16450   31| /OUT2
+    TxD |11   8250   30| INTR
+    CE0 |12          29|
+    CE1 |13          28| A0
+   /CE2 |14          27| A1
+/CLKOUT |15          26| A2
+     X1 |16          25| /ADS
+     X0 |17          24| CSOUT
+    /WR |18          23| DDIS
+     WR |19          22| RD
+    GND |20          21| /RD
+        +--------------+
+</pre>
+<p>
+<a name="16550"></a>
+<h2>16550</h2>
+Asynchronous serial interface controller with DMA support and 16-byte FIFOs.
+<pre>
+        +-----+--+-----+
+     D0 |1    +--+   40| VCC
+     D1 |2           39| /RI
+     D2 |3           38| /DCD
+     D3 |4           37| /DSR
+     D4 |5           36| /CTS
+     D5 |6           35| MR
+     D6 |7           34| /OUT1
+     D7 |8           33| /DTR
+   RCLK |9           32| /RTS
+    RxD |10  16550   31| /OUT2
+    TxD |11          30| INTR
+    CE0 |12          29| /RXRDY
+    CE1 |13          28| A0
+   /CE2 |14          27| A1
+/CLKOUT |15          26| A2
+     X1 |16          25| /ADS
+     X0 |17          24| /TXRDY
+    /WR |18          23| DDIS
+     WR |19          22| RD
+    GND |20          21| /RD
+        +--------------+
+</pre>
+<p>
+<a name="16552"></a>
+<h2>16552</h2>
+Dual asynchronous serial interface controller with DMA support and
+16-byte FIFOs, and an 8-bit parallel printer port.
+<pre>
+PLCC68
++---------------+---------------+---------------+---------------+
+| 10 2TxD       | 27 GND        | 44 1BD        | 61 /2RXRDY    |
+| 11 /2DTR      | 28 /1CTS      | 45 1INT       | 62 2RxD       |
+| 12 /2RTS      | 29 /1DCD      | 46 PD7        | 63 /ERR       |
+| 13 /2CTS      | 30 /1RI       | 47 PD6        | 64 VCC        |
+| 14 D0         | 31 /1DSR      | 48 PD5        | 65 SLCT       |
+| 15 D1         | 32 /1CE       | 49 PD4        | 66 BUSY       |
+| 16 D2         | 33 A2         | 50 PD3        | 67 PE         |
+| 17 D3         | 34 A1         | 51 PD2        | 68 /ACK       |
+| 18 D4         | 35 A0         | 52 PD1        |  1 PEMD       |
+| 19 D5         | 36 /WR        | 53 PD0        |  2 2TR        |
+| 20 D6         | 37 /RD        | 54 GND        |  3 /2CE       |
+| 21 D7         | 38 /PCE       | 55 /STB       |  4 CLK        |
+| 22 /1TXRDY    | 39 /RST       | 56 /AFD       |  5 /2DSR      |
+| 23 VCC        | 40 VCC        | 57 /INIT      |  6 /2RI       |
+| 24 /1RTS      | 41 1RxD       | 58 /SLIN      |  7 GND        |
+| 25 /1DTR      | 42 /2TXRDY    | 59 PINT       |  8 /2DCD      |
+| 26 1TxD       | 43 /ENIRQ     | 60 2INT       |  9 /1RXRDY    |
++---------------+---------------+---------------+---------------+
+</pre>
+<p>
+<a name="16554"></a>
+<h2>16554</h2>
+Quad asynchronous serial interface controller with DMA support and
+16-byte FIFOs.
+<pre>
+PLCC68
++---------------+---------------+---------------+---------------+
+| 10 /1DSR      | 27 /2DCD      | 44 /3DSR      | 61 /4DCD      |
+| 11 /1CTS      | 28 /2RI       | 45 /3CTS      | 62 /4RI       |
+| 12 /1DTR      | 29 2RxD       | 46 /3DTR      | 63 4RxD       |
+| 13 VCC        | 30 VCC        | 47 VCC        | 64 VCC        |
+| 14 /1RTS      | 31            | 48 /3RTS      | 65 /INTN      |
+| 15 1INT       | 32 A2         | 49 3INT       | 66 D0         |
+| 16 /1CE       | 33 A1         | 50 /3CE       | 67 D1         |
+| 17 1TxD       | 34 A0         | 51 3TxD       | 68 D2         |
+| 18 /WR        | 35 X1         | 52 /RD        |  1 D3         |
+| 19 2TxD       | 36 X2         | 53 4TxD       |  2 D4         |
+| 20 /2CE       | 37 RST        | 54 /4CE       |  3 D5         |
+| 21 2INT       | 38 /RXRDY     | 55 4INT       |  4 D6         |
+| 22 /2RTS      | 39 /TXRDY     | 56 /4RTS      |  5 D7         |
+| 23 GND        | 40 GND        | 57 GND        |  6 GND        |
+| 24 /2DTR      | 41 3RxD       | 58 /4DTR      |  7 1RxD       |
+| 25 /2CTS      | 42 /3RI       | 59 /4CTS      |  8 /1RI       |
+| 26 /2DSR      | 43 /3DCD      | 60 /4DSR      |  9 /1DCD      |
++---------------+---------------+---------------+---------------+
+</pre>
+<p>
+<a name="68153"></a>
+<h2>68153</h2>
+680x0 family bus interrupter.
+<pre>
+       +-----+--+-----+
+   VCC |1    +--+   40| A3
+  R//W |2           39| A2
+   /CE |3           38| A1
+/DTACK |4           37| D7
+ /IACK |5           36| D6
+/IACKi |6           35| D5
+/IACKo |7           34| D4
+ /IRQ1 |8           33| D3
+   GND |9           32| D2
+   GND |10          31| GND
+   VCC |11  68153   30| VCC
+ /IRQ2 |12          29| D1
+ /IRQ3 |13          28| D0
+ /IRQ4 |14          27| /INTAE
+ /IRQ5 |15          26| INTAL1
+ /IRQ6 |16          25| INTAL0
+ /IRQ7 |17          24| /INT3
+   CLK |18          23| /INT2
+ /INT0 |19          22| /INT1
+   GND |20          21| VCC
+       +--------------+
+</pre>
+<p>
+<a name="68230"></a>
+<h2>68230 (PLCC)</h2>
+680x0 family Parallel Interface and Timer (PI/T)
+<pre>
+PLCC52
++---------------+---------------+---------------+---------------+
+|  8            | 21            | 34 PC0        | 47 R//W       |
+|  9 PA4        | 22 PB2        | 35 PC1        | 48 D0         |
+| 10 PA5        | 23 PB3        | 36 PC2 TIN    | 49 D1         |
+| 11 PA6        | 24 PB4        | 37 PC3 TOUT   | 50 D2         |
+| 12 PA7        | 25 PB5        | 38 PC4 /DMARQ | 51 D3         |
+| 13 VCC        | 26 PB6        | 39 PC5 /PIRQ  | 52 D4         |
+| 14 H1         | 27 PB7        | 40 PC6 /PIACK |  1 D5         |
+| 15 H2         | 28 A4         | 41 PC7 /TIACK |  2 D6         |
+| 16 H3         | 29 A3         | 42 GND        |  3 D7         |
+| 17 H4         | 30 A2         | 43 /RST       |  4 PA0        |
+| 18 PB0        | 31 A1         | 44 CLK        |  5 PA1        |
+| 19 PB1        | 32 A0         | 45 /CE        |  6 PA2        |
+| 20            | 33            | 46 /DTACK     |  7 PA3        |
++---------------+---------------+---------------+---------------+
+</pre>
+<p>
+<a name="68230"></a>
+<h2>68230 (DIP)</h2>
+680x0 family Parallel Interface and Timer (PI/T)
+<pre>
+    +-----+--+-----+
+ D5 |1    +--+   48| D4
+ D6 |2           47| D3
+ D7 |3           46| D2
+PA0 |4           45| D1
+PA1 |5           44| D0
+PA2 |6           43| R//W
+PA3 |7           42| /DTACK
+PA4 |8           41| /CE
+PA5 |9           40| CLK
+PA6 |10          39| /RST
+PA7 |11          38| GND
+VCC |12          37| PC7 /TIACK
+ H1 |13  68230   36| PC6 /PIACK
+ H2 |14          35| PC5 /PIRQ
+ H3 |15          34| PC4 /DMAREQ
+ H4 |16          33| PC3 TOUT
+PB0 |17          32| PC2 TIN
+PB1 |18          31| PC1
+PB2 |19          30| PC0
+PB3 |20          29| RS0
+PB4 |21          28| RS1
+PB5 |22          27| RS2
+PB6 |23          26| RS3
+PB7 |24          25| RS4
+    +--------------+
+</pre>
+<p>
+<a name="68452"></a>
+<h2>68452</h2>
+680x0 family bus arbiter.
+<pre>
+       +-----+--+-----+
+   VCC |1    +--+   28| GND
+   VCC |2           27| /BCLR
+  /GT4 |3           26| /GT0
+ /REQ3 |4           25| /REQ4
+  /GT5 |5           24| /GT1
+ /REQ2 |6           23| /REQ5
+ /REQ1 |7           22| /REQ6
+   GND |8   68452   21| /REQ7
+ /REQ0 |9           20| /BG
+  /LEI |10          19| /BR
+/BGACK |11          18| /GT2
+  /GT7 |12          17| /GT3
+  /GT6 |13          16| VCC
+   GND |14          15| VCC
+       +--------------+
+</pre>
+<p>
+<a name="68901"></a>
+<h2>68901 (DIP)</h2>
+680x0 multi-function peripheral.
+<pre>
+     +-----+--+-----+
+R//W |1    +--+   48| /CE
+ RS0 |2           47| /DS
+ RS1 |3           46| /DTACK
+ RS2 |4           45| /IACK
+ RS3 |5           44| D7
+ RS4 |6           43| D6
+  TC |7           42| D5
+  SO |8           41| D4
+  SI |9           40| D3
+  RC |10          39| D2
+ VCC |11          38| D1
+     |12          37| D0
+ TAO |13  68901   36| GND
+ TBO |14          35| CLK
+ TCO |15          34| /IEI
+ TDO |16          33| /IEO
+  X1 |17          32| /IRQ
+  X0 |18          31| /RR
+ TAI |19          30| /TR
+ TBI |20          29| INT7
+/RST |21          28| INT6
+INT0 |22          27| INT5
+INT1 |23          26| INT4
+INT2 |24          25| INT3
+     +--------------+
+</pre>
+<p>
+<a name="68901"></a>
+<h2>68901 (PLCC)</h2>
+680x0 multi-function peripheral.
+<pre>
+PLCC52
++---------------+---------------+---------------+---------------+
+|  8 TC         | 21            | 34 /TR        | 47 D6         |
+|  9 SO         | 22 TAI        | 35 /RR        | 48 D7         |
+| 10 SI         | 23 TBI        | 36 /IRQ       | 49 /IACK      |
+| 11 RC         | 24 /RST       | 37 /IEO       | 50 /DTACK     |
+| 12 VCC        | 25 INT0       | 38 /IEI       | 51 /DS        |
+| 13            | 26 INT1       | 39 CLK        | 52 /CE        |
+| 14            | 27 INT2       | 40 GND        |  1            |
+| 15 TAO        | 28 INT3       | 41 D0         |  2 R//W       |
+| 16 TBO        | 29 INT4       | 42 D1         |  3 RS0        |
+| 17 TCO        | 30 INT5       | 43 D2         |  4 RS1        |
+| 18 TDO        | 31 INT6       | 44 D3         |  5 RS2        |
+| 19 X1         | 32 INT7       | 45 D4         |  6 RS3        |
+| 20 X0         | 33            | 46 D5         |  7 RS4        |
++---------------+---------------+---------------+---------------+
+</pre>
+<p>
+<a name="146818"></a>
+<h2>146818</h2>
+Real-time clock with 50 bytes RAM.
+<pre>
+    +-----+--+-----+
+    |1    +--+   24| VCC
+ X1 |2           23| SQW
+ X2 |3           22|
+AD0 |4           21| /RCLR
+AD1 |5           20| VBAT
+AD2 |6   146818  19| /INT
+AD3 |7           18| /RST
+AD4 |8           17| DS
+AD5 |9           16| GND
+AD6 |10          15| R//W
+AD7 |11          14| AS
+GND |12          13| /CE
+    +--------------+
+</pre>
+<p>
+<hr><a href="index.html">Back to the GIICM index.</a>
+</body>
+</html>

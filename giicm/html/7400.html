@@ -1,0 +1,614 @@
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <link rel="stylesheet" type="text/css" href="../frank/frank.css">
+   <meta name="CVS" content="$Id$">
+   <meta name="description" content="GIICM">
+   <title>GIICM</title>
+</head><body><h1>7400 series TTL IC's:  7400...7449</h1>
+<p>
+<hr>
+<a name="7400"></a>
+<h2>7400</h2>
+Quad 2-input NAND gates.
+<pre>
+    +---+--+---+             +---+---*---+           __
+ 1A |1  +--+ 14| VCC         | A | B |/Y |      /Y = AB
+ 1B |2       13| 4B          +===+===*===+
+/1Y |3       12| 4A          | 0 | 0 | 1 |
+ 2A |4  7400 11| /4Y         | 0 | 1 | 1 |
+ 2B |5       10| 3B          | 1 | 0 | 1 |
+/2Y |6        9| 3A          | 1 | 1 | 0 |
+GND |7        8| /3Y         +---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="7401"></a>
+<h2>7401</h2>
+Quad 2-input open-collector NAND gates.
+<pre>
+    +---+--+---+             +---+---*---+           __
+/1Y |1  +--+ 14| VCC         | A | B |/Y |      /Y = AB
+ 1A |2       13| /4Y         +===+===*===+
+ 1B |3       12| 4B          | 0 | 0 | Z |
+/2Y |4  7401 11| 4A          | 0 | 1 | Z |
+ 2A |5       10| /3Y         | 1 | 0 | Z |
+ 2B |6        9| 3B          | 1 | 1 | 0 |
+GND |7        8| 3A          +---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="7402"></a>
+<h2>7402</h2>
+Quad 2-input NOR gates.
+<pre>
+    +---+--+---+             +---+---*---+           ___
+/1Y |1  +--+ 14| VCC         | A | B |/Y |      /Y = A+B
+ 1A |2       13| /4Y         +===+===*===+
+ 1B |3       12| 4B          | 0 | 0 | 1 |
+/2Y |4  7402 11| 4A          | 0 | 1 | 0 |
+ 2A |5       10| /3Y         | 1 | 0 | 0 |
+ 2B |6        9| 3B          | 1 | 1 | 0 |
+GND |7        8| 3A          +---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="7403"></a>
+<h2>7403</h2>
+Quad 2-input open-collector NAND gates.
+<pre>
+    +---+--+---+             +---+---*---+           __
+ 1A |1  +--+ 14| VCC         | A | B |/Y |      /Y = AB
+ 1B |2       13| 4B          +===+===*===+
+/1Y |3       12| 4A          | 0 | 0 | Z |
+ 2A |4  7403 11| /4Y         | 0 | 1 | Z |
+ 2B |5       10| 3B          | 1 | 0 | Z |
+/2Y |6        9| 3A          | 1 | 1 | 0 |
+GND |7        8| /3Y         +---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="7404"></a>
+<h2>7404</h2>
+Hex inverters.
+<pre>
+    +---+--+---+             +---*---+               _
+ 1A |1  +--+ 14| VCC         | A |/Y |          /Y = A
+/1Y |2       13| 6A          +===*===+
+ 2A |3       12| /6Y         | 0 | 1 |
+/2Y |4  7404 11| 5A          | 1 | 0 |
+ 3A |5       10| /5Y         +---*---+
+/3Y |6        9| 4A
+GND |7        8| /4Y
+    +----------+
+</pre>
+<p>
+<a name="7405"></a>
+<h2>7405</h2>
+Hex open-collector inverters.
+<pre>
+    +---+--+---+             +---*---+               _
+ 1A |1  +--+ 14| VCC         | A |/Y |          /Y = A
+/1Y |2       13| 6A          +===*===+
+ 2A |3       12| /6Y         | 0 | Z |
+/2Y |4  7405 11| 5A          | 1 | 0 |
+ 3A |5       10| /5Y         +---*---+
+/3Y |6        9| 4A
+GND |7        8| /4Y
+    +----------+
+</pre>
+<p>
+<a name="7406"></a>
+<h2>7406</h2>
+Hex open-collector high-voltage inverters.
+<br>
+Maximum output voltage is 30V.
+<pre>
+    +---+--+---+             +---*---+               _
+ 1A |1  +--+ 14| VCC         | A |/Y |          /Y = A
+/1Y |2       13| 6A          +===*===+
+ 2A |3       12| /6Y         | 0 | Z |
+/2Y |4  7406 11| 5A          | 1 | 0 |
+ 3A |5       10| /5Y         +---*---+
+/3Y |6        9| 4A
+GND |7        8| /4Y
+    +----------+
+</pre>
+<p>
+<a name="7407"></a>
+<h2>7407</h2>
+Hex open-collector high-voltage buffers.
+<br>
+Maximum output voltage is 30V.
+<pre>
+    +---+--+---+             +---*---+
+ 1A |1  +--+ 14| VCC         | A | Y |           Y = A
+ 1Y |2       13| 6A          +===*===+
+ 2A |3       12| 6Y          | 0 | 0 |
+ 2Y |4  7407 11| 5A          | 1 | Z |
+ 3A |5       10| 5Y          +---*---+
+ 3Y |6        9| 4A
+GND |7        8| 4Y
+    +----------+
+</pre>
+<p>
+<a name="7408"></a>
+<h2>7408</h2>
+Quad 2-input AND gates.
+<pre>
+    +---+--+---+             +---+---*---+
+ 1A |1  +--+ 14| VCC         | A | B | Y |       Y = AB
+ 1B |2       13| 4B          +===+===*===+
+ 1Y |3       12| 4A          | 0 | 0 | 0 |
+ 2A |4  7408 11| 4Y          | 0 | 1 | 0 |
+ 2B |5       10| 3B          | 1 | 0 | 0 |
+ 2Y |6        9| 3A          | 1 | 1 | 1 |
+GND |7        8| 3Y          +---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="7409"></a>
+<h2>7409</h2>
+Quad 2-input open-collector AND gates.
+<pre>
+    +---+--+---+             +---+---*---+
+ 1A |1  +--+ 14| VCC         | A | B | Y |       Y = AB
+ 1B |2       13| 4B          +===+===*===+
+ 1Y |3       12| 4A          | 0 | 0 | 0 |
+ 2A |4  7409 11| 4Y          | 0 | 1 | 0 |
+ 2B |5       10| 3B          | 1 | 0 | 0 |
+ 2Y |6        9| 3A          | 1 | 1 | Z |
+GND |7        8| 3Y          +---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="7410"></a>
+<h2>7410</h2>
+Triple 3-input NAND gates.
+<pre>
+    +---+--+---+             +---+---+---*---+       ___
+ 1A |1  +--+ 14| VCC         | A | B | C |/Y |  /Y = ABC
+ 1B |2       13| 1C          +===+===+===*===+
+ 2A |3       12| /1Y         | 0 | X | X | 1 |
+ 2B |4  7410 11| 3C          | 1 | 0 | X | 1 |
+ 2C |5       10| 3B          | 1 | 1 | 0 | 1 |
+/2Y |6        9| 3A          | 1 | 1 | 1 | 0 |
+GND |7        8| /3Y         +---+---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="7411"></a>
+<h2>7411</h2>
+Triple 3-input AND gates.
+<pre>
+    +---+--+---+             +---+---+---*---+
+ 1A |1  +--+ 14| VCC         | A | B | C | Y |   Y = ABC
+ 1B |2       13| 1C          +===+===+===*===+
+ 2A |3       12| 1Y          | 0 | X | X | 0 |
+ 2B |4  7411 11| 3C          | 1 | 0 | X | 0 |
+ 2C |5       10| 3B          | 1 | 1 | 0 | 0 |
+ 2Y |6        9| 3A          | 1 | 1 | 1 | 1 |
+GND |7        8| 3Y          +---+---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="7412"></a>
+<h2>7412</h2>
+Triple 3-input open-collector NAND gates.
+<pre>
+    +---+--+---+             +---+---+---*---+       ___
+ 1A |1  +--+ 14| VCC         | A | B | C |/Y |  /Y = ABC
+ 1B |2       13| 1C          +===+===+===*===+
+ 2A |3       12| /1Y         | 0 | X | X | Z |
+ 2B |4  7410 11| 3C          | 1 | 0 | X | Z |
+ 2C |5       10| 3B          | 1 | 1 | 0 | Z |
+/2Y |6        9| 3A          | 1 | 1 | 1 | 0 |
+GND |7        8| /3Y         +---+---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="7413"></a>
+<h2>7413</h2>
+Dual 4-input NAND gates with schmitt-trigger inputs.
+<br>
+0.8V typical input hysteresis at VCC=+5V.
+<pre>
+    +---+--+---+             +---+---+---+---*---+        ____
+ 1A |1  +--+ 14| VCC         | A | B | C | D |/Y |   /Y = ABCD
+ 1B |2       13| 2D          +===+===+===+===*===+
+    |3       12| 2C          | 0 | X | X | X | 1 |
+ 1C |4  7413 11|             | 1 | 0 | X | X | 1 |
+ 1D |5       10| 2B          | 1 | 1 | 0 | X | 1 |
+/1Y |6        9| 2A          | 1 | 1 | 1 | 0 | 1 |
+GND |7        8| /2Y         | 1 | 1 | 1 | 1 | 0 |
+    +----------+             +---+---+---+---*---+
+</pre>
+<p>
+<a name="7414"></a>
+<h2>7414</h2>
+Hex inverters with schmitt-trigger inputs.
+<br>
+0.8V typical input hysteresis at VCC=+5V.
+<pre>
+    +---+--+---+             +---*---+               _
+ 1A |1  +--+ 14| VCC         | A |/Y |          /Y = A
+/1Y |2       13| 6A          +===*===+
+ 2A |3       12| /6Y         | 0 | 1 |
+/2Y |4  7414 11| 5A          | 1 | 0 |
+ 3A |5       10| /5Y         +---*---+
+/3Y |6        9| 4A
+GND |7        8| /4Y
+    +----------+
+</pre>
+<p>
+<a name="7415"></a>
+<h2>7415</h2>
+Triple 3-input open-collector AND gates.
+<pre>
+    +---+--+---+             +---+---+---*---+
+ 1A |1  +--+ 14| VCC         | A | B | C | Y |   Y = ABC
+ 1B |2       13| 1C          +===+===+===*===+
+ 2A |3       12| 1Y          | 0 | X | X | 0 |
+ 2B |4  7415 11| 3C          | 1 | 0 | X | 0 |
+ 2C |5       10| 3B          | 1 | 1 | 0 | 0 |
+ 2Y |6        9| 3A          | 1 | 1 | 1 | Z |
+GND |7        8| 3Y          +---+---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="7416"></a>
+<h2>7416</h2>
+Hex open-collector high-voltage inverters.
+<br>
+Maximum output voltage is 15V.
+<pre>
+    +---+--+---+             +---*---+               _
+ 1A |1  +--+ 14| VCC         | A |/Y |          /Y = A
+/1Y |2       13| 6A          +===*===+
+ 2A |3       12| /6Y         | 0 | Z |
+/2Y |4  7416 11| 5A          | 1 | 0 |
+ 3A |5       10| /5Y         +---*---+
+/3Y |6        9| 4A
+GND |7        8| /4Y
+    +----------+
+</pre>
+<p>
+<a name="7417"></a>
+<h2>7417</h2>
+Hex open-collector high-voltage buffers.
+<br>
+Maximum output voltage is 15V.
+<pre>
+    +---+--+---+             +---*---+
+ 1A |1  +--+ 14| VCC         | A | Y |          Y = A
+ 1Y |2       13| 6A          +===*===+
+ 2A |3       12| 6Y          | 0 | 0 |
+ 2Y |4  7417 11| 5A          | 1 | Z |
+ 3A |5       10| 5Y          +---*---+
+ 3Y |6        9| 4A
+GND |7        8| 4Y
+    +----------+
+</pre>
+<p>
+<a name="7418"></a>
+<h2>7418</h2>
+Dual 4-input NAND gates with schmitt-trigger inputs.
+<br>
+0.8V typical input hysteresis at VCC=+5V.
+<pre>
+    +---+--+---+             +---+---+---+---*---+        ____
+ 1A |1  +--+ 14| VCC         | A | B | C | D |/Y |   /Y = ABCD
+ 1B |2       13| 2D          +===+===+===+===*===+
+    |3       12| 2C          | 0 | X | X | X | 1 |
+ 1C |4  7418 11|             | 1 | 0 | X | X | 1 |
+ 1D |5       10| 2B          | 1 | 1 | 0 | X | 1 |
+/1Y |6        9| 2A          | 1 | 1 | 1 | 0 | 1 |
+GND |7        8| /2Y         | 1 | 1 | 1 | 1 | 0 |
+    +----------+             +---+---+---+---*---+
+</pre>
+<p>
+<a name="7419"></a>
+<h2>7419</h2>
+Hex inverters with schmitt-trigger line-receiver inputs.
+<br>
+0.8V typical input hysteresis at VCC=+5V.
+<pre>
+    +---+--+---+             +---*---+               _
+ 1A |1  +--+ 14| VCC         | A |/Y |          /Y = A
+/1Y |2       13| 6A          +===*===+
+ 2A |3       12| /6Y         | 0 | 1 |
+/2Y |4  7414 11| 5A          | 1 | 0 |
+ 3A |5       10| /5Y         +---*---+
+/3Y |6        9| 4A
+GND |7        8| /4Y
+    +----------+
+</pre>
+<p>
+<a name="7420"></a>
+<h2>7420</h2>
+Dual 4-input NAND gates.
+<pre>
+    +---+--+---+             +---+---+---+---*---+        ____
+ 1A |1  +--+ 14| VCC         | A | B | C | D |/Y |   /Y = ABCD
+ 1B |2       13| 2D          +===+===+===+===*===+
+    |3       12| 2C          | 0 | X | X | X | 1 |
+ 1C |4  7420 11|             | 1 | 0 | X | X | 1 |
+ 1D |5       10| 2B          | 1 | 1 | 0 | X | 1 |
+/1Y |6        9| 2A          | 1 | 1 | 1 | 0 | 1 |
+GND |7        8| /2Y         | 1 | 1 | 1 | 1 | 0 |
+    +----------+             +---+---+---+---*---+
+</pre>
+<p>
+<a name="7421"></a>
+<h2>7421</h2>
+Dual 4-input AND gates.
+<pre>
+    +---+--+---+             +---+---+---+---*---+
+ 1A |1  +--+ 14| VCC         | A | B | C | D | Y |    Y = ABCD
+ 1B |2       13| 2D          +===+===+===+===*===+
+    |3       12| 2C          | 0 | X | X | X | 0 |
+ 1C |4  7421 11|             | 1 | 0 | X | X | 0 |
+ 1D |5       10| 2B          | 1 | 1 | 0 | X | 0 |
+ 1Y |6        9| 2A          | 1 | 1 | 1 | 0 | 0 |
+GND |7        8| 2Y          | 1 | 1 | 1 | 1 | 1 |
+    +----------+             +---+---+---+---*---+
+</pre>
+<p>
+<a name="7422"></a>
+<h2>7422</h2>
+Dual 4-input open-collector NAND gates.
+<pre>
+    +---+--+---+             +---+---+---+---*---+        ____
+ 1A |1  +--+ 14| VCC         | A | B | C | D |/Y |   /Y = ABCD
+ 1B |2       13| 2D          +===+===+===+===*===+
+    |3       12| 2C          | 0 | X | X | X | Z |
+ 1C |4  7422 11|             | 1 | 0 | X | X | Z |
+ 1D |5       10| 2B          | 1 | 1 | 0 | X | Z |
+/1Y |6        9| 2A          | 1 | 1 | 1 | 0 | Z |
+GND |7        8| /2Y         | 1 | 1 | 1 | 1 | 0 |
+    +----------+             +---+---+---+---*---+
+</pre>
+<p>
+<a name="7424"></a>
+<h2>7424</h2>
+Quad 2-input NAND gates with schmitt-trigger line-receiver inputs.
+<br>
+0.8V typical input hysteresis at VCC=+5V.
+<pre>
+    +---+--+---+             +---+---*---+           __
+ 1A |1  +--+ 14| VCC         | A | B |/Y |      /Y = AB
+ 1B |2       13| 4B          +===+===*===+
+/1Y |3       12| 4A          | 0 | 0 | 1 |
+ 2A |4  7424 11| /4Y         | 0 | 1 | 1 |
+ 2B |5       10| 3B          | 1 | 0 | 1 |
+/2Y |6        9| 3A          | 1 | 1 | 0 |
+GND |7        8| /3Y         +---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="7425"></a>
+<h2>7425</h2>
+Dual 4-input NOR gates with enable input.
+<pre>
+    +---+--+---+                 __________
+ 1A |1  +--+ 14| VCC         Y = G(A+B+C+D)
+ 1B |2       13| 2D
+ 1G |3       12| 2C
+ 1C |4  7425 11| 2G
+ 1D |5       10| 2B
+/1Y |6        9| 2A
+GND |7        8| /2Y
+    +----------+
+</pre>
+<p>
+<a name="7426"></a>
+<h2>7426</h2>
+Quad 2-input open-collector high-voltage NAND gates.
+<br>
+Maximum output voltage is 15V.
+<pre>
+    +---+--+---+             +---+---*---+           __
+ 1A |1  +--+ 14| VCC         | A | B |/Y |      /Y = AB
+ 1B |2       13| 4B          +===+===*===+
+/1Y |3       12| 4A          | 0 | 0 | Z |
+ 2A |4  7426 11| /4Y         | 0 | 1 | Z |
+ 2B |5       10| 3B          | 1 | 0 | Z |
+/2Y |6        9| 3A          | 1 | 1 | 0 |
+GND |7        8| /3Y         +---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="7427"></a>
+<h2>7427</h2>
+Triple 3-input NOR gates.
+<pre>
+    +---+--+---+             +---+---+---*---+       _____
+ 1A |1  +--+ 14| VCC         | A | B | C |/Y |  /Y = A+B+C
+ 1B |2       13| 1C          +===+===+===*===+
+ 2A |3       12| /1Y         | 0 | 0 | 0 | 1 |
+ 2B |4  7427 11| 3C          | 0 | 0 | 1 | 0 |
+ 2C |5       10| 3B          | 0 | 1 | X | 0 |
+/2Y |6        9| 3A          | 1 | X | X | 0 |
+GND |7        8| /3Y         +---+---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="7428"></a>
+<h2>7428</h2>
+Quad 2-input NOR gates with buffered outputs.
+<pre>
+    +---+--+---+             +---+---*---+           ___
+/1Y |1  +--+ 14| VCC         | A | B |/Y |      /Y = A+B
+ 1A |2       13| /4Y         +===+===*===+
+ 1B |3       12| 4B          | 0 | 0 | 1 |
+/2Y |4  7428 11| 4A          | 0 | 1 | 0 |
+ 2A |5       10| /3Y         | 1 | 0 | 0 |
+ 2B |6        9| 3B          | 1 | 1 | 0 |
+GND |7        8| 3A          +---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="7430"></a>
+<h2>7430</h2>
+8-input NAND gate.
+<pre>
+    +---+--+---+                 ________
+  A |1  +--+ 14| VCC        /Y = ABCDEFGH
+  B |2       13|
+  C |3       12| H
+  D |4  7430 11| G
+  E |5       10|
+  F |6        9|
+GND |7        8| /Y
+    +----------+
+</pre>
+<p>
+<a name="7431"></a>
+<h2>7431</h2>
+Hex delay elements.
+<br>
+Typical delays are 27.5ns (1,6), 46.5ns (2,5), 6ns (3,4).
+Improved output currents IoH=-1.2mA, IoL=24mA for gates 3 and 4.
+<pre>
+    +---+--+---+                 _            _____
+ 1A |1  +--+ 16| VCC        /1Y=1A        /4Y=4A.4B
+/1Y |2       15| 6A
+ 2A |3       14| /6Y         2Y=2A         5Y=5A
+ 2Y |4       13| 5A             _____          _
+ 3A |5  7431 12| 5Y         /3Y=3A.3B     /6Y=6A
+ 3B |6       11| 4B
+/3Y |7       10| 4A
+GND |8        9| /4Y
+    +----------+
+</pre>
+<p>
+<a name="7432"></a>
+<h2>7432</h2>
+Quad 2-input OR gates.
+<pre>
+    +---+--+---+             +---+---*---+
+ 1A |1  +--+ 14| VCC         | A | B | Y |       Y = A+B
+ 1B |2       13| 4B          +===+===*===+
+ 1Y |3       12| 4A          | 0 | 0 | 0 |
+ 2A |4  7432 11| 4Y          | 0 | 1 | 1 |
+ 2B |5       10| 3B          | 1 | 0 | 1 |
+ 2Y |6        9| 3A          | 1 | 1 | 1 |
+GND |7        8| 3Y          +---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="7433"></a>
+<h2>7433</h2>
+Quad 2-input open-collector NOR gates.
+<pre>
+    +---+--+---+             +---+---*---+           ___
+/1Y |1  +--+ 14| VCC         | A | B |/Y |      /Y = A+B
+ 1A |2       13| /4Y         +===+===*===+
+ 1B |3       12| 4B          | 0 | 0 | Z |
+/2Y |4  7433 11| 4A          | 0 | 1 | 0 |
+ 2A |5       10| /3Y         | 1 | 0 | 0 |
+ 2B |6        9| 3B          | 1 | 1 | 0 |
+GND |7        8| 3A          +---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="7437"></a>
+<h2>7437</h2>
+Quad 2-input NAND gates with buffered output.
+<pre>
+    +---+--+---+             +---+---*---+           __
+ 1A |1  +--+ 14| VCC         | A | B |/Y |      /Y = AB
+ 1B |2       13| 4B          +===+===*===+
+/1Y |3       12| 4A          | 0 | 0 | 1 |
+ 2A |4  7437 11| /4Y         | 0 | 1 | 1 |
+ 2B |5       10| 3B          | 1 | 0 | 1 |
+/2Y |6        9| 3A          | 1 | 1 | 0 |
+GND |7        8| /3Y         +---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="7438"></a>
+<h2>7438</h2>
+Quad 2-input open-collector NAND gates with buffered output.
+<pre>
+    +---+--+---+             +---+---*---+           __
+ 1A |1  +--+ 14| VCC         | A | B |/Y |      /Y = AB
+ 1B |2       13| 4B          +===+===*===+
+/1Y |3       12| 4A          | 0 | 0 | Z |
+ 2A |4  7438 11| /4Y         | 0 | 1 | Z |
+ 2B |5       10| 3B          | 1 | 0 | Z |
+/2Y |6        9| 3A          | 1 | 1 | 0 |
+GND |7        8| /3Y         +---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="7440"></a>
+<h2>7440</h2>
+Dual 4-input NAND gates with buffered output.
+<pre>
+    +---+--+---+             +---+---+---+---*---+        ____
+ 1A |1  +--+ 14| VCC         | A | B | C | D |/Y |   /Y = ABCD
+ 1B |2       13| 2D          +===+===+===+===*===+
+    |3       12| 2C          | 0 | X | X | X | 1 |
+ 1C |4  7440 11|             | 1 | 0 | X | X | 1 |
+ 1D |5       10| 2B          | 1 | 1 | 0 | X | 1 |
+/1Y |6        9| 2A          | 1 | 1 | 1 | 0 | 1 |
+GND |7        8| /2Y         | 1 | 1 | 1 | 1 | 0 |
+    +----------+             +---+---+---+---*---+
+</pre>
+<p>
+<a name="7442"></a>
+<h2>7442</h2>
+1-of-10 inverting decoder/demultiplexer.
+<pre>
+    +---+--+---+             +---+---+---+---*---+---+---+---+
+/Y0 |1  +--+ 16| VCC         | S3| S2| S1| S0|/Y0|/Y1|...|/Y9|
+/Y1 |2       15| S0          +===+===+===+===*===+===+===+===+
+/Y2 |3       14| S1          | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 1 |
+/Y3 |4       13| S2          | 0 | 0 | 0 | 1 | 1 | 0 | 1 | 1 |
+/Y4 |5  7442 12| S3          | . | . | . | . | 1 | 1 | . | 1 |
+/Y5 |6       11| /Y9         | 1 | 0 | 0 | 1 | 1 | 1 | 1 | 0 |
+/Y6 |7       10| /Y8         | 1 | 0 | 1 | X | 1 | 1 | 1 | 1 |
+GND |8        9| /Y7         | 1 | 1 | X | X | 1 | 1 | 1 | 1 |
+    +----------+             +---+---+---+---*---+---+---+---+
+</pre>
+<p>
+<a name="7446"></a>
+<a name="7447"></a>
+<h2>7446, 7447</h2>
+Open-collector BCD to 7-segment decoder/common-anode LED driver with
+ripple blank input and output.
+<br>
+7446 has 30V outputs, 7447 has 15V outputs.
+<pre>
+     +---+--+---+
+  A1 |1  +--+ 16| VCC
+  A2 |2       15| /YF
+ /LT |3       14| /YG
+/RBO |4       13| /YA
+/RBI |5  7447 12| /YB
+  A3 |6       11| /YC
+  A0 |7       10| /YD
+ GND |8        9| /YE
+     +----------+
+</pre>
+<p>
+<a name="7448"></a>
+<h2>7448</h2>
+BCD to 7-segment decoder/common-cathode LED driver with ripple blank input
+and output.
+<pre>
+     +---+--+---+
+  A1 |1  +--+ 16| VCC
+  A2 |2       15| YF
+ /LT |3       14| YG
+/RBO |4       13| YA
+/RBI |5  7448 12| YB
+  A3 |6       11| YC
+  A0 |7       10| YD
+ GND |8        9| YE
+     +----------+
+</pre>
+<p>
+<hr><a href="index.html">Back to the GIICM index.</a>
+</body>
+</html>

@@ -1,0 +1,496 @@
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <link rel="stylesheet" type="text/css" href="../frank/frank.css">
+   <meta name="CVS" content="$Id$">
+   <meta name="description" content="GIICM">
+   <title>GIICM</title>
+</head><body><h1>Analog IC's</h1>
+<p>
+Only a few -- including complete datasheets here isn't such a
+good idea.
+<p>
+<hr>
+<a name="REF01"></a>
+<h2>REF01</h2>
+Precision 10V voltage reference.
+<pre>
+    +---+--+---+
+    |1  +--+  8|
+VCC |2        7|
+    |3  REF01 6| OUT
+GND |4        5| TRIM
+    +----------+
+</pre>
+<p>
+<a name="REF02"></a>
+<a name="REF05"></a>
+<h2>REF02, REF05</h2>
+Precision 5V voltage reference.
+<pre>
+     +---+--+---+
+     |1  +--+  8|
+ VCC |2        7|
+TEMP |3  REF02 6| OUT
+ GND |4        5| TRIM
+     +----------+
+</pre>
+<p>
+<a name="REF03"></a>
+<h2>REF03</h2>
+Precision 2.5V voltage reference.
+<pre>
+     +---+--+---+
+     |1  +--+  8|
+ VCC |2        7|
+TEMP |3  REF03 6| OUT
+ GND |4        5| TRIM
+     +----------+
+</pre>
+<p>
+<a name="REF08"></a>
+<h2>REF08</h2>
+Precision -10/-10.24V voltage reference.
+<br>
+Leaving SEL open will produce -10V, grounding it -10.24V output.
+<pre>
+    +---+--+---+
+OUT |1  +--+  8| TRIM
+    |2        7| VEE
+    |3  REF08 6|
+SEL |4        5| GND
+    +----------+
+</pre>
+<p>
+<a name="REF10"></a>
+<h2>REF10</h2>
+Precision 10V voltage reference.
+<pre>
+    +---+--+---+
+    |1  +--+  8|
+VCC |2        7|
+    |3  REF01 6| OUT
+GND |4        5| TRIM
+    +----------+
+</pre>
+<p>
+<a name="LM34"></a>
+<h2>LM34</h2>
+Voltage mode temperature sensor.
+<br>
+Available in Fahrenheit or Celsius models and multiple temperature sense
+ranges.  Output is 10mv/degree regardless of VCC (+5 to +30 V).
+<pre>
+TO 92
++---+
+| ##|
++++++    1: VCC
+ |||     2: Vout
+ |||     3: GND
+1 2 3
+</pre>
+<p>
+<a name="REF43"></a>
+<h2>REF43</h2>
+Precision 2.5V voltage reference.
+<pre>
+     +---+--+---+
+     |1  +--+  8|
+ VCC |2        7|
+TEMP |3  REF03 6| OUT
+ GND |4        5| TRIM
+     +----------+
+</pre>
+<p>
+<a name="LM334"></a>
+<h2>LM334</h2>
+Current mode temperature sensor.
+<pre>
+TO 92
++---+
+| ##|
++++++    1: Iin
+ |||     2: Rset
+ |||     3: GND
+1 2 3
+</pre>
+<p>
+<a name="339"></a>
+<a name="LM339"></a>
+<h2>339, LM339</h2>
+Quad comparator.
+<pre>
+     +---+--+---+
+1OUT |1  +--+ 14| 3OUT
+2OUT |2       13| 4OUT
+ VCC |3       12| GND
+-2In |4 LM339 11| +4In
++2In |5       10| -4In
+-1In |6        9| +3In
++1In |7        8| -3In
+     +----------+
+</pre>
+<p>
+<a name="386"></a>
+<a name="LM386"></a>
+<h2>386, LM386</h2>
+500mW audio amplifier.
+<pre>
+     +---+--+---+
+GAIN |1  +--+  8| GAIN
+ -In |2        7| BYP
+ +In |3 LM386  6| VCC
+ GND |4        5| OUT
+     +----------+
+</pre>
+<p>
+<a name="555"></a>
+<h2>555</h2>
+Universal timer.
+<br>
+When CV is not connected it is held at 2/3.VCC through a 5k/10k
+divider (larger values on the 7555).
+<pre>
+     +---+--+---+            +------+--------+------*---+-----+
+ GND |1  +--+  8| VCC        | /RST |  /TR   | Thr  | Q | Dis |
+ /TR |2        7| Dis        +======+========+======*===+=====+
+   Q |3   555  6| Thr        |  0   |   X    |  X   | 0 |  0  |
+/RST |4        5| CV         |  1   | &lt; CV/2 |  X   | 1 |  Z  |
+     +----------+            |  1   | &gt; CV/2 | &lt; CV | - |  -  |
+                             |  1   | &gt; CV/2 | &gt; CV | 0 |  0  |
+                             +------+--------+------*---+-----+
+</pre>
+<p>
+<a name="556"></a>
+<h2>556</h2>
+Dual 555 universal timers.
+<br>
+When 1CV or 2CV are not connected they are held at 2/3.VCC through a
+5k/10k divider.
+<pre>
+      +---+--+---+           +------+--------+------*---+-----+
+ 1Dis |1  +--+ 14| VCC       | /RST |  /TR   | Thr  | Q | Dis |
+ 1Thr |2       13| 2Dis      +======+========+======*===+=====+
+  1CV |3       12| 2Thr      |  0   |   X    |  X   | 0 |  0  |
+/1RST |4  556  11| 2CV       |  1   | &lt; CV/2 |  X   | 1 |  Z  |
+   1Q |5       10| /2RST     |  1   | &gt; CV/2 | &lt; CV | - |  -  |
+ /1TR |6        9| 2Q        |  1   | &gt; CV/2 | &gt; CV | 0 |  0  |
+  GND |7        8| /2TR      +------+--------+------*---+-----+
+      +----------+
+</pre>
+<p>
+<a name="558"></a>
+<h2>558</h2>
+Quad monostable timers.
+<pre>
+       +---+--+---+
+    1Q |1  +--+ 16| 4Q
+1RCext |2       15| 4RCext
+   1TR |3       14| 4TR
+    CV |4       13| /RST
+   VCC |5  558  12| GND
+   2TR |6       11| 3TR
+2RCext |7       10| 3RCext
+    2Q |8        9| 3Q
+       +----------+
+</pre>
+<p>
+<a name="566"></a>
+<h2>566</h2>
+Voltage controlled oscillator.
+<pre>
+      +---+--+---+
+  GND |1  +--+  8| VCC
+      |2        7| Cext
+TRout |3   566  6| RCext
+SQout |4        5| MOD
+      +----------+
+</pre>
+<p>
+<a name="567"></a>
+<a name="LM567"></a>
+<h2>567, LM567</h2>
+PLL frequency detector.
+<pre>
+        +---+--+---+
+OUTCext |1  +--+  8| Q
+ LPCext |2        7| GND
+     IN |3   567  6| RCext
+    VCC |4        5| Rext
+        +----------+
+</pre>
+<p>
+<a name="3909"></a>
+<h2>3909</h2>
+LED flasher and oscillator.
+<pre>
+    +---+--+---+
+RCf |1  +--+  8| RCs
+OUT |2        7|
+    |3  3909  6| RL
+GND |4        5| VCC
+    +----------+
+</pre>
+<p>
+<a name="3914"></a>
+<a name="3915"></a>
+<h2>3914, 3915</h2>
+LED dot and bargraph drivers with open-collector outputs.
+<br>
+The 3914 has a linear display, the 3915 a logarithmic one.
+Connect the MODE pin to VCC for bar graph, or to Q9 for a single dot.
+<pre>
+     +---+--+---+
+  Q1 |1  +--+ 18| Q2
+ GND |2       17| Q3
+ VCC |3       16| Q4
+ Rlo |4       15| Q5
+  IN |5  3914 14| Q6
+ Rhi |6  3915 13| Q7
+ REF |7       12| Q8
+ ADJ |8       11| Q9
+MODE |9       10| Q10
+     +----------+
+</pre>
+<p>
+<a name="4016"></a>
+<h2>4016</h2>
+Quad analog switches.
+<pre>
+     +---+--+---+
+  1X |1  +--+ 14| VCC
+  1Y |2       13| 1EN
+  2Y |3       12| 4EN
+  2X |4  4016 11| 4X
+ 2EN |5  4066 10| 4Y
+ 3EN |6        9| 3Y
+ GND |7        8| 3X
+     +----------+
+</pre>
+<p>
+<a name="4066"></a>
+<h2>4066</h2>
+Quad analog switches.
+<pre>
+     +---+--+---+
+  1X |1  +--+ 14| VCC
+  1Y |2       13| 1EN
+  2Y |3       12| 4EN
+  2X |4  4016 11| 4X
+ 2EN |5  4066 10| 4Y
+ 3EN |6        9| 3Y
+ GND |7        8| 3X
+     +----------+
+</pre>
+<p>
+<a name="4067"></a>
+<h2>4067</h2>
+16-to-1 line analog multiplexer/demultiplexer.
+<pre>
+    +-----+--+-----+
+  Y |1    +--+   24| VCC
+ X7 |2           23| X8
+ X6 |3           22| X9
+ X5 |4           21| X10
+ X4 |5           20| X11
+ X3 |6           19| X12
+ X2 |7    4067   18| X13
+ X1 |8           17| X14
+ X0 |9           16| X15
+ S0 |10          15| /EN
+ S1 |11          14| S2
+GND |12          13| S3
+    +--------------+
+</pre>
+<p>
+<a name="4097"></a>
+<h2>4097</h2>
+16-to-2 line analog multiplexer/demultiplexer.
+<pre>
+    +-----+--+-----+
+ 1Y |1    +--+   24| VCC
+1X7 |2           23| 2X0
+1X6 |3           22| 2X1
+1X5 |4           21| 2X2
+1X4 |5           20| 2X3
+1X3 |6           19| 2X4
+1X2 |7    4097   18| 2X5
+1X1 |8           17| 2Y
+1X0 |9           16| 2X6
+ S0 |10          15| 2X7
+ S1 |11          14| S2
+GND |12          13| /EN
+    +--------------+
+</pre>
+<p>
+<a name="4316"></a>
+<h2>4316</h2>
+Quad analog switches with enable input and dual power supply.
+<br>
+VEE supply may not be more positive than GND.
+<pre>
+    +---+--+---+
+ 1X |1  +--+ 16| VCC
+ 1Y |2       15| 1EN
+ 2Y |3       14| 4EN
+ 2X |4       13| 4X
+2EN |5  4316 12| 4Y
+3EN |6       11| 3Y
+ EN |7       10| 3X
+GND |8        9| VEE
+    +----------+
+</pre>
+<p>
+<a name="4351"></a>
+<h2>4351</h2>
+8-to-1 line analog multiplexer/demultiplexer with address latch and dual
+power supply.
+<br>
+VEE supply may not be more positive than GND.
+<pre>
+    +---+--+---+
+1X0 |1  +--+ 18| VCC
+1X1 |2       17| X2
+2X1 |3       16| X1
+ 2Y |4       15| X0
+2X0 |5  4351 14| X3
+/EN |6       13| S0
+ EN |7       12| S1
+VEE |8       11| S2
+GND |9       10| LE
+    +----------+
+</pre>
+<p>
+<a name="4352"></a>
+<h2>4352</h2>
+8-to-2 line analog multiplexer/demultiplexer with address latch and dual
+power supply.
+<br>
+VEE supply may not be more positive than GND.
+<pre>
+    +---+--+---+
+1X0 |1  +--+ 18| VCC
+1X2 |2       17| 2X2
+ 1Y |3       16| 2X1
+1X3 |4       15| 2Y
+1X1 |5  4352 14| 2X0
+/EN |6       13| 2X3
+ EN |7       12| S0
+VEE |8       11| S1
+GND |9       10| LE
+    +----------+
+</pre>
+<p>
+<a name="4353"></a>
+<h2>4353</h2>
+Triple 2-to-1 line analog multiplexer/demultiplexer with address latch and
+dual power supply.
+<br>
+VEE supply may not be more positive than GND.
+<pre>
+    +---+--+---+
+1X0 |1  +--+ 18| VCC
+1X1 |2       17| 1Y
+2X1 |3       16| 3Y
+ 2Y |4       15| 3X1
+2X0 |5  4353 14| 3X0
+/EN |6       13| 3S
+ EN |7       12| 1S
+VEE |8       11| 2S
+GND |9       10| LE
+    +----------+
+</pre>
+<p>
+<a name="TP5088"></a>
+<h2>TP5088</h2>
+DTMF encoder (NatSemi).
+<br>
+When /SNGL is low, only the upper or lower tone (selected by GRP) is given.
+OUT is open emitter, connect load to GND.
+<pre>
+      +---+--+---+
+  VCC |1  +--+ 14| OUT
+   LE |2       13|
+/SNGL |3       12| D3
+  GRP |4  5088 11| D2
+  GND |5       10| D1
+   X1 |6        9| D0
+   X0 |7        8| MUTE
+      +----------+
+</pre>
+<p>
+<a name="5555"></a>
+<h2>5555</h2>
+Programmable delay timer with oscillator.
+<pre>
+         +---+--+---+
+      X1 |1  +--+ 16| VCC
+      X0 |2       15| RST
+      X2 |3       14| OSCCON
+       A |4       13| S3
+      /B |5  5555 12| S2
+RTR//RTR |6       11| S1
+      /Q |7       10| S0
+     GND |8        9| Q
+         +----------+
+</pre>
+<p>
+<a name="7555"></a>
+<h2>7555</h2>
+Universal timer.
+<br>
+When CV is not connected it is held at 2/3.VCC through a 5k/10k
+divider (larger values on the 7555).
+<pre>
+     +---+--+---+            +------+--------+------*---+-----+
+ GND |1  +--+  8| VCC        | /RST |  /TR   | Thr  | Q | Dis |
+ /TR |2        7| Dis        +======+========+======*===+=====+
+   Q |3   555  6| Thr        |  0   |   X    |  X   | 0 |  0  |
+/RST |4        5| CV         |  1   | &lt; CV/2 |  X   | 1 |  Z  |
+     +----------+            |  1   | &gt; CV/2 | &lt; CV | - |  -  |
+                             |  1   | &gt; CV/2 | &gt; CV | 0 |  0  |
+                             +------+--------+------*---+-----+
+</pre>
+<p>
+<a name="TC35305"></a>
+<h2>TC35305</h2>
+DTMF decoder.
+<br>
+DV goes high when a tone is detected on IN (-32..-2dB).
+XEN is oscillator enable (pull high, and connect a Xtal // 1M resistor to
+X0 and X1).  If XEN is low, ATB can be used to connect multiple chips
+together.  GT determines the guard time, 0=short 1=long.
+<pre>
+      +---+--+---+
+   D1 |1  +--+ 14| D2
+   D0 |2       13| D3
+   OE |3       12| DV
+  VCC |4  MC14 11| ATB
+   GT |5  5436 10| X1
+  XEN |6        9| X0
+   IN |7        8| GND
+      +----------+
+</pre>
+<p>
+<a name="MC145436"></a>
+<h2>MC145436</h2>
+DTMF decoder.
+<br>
+DV goes high when a tone is detected on IN (-32..-2dB).
+XEN is oscillator enable (pull high, and connect a Xtal // 1M resistor to
+X0 and X1).  If XEN is low, ATB can be used to connect multiple chips
+together.  GT determines the guard time, 0=short 1=long.
+<pre>
+      +---+--+---+
+   D1 |1  +--+ 14| D2
+   D0 |2       13| D3
+   OE |3       12| DV
+  VCC |4  MC14 11| ATB
+   GT |5  5436 10| X1
+  XEN |6        9| X0
+   IN |7        8| GND
+      +----------+
+</pre>
+<p>
+<hr><a href="index.html">Back to the GIICM index.</a>
+</body>
+</html>

@@ -1,0 +1,1159 @@
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <link rel="stylesheet" type="text/css" href="../frank/frank.css">
+   <meta name="CVS" content="$Id$">
+   <meta name="description" content="GIICM">
+   <title>GIICM</title>
+</head><body><h1>Operational amplifiers.</h1>
+
+<p>
+<hr>
+<a name="OP01"></a>
+<h2>OP01</h2>
+High-speed operational amplifier.
+<br>
+Nulling to VEE.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8|
+ -In |2        7| VCC
+ +In |3  OP01  6| OUT
+ VEE |4        5| NULL
+     +----------+
+</pre>
+<p>
+<a name="OP02"></a>
+<h2>OP02</h2>
+General-purpose operational amplifier.
+<br>
+Nulling to VEE.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8|
+ -In |2        7| VCC
+ +In |3  741   6| OUT
+ VEE |4        5| NULL
+     +----------+
+</pre>
+<p>
+<a name="OP04"></a>
+<h2>OP04</h2>
+Dual general-purpose operational amplifiers.
+<br>
+Nulling to VEE.
+<pre>
+      +---+--+---+
+ -1In |1  +--+ 14| 1OUT
+ +1In |2       13|
+1NULL |3       12|
+  VEE |4  OP04 11| VCC
+2NULL |5 uA747 10|
+ +2In |6        9|
+ -1In |7        8| 2OUT
+      +----------+
+</pre>
+<p>
+<a name="OP05"></a>
+<a name="OP06"></a>
+<h2>OP05, OP06</h2>
+Instrumentation operational amplifier.
+<br>
+Nulling to VCC.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8| NULL
+ -In |2 LM725  7| VCC
+ +In |3  OP05  6| OUT
+ VEE |4        5|
+     +----------+
+</pre>
+<p>
+<a name="OP07"></a>
+<h2>OP07</h2>
+Ultra-low offset voltage precision operational amplifier.
+<br>
+Nulling to VCC.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8| NULL
+ -In |2  OP07  7| VCC
+ +In |3 LM607  6| OUT
+ VEE |4        5|
+     +----------+
+</pre>
+<p>
+<a name="OP08"></a>
+<h2>OP08</h2>
+Precision low-input-current operational amplifier.
+<pre>
+     +---+--+---+
+COMP |1  +--+  8| COMP
+ -In |2        7| VCC
+ +In |3 LM108  6| OUT
+ VEE |4  OP08  5|
+     +----------+
+</pre>
+<p>
+<a name="OP09"></a>
+<h2>OP09</h2>
+Quad general-purpose operational amplifiers.
+<pre>
+     +---+--+---+
+-1In |1  +--+ 14| -4In
++1In |2       13| +4In
+1OUT |3       12| 4OUT
+2OUT |4  OP09 11| VCC
++2In |5       10| 3OUT
+-2In |6        9| +3In
+ VEE |7        8| -3In
+     +----------+
+</pre>
+<p>
+<a name="OP10"></a>
+<h2>OP10</h2>
+Dual instrumentation operational amplifiers.
+<br>
+Nulling to VCC.
+<pre>
+      +---+--+---+
+1NULL |1  +--+ 14| 1VCC
+1NULL |2       13| 1OUT
+ -1In |3       12| 1VEE
+ +1In |4  OP10 11| +2In
+ 2VEE |5       10| -2In
+ 2OUT |6        9| 2NULL
+ 2VCC |7        8| 2NULL
+      +----------+
+</pre>
+<p>
+<a name="OP11"></a>
+<h2>OP11</h2>
+Quad general-purpose operational amplifiers.
+<pre>
+     +---+--+---+
+1OUT |1  +--+ 14| 4OUT
+-1In |2       13| -4In
++1In |3       12| +4In
+ VCC |4 LM148 11| VEE
++2In |5  OP11 10| +3In
+-2In |6        9| -3In
+2OUT |7        8| 3OUT
+     +----------+
+</pre>
+<p>
+<a name="OP12"></a>
+<h2>OP12</h2>
+Precision low-input-current operational amplifier.
+<pre>
+    +---+--+---+
+    |1  +--+  8|
+-In |2        7| VCC
++In |3  OP12  6| OUT
+VEE |4        5|
+    +----------+
+</pre>
+<p>
+<a name="OP14"></a>
+<h2>OP14</h2>
+Dual general-purpose operational amplifiers.
+<pre>
+     +---+--+---+
+1OUT |1  +--+  8| VCC
+-1In |2  1458  7| 2OUT
++1In |3  1558  6| -2In
+ VEE |4  4558  5| +2In
+     +----------+
+</pre>
+<p>
+<a name="OP15"></a>
+<a name="OP16"></a>
+<a name="OP17"></a>
+<h2>OP15, OP16, OP17</h2>
+Precision JFET-input operational amplifier.
+<br>
+Nulling to VCC.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8|
+ -In |2        7| VCC
+ +In |3 LF155  6| OUT
+ VEE |4  OP15  5| NULL
+     +----------+
+</pre>
+<p>
+<a name="OP20"></a>
+<a name="OP21"></a>
+<h2>OP20, OP21</h2>
+Single/dual-supply low power operational amplifier.
+<br>
+Nulling to VEE.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8|
+ -In |2        7| VCC
+ +In |3  OP20  6| OUT
+ VEE |4        5| NULL
+     +----------+
+</pre>
+<p>
+<a name="OP22"></a>
+<h2>OP22</h2>
+Single/dual-supply low power operational amplifier with programmable
+slew rate and gain-bandwidth product.
+<br>
+Nulling to VEE.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8| Iset
+ -In |2        7| VCC
+ +In |3  OP22  6| OUT
+ VEE |4        5| NULL
+     +----------+
+</pre>
+<p>
+<a name="OP27"></a>
+<h2>OP27</h2>
+Low-noise precision operational amplifier.
+<br>
+Nulling to VCC.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8| NULL
+ -In |2        7| VCC
+ +In |3  OP27  6| OUT
+ VEE |4        5|
+     +----------+
+</pre>
+<p>
+<a name="OP32"></a>
+<h2>OP32</h2>
+Single/dual-supply high-speed low power operational amplifier with
+programmable slew rate and gain-bandwidth product.
+<br>
+Stable for gains&gt;=10.
+Nulling to VEE.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8| Iset
+ -In |2        7| VCC
+ +In |3  OP32  6| OUT
+ VEE |4        5| NULL
+     +----------+
+</pre>
+<p>
+<a name="OP37"></a>
+<h2>OP37</h2>
+High-speed low-noise precision operational amplifier.
+<br>
+Stable for gains&gt;=5.  Nulling to VCC.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8| NULL
+ -In |2        7| VCC
+ +In |3  OP37  6| OUT
+ VEE |4        5|
+     +----------+
+</pre>
+<p>
+<a name="OP41"></a>
+<h2>OP41</h2>
+Precision JFET-input operational amplifier.
+<br>
+Nulling to VCC.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8|
+ -In |2        7| VCC
+ +In |3 LF155  6| OUT
+ VEE |4  OP15  5| NULL
+     +----------+
+</pre>
+<p>
+<a name="OP42"></a>
+<a name="OP44"></a>
+<h2>OP42, OP44</h2>
+High-speed precision JFET-input operational amplifier.
+<br>
+Nulling to VEE or via 1M to VCC.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8|
+ -In |2 AD544  7| VCC
+ +In |3 LT1023 6| OUT
+ VEE |4  OP42  5| NULL
+     +----------+
+</pre>
+<p>
+<a name="OP43"></a>
+<h2>OP43</h2>
+High-speed JFET-input operational amplifier.
+<br>
+Nulling to VEE.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8|
+ -In |2        7| VCC
+ +In |3  OP43  6| OUT
+ VEE |4        5| NULL
+     +----------+
+</pre>
+<p>
+<a name="OP50"></a>
+<h2>OP50</h2>
+High output current operational amplifier.
+<br>
+Separate power connections for output state. Stable for gains&gt;=5.
+Nulling to VEE.
+<pre>
+      +---+--+---+
+  +In |1  +--+ 14| NULL
+  -In |2       13| NULL
+      |3       12| COMP
+      |4  OP50 11| COMP
+  VEE |5       10| VCCo
+  OUT |6        9| VCC
+ VEEo |7        8|
+      +----------+
+</pre>
+<p>
+<a name="OP61"></a>
+<h2>OP61</h2>
+Wide-bandwidth precision operational amplifier.
+<br>
+Stable for gains&gt;=10.  Nulling to VCC.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8|
+ -In |2        7| VCC
+ +In |3  OP61  6| OUT
+ VEE |4        5| NULL
+     +----------+
+</pre>
+<p>
+<a name="OP64"></a>
+<h2>OP64</h2>
+High-speed wide-bandwidth precision operational amplifier with
+shutdown.
+<br>
+Stable for gains&gt;=5.  Nulling to VEE.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8| /SHDN
+ -In |2        7| VCC
+ +In |3  OP64  6| OUT
+ VEE |4        5| NULL
+     +----------+
+</pre>
+<p>
+<a name="TL074"></a>
+<a name="TL084"></a>
+<h2>TL074, TL084</h2>
+Quad JFET-input operational amplifiers.
+<pre>
+     +---+--+---+
+1OUT |1  +--+ 14| 4OUT
+-1In |2       13| -4In
++1In |3       12| +4In
+ VCC |4 TL074 11| VEE
++2In |5       10| +3In
+-2In |6        9| -3In
+2OUT |7        8| 3OUT
+     +----------+
+</pre>
+<p>
+<a name="OP80"></a>
+<h2>OP80</h2>
+Single/dual-supply low bias current CMOS operational amplifier.
+<br>
+Nulling to VEE.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8|
+ -In |2        7| VCC
+ +In |3 AD549  6| OUT
+ VEE |4  OP80  5| NULL
+     +----------+
+</pre>
+<p>
+<a name="OP90"></a>
+<h2>OP90</h2>
+Single/dual-supply low voltage operational amplifier.
+<br>
+Nulling to VEE.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8|
+ -In |2        7| VCC
+ +In |3  OP90  6| OUT
+ VEE |4        5| NULL
+     +----------+
+</pre>
+<p>
+<a name="OP97"></a>
+<h2>OP97</h2>
+Low power instrumentation operational amplifier.
+<br>
+Nulling to VCC.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8| NULL
+ -In |2        7| VCC
+ +In |3  OP97  6| OUT
+ VEE |4        5|
+     +----------+
+</pre>
+<p>
+<a name="LM108"></a>
+<h2>LM108</h2>
+Precision low-input-current operational amplifier.
+<pre>
+     +---+--+---+
+COMP |1  +--+  8| COMP
+ -In |2        7| VCC
+ +In |3 LM108  6| OUT
+ VEE |4  OP08  5|
+     +----------+
+</pre>
+<p>
+<a name="LM148"></a>
+<h2>LM148</h2>
+Quad general-purpose operational amplifiers.
+<pre>
+     +---+--+---+
+1OUT |1  +--+ 14| 4OUT
+-1In |2       13| -4In
++1In |3       12| +4In
+ VCC |4 LM148 11| VEE
++2In |5  OP11 10| +3In
+-2In |6        9| -3In
+2OUT |7        8| 3OUT
+     +----------+
+</pre>
+<p>
+<a name="LF155"></a>
+<a name="LF156"></a>
+<a name="LF157"></a>
+<h2>LF155, LF156, LF157</h2>
+Precision JFET-input operational amplifier.
+<br>
+Nulling to VCC.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8|
+ -In |2        7| VCC
+ +In |3 LF155  6| OUT
+ VEE |4  OP15  5| NULL
+     +----------+
+</pre>
+<p>
+<a name="OP177"></a>
+<h2>OP177</h2>
+Instrumentation operational amplifier.
+<br>
+Nulling to VCC.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8| NULL
+ -In |2 LM725  7| VCC
+ +In |3  OP05  6| OUT
+ VEE |4        5|
+     +----------+
+</pre>
+<p>
+<a name="OP200"></a>
+<h2>OP200</h2>
+Dual low-power operational amplifiers.
+<pre>
+     +---+--+---+
+1OUT |1  +--+  8| VCC
+-1In |2        7| 2OUT
++1In |3 OP200  6| -2In
+ VEE |4        5| +2In
+     +----------+
+</pre>
+<p>
+<a name="OP207"></a>
+<h2>OP207</h2>
+Dual ultra-low offset operational amplifiers.
+<br>
+Nulling to VCC.
+<pre>
+      +---+--+---+
+1NULL |1  +--+ 14| 1VCC
+1NULL |2       13| 1OUT
+ -1In |3       12| 1VEE
+ +1In |4 OP207 11| +2In
+ 2VEE |5       10| -2In
+ 2OUT |6        9| 2NULL
+ 2VCC |7        8| 2NULL
+      +----------+
+</pre>
+<p>
+<a name="OP215"></a>
+<h2>OP215</h2>
+Dual JFET-input operational amplifiers.
+<pre>
+     +---+--+---+
+1OUT |1  +--+  8| VCC
+-1In |2        7| 2OUT
++1In |3 LF353  6| -2In
+ VEE |4        5| +2In
+     +----------+
+</pre>
+<p>
+<a name="OP220"></a>
+<a name="OP221"></a>
+<h2>OP220, OP221</h2>
+Dual single/dual-supply low power operational amplifier.
+<pre>
+     +---+--+---+
+1OUT |1  +--+  8| VCC
+-1In |2        7| 2OUT
++1In |3 OP220  6| -2In
+ VEE |4        5| +2In
+     +----------+
+</pre>
+<p>
+<a name="OP227"></a>
+<h2>OP227</h2>
+Dual low-noise precision operational amplifier.
+<br>
+Nulling to VCC.
+<pre>
+      +---+--+---+
+1NULL |1  +--+ 14| 1VCC
+1NULL |2       13| 1OUT
+ -1In |3       12| 1VEE
+ +1In |4 OP227 11| +2In
+ 2VEE |5       10| -2In
+ 2OUT |6        9| 2NULL
+ 2VCC |7        8| 2NULL
+      +----------+
+</pre>
+<p>
+<a name="LM248"></a>
+<h2>LM248</h2>
+Quad general-purpose operational amplifiers.
+<pre>
+     +---+--+---+
+1OUT |1  +--+ 14| 4OUT
+-1In |2       13| -4In
++1In |3       12| +4In
+ VCC |4 LM148 11| VEE
++2In |5  OP11 10| +3In
+-2In |6        9| -3In
+2OUT |7        8| 3OUT
+     +----------+
+</pre>
+<p>
+<a name="OP249"></a>
+<h2>OP249</h2>
+Dual high-speed precision JFET-input operational amplifier.
+<pre>
+     +---+--+---+
+1OUT |1  +--+  8| VCC
+-1In |2        7| 2OUT
++1In |3 OP227  6| -2In
+ VEE |4        5| +2In
+     +----------+
+</pre>
+<p>
+<a name="OP260"></a>
+<h2>OP260</h2>
+Dual high-speed current-feedback operational amplifier.
+<br>
+Current feedback on inverting input.
+<pre>
+     +---+--+---+
+1OUT |1  +--+  8| VCC
+-1In |2        7| 2OUT
++1In |3 OP260  6| -2In
+ VEE |4        5| +2In
+     +----------+
+</pre>
+<p>
+<a name="OP270"></a>
+<h2>OP270</h2>
+Dual low-noise precision operational amplifier.
+<pre>
+     +---+--+---+
+1OUT |1  +--+  8| VCC
+-1In |2        7| 2OUT
++1In |3 OP270  6| -2In
+ VEE |4        5| +2In
+     +----------+
+</pre>
+<p>
+<a name="OP271"></a>
+<h2>OP271</h2>
+Dual high-speed operational amplifier.
+<pre>
+     +---+--+---+
+1OUT |1  +--+  8| VCC
+-1In |2        7| 2OUT
++1In |3 OP271  6| -2In
+ VEE |4        5| +2In
+     +----------+
+</pre>
+<p>
+<a name="OP290"></a>
+<h2>OP290</h2>
+Dual low-power operational amplifiers.
+<pre>
+     +---+--+---+
+1OUT |1  +--+  8| VCC
+-1In |2        7| 2OUT
++1In |3 OP200  6| -2In
+ VEE |4        5| +2In
+     +----------+
+</pre>
+<p>
+<a name="LM324"></a>
+<h2>LM324</h2>
+Quad dual/single-supply low-power operational amplifiers.
+<pre>
+     +---+--+---+
+1OUT |1  +--+ 14| 4OUT
+-1In |2       13| -4In
++1In |3       12| +4In
+ VCC |4 LM324 11| VEE
++2In |5 OP421 10| +3In
+-2In |6        9| -3In
+2OUT |7        8| 3OUT
+     +----------+
+</pre>
+<p>
+<a name="LF347"></a>
+<h2>LF347</h2>
+Quad JFET operational amplifiers.
+<pre>
+     +---+--+---+
+1OUT |1  +--+ 14| 4OUT
+-1In |2       13| -4In
++1In |3       12| +4In
+ VCC |4 LF347 11| VEE
++2In |5       10| +3In
+-2In |6        9| -3In
+2OUT |7        8| 3OUT
+     +----------+
+</pre>
+<p>
+<a name="LM348"></a>
+<h2>LM348</h2>
+Quad general-purpose operational amplifiers.
+<pre>
+     +---+--+---+
+1OUT |1  +--+ 14| 4OUT
+-1In |2       13| -4In
++1In |3       12| +4In
+ VCC |4 LM148 11| VEE
++2In |5  OP11 10| +3In
+-2In |6        9| -3In
+2OUT |7        8| 3OUT
+     +----------+
+</pre>
+<p>
+<a name="LF353"></a>
+<h2>LF353</h2>
+Dual JFET-input operational amplifiers.
+<pre>
+     +---+--+---+
+1OUT |1  +--+  8| VCC
+-1In |2        7| 2OUT
++1In |3 LF353  6| -2In
+ VEE |4        5| +2In
+     +----------+
+</pre>
+<p>
+<a name="LM387"></a>
+<h2>LM387</h2>
+Single supply stereo preamplifier.
+<br>
+Inputs are self-biasing to VCC/2
+<pre>
+     +---+--+---+
++1In |1  +--+  8| +2In
+-1In |2        7| -2In
+ GND |3 LM387  6| VCC
+1OUT |4 NE542  5| 2OUT
+     +----------+
+</pre>
+<p>
+<a name="LF400"></a>
+<h2>LF400</h2>
+High-speed precision JFET-input operational amplifier.
+<br>
+Nulling to VEE or via 1M to VCC.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8|
+ -In |2 AD544  7| VCC
+ +In |3 LT1023 6| OUT
+ VEE |4  OP42  5| NULL
+     +----------+
+</pre>
+<p>
+<a name="MAX400"></a>
+<h2>MAX400</h2>
+Instrumentation operational amplifier.
+<br>
+Nulling to VCC.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8| NULL
+ -In |2 LM725  7| VCC
+ +In |3  OP05  6| OUT
+ VEE |4        5|
+     +----------+
+</pre>
+<p>
+<a name="OP400"></a>
+<a name="OP420"></a>
+<h2>OP400, OP420</h2>
+Quad low-power operational amplifiers.
+<pre>
+     +---+--+---+
+1OUT |1  +--+ 14| 4OUT
+-1In |2       13| -4In
++1In |3       12| +4In
+ VCC |4 OP400 11| VEE
++2In |5       10| +3In
+-2In |6        9| -3In
+2OUT |7        8| 3OUT
+     +----------+
+</pre>
+<p>
+<a name="OP421"></a>
+<h2>OP421</h2>
+Quad dual/single-supply low-power operational amplifiers.
+<pre>
+     +---+--+---+
+1OUT |1  +--+ 14| 4OUT
+-1In |2       13| -4In
++1In |3       12| +4In
+ VCC |4 LM324 11| VEE
++2In |5 OP421 10| +3In
+-2In |6        9| -3In
+2OUT |7        8| 3OUT
+     +----------+
+</pre>
+<p>
+<a name="LF441"></a>
+<h2>LF441</h2>
+High-speed JFET-input operational amplifier.
+<br>
+Nulling to VEE.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8|
+ -In |2        7| VCC
+ +In |3  OP43  6| OUT
+ VEE |4        5| NULL
+     +----------+
+</pre>
+<p>
+<a name="OP470"></a>
+<h2>OP470</h2>
+Quad low-noise operational amplifiers.
+<pre>
+     +---+--+---+
+1OUT |1  +--+ 14| 4OUT
+-1In |2       13| -4In
++1In |3       12| +4In
+ VCC |4 OP470 11| VEE
++2In |5       10| +3In
+-2In |6        9| -3In
+2OUT |7        8| 3OUT
+     +----------+
+</pre>
+<p>
+<a name="OP471"></a>
+<h2>OP471</h2>
+Quad high-speed operational amplifiers.
+<pre>
+     +---+--+---+
+1OUT |1  +--+ 14| 4OUT
+-1In |2       13| -4In
++1In |3       12| +4In
+ VCC |4 OP471 11| VEE
++2In |5       10| +3In
+-2In |6        9| -3In
+2OUT |7        8| 3OUT
+     +----------+
+</pre>
+<p>
+<a name="OP490"></a>
+<h2>OP490</h2>
+Quad low-power operational amplifiers.
+<pre>
+     +---+--+---+
+1OUT |1  +--+ 14| 4OUT
+-1In |2       13| -4In
++1In |3       12| +4In
+ VCC |4 OP400 11| VEE
++2In |5       10| +3In
+-2In |6        9| -3In
+2OUT |7        8| 3OUT
+     +----------+
+</pre>
+<p>
+<a name="NE542"></a>
+<h2>NE542</h2>
+Single supply stereo preamplifier.
+<br>
+Inputs are self-biasing to VCC/2
+<pre>
+     +---+--+---+
++1In |1  +--+  8| +2In
+-1In |2        7| -2In
+ GND |3 LM387  6| VCC
+1OUT |4 NE542  5| 2OUT
+     +----------+
+</pre>
+<p>
+<a name="AD544"></a>
+<h2>AD544</h2>
+High-speed precision JFET-input operational amplifier.
+<br>
+Nulling to VEE or via 1M to VCC.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8|
+ -In |2 AD544  7| VCC
+ +In |3 LT1023 6| OUT
+ VEE |4  OP42  5| NULL
+     +----------+
+</pre>
+<p>
+<a name="AD549"></a>
+<h2>AD549</h2>
+Single/dual-supply low bias current CMOS operational amplifier.
+<br>
+Nulling to VEE.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8|
+ -In |2        7| VCC
+ +In |3 AD549  6| OUT
+ VEE |4  OP80  5| NULL
+     +----------+
+</pre>
+<p>
+<a name="LM607"></a>
+<h2>LM607</h2>
+Ultra-low offset voltage precision operational amplifier.
+<br>
+Nulling to VCC.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8| NULL
+ -In |2  OP07  7| VCC
+ +In |3 LM607  6| OUT
+ VEE |4        5|
+     +----------+
+</pre>
+<p>
+<a name="AD611"></a>
+<a name="AD711"></a>
+<h2>AD611, AD711</h2>
+High-speed precision JFET-input operational amplifier.
+<br>
+Nulling to VEE or via 1M to VCC.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8|
+ -In |2 AD544  7| VCC
+ +In |3 LT1023 6| OUT
+ VEE |4  OP42  5| NULL
+     +----------+
+</pre>
+<p>
+<a name="LM627"></a>
+<h2>LM627</h2>
+Low-noise precision operational amplifier.
+<br>
+Nulling to VCC.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8| NULL
+ -In |2        7| VCC
+ +In |3  OP27  6| OUT
+ VEE |4        5|
+     +----------+
+</pre>
+<p>
+<a name="LM637"></a>
+<h2>LM637</h2>
+High-speed low-noise precision operational amplifier.
+<br>
+Stable for gains&gt;=5.  Nulling to VCC.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8| NULL
+ -In |2        7| VCC
+ +In |3  OP37  6| OUT
+ VEE |4        5|
+     +----------+
+</pre>
+<p>
+<a name="LM725"></a>
+<h2>LM725</h2>
+Instrumentation operational amplifier.
+<br>
+Nulling to VCC.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8| NULL
+ -In |2 LM725  7| VCC
+ +In |3  OP05  6| OUT
+ VEE |4        5|
+     +----------+
+</pre>
+<p>
+<a name="LM747"></a>
+<a name="uA747"></a>
+<h2>LM747, uA747</h2>
+Dual general-purpose operational amplifiers.
+<br>
+Nulling to VEE.
+<pre>
+      +---+--+---+
+ -1In |1  +--+ 14| 1OUT
+ +1In |2       13|
+1NULL |3       12|
+  VEE |4  OP04 11| VCC
+2NULL |5 uA747 10|
+ +2In |6        9|
+ -1In |7        8| 2OUT
+      +----------+
+</pre>
+<p>
+<a name="uA776"></a>
+<h2>uA776</h2>
+Single/dual-supply low power operational amplifier with programmable
+slew rate and gain-bandwidth product.
+<br>
+Nulling to VEE.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8| Iset
+ -In |2        7| VCC
+ +In |3  OP22  6| OUT
+ VEE |4        5| NULL
+     +----------+
+</pre>
+<p>
+<a name="LM833"></a>
+<h2>LM833</h2>
+Dual low-noise audio amplifiers.
+<pre>
+     +---+--+---+
+1OUT |1  +--+  8| VCC
+-1In |2  5532  7| 2OUT
++1In |3 LM833  6| -2In
+ VEE |4        5| +2In
+     +----------+
+</pre>
+<p>
+<a name="LM837"></a>
+<h2>LM837</h2>
+Quad low-noise audio amplifiers.
+<pre>
+     +---+--+---+
+1OUT |1  +--+ 14| 4OUT
+-1In |2       13| -4In
++1In |3       12| +4In
+ VCC |4 LM837 11| VEE
++2In |5       10| +3In
+-2In |6        9| -3In
+2OUT |7        8| 3OUT
+     +----------+
+</pre>
+<p>
+<a name="LT1001"></a>
+<h2>LT1001</h2>
+Instrumentation operational amplifier.
+<br>
+Nulling to VCC.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8| NULL
+ -In |2 LM725  7| VCC
+ +In |3  OP05  6| OUT
+ VEE |4        5|
+     +----------+
+</pre>
+<p>
+<a name="LT1007"></a>
+<h2>LT1007</h2>
+Low-noise precision operational amplifier.
+<br>
+Nulling to VCC.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8| NULL
+ -In |2        7| VCC
+ +In |3  OP27  6| OUT
+ VEE |4        5|
+     +----------+
+</pre>
+<p>
+<a name="LT1014"></a>
+<h2>LT1014</h2>
+Quad low-power operational amplifiers.
+<pre>
+     +---+--+---+
+1OUT |1  +--+ 14| 4OUT
+-1In |2       13| -4In
++1In |3       12| +4In
+ VCC |4 OP400 11| VEE
++2In |5       10| +3In
+-2In |6        9| -3In
+2OUT |7        8| 3OUT
+     +----------+
+</pre>
+<p>
+<a name="LT1023"></a>
+<h2>LT1023</h2>
+High-speed precision JFET-input operational amplifier.
+<br>
+Nulling to VEE or via 1M to VCC.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8|
+ -In |2 AD544  7| VCC
+ +In |3 LT1023 6| OUT
+ VEE |4  OP42  5| NULL
+     +----------+
+</pre>
+<p>
+<a name="LT1037"></a>
+<h2>LT1037</h2>
+High-speed low-noise precision operational amplifier.
+<br>
+Stable for gains&gt;=5.  Nulling to VCC.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8| NULL
+ -In |2        7| VCC
+ +In |3  OP37  6| OUT
+ VEE |4        5|
+     +----------+
+</pre>
+<p>
+<a name="MC1458"></a>
+<a name="MC1558"></a>
+<h2>MC1458, MC1558</h2>
+Dual general-purpose operational amplifiers.
+<pre>
+     +---+--+---+
+1OUT |1  +--+  8| VCC
+-1In |2  1458  7| 2OUT
++1In |3  1558  6| -2In
+ VEE |4  4558  5| +2In
+     +----------+
+</pre>
+<p>
+<a name="MC1709"></a>
+<a name="MC1741"></a>
+<h2>MC1709, MC1741</h2>
+Instrumentation operational amplifier.
+<br>
+Nulling to VCC.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8| NULL
+ -In |2 LM725  7| VCC
+ +In |3  OP05  6| OUT
+ VEE |4        5|
+     +----------+
+</pre>
+<p>
+<a name="MC3403"></a>
+<h2>MC3403</h2>
+Quad dual/single-supply low-power operational amplifiers.
+<pre>
+     +---+--+---+
+1OUT |1  +--+ 14| 4OUT
+-1In |2       13| -4In
++1In |3       12| +4In
+ VCC |4 LM324 11| VEE
++2In |5 OP421 10| +3In
+-2In |6        9| -3In
+2OUT |7        8| 3OUT
+     +----------+
+</pre>
+<p>
+<a name="RM4136"></a>
+<h2>RM4136</h2>
+Quad general-purpose operational amplifiers.
+<pre>
+     +---+--+---+
+-1In |1  +--+ 14| -4In
++1In |2       13| +4In
+1OUT |3       12| 4OUT
+2OUT |4  OP09 11| VCC
++2In |5       10| 3OUT
+-2In |6        9| +3In
+ VEE |7        8| -3In
+     +----------+
+</pre>
+<p>
+<a name="LM4250"></a>
+<h2>LM4250</h2>
+Single/dual-supply low power operational amplifier with programmable
+slew rate and gain-bandwidth product.
+<br>
+Nulling to VEE.
+<pre>
+     +---+--+---+
+NULL |1  +--+  8| Iset
+ -In |2        7| VCC
+ +In |3  OP22  6| OUT
+ VEE |4        5| NULL
+     +----------+
+</pre>
+<p>
+<a name="4558"></a>
+<h2>4558</h2>
+Dual general-purpose operational amplifiers.
+<pre>
+     +---+--+---+
+1OUT |1  +--+  8| VCC
+-1In |2  1458  7| 2OUT
++1In |3  1558  6| -2In
+ VEE |4  4558  5| +2In
+     +----------+
+</pre>
+<p>
+<a name="HA5104"></a>
+<h2>HA5104</h2>
+Quad low-noise operational amplifiers.
+<pre>
+     +---+--+---+
+1OUT |1  +--+ 14| 4OUT
+-1In |2       13| -4In
++1In |3       12| +4In
+ VCC |4 OP470 11| VEE
++2In |5       10| +3In
+-2In |6        9| -3In
+2OUT |7        8| 3OUT
+     +----------+
+</pre>
+<p>
+<a name="NE5532"></a>
+<a name="SN5532"></a>
+<h2>NE5532, SN5532</h2>
+Dual low-noise audio amplifiers.
+<pre>
+     +---+--+---+
+1OUT |1  +--+  8| VCC
+-1In |2  5532  7| 2OUT
++1In |3 LM833  6| -2In
+ VEE |4        5| +2In
+     +----------+
+</pre>
+<p>
+<hr><a href="index.html">Back to the GIICM index.</a>
+</body>
+</html>

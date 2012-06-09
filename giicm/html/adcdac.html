@@ -1,0 +1,313 @@
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <link rel="stylesheet" type="text/css" href="../frank/frank.css">
+   <meta name="CVS" content="$Id$">
+   <meta name="description" content="GIICM">
+   <title>GIICM</title>
+</head><body><h1>A/D and D/A converters</h1>
+<p>
+<hr>
+<a name="MAX162"></a>
+<h2>MAX162</h2>
+12-bit analog-to-digital converter.
+<pre>
+     +---+--+---+
+ AIN |1  +--+ 24| VCC
+Vref |2       23| VEE
+AGND |3       22| /BUSY
+ D11 |4       21| /CE
+ D10 |5       20| /RD
+  D9 |6   AD  19| HBEN
+  D8 |7  7572 18| X0
+  D7 |8       17| X1
+  D6 |9       16| D0
+  D5 |10      15| D1
+  D4 |11      14| D2
+ GND |12      13| D3
+     +----------+
+</pre>
+<p>
+<a name="TL507"></a>
+<a name="TL507C"></a>
+<h2>TL507, TL507C</h2>
+7-bit PWM output analog-to-digital converter.
+<br>
+Only one of the two power supply pins should be used, 3.5V &lt; VCC &lt; 6V;
+8V &lt; VDD &lt; 18V.  At VCC=5V the analog input range is 1.3V &lt; AIN &lt; 3.9V.
+<pre>
+     +---+--+---+
+  EN |1  +--+  8| /RST
+ CLK |2  TL    7| VDD
+ GND |3  507   6| VCC
+/OUT |4        5| AIN
+     +----------+
+</pre>
+<p>
+<a name="TLC548"></a>
+<a name="TLC549"></a>
+<h2>TLC548, TLC549</h2>
+8-bit serial-output ADC.
+<pre>
+        +---+--+---+
+Vref(+) |1  +--+  8| VCC
+    AIN |2 TLC548 7| CLK
+Vref(-) |3 TLC549 6| DOUT
+    GND |4        5| /CE
+        +----------+
+</pre>
+<p>
+<a name="0809"></a>
+<a name="ADC0809"></a>
+<h2>0809, ADC0809</h2>
+8-bit ADC with 8-input multiplexer.
+<pre>
+        +-----+--+-----+
+    IN3 |1    +--+   28| IN2
+    IN4 |2           27| IN1
+    IN5 |3           26| IN0
+    IN6 |4           25| A0
+    IN7 |5           24| A1
+  START |6           23| A2
+    EOC |7  ADC0809  22| ALE
+     D3 |8           21| D7
+    /OE |9           20| D6
+    CLK |10          19| D5
+    VCC |11          18| D4
+Vref(+) |12          17| D0
+    GND |13          16| Vref(-)
+     D1 |14          15| D2
+        +--------------+
+</pre>
+<p>
+<a name="TDA1310"></a>
+<h2>TDA1310</h2>
+Dual 16-bit current output audio DAC.
+<pre>
+    +---+--+---+
+CLK |1  +--+  8| ROUT
+ WS |2  TDA   7| Iref
+DIN |3  1543  6| LOUT
+GND |4        5| VCC
+    +----------+
+</pre>
+<p>
+<a name="TDA1312"></a>
+<h2>TDA1312</h2>
+Dual 16-bit audio DAC.
+<pre>
+    +---+--+---+
+CLK |1  +--+  8| WS
+RIN |2  TDA   7| ROUT
+LIN |3  1543  6| LOUT
+GND |4        5| VCC
+    +----------+
+</pre>
+<p>
+<a name="DAC1408"></a>
+<a name="MC1408"></a>
+<h2>DAC1408, MC1408</h2>
+8-bit current-output D/A converter.
+<pre>
+    +---+--+---+
+    |1  +--+ 16| COMP
+GND |2       15| Vref-
+VEE |3       14| Vref+
+ Io |4  MC   13| VCC
+ D7 |5  1408 12| D0
+ D6 |6       11| D1
+ D5 |7       10| D2
+ D4 |8        9| D3
+    +----------+
+</pre>
+<p>
+<a name="TDA1543"></a>
+<h2>TDA1543</h2>
+Dual 16-bit audio DAC.
+<pre>
+    +---+--+---+
+CLK |1  +--+  8| ROUT
+ WS |2  TDA   7| Vref
+DIN |3  1543  6| LOUT
+GND |4        5| VCC
+    +----------+
+</pre>
+<p>
+<a name="TDA1545"></a>
+<h2>TDA1545</h2>
+Dual 16-bit current output audio DAC.
+<pre>
+    +---+--+---+
+CLK |1  +--+  8| ROUT
+ WS |2  TDA   7| Iref
+DIN |3  1543  6| LOUT
+GND |4        5| VCC
+    +----------+
+</pre>
+<p>
+<a name="TLC1549"></a>
+<h2>TLC1549</h2>
+10-bit serial-output ADC.
+<pre>
+        +---+--+---+
+Vref(+) |1  +--+  8| VCC
+    AIN |2  TLC   7| CLK
+Vref(-) |3  1549  6| DOUT
+    GND |4        5| /CE
+        +----------+
+</pre>
+<p>
+<a name="AD7224"></a>
+<h2>AD7224</h2>
+8-bit voltage-output D/A converter.
+<br>
+VEE can be connected to GND for single-supply usage.
+<pre>
+     +---+--+---+
+ VEE |1  +--+ 18| VCC
+ OUT |2       17| /RST
+Vref |3       16| /LD
+AGND |4   AD  15| /WR
+ GND |5  7224 14| /CE
+  D7 |6       13| D0
+  D6 |7       12| D1
+  D5 |8       11| D2
+  D4 |9       10| D3
+     +----------+
+</pre>
+<p>
+<a name="AD7226"></a>
+<h2>AD7226</h2>
+Quad 8-bit voltage-output D/A converter.
+<br>
+VEE can be connected to GND for single-supply usage.
+<pre>
+     +---+--+---+
+OUT1 |1  +--+ 20| OUT2
+OUT0 |2       19| OUT3
+ VEE |3       18| VCC
+Vref |4       17| A0
+AGND |5   AD  16| A1
+ GND |6  7226 15| /WR
+  D7 |7       14| D0
+  D6 |8       13| D1
+  D5 |9       12| D2
+  D4 |10      11| D3
+     +----------+
+</pre>
+<p>
+<a name="AD7228"></a>
+<h2>AD7228</h2>
+Octal 8-bit voltage-output D/A converter.
+<br>
+VEE can be connected to GND for single-supply usage.
+<pre>
+     +---+--+---+
+ VCC |1  +--+ 24| A0
+OUT7 |2       23| A1
+OUT6 |3       22| A2
+OUT5 |4       21| /WR
+OUT4 |5       20| D0
+OUT3 |6   AD  19| D1
+OUT2 |7  7228 18| D2
+OUT1 |8       17| D3
+OUT0 |9       16| D4
+ VEE |10      15| D5
+Vref |11      14| D6
+ GND |12      13| D7
+     +----------+
+</pre>
+<p>
+<a name="AD7545"></a>
+<a name="AD7645"></a>
+<h2>AD7545, AD7645</h2>
+12-bit current-output D/A converter with input latches.
+<br>
+AD7545 has CMOS compatible inputs.
+<pre>
+     +---+--+---+
+ OUT |1  +--+ 20| Rfb
+AGND |2       19| Vref
+ GND |3       18| VCC
+ D11 |4       17| /WR
+ D10 |5   AD  16| /CE
+  D9 |6  7545 15| D0
+  D8 |7       14| D1
+  D7 |8       13| D2
+  D6 |9       12| D3
+  D5 |10      11| D4
+     +----------+
+</pre>
+<p>
+<a name="AD7572"></a>
+<h2>AD7572</h2>
+12-bit analog-to-digital converter.
+<pre>
+     +---+--+---+
+ AIN |1  +--+ 24| VCC
+Vref |2       23| VEE
+AGND |3       22| /BUSY
+ D11 |4       21| /CE
+ D10 |5       20| /RD
+  D9 |6   AD  19| HBEN
+  D8 |7  7572 18| X0
+  D7 |8       17| X1
+  D6 |9       16| D0
+  D5 |10      15| D1
+  D4 |11      14| D2
+ GND |12      13| D3
+     +----------+
+</pre>
+<p>
+<a name="DAC8012"></a>
+<h2>DAC8012</h2>
+12-bit current-output D/A converter with input latches and readback.
+<pre>
+     +---+--+---+
+ OUT |1  +--+ 20| Rfb
+AGND |2       19| Vref
+ GND |3       18| VCC
+ D11 |4       17| R//W
+ D10 |5   AD  16| /CE
+  D9 |6  7545 15| D0
+  D8 |7       14| D1
+  D7 |8       13| D2
+  D6 |9       12| D3
+  D5 |10      11| D4
+     +----------+
+</pre>
+<p>
+<a name="DAC8043"></a>
+<h2>DAC8043</h2>
+12-bit serial-input current-output D/A converter.
+<pre>
+     +---+--+---+
+Vref |1  +--+  8| VCC
+ Rfb |2  DAC   7| CLK
+ OUT |3  8043  6| D
+ GND |4        5| /LD
+     +----------+
+</pre>
+<p>
+<a name="DAC8800"></a>
+<h2>DAC8800</h2>
+Octal 8-bit serial-input voltage-output CMOS D/A converter.
+<br>
+VEE can be connected to GND for single-supply usage.
+<pre>
+       +---+--+---+
+1Vref- |1  +--+ 20| 2Vref-
+1Vref+ |2       19| 2Vref+
+ 1OUT0 |3       18| 2OUT3
+ 1OUT1 |4       17| 2OUT2
+ 1OUT2 |5  DAC  16| 2OUT1
+ 1OUT3 |6  8800 15| 2OUT0
+   VCC |7       14| VEE
+     D |8       13| /LD
+   CLK |9       12| /RST
+  /CLK |10      11| GND
+       +----------+
+</pre>
+<p>
+<hr><a href="index.html">Back to the GIICM index.</a>
+</body>
+</html>

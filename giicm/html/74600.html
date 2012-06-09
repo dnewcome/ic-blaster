@@ -1,0 +1,638 @@
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <link rel="stylesheet" type="text/css" href="../frank/frank.css">
+   <meta name="CVS" content="$Id$">
+   <meta name="description" content="GIICM">
+   <title>GIICM</title>
+</head><body><h1>7400 series TTL IC's:  74600...74699</h1>
+<p>
+<hr>
+<a name="74620"></a>
+<h2>74620</h2>
+8-bit 3-state inverting bus transceiver.
+<br>
+Two enable pins control output enables, one active high and one active low.
+<pre>
+    +---+--+---+
+GAB |1  +--+ 20| VCC
+ A1 |2       19| /GBA
+ A2 |3       18| B1
+ A3 |4       17| B2
+ A4 |5  74   16| B3
+ A5 |6  620  15| B4
+ A6 |7       14| B5
+ A7 |8       13| B6
+ A8 |9       12| B7
+GND |10      11| B8
+    +----------+
+</pre>
+<p>
+<a name="74621"></a>
+<h2>74621</h2>
+8-bit open-collector noninverting bus transceiver.
+<br>
+Two enable pins control output enables, one active high and one active low.
+<pre>
+    +---+--+---+
+GAB |1  +--+ 20| VCC
+ A1 |2       19| /GBA
+ A2 |3       18| B1
+ A3 |4       17| B2
+ A4 |5  74   16| B3
+ A5 |6  621  15| B4
+ A6 |7       14| B5
+ A7 |8       13| B6
+ A8 |9       12| B7
+GND |10      11| B8
+    +----------+
+</pre>
+<p>
+<a name="74623"></a>
+<h2>74623</h2>
+8-bit 3-state noninverting bus transceiver.
+<br>
+Two enable pins control output enables, one active high and one active low.
+<pre>
+    +---+--+---+
+GAB |1  +--+ 20| VCC
+ A1 |2       19| /GBA
+ A2 |3       18| B1
+ A3 |4       17| B2
+ A4 |5  74   16| B3
+ A5 |6  623  15| B4
+ A6 |7       14| B5
+ A7 |8       13| B6
+ A8 |9       12| B7
+GND |10      11| B8
+    +----------+
+</pre>
+<p>
+<a name="74638"></a>
+<h2>74638</h2>
+8-bit 3-state/open-collector inverting bus transceiver.
+<br>
+Enable and direction pins control output enables.
+<pre>
+    +---+--+---+
+DIR |1  +--+ 20| VCC
+ A1 |2       19| /OE
+ A2 |3       18| B1
+ A3 |4       17| B2
+ A4 |5  74   16| B3
+ A5 |6  638  15| B4
+ A6 |7       14| B5
+ A7 |8       13| B6
+ A8 |9       12| B7
+GND |10      11| B8
+    +----------+
+</pre>
+<p>
+<a name="74639"></a>
+<h2>74639</h2>
+8-bit 3-state/open-collector noninverting bus transceiver.
+<br>
+Enable and direction pins control output enables.
+<pre>
+    +---+--+---+
+DIR |1  +--+ 20| VCC
+ A1 |2       19| /OE
+ A2 |3       18| B1
+ A3 |4       17| B2
+ A4 |5  74   16| B3
+ A5 |6  639  15| B4
+ A6 |7       14| B5
+ A7 |8       13| B6
+ A8 |9       12| B7
+GND |10      11| B8
+    +----------+
+</pre>
+<p>
+<a name="74640"></a>
+<h2>74640</h2>
+8-bit 3-state inverting bus transceiver.
+<br>
+Enable and direction pins control output enables.
+<pre>
+    +---+--+---+             +---+---*---+---+
+DIR |1  +--+ 20| VCC         |/EN|DIR| A | B |
+ A1 |2       19| /EN         +===+===*===+===+
+ A2 |3       18| B1          | 1 | X | Z | Z |
+ A3 |4       17| B2          | 0 | 0 |/B | Z |
+ A4 |5  74   16| B3          | 0 | 1 | Z |/A |
+ A5 |6  640  15| B4          +---+---*---+---+
+ A6 |7       14| B5
+ A7 |8       13| B6
+ A8 |9       12| B7
+GND |10      11| B8
+    +----------+
+</pre>
+<p>
+<a name="74641"></a>
+<h2>74641</h2>
+8-bit 3-state noninverting bus transceiver.
+<br>
+Enable and direction pins control output enables.
+<pre>
+    +---+--+---+
+DIR |1  +--+ 20| VCC
+ A1 |2       19| /OE
+ A2 |3       18| B1
+ A3 |4       17| B2
+ A4 |5  74   16| B3
+ A5 |6  641  15| B4
+ A6 |7       14| B5
+ A7 |8       13| B6
+ A8 |9       12| B7
+GND |10      11| B8
+    +----------+
+</pre>
+<p>
+<a name="74642"></a>
+<h2>74642</h2>
+8-bit open-collector inverting bus transceiver.
+<br>
+Enable and direction pins control output enables.
+<pre>
+    +---+--+---+
+DIR |1  +--+ 20| VCC
+ A1 |2       19| /OE
+ A2 |3       18| B1
+ A3 |4       17| B2
+ A4 |5  74   16| B3
+ A5 |6  642  15| B4
+ A6 |7       14| B5
+ A7 |8       13| B6
+ A8 |9       12| B7
+GND |10      11| B8
+    +----------+
+</pre>
+<p>
+<a name="74643"></a>
+<h2>74643</h2>
+8-bit 3-state inverting/noninverting bus transceiver.
+<br>
+Enable and direction pins control output enables.
+<pre>
+    +---+--+---+             +---+---*---+---+
+DIR |1  +--+ 20| VCC         |/EN|DIR| A | B |
+ A1 |2       19| /EN         +===+===*===+===+
+ A2 |3       18| B1          | 1 | X | Z | Z |
+ A3 |4       17| B2          | 0 | 0 | B | Z |
+ A4 |5  74   16| B3          | 0 | 1 | Z |/A |
+ A5 |6  643  15| B4          +---+---*---+---+
+ A6 |7       14| B5
+ A7 |8       13| B6
+ A8 |9       12| B7
+GND |10      11| B8
+    +----------+
+</pre>
+<p>
+<a name="74645"></a>
+<h2>74645</h2>
+8-bit 3-state noninverting bus transceiver.
+<br>
+Enable and direction pins control output enables.
+<pre>
+    +---+--+---+
+DIR |1  +--+ 20| VCC
+ A1 |2       19| /OE
+ A2 |3       18| B1
+ A3 |4       17| B2
+ A4 |5  74   16| B3
+ A5 |6  645  15| B4
+ A6 |7       14| B5
+ A7 |8       13| B6
+ A8 |9       12| B7
+GND |10      11| B8
+    +----------+
+</pre>
+<p>
+<a name="74646"></a>
+<h2>74646</h2>
+8-bit 3-state noninverting registered transceiver.
+<pre>
+    +---+--+---+
+CAB |1  +--+ 24| VCC
+SAB |2       23| CBA
+DIR |3       22| SBA
+ A1 |4       21| /OE
+ A2 |5       20| B1
+ A3 |6   74  19| B2
+ A4 |7  646  18| B3
+ A5 |8       17| B4
+ A6 |9       16| B5
+ A7 |10      15| B6
+ A8 |11      14| B7
+GND |12      13| B8
+    +----------+
+</pre>
+<p>
+<a name="74648"></a>
+<h2>74648</h2>
+8-bit 3-state inverting registered transceiver.
+<pre>
+    +---+--+---+
+CAB |1  +--+ 24| VCC
+SAB |2       23| CBA
+DIR |3       22| SBA
+ A1 |4       21| /OE
+ A2 |5       20| B1
+ A3 |6   74  19| B2
+ A4 |7  648  18| B3
+ A5 |8       17| B4
+ A6 |9       16| B5
+ A7 |10      15| B6
+ A8 |11      14| B7
+GND |12      13| B8
+    +----------+
+</pre>
+<p>
+<a name="74651"></a>
+<h2>74651</h2>
+8-bit 3-state inverting registered transceiver.
+<pre>
+    +---+--+---+
+CAB |1  +--+ 24| VCC
+SAB |2       23| CBA
+GAB |3       22| SBA
+ A1 |4       21| /GBA
+ A2 |5       20| B1
+ A3 |6   74  19| B2
+ A4 |7  651  18| B3
+ A5 |8       17| B4
+ A6 |9       16| B5
+ A7 |10      15| B6
+ A8 |11      14| B7
+GND |12      13| B8
+    +----------+
+</pre>
+<p>
+<a name="74652"></a>
+<h2>74652</h2>
+8-bit 3-state noninverting registered transceiver.
+<pre>
+    +---+--+---+
+CAB |1  +--+ 24| VCC
+SAB |2       23| CBA
+GAB |3       22| SBA
+ A1 |4       21| /GBA
+ A2 |5       20| B1
+ A3 |6   74  19| B2
+ A4 |7  652  18| B3
+ A5 |8       17| B4
+ A6 |9       16| B5
+ A7 |10      15| B6
+ A8 |11      14| B7
+GND |12      13| B8
+    +----------+
+</pre>
+<p>
+<a name="74653"></a>
+<h2>74653</h2>
+8-bit 3-state/open-collector inverting registered transceiver.
+<pre>
+    +---+--+---+
+CAB |1  +--+ 24| VCC
+SAB |2       23| CBA
+GAB |3       22| SBA
+ A1 |4       21| /GBA
+ A2 |5       20| B1
+ A3 |6   74  19| B2
+ A4 |7  653  18| B3
+ A5 |8       17| B4
+ A6 |9       16| B5
+ A7 |10      15| B6
+ A8 |11      14| B7
+GND |12      13| B8
+    +----------+
+</pre>
+<p>
+<a name="74654"></a>
+<h2>74654</h2>
+8-bit 3-state/open-collector noninverting registered transceiver.
+<pre>
+    +---+--+---+
+CAB |1  +--+ 24| VCC
+SAB |2       23| CBA
+GAB |3       22| SBA
+ A1 |4       21| /GBA
+ A2 |5       20| B1
+ A3 |6   74  19| B2
+ A4 |7  654  18| B3
+ A5 |8       17| B4
+ A6 |9       16| B5
+ A7 |10      15| B6
+ A8 |11      14| B7
+GND |12      13| B8
+    +----------+
+</pre>
+<p>
+<a name="74657"></a>
+<h2>74657</h2>
+8-bit 3-state noninverting bus transceiver with parity generator/checker.
+<br>
+Enable and direction pins control output enables.
+<pre>
+       +---+--+---+
+   DIR |1  +--+ 24| /OE
+    A1 |2       23| B1
+    A2 |3       22| B2
+    A3 |4       21| B3
+    A4 |5       20| B4
+    A5 |6   74  19| GND
+   VCC |7  657  18| GND
+    A6 |8       17| B5
+    A7 |9       16| B6
+    A8 |10      15| B7
+  O//E |11      14| B8
+/ERROR |12      13| PAR
+       +----------+
+</pre>
+<p>
+<a name="74666"></a>
+<h2>74666</h2>
+8-bit 3-state transparent latch with readback, set and reset.
+<pre>
+      +---+--+---+
+/OERB |1  +--+ 24| VCC
+ /OE1 |2       23| /OE2
+   D1 |3       22| Q1
+   D2 |4       21| Q2
+   D3 |5       20| Q3
+   D4 |6   74  19| Q4
+   D5 |7  666  18| Q5
+   D6 |8       17| Q6
+   D7 |9       16| Q7
+   D8 |10      15| Q8
+ /RST |11      14| /SET
+  GND |12      13| LE
+      +----------+
+</pre>
+<p>
+<a name="74669"></a>
+<h2>74669</h2>
+4-bit synchronous binary up/down counter with load and ripple carry output.
+<pre>
+     +---+--+---+
+U//D |1  +--+ 16| VCC
+ CLK |2       15| /RCO
+  P0 |3       14| Q0
+  P1 |4   74  13| Q1
+  P2 |5  169  12| Q2
+  P3 |6       11| Q3
+/ENP |7       10| /ENT
+ GND |8        9| /LOAD
+     +----------+
+</pre>
+<p>
+<a name="74670"></a>
+<h2>74670</h2>
+4x4-bit 3-state dual-port register file.
+<pre>
+    +---+--+---+
+ D2 |1  +--+ 16| VCC
+ D3 |2       15| D1
+ D4 |3       14| WA0
+RA1 |4   74  13| WA1
+RA0 |5  670  12| /WR
+ Q4 |6       11| /RD
+ Q3 |7       10| Q1
+GND |8        9| Q2
+    +----------+
+</pre>
+<p>
+<a name="74673"></a>
+<h2>74673</h2>
+16-bit 3-state universal shift register with storage register, reset
+and 16-bit rotate function.
+<pre>
+         +---+--+---+
+     /CE |1  +--+ 24| VCC
+    /CLK |2       23| P15
+ R//W S0 |3       22| P14
+/RRST S1 |4       21| P13
+ L//S S2 |5       20| P12
+  D0/Q15 |6   74  19| P11
+      P0 |7  673  18| P10
+      P1 |8       17| P9
+      P2 |9       16| P8
+      P3 |10      15| P7
+      P4 |11      14| P6
+     GND |12      13| P5
+         +----------+
+</pre>
+<p>
+<a name="74674"></a>
+<h2>74674</h2>
+16-bit 3-state universal shift register with 16-bit rotate function.
+<pre>
+        +---+--+---+         +---+---+---*----------------------------+
+    /CE |1  +--+ 24| VCC     |/CE| S1| S0| Function                   |
+   /CLK |2       23| P15     +===+===+===*============================+
+R//W S0 |3       22| P14     | 1 | X | X | hold, P0..15=Z             |
+        |4       21| P13     | 0 | X | 0 | serial-in parallel out     |
+L//S S1 |5       20| P12     | 0 | 0 | 1 | serial&amp;parallel out rotate |
+ D0/Q15 |6   74  19| P11     | 0 | 1 | 1 | parallel load              |
+     P0 |7  674  18| P10     +---+---+---*----------------------------+
+     P1 |8       17| P9
+     P2 |9       16| P8
+     P3 |10      15| P7
+     P4 |11      14| P6
+    GND |12      13| P5
+        +----------+
+</pre>
+<p>
+<a name="74677"></a>
+<h2>74677</h2>
+16-bit inverting address comparator with enable.
+<pre>
+    +---+--+---+
+ A1 |1  +--+ 24| VCC
+ A2 |2       23| /EN
+ A3 |3       22| Y
+ A4 |4       21| P3
+ A5 |5       20| P2
+ A6 |6   74  19| P1
+ A7 |7  677  18| P0
+ A8 |8       17| A16
+ A9 |9       16| A15
+A10 |10      15| A14
+A11 |11      14| A13
+GND |12      13| A12
+    +----------+
+</pre>
+<p>
+<a name="74682"></a>
+<h2>74682</h2>
+8-bit inverting magnitude comparator with integrated 100k pull-up resistors.
+<pre>
+     +---+--+---+
+/A&gt;B |1  +--+ 20| VCC
+  A0 |2       19| A=B
+  B0 |3       18| B7
+  A1 |4       17| A7
+  B1 |5   74  16| B6
+  A2 |6  682  15| A6
+  B2 |7       14| B5
+  A3 |8       13| A5
+  B3 |9       12| B4
+ GND |10      11| A4
+     +----------+
+</pre>
+<p>
+<a name="74684"></a>
+<h2>74684</h2>
+8-bit inverting magnitude comparator.
+<pre>
+     +---+--+---+
+/A&gt;B |1  +--+ 20| VCC
+  A0 |2       19| A=B
+  B0 |3       18| B7
+  A1 |4       17| A7
+  B1 |5   74  16| B6
+  A2 |6  684  15| A6
+  B2 |7       14| B5
+  A3 |8       13| A5
+  B3 |9       12| B4
+ GND |10      11| A4
+     +----------+
+</pre>
+<p>
+<a name="74686"></a>
+<h2>74686</h2>
+8-bit inverting magnitude comparator with enable.
+<pre>
+     +---+--+---+
+/A&gt;B |1  +--+ 24| VCC
+/EN1 |2       23| /EN2
+  A0 |3       22| /A=B
+  B0 |4       21| B7
+  A1 |5       20| A7
+  B1 |6   74  19|
+     |7  686  18| B6
+  A2 |8       17| A6
+  B2 |9       16| B5
+  A3 |10      15| A5
+  B3 |11      14| B4
+ GND |12      13| A4
+     +----------+
+</pre>
+<p>
+<a name="74687"></a>
+<h2>74687</h2>
+8-bit open-collector inverting magnitude comparator with enable.
+<pre>
+     +---+--+---+
+/A&gt;B |1  +--+ 24| VCC
+/EN1 |2       23| /EN2
+  A0 |3       22| /A=B
+  B0 |4       21| B7
+  A1 |5       20| A7
+  B1 |6   74  19|
+     |7  687  18| B6
+  A2 |8       17| A6
+  B2 |9       16| B5
+  A3 |10      15| A5
+  B3 |11      14| B4
+ GND |12      13| A4
+     +----------+
+</pre>
+<p>
+<a name="74688"></a>
+<h2>74688</h2>
+8-bit inverting identity comparator with enable.
+<pre>
+    +---+--+---+
+/EN |1  +--+ 20| VCC
+ A0 |2       19| /A=B
+ B0 |3       18| B7
+ A1 |4       17| A7
+ B1 |5   74  16| B6
+ A2 |6  688  15| A6
+ B2 |7       14| B5
+ A3 |8       13| A5
+ B3 |9       12| B4
+GND |10      11| A4
+    +----------+
+</pre>
+<p>
+<a name="74689"></a>
+<h2>74689</h2>
+8-bit open-collector inverting identity comparator with enable.
+<pre>
+    +---+--+---+
+/EN |1  +--+ 20| VCC
+ A0 |2       19| /A=B
+ B0 |3       18| B7
+ A1 |4       17| A7
+ B1 |5   74  16| B6
+ A2 |6  689  15| A6
+ B2 |7       14| B5
+ A3 |8       13| A5
+ B3 |9       12| B4
+GND |10      11| A4
+    +----------+
+</pre>
+<p>
+<a name="74691"></a>
+<h2>74691</h2>
+4-bit 3-state synchronous binary counter with output registers, asynchronous
+reset and ripple carry output.  Multiplexed register/counter outputs.
+<pre>
+      +---+--+---+
+/CRST |1  +--+ 20| VCC
+ CCLK |2       19| RCO
+   P0 |3       18| Q0
+   P1 |4       17| Q1
+   P2 |5   74  16| Q2
+   P3 |6  691  15| Q3
+  ENP |7       14| ENT
+/RRST |8       13| /LOAD
+ RCLK |9       12| /OE
+  GND |10      11| R//C
+      +----------+
+</pre>
+<p>
+<a name="74697"></a>
+<h2>74697</h2>
+4-bit 3-state synchronous binary up/down counter with output registers,
+asynchronous reset and ripple carry output.  Multiplexed register/counter
+outputs.
+<pre>
+      +---+--+---+
+ U//D |1  +--+ 20| VCC
+ CCLK |2       19| RCO
+   P0 |3       18| Q0
+   P1 |4       17| Q1
+   P2 |5   74  16| Q2
+   P3 |6  697  15| Q3
+  ENP |7       14| ENT
+/CRST |8       13| /LOAD
+ RCLK |9       12| /OE
+  GND |10      11| R//C
+      +----------+
+</pre>
+<p>
+<a name="74699"></a>
+<h2>74699</h2>
+4-bit 3-state synchronous binary up/down counter with output registers,
+reset and ripple carry output.  Multiplexed register/counter
+outputs.
+<pre>
+      +---+--+---+
+ U//D |1  +--+ 20| VCC
+ CCLK |2       19| RCO
+   P0 |3       18| Q0
+   P1 |4       17| Q1
+   P2 |5   74  16| Q2
+   P3 |6  699  15| Q3
+  ENP |7       14| ENT
+/CRST |8       13| /LOAD
+ RCLK |9       12| /OE
+  GND |10      11| R//C
+      +----------+
+</pre>
+<p>
+<hr><a href="index.html">Back to the GIICM index.</a>
+</body>
+</html>

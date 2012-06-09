@@ -1,0 +1,547 @@
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <link rel="stylesheet" type="text/css" href="../frank/frank.css">
+   <meta name="CVS" content="$Id$">
+   <meta name="description" content="GIICM">
+   <title>GIICM</title>
+</head><body><h1>7400 series TTL IC's:  74500...74599</h1>
+<p>
+<hr>
+<a name="74519"></a>
+<h2>74519</h2>
+8-bit open-collector noninverting identity comparator with enable.
+<pre>
+    +---+--+---+
+/OE |1  +--+ 20| VCC
+ A0 |2       19| A=B
+ B0 |3       18| B7
+ A1 |4       17| A7
+ B1 |5   74  16| B6
+ A2 |6  519  15| A6
+ B2 |7       14| B5
+ A3 |8       13| A5
+ B3 |9       12| B4
+GND |10      11| A4
+    +----------+
+</pre>
+<p>
+<a name="74520"></a>
+<h2>74520</h2>
+8-bit inverting identity comparator with itegrated 20k pull-up resistors
+and enable.
+<pre>
+    +---+--+---+
+/EN |1  +--+ 20| VCC
+ A0 |2       19| A=B
+ B0 |3       18| B7
+ A1 |4       17| A7
+ B1 |5   74  16| B6
+ A2 |6  520  15| A6
+ B2 |7       14| B5
+ A3 |8       13| A5
+ B3 |9       12| B4
+GND |10      11| A4
+    +----------+
+</pre>
+<p>
+<a name="74521"></a>
+<h2>74521</h2>
+8-bit inverting identity comparator with enable.
+<pre>
+    +---+--+---+
+/OE |1  +--+ 20| VCC
+ A0 |2       19| A=B
+ B0 |3       18| B7
+ A1 |4       17| A7
+ B1 |5   74  16| B6
+ A2 |6  521  15| A6
+ B2 |7       14| B5
+ A3 |8       13| A5
+ B3 |9       12| B4
+GND |10      11| A4
+    +----------+
+</pre>
+<p>
+<a name="74533"></a>
+<h2>74533</h2>
+8-bit 3-state inverting transparent latch.
+<pre>
+    +---+--+---+             +---+---+---*---+
+/OE |1  +--+ 20| VCC         |/OE| LE| D | Q |
+/Q1 |2       19| /Q8         +===+===+===*===+
+ D1 |3       18| D8          | 1 | X | X | Z |
+ D2 |4       17| D7          | 0 | 0 | X | - |
+/Q2 |5   74  16| /Q7         | 0 | 1 | 0 | 0 |
+/Q3 |6  533  15| /Q6         | 0 | 1 | 1 | 1 |
+ D3 |7       14| D6          +---+---+---*---+
+ D4 |8       13| D5
+/Q4 |9       12| /Q5
+GND |10      11| LE
+    +----------+
+</pre>
+<p>
+<a name="74534"></a>
+<h2>74534</h2>
+8-bit 3-state inverting D flip-flop.
+<pre>
+    +---+--+---+             +---+---+---*---+
+/OE |1  +--+ 20| VCC         |/OE|CLK| D |/Q |
+/Q1 |2       19| /Q8         +===+===+===*===+
+ D1 |3       18| D8          | 1 | X | X | Z |
+ D2 |4       17| D7          | 0 | / | 0 | 1 |
+/Q2 |5   74  16| /Q7         | 0 | / | 1 | 0 |
+/Q3 |6  534  15| /Q6         | 0 |!/ | X | - |
+ D3 |7       14| D6          +---+---+---*---+
+ D4 |8       13| D5
+/Q4 |9       12| /Q5
+GND |10      11| CLK
+    +----------+
+</pre>
+<p>
+<a name="74540"></a>
+<h2>74540</h2>
+8-bit 3-state inverting buffer/line driver.
+<pre>
+     +---+--+---+
+/OE1 |1  +--+ 20| VCC
+  A1 |2       19| /OE2
+  A2 |3       18| /Y1
+  A3 |4       17| /Y2
+  A4 |5   74  16| /Y3
+  A5 |6  540  15| /Y4
+  A6 |7       14| /Y5
+  A7 |8       13| /Y6
+  A8 |9       12| /Y7
+ GND |10      11| /Y8
+     +----------+
+</pre>
+<p>
+<a name="74541"></a>
+<h2>74541</h2>
+8-bit 3-state noninverting buffer/line driver.
+<pre>
+     +---+--+---+
+/OE1 |1  +--+ 20| VCC
+  A1 |2       19| /OE2
+  A2 |3       18| Y1
+  A3 |4       17| Y2
+  A4 |5   74  16| Y3
+  A5 |6  541  15| Y4
+  A6 |7       14| Y5
+  A7 |8       13| Y6
+  A8 |9       12| Y7
+ GND |10      11| Y8
+     +----------+
+</pre>
+<p>
+<a name="74543"></a>
+<h2>74543</h2>
+8-bit 3-state noninverting registered transceiver.
+<pre>
+      +---+--+---+
+/LEBA |1  +--+ 24| VCC
+ /GBA |2       23| /CEBA
+   A1 |3       22| B1
+   A2 |4       21| B2
+   A3 |5       20| B3
+   A4 |6   74  19| B4
+   A5 |7  543  18| B5
+   A6 |8       17| B6
+   A7 |9       16| B7
+   A8 |10      15| B8
+/CEAB |11      14| /LEAB
+  GND |12      13| /GAB
+      +----------+
+</pre>
+<p>
+<a name="74544"></a>
+<h2>74544</h2>
+8-bit 3-state inverting registered transceiver.
+<pre>
+      +---+--+---+
+/LEBA |1  +--+ 24| VCC
+ /GBA |2       23| /CEBA
+   A1 |3       22| B1
+   A2 |4       21| B2
+   A3 |5       20| B3
+   A4 |6   74  19| B4
+   A5 |7  544  18| B5
+   A6 |8       17| B6
+   A7 |9       16| B7
+   A8 |10      15| B8
+/CEAB |11      14| /LEAB
+  GND |12      13| /GAB
+      +----------+
+</pre>
+<p>
+<a name="74561"></a>
+<h2>74561</h2>
+4-bit 3-state synchronous binary counter with sync/async load, sync/async
+reset, and ripple/clocked carry output.
+<pre>
+      +---+--+---+
+ /ALD |1  +--+ 20| VCC
+  CLK |2       19| RCO
+   P0 |3       18| CCO
+   P1 |4       17| /OE
+   P2 |5   74  16| Q0
+   P3 |6  561  15| Q1
+  ENP |7       14| Q2
+/ARST |8       13| Q3
+/SRST |9       12| ENT
+  GND |10      11| /SLD
+      +----------+
+</pre>
+<p>
+<a name="74563"></a>
+<h2>74563</h2>
+8-bit 3-state inverting transparent latch.
+<pre>
+    +---+--+---+             +---+---+---*---+
+/OE |1  +--+ 20| VCC         |/OE| LE| D |/Q |
+ D1 |2       19| /Q1         +===+===+===*===+
+ D2 |3       18| /Q2         | 1 | X | X | Z |
+ D3 |4       17| /Q3         | 0 | 0 | X | - |
+ D4 |5   74  16| /Q4         | 0 | 1 | 0 | 1 |
+ D5 |6  563  15| /Q5         | 0 | 1 | 1 | 0 |
+ D6 |7       14| /Q6         +---+---+---*---+
+ D7 |8       13| /Q7
+ D8 |9       12| /Q8
+GND |10      11| LE
+    +----------+
+</pre>
+<p>
+<a name="74564"></a>
+<h2>74564</h2>
+8-bit 3-state inverting D flip-flop.
+<pre>
+    +---+--+---+             +---+---+---*---+
+/OE |1  +--+ 20| VCC         |/OE|CLK| D |/Q |
+ D1 |2       19| /Q1         +===+===+===*===+
+ D2 |3       18| /Q2         | 1 | X | X | Z |
+ D3 |4       17| /Q3         | 0 | / | 0 | 1 |
+ D4 |5   74  16| /Q4         | 0 | / | 1 | 0 |
+ D5 |6  564  15| /Q5         | 0 |!/ | X | - |
+ D6 |7       14| /Q6         +---+---+---*---+
+ D7 |8       13| /Q7
+ D8 |9       12| /Q8
+GND |10      11| CLK
+    +----------+
+</pre>
+<p>
+<a name="74568"></a>
+<h2>74568</h2>
+4-bit 3-state synchronous decade up/down counter with load, sync/async reset,
+and ripple/clocked carry output.
+<pre>
+      +---+--+---+
+ U//D |1  +--+ 20| VCC
+  CLK |2       19| /RCO
+   P0 |3       18| /CCO
+   P1 |4       17| /OE
+   P2 |5   74  16| Q0
+   P3 |6  568  15| Q1
+ /ENP |7       14| Q2
+/ARST |8       13| Q3
+/SRST |9       12| /ENT
+  GND |10      11| /LOAD
+      +----------+
+</pre>
+<p>
+<a name="74569"></a>
+<h2>74569</h2>
+4-bit 3-state synchronous binary up/down counter with load, sync/async reset,
+and ripple/clocked carry output.
+<pre>
+      +---+--+---+
+ U//D |1  +--+ 20| VCC
+  CLK |2       19| /RCO
+   P0 |3       18| /CCO
+   P1 |4       17| /OE
+   P2 |5   74  16| Q0
+   P3 |6  569  15| Q1
+ /ENP |7       14| Q2
+/ARST |8       13| Q3
+/SRST |9       12| /ENT
+  GND |10      11| /LOAD
+      +----------+
+</pre>
+<p>
+<a name="74573"></a>
+<h2>74573</h2>
+8-bit 3-state transparent latch.
+<pre>
+    +---+--+---+             +---+---+---*---+
+/OE |1  +--+ 20| VCC         |/OE| LE| D |/Q |
+ D1 |2       19| Q1          +===+===+===*===+
+ D2 |3       18| Q2          | 1 | X | X | Z |
+ D3 |4       17| Q3          | 0 | 0 | X | - |
+ D4 |5   74  16| Q4          | 0 | 1 | 0 | 0 |
+ D5 |6  573  15| Q5          | 0 | 1 | 1 | 1 |
+ D6 |7       14| Q6          +---+---+---*---+
+ D7 |8       13| Q7
+ D8 |9       12| Q8
+GND |10      11| LE
+    +----------+
+</pre>
+<p>
+<a name="74574"></a>
+<h2>74574</h2>
+8-bit 3-state D flip-flop.
+<pre>
+    +---+--+---+             +---+---+---*---+
+/OE |1  +--+ 20| VCC         |/OE|CLK| D | Q |
+ D1 |2       19| Q1          +===+===+===*===+
+ D2 |3       18| Q2          | 1 | X | X | Z |
+ D3 |4       17| Q3          | 0 | / | 0 | 0 |
+ D4 |5   74  16| Q4          | 0 | / | 1 | 1 |
+ D5 |6  574  15| Q5          | 0 |!/ | X | - |
+ D6 |7       14| Q6          +---+---+---*---+
+ D7 |8       13| Q7
+ D8 |9       12| Q8
+GND |10      11| CLK
+    +----------+
+</pre>
+<p>
+<a name="74575"></a>
+<h2>74575</h2>
+8-bit 3-state D flip-flop with reset.
+<pre>
+     +---+--+---+            +----+---+---+---*---+
+/RST |1  +--+ 24| VCC        |/RST|/OE|CLK| D | Q |
+ /OE |2       23|            +====+===+===+===*===+
+  D1 |3       22| Q1         |  0 | 1 | X | X | Z |
+  D2 |4       21| Q2         |  X | 0 | X | X | 0 |
+  D3 |5       20| Q3         |  1 | 0 | / | 0 | 0 |
+  D4 |6   74  19| Q4         |  1 | 0 | / | 1 | 1 |
+  D5 |7  575  18| Q5         |  1 | 0 |!/ | X | - |
+  D6 |8       17| Q6         +----+---+---+---*---+
+  D7 |9       16| Q7
+  D8 |10      15| Q8
+     |11      14| CLK
+ GND |12      13|
+     +----------+
+</pre>
+<p>
+<a name="74576"></a>
+<h2>74576</h2>
+8-bit 3-state inverting D flip-flop.
+<pre>
+    +---+--+---+             +---+---+---*---+
+/OE |1  +--+ 20| VCC         |/OE|CLK| D |/Q |
+ D1 |2       19| /Q1         +===+===+===*===+
+ D2 |3       18| /Q2         | 1 | X | X | Z |
+ D3 |4       17| /Q3         | 0 | / | 0 | 1 |
+ D4 |5   74  16| /Q4         | 0 | / | 1 | 0 |
+ D5 |6  576  15| /Q5         | 0 |!/ | X | - |
+ D6 |7       14| /Q6         +---+---+---*---+
+ D7 |8       13| /Q7
+ D8 |9       12| /Q8
+GND |10      11| CLK
+    +----------+
+</pre>
+<p>
+<a name="74577"></a>
+<h2>74577</h2>
+8-bit 3-state inverting D flip-flop with reset.
+<pre>
+     +---+--+---+            +----+---+---+---*---+
+/RST |1  +--+ 24| VCC        |/RST|/OE|CLK| D |/Q |
+ /OE |2       23|            +====+===+===+===*===+
+  D1 |3       22| /Q1        |  0 | 1 | X | X | Z |
+  D2 |4       21| /Q2        |  X | 0 | X | X | 1 |
+  D3 |5       20| /Q3        |  1 | 0 | / | 0 | 1 |
+  D4 |6   74  19| /Q4        |  1 | 0 | / | 1 | 0 |
+  D5 |7  577  18| /Q5        |  1 | 0 |!/ | X | - |
+  D6 |8       17| /Q6        +----+---+---+---*---+
+  D7 |9       16| /Q7
+  D8 |10      15| /Q8
+     |11      14| CLK
+ GND |12      13|
+     +----------+
+</pre>
+<p>
+<a name="74580"></a>
+<h2>74580</h2>
+8-bit 3-state inverting transparent latch.
+<pre>
+    +---+--+---+             +---+---+---*---+
+/OE |1  +--+ 20| VCC         |/OE| LE| D |/Q |
+ D1 |2       19| /Q1         +===+===+===*===+
+ D2 |3       18| /Q2         | 1 | X | X | Z |
+ D3 |4       17| /Q3         | 0 | 0 | X | - |
+ D4 |5   74  16| /Q4         | 0 | 1 | 0 | 1 |
+ D5 |6  580  15| /Q5         | 0 | 1 | 1 | 0 |
+ D6 |7       14| /Q6         +---+---+---*---+
+ D7 |8       13| /Q7
+ D8 |9       12| /Q8
+GND |10      11| LE
+    +----------+
+</pre>
+<p>
+<a name="74589"></a>
+<h2>74589</h2>
+8-bit 3-state parallel-in serial-out shift register with input registers.
+<br>
+Independent clocks for shift and storage registers.
+<pre>
+    +---+--+---+
+ P1 |1  +--+ 16| VCC
+ P2 |2       15| P0
+ P3 |3       14| D
+ P4 |4   74  13| SH//LD
+ P5 |5  589  12| RCLK
+ P6 |6       11| SCLK
+ P7 |7       10| /OE
+GND |8        9| Q7
+    +----------+
+</pre>
+<p>
+<a name="74590"></a>
+<h2>74590</h2>
+8-bit 3-state synchronous binary counter with reset and output registers.
+<br>
+Separate clocks for both counter and storage register, ripple carry output.
+<pre>
+    +---+--+---+
+ Q1 |1  +--+ 16| VCC
+ Q2 |2       15| Q0
+ Q3 |3       14| /OE
+ Q4 |4   74  13| RCLK
+ Q5 |5  590  12| /CLKEN
+ Q6 |6       11| CCLK
+ Q7 |7       10| /CRST
+GND |8        9| /RCO
+    +----------+
+</pre>
+<p>
+<a name="74592"></a>
+<h2>74592</h2>
+8-bit synchronous binary counter with input registers.
+<br>
+Separate clocks for counter and input register.  Counter outputs only
+internally connected but ripple carry and clock outputs available.
+<pre>
+    +---+--+---+
+ P1 |1  +--+ 16| VCC
+ P2 |2       15| P0
+ P3 |3       14| /CLOAD
+ P4 |4   74  13| RCLK
+ P5 |5  592  12| /CLKEN
+ P6 |6       11| CCLK
+ P7 |7       10| /CRST
+GND |8        9| /RCO
+    +----------+
+</pre>
+<p>
+<a name="74593"></a>
+<h2>74593</h2>
+8-bit 3-state synchronous binary counter with input registers and ripple
+carry and clock outputs.  Separate clocks for counter and input registers.
+<pre>
+     +---+--+---+
+  P0 |1  +--+ 20| VCC
+  P1 |2       19| OE
+  P2 |3       18| /OE
+  P3 |4       17| /RCLKEN
+  P4 |5   74  16| RCLK
+  P5 |6  593  15| CLKEN
+  P6 |7       14| /CLKEN
+  P7 |8       13| CCLK
+/CLD |9       12| /CRST
+ GND |10      11| /RCO
+     +----------+
+</pre>
+<p>
+<a name="74594"></a>
+<h2>74594</h2>
+8-bit serial-in parallel-out shift register with output registers and
+two asynchronous resets.  Independent clocks and resets for shift and
+storage registers.
+<pre>
+    +---+--+---+
+ Y1 |1  +--+ 16| VCC
+ Y2 |2       15| Y0
+ Y3 |3       14| A
+ Y4 |4   74  13| /RRST
+ Y5 |5  594  12| RCLK
+ Y6 |6       11| SCLK
+ Y7 |7       10| /SRST
+GND |8        9| Q7
+    +----------+
+</pre>
+<p>
+<a name="74595"></a>
+<h2>74595</h2>
+8-bit 3-state serial-in parallel-out shift register with output registers and
+asynchronous reset.  Independent clocks for shift and storage registers.
+<pre>
+    +---+--+---+
+ Y1 |1  +--+ 16| VCC
+ Y2 |2       15| Y0
+ Y3 |3       14| A
+ Y4 |4   74  13| /OE
+ Y5 |5  595  12| RCLK
+ Y6 |6       11| SCLK
+ Y7 |7       10| /RST
+GND |8        9| Q7
+    +----------+
+</pre>
+<p>
+<a name="74596"></a>
+<h2>74596</h2>
+8-bit open-collector serial-in parallel-out shift register with output
+registers and asynchronous reset.  Independent clocks for shift and storage
+registers.
+<pre>
+    +---+--+---+
+ Y1 |1  +--+ 16| VCC
+ Y2 |2       15| Y0
+ Y3 |3       14| D
+ Y4 |4   74  13| /OE
+ Y5 |5  596  12| RCLK
+ Y6 |6       11| SCLK
+ Y7 |7       10| /RST
+GND |8        9| Q7
+    +----------+
+</pre>
+<p>
+<a name="74597"></a>
+<h2>74597</h2>
+8-bit parallel-in serial-out shift register with input registers and
+asynchronous reset.  Independent clocks for shift and storage registers.
+<pre>
+    +---+--+---+
+ P1 |1  +--+ 16| VCC
+ P2 |2       15| P0
+ P3 |3       14| D
+ P4 |4   74  13| SH//LD
+ P5 |5  597  12| RCLK
+ P6 |6       11| SCLK
+ P7 |7       10| /RST
+GND |8        9| Q7
+    +----------+
+</pre>
+<p>
+<a name="74598"></a>
+<h2>74598</h2>
+8-bit 3-state shift register with input registers, asynchronous reset and
+selectable serial input.  Independent clocks for shift and storage registers.
+<pre>
+       +---+--+---+
+    P0 |1  +--+ 20| VCC
+    P1 |2       19| S
+    P2 |3       18| D
+    P3 |4       17| E
+    P4 |5   74  16| /OE
+    P5 |6  598  15| RCLK
+    P6 |7       14| /SCE
+    P7 |8       13| SCLK
+SH//LD |9       12| /RST
+   GND |10      11| Q7
+       +----------+
+</pre>
+<p>
+<hr><a href="index.html">Back to the GIICM index.</a>
+</body>
+</html>

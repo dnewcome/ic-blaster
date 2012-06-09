@@ -1,0 +1,441 @@
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <link rel="stylesheet" type="text/css" href="../frank/frank.css">
+   <meta name="CVS" content="$Id$">
+   <meta name="description" content="GIICM">
+   <title>GIICM</title>
+</head><body><h1>7429 series wide (8..10 bit) TTL IC's:  7429xxx</h1>
+<p>
+Extended width TTL bus driver IC's.
+<p>
+<hr>
+<a name="7429818"></a>
+<h2>7429818</h2>
+8-bit 3-state noninverting diagnostics/pipeline register.
+<pre>
+      +---+--+---+
+ /OEY |1  +--+ 24| VCC
+SRCLK |2       23| MODE
+  DQ0 |3       22| Y0
+  DQ1 |4       21| Y1
+  DQ2 |5       20| Y2
+  DQ3 |6 7429  19| Y3
+  DQ4 |7  818  18| Y4
+  DQ5 |8       17| Y5
+  DQ6 |9       16| Y6
+  DQ7 |10      15| Y7
+  SDI |11      14| SDO
+  GND |12      13| ORCLK
+      +----------+
+</pre>
+<p>
+<a name="7429821"></a>
+<h2>7429821</h2>
+10-bit 3-state D flip-flop/bus driver.
+<pre>
+    +---+--+---+             +---+---+---*---+
+/OE |1  +--+ 24| VCC         |/OE|CLK| D | Q |
+ D1 |2       23| Q1          +===+===+===*===+
+ D2 |3       22| Q2          | 1 | X | X | Z |
+ D3 |4       21| Q3          | 0 | / | 0 | 0 |
+ D4 |5       20| Q4          | 0 | / | 1 | 1 |
+ D5 |6 7429  19| Q5          | 0 |!/ | X | - |
+ D6 |7  821  18| Q6          +---+---+---*---+
+ D7 |8       17| Q7
+ D8 |9       16| Q8
+ D9 |10      15| Q9
+D10 |11      14| Q10
+GND |12      13| CLK
+    +----------+
+</pre>
+<p>
+<a name="7429822"></a>
+<h2>7429822</h2>
+10-bit 3-state inverting D flip-flop/bus driver.
+<pre>
+    +---+--+---+             +---+---+---*---+
+/OE |1  +--+ 24| VCC         |/OE|CLK| D |/Q |
+ D1 |2       23| /Q1         +===+===+===*===+
+ D2 |3       22| /Q2         | 1 | X | X | Z |
+ D3 |4       21| /Q3         | 0 | / | 0 | 1 |
+ D4 |5       20| /Q4         | 0 | / | 1 | 0 |
+ D5 |6 7429  19| /Q5         | 0 |!/ | X | - |
+ D6 |7  822  18| /Q6         +---+---+---*---+
+ D7 |8       17| /Q7
+ D8 |9       16| /Q8
+ D9 |10      15| /Q9
+D10 |11      14| /Q10
+GND |12      13| CLK
+    +----------+
+</pre>
+<p>
+<a name="7429823"></a>
+<h2>7429823</h2>
+9-bit 3-state D flip-flop/bus driver with clock enable and reset.
+<pre>
+     +---+--+---+
+ /OE |1  +--+ 24| VCC
+  D1 |2       23| Q1
+  D2 |3       22| Q2
+  D3 |4       21| Q3
+  D4 |5       20| Q4
+  D5 |6 7429  19| Q5
+  D6 |7  823  18| Q6
+  D7 |8       17| Q7
+  D8 |9       16| Q8
+  D9 |10      15| Q9
+/RST |11      14| /CLKEN
+ GND |12      13| CLK
+     +----------+
+</pre>
+<p>
+<a name="7429825"></a>
+<h2>7429825</h2>
+8-bit 3-state D flip-flop/bus driver with three output enables, clock enable
+and reset.
+<pre>
+     +---+--+---+
+/OE1 |1  +--+ 24| VCC
+/OE2 |2       23| /OE3
+  D1 |3       22| Q1
+  D2 |4       21| Q2
+  D3 |5       20| Q3
+  D4 |6 7429  19| Q4
+  D5 |7  825  18| Q5
+  D6 |8       17| Q6
+  D7 |9       16| Q7
+  D8 |10      15| Q8
+/RST |11      14| /CLKEN
+ GND |12      13| CLK
+     +----------+
+</pre>
+<p>
+<a name="7429826"></a>
+<h2>7429826</h2>
+8-bit 3-state inverting D flip-flop/bus driver with three output enables,
+clock enable and reset.
+<pre>
+     +---+--+---+
+/OE1 |1  +--+ 24| VCC
+/OE2 |2       23| /OE3
+  D0 |3       22| /Q0
+  D1 |4       21| /Q1
+  D2 |5       20| /Q2
+  D3 |6 7429  19| /Q3
+  D4 |7  826  18| /Q4
+  D5 |8       17| /Q5
+  D6 |9       16| /Q6
+  D7 |10      15| /Q7
+/RST |11      14| /CLKEN
+ GND |12      13| CLK
+     +----------+
+</pre>
+<p>
+<a name="7429827"></a>
+<h2>7429827</h2>
+10-bit 3-state noninverting buffer/line driver.
+<pre>
+     +---+--+---+
+/OE1 |1  +--+ 24| VCC
+  A0 |2       23| Y0
+  A1 |3       22| Y1
+  A2 |4       21| Y2
+  A3 |5       20| Y3
+  A4 |6 7429  19| Y4
+  A5 |7  827  18| Y5
+  A6 |8       17| Y6
+  A7 |9       16| Y7
+  A8 |10      15| Y8
+  A9 |11      14| Y9
+ GND |12      13| /OE2
+     +----------+
+</pre>
+<p>
+<a name="7429828"></a>
+<h2>7429828</h2>
+10-bit 3-state inverting buffer/line driver.
+<pre>
+     +---+--+---+
+/OE1 |1  +--+ 24| VCC
+  A0 |2       23| /Y0
+  A1 |3       22| /Y1
+  A2 |4       21| /Y2
+  A3 |5       20| /Y3
+  A4 |6 7429  19| /Y4
+  A5 |7  828  18| /Y5
+  A6 |8       17| /Y6
+  A7 |9       16| /Y7
+  A8 |10      15| /Y8
+  A9 |11      14| /Y9
+ GND |12      13| /OE2
+     +----------+
+</pre>
+<p>
+<a name="7429833"></a>
+<h2>7429833</h2>
+8-bit 3-state noninverting bus transceiver with parity generator/checker
+and parity register.
+<pre>
+       +---+--+---+
+  /OEA |1  +--+ 24| VCC
+    A0 |2       23| B0
+    A1 |3       22| B1
+    A2 |4       21| B2
+    A3 |5       20| B3
+    A4 |6 7429  19| B4
+    A5 |7  833  18| B5
+    A6 |8       17| B6
+    A7 |9       16| B7
+/ERROR |10      15| PAR
+  /CLR |11      14| /OEB
+   GND |12      13| CLK
+       +----------+
+</pre>
+<p>
+<a name="7429834"></a>
+<h2>7429834</h2>
+8-bit 3-state inverting bus transceiver with parity generator/checker
+and parity register.
+<pre>
+       +---+--+---+
+  /OEA |1  +--+ 24| VCC
+    A0 |2       23| B0
+    A1 |3       22| B1
+    A2 |4       21| B2
+    A3 |5       20| B3
+    A4 |6 7429  19| B4
+    A5 |7  834  18| B5
+    A6 |8       17| B6
+    A7 |9       16| B7
+/ERROR |10      15| PAR
+  /CLR |11      14| /OEB
+   GND |12      13| CLK
+       +----------+
+</pre>
+<p>
+<a name="7429841"></a>
+<h2>7429841</h2>
+10-bit 3-state transparent latch/bus driver.
+<pre>
+    +---+--+---+             +---+---+---*---+
+/OE |1  +--+ 24| VCC         |/OE| LE| D | Q |
+ D0 |2       23| Q0          +===+===+===*===+
+ D1 |3       22| Q1          | 1 | X | X | Z |
+ D2 |4       21| Q2          | 0 | 0 | X | - |
+ D3 |5       20| Q3          | 0 | 1 | 0 | 0 |
+ D4 |6 7429  19| Q4          | 0 | 1 | 1 | 1 |
+ D5 |7  841  18| Q5          +---+---+---*---+
+ D6 |8       17| Q6
+ D7 |9       16| Q7
+ D8 |10      15| Q8
+ D9 |11      14| Q9
+GND |12      13| LE
+    +----------+
+</pre>
+<p>
+<a name="7429842"></a>
+<h2>7429842</h2>
+10-bit 3-state inverting transparent latch/bus driver.
+<pre>
+    +---+--+---+             +---+---+---*---+
+/OE |1  +--+ 24| VCC         |/OE| LE| D |/Q |
+ D0 |2       23| /Q0         +===+===+===*===+
+ D1 |3       22| /Q1         | 1 | X | X | Z |
+ D2 |4       21| /Q2         | 0 | 0 | X | - |
+ D3 |5       20| /Q3         | 0 | 1 | 0 | 1 |
+ D4 |6 7429  19| /Q4         | 0 | 1 | 1 | 0 |
+ D5 |7  842  18| /Q5         +---+---+---*---+
+ D6 |8       17| /Q6
+ D7 |9       16| /Q7
+ D8 |10      15| /Q8
+ D9 |11      14| /Q9
+GND |12      13| LE
+    +----------+
+</pre>
+<p>
+<a name="7429843"></a>
+<h2>7429843</h2>
+9-bit 3-state transparent latch/bus driver with set and reset.
+<pre>
+     +---+--+---+            +----+----+---+---+---*---+
+ /OE |1  +--+ 24| VCC        |/RST|/SET|/OE| LE| D | Q |
+  D0 |2       23| Q0         +====+====+===+===+===*===+
+  D1 |3       22| Q1         |  0 |  1 | 0 | X | X | 0 |
+  D2 |4       21| Q2         |  1 |  0 | 0 | X | X | 0 |
+  D3 |5       20| Q3         |  X |  X | 1 | X | X | Z |
+  D4 |6 7429  19| Q4         |  1 |  1 | 0 | 0 | X | - |
+  D5 |7  843  18| Q5         |  1 |  1 | 0 | 1 | 0 | 0 |
+  D6 |8       17| Q6         |  1 |  1 | 0 | 1 | 1 | 1 |
+  D7 |9       16| Q7         +----+----+---+---+---*---+
+  D8 |10      15| Q8
+/RST |11      14| /SET
+ GND |12      13| LE
+     +----------+
+</pre>
+<p>
+<a name="7429844"></a>
+<h2>7429844</h2>
+9-bit 3-state inverting transparent latch/bus driver with set and reset.
+<pre>
+     +---+--+---+
+ /OE |1  +--+ 24| VCC
+  D0 |2       23| /Q0
+  D1 |3       22| /Q1
+  D2 |4       21| /Q2
+  D3 |5       20| /Q3
+  D4 |6 7429  19| /Q4
+  D5 |7  844  18| /Q5
+  D6 |8       17| /Q6
+  D7 |9       16| /Q7
+  D8 |10      15| /Q8
+/RST |11      14| /SET
+ GND |12      13| LE
+     +----------+
+</pre>
+<p>
+<a name="7429846"></a>
+<h2>7429846</h2>
+8-bit 3-state inverting transparent latch/bus driver with three output
+enables, set and reset.
+<pre>
+     +---+--+---+
+/OE1 |1  +--+ 24| VCC
+/OE2 |2       23| /OE3
+  D1 |3       22| /Q1
+  D2 |4       21| /Q2
+  D3 |5       20| /Q3
+  D4 |6 7429  19| /Q4
+  D5 |7  846  18| /Q5
+  D6 |8       17| /Q6
+  D7 |9       16| /Q7
+  D8 |10      15| /Q8
+/RST |11      14| /SET
+ GND |12      13| LE
+     +----------+
+</pre>
+<p>
+<a name="7429853"></a>
+<h2>7429853</h2>
+8-bit 3-state noninverting bus transceiver with parity generator/checker
+and parity latch.
+<pre>
+       +---+--+---+
+  /OEA |1  +--+ 24| VCC
+    A0 |2       23| B0
+    A1 |3       22| B1
+    A2 |4       21| B2
+    A3 |5       20| B3
+    A4 |6 7429  19| B4
+    A5 |7  853  18| B5
+    A6 |8       17| B6
+    A7 |9       16| B7
+/ERROR |10      15| PAR
+  /CLR |11      14| /OEB
+   GND |12      13| /LE
+       +----------+
+</pre>
+<p>
+<a name="7429854"></a>
+<h2>7429854</h2>
+8-bit 3-state inverting bus transceiver with parity generator/checker
+and parity latch.
+<pre>
+       +---+--+---+
+  /OEA |1  +--+ 24| VCC
+    A0 |2       23| B0
+    A1 |3       22| B1
+    A2 |4       21| B2
+    A3 |5       20| B3
+    A4 |6 7429  19| B4
+    A5 |7  853  18| B5
+    A6 |8       17| B6
+    A7 |9       16| B7
+/ERROR |10      15| PAR
+  /CLR |11      14| /OEB
+   GND |12      13| /LE
+       +----------+
+</pre>
+<p>
+<a name="7429861"></a>
+<h2>7429861</h2>
+10-bit 3-state noninverting bus transceiver.
+<pre>
+     +---+--+---+
+/GBA |1  +--+ 24| VCC
+  A1 |2       23| B1
+  A2 |3       22| B2
+  A3 |4       21| B3
+  A4 |5       20| B4
+  A5 |6 7429  19| B5
+  A6 |7  861  18| B6
+  A7 |8       17| B7
+  A8 |9       16| B8
+  A9 |10      15| B9
+ A10 |11      14| B10
+ GND |12      13| /GAB
+     +----------+
+</pre>
+<p>
+<a name="7429862"></a>
+<h2>7429862</h2>
+10-bit 3-state inverting bus transceiver.
+<pre>
+     +---+--+---+
+/GBA |1  +--+ 24| VCC
+  A1 |2       23| B1
+  A2 |3       22| B2
+  A3 |4       21| B3
+  A4 |5       20| B4
+  A5 |6 7429  19| B5
+  A6 |7  862  18| B6
+  A7 |8       17| B7
+  A8 |9       16| B8
+  A9 |10      15| B9
+ A10 |11      14| B10
+ GND |12      13| /GAB
+     +----------+
+</pre>
+<p>
+<a name="7429863"></a>
+<h2>7429863</h2>
+9-bit 3-state noninverting bus transceiver.
+<pre>
+      +---+--+---+
+/GBA1 |1  +--+ 24| VCC
+   A1 |2       23| B1
+   A2 |3       22| B2
+   A3 |4       21| B3
+   A4 |5       20| B4
+   A5 |6 7429  19| B5
+   A6 |7  863  18| B6
+   A7 |8       17| B7
+   A8 |9       16| B8
+   A9 |10      15| B9
+/GBA2 |11      14| /GAB2
+  GND |12      13| /GAB1
+      +----------+
+</pre>
+<p>
+<a name="7429864"></a>
+<h2>7429864</h2>
+9-bit 3-state inverting bus transceiver.
+<pre>
+      +---+--+---+
+/GBA1 |1  +--+ 24| VCC
+   A1 |2       23| B1
+   A2 |3       22| B2
+   A3 |4       21| B3
+   A4 |5       20| B4
+   A5 |6 7429  19| B5
+   A6 |7  864  18| B6
+   A7 |8       17| B7
+   A8 |9       16| B8
+   A9 |10      15| B9
+/GBA2 |11      14| /GAB2
+  GND |12      13| /GAB1
+      +----------+
+</pre>
+<p>
+<hr><a href="index.html">Back to the GIICM index.</a>
+</body>
+</html>

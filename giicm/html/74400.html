@@ -1,0 +1,64 @@
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <link rel="stylesheet" type="text/css" href="../frank/frank.css">
+   <meta name="CVS" content="$Id$">
+   <meta name="description" content="GIICM">
+   <title>GIICM</title>
+</head><body><h1>7400 series TTL IC's:  74400...74499</h1>
+<p>
+<hr>
+<a name="74423"></a>
+<h2>74423</h2>
+Dual retriggerable monostable multivibrator with overriding reset.
+<br>
+Cannot be triggered via reset input.
+<pre>
+       +---+--+---+
+  /1TR |1  +--+ 16| VCC
+   1TR |2       15| 1RCext
+ /1RST |3       14| 1Cext
+   /1Q |4   74  13| 1Q
+    2Q |5  423  12| /2Q
+ 2Cext |6       11| /2RST
+2RCext |7       10| 2TR
+   GND |8        9| /2TR
+       +----------+
+</pre>
+<p>
+<a name="74465"></a>
+<h2>74465</h2>
+8-bit 3-state noninverting buffer/line driver.
+<pre>
+     +---+--+---+
+/OE1 |1  +--+ 20| VCC
+  A1 |2       19| /OE2
+  Y1 |3       18| A8
+  A2 |4       17| Y8
+  Y2 |5  74   16| A7
+  A3 |6  465  15| Y7
+  Y3 |7       14| A6
+  A4 |8       13| Y6
+  Y4 |9       12| A5
+ GND |10      11| Y5
+     +----------+
+</pre>
+<p>
+<a name="74490"></a>
+<h2>74490</h2>
+Dual 4-bit asynchronous decade counters with set(9) and reset.
+<pre>
+      +---+--+---+
+/1CLK |1  +--+ 16| VCC
+ 1RST |2       15| /2CLK
+  1QA |3       14| 2RST
+ 1SET |4   74  13| 2Q0
+  1QB |5  490  12| 2SET
+  1QC |6       11| 2Q1
+  1QD |7       10| 2Q2
+  GND |8        9| 2Q3
+      +----------+
+</pre>
+<p>
+<hr><a href="index.html">Back to the GIICM index.</a>
+</body>
+</html>

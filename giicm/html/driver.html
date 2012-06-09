@@ -1,0 +1,526 @@
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <link rel="stylesheet" type="text/css" href="../frank/frank.css">
+   <meta name="CVS" content="$Id$">
+   <meta name="description" content="GIICM">
+   <title>GIICM</title>
+</head><body><h1>Drivers and level shifters.</h1>
+<p>
+<hr>
+<a name="MAX232"></a>
+<a name="MAX232A"></a>
+<h2>MAX232, MAX232A</h2>
+5V RS232 transceiver.
+<br>
+To operate, connect two capacitors to the C1 and C2 pins, one between
+the V- and GND, and one between V+ and GND.  For the MAX232, capacitors
+should be 10uF, for the MAX232A 100nF is enough.
+<pre>
+      +---+--+---+
+  C1+ |1  +--+ 16| VCC
+   V+ |2       15| GND
+  C1- |3       14| T1out
+  C2+ |4  MAX  13| R1in
+  C2- |5  232  12| R1out
+   V- |6       11| T1in
+T2out |7       10| T2in
+ R2in |8        9| R2out
+      +----------+
+</pre>
+<p>
+<a name="MAX242"></a>
+<h2>MAX242</h2>
+5V RS232 transceiver with shutdown.
+<pre>
+      +---+--+---+
+  /EN |1  +--+ 18| /SHDN
+  C1+ |2       17| VCC
+   V+ |3       16| GND
+  C1- |4       15| T1out
+  C2+ |5  MAX  14| R1in
+  C2- |6  242  13| R1out
+   V- |7       12| T1in
+T2out |8       11| T2in
+ R2in |9       10| R2out
+      +----------+
+</pre>
+<p>
+<a name="LTC485"></a>
+<h2>LTC485</h2>
+Quad RS485 line driver.
+<pre>
+     +---+--+---+            +---+---*---+---+
+ 1A1 |1  +--+ 16| VCC        | A | EN| Y |/Y |
+ 1Y1 |2       15| 2A2        +===+===*===+===+
+/1Y1 |3       14| 2Y2        | 0 | 1 | 0 | 1 |
+ 1EN |4       13| /2Y2       | 1 | 1 | 1 | 0 |
+/1Y2 |5 75174 12| 2EN        | X | 0 | Z | Z |
+ 1Y2 |6       11| /2Y1       +---+---*---+---+
+ 1A2 |7       10| 2Y1
+ GND |8        9| 2A1
+     +----------+
+</pre>
+<p>
+<a name="LTC485"></a>
+<h2>LTC485</h2>
+RS485 line transceiver.
+<pre>
+    +---+--+---+             Receiver:           Transmitter:
+  Y |1  +--+  8| VCC         +-------+---*---+   +---+---*---+---+
+/OE |2        7| B           |  A-B  |/OE| Y |   | D |DEN| A | B |
+DEN |3  75176 6| A           +=======+===*===+   +===+===*===+===+
+  D |4        5| GND         |&gt;+200mV| 0 | 1 |   | 0 | 1 | 0 | 1 |
+    +----------+             |&lt;-200mV| 0 | 0 |   | 1 | 1 | 1 | 0 |
+                             |   X   | 1 | Z |   | X | 0 | Z | Z |
+                             +-------+---*---+   +---+---*---+---+
+</pre>
+<p>
+<a name="LTC488"></a>
+<h2>LTC488</h2>
+Quad RS485 line receiver.
+<br>
+Note the unusual ORed output enables.
+<pre>
+    +---+--+---+             +-------+---+---*---+
+ B1 |1  +--+ 16| VCC         |  A-B  | OE|/OE| Y |
+ A1 |2       15| B4          +=======+===+===*===+
+ Y1 |3       14| A4          |&gt;+200mV| 1 | X | 1 |
+ OE |4       13| Y4          |&gt;+200mV| X | 0 | 1 |
+ Y2 |5 75173 12| /OE         |&lt;-200mV| 1 | X | 0 |
+ A2 |6       11| Y3          |&lt;-200mV| X | 0 | 0 |
+ B2 |7       10| A3          |   X   | 0 | 1 | Z |
+GND |8        9| B3          +-------+---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="LTC489"></a>
+<h2>LTC489</h2>
+Quad RS485 line receiver.
+<pre>
+    +---+--+---+             +-------+---*---+
+1B1 |1  +--+ 16| VCC         |  A-B  | OE| Y |
+1A1 |2       15| 2B2         +=======+===*===+
+1Y1 |3       14| 2A2         |&gt;+200mV| 1 | 1 |
+1OE |4       13| 2Y2         |&lt;-200mV| 1 | 0 |
+1Y2 |5 75175 12| 2OE         |   X   | 0 | Z |
+1A2 |6       11| 2Y1         +-------+---*---+
+1B2 |7       10| 2A1
+GND |8        9| 2B1
+    +----------+
+</pre>
+<p>
+<a name="MC1413"></a>
+<h2>MC1413</h2>
+7-bit 50V 500mA TTL-input NPN darlington driver.
+<br>
+The drivers need no power supply; the VDD pin is the common cathode of the
+seven integrated protection diodes.
+<pre>
+    +---+--+---+             +---*---+
+ A0 |1  +--+ 16| /Y0         | A |/Y |
+ A1 |2       15| /Y1         +===*===+
+ A2 |3       14| /Y2         | 0 | Z |
+ A3 |4  ULN  13| /Y3         | 1 | 0 |
+ A4 |5  2003 12| /Y4         +---*---+
+ A5 |6       11| /Y5
+ A6 |7       10| /Y6
+GND |8        9| VDD
+    +----------+
+</pre>
+<p>
+<a name="1488"></a>
+<h2>1488</h2>
+TTL to RS232 level shifter.
+<br>
+The outputs are at RS-232 levels, and sometimes are connected to ground
+through a small capacitor (up to 470 pF) to reduce slew-rate.
+Note that 1B is missing (and can be taken to be 1 at all times).
+Usually VDD=+12 and VEE=-12.
+<pre>
+    +---+--+---+          +---+---*-----+
+VEE |1  +--+ 14| VDD      | A | B |  Y  |
+ 1A |2       13| 4A       +===+===*=====+
+ 1Y |3       12| 4B       | 0 | 0 | VDD |
+ 2A |4  1488 11| 4Y       | 0 | 1 | VDD |
+ 2B |5       10| 3A       | 1 | 0 | VDD |
+ 2Y |6        9| 3B       | 1 | 1 | VEE |
+GND |7        8| 3Y       +---+---*-----+
+    +----------+
+</pre>
+<p>
+<a name="1489"></a>
+<h2>1489</h2>
+RS232 to TTL level shifter.
+<br>
+A inputs are RS232-level inputs, C inputs are response control, a TTL
+signal which could be used to adjust threshhold and hysteresis but is
+generally unnecessary and unused. It is often tied through a 300 - 470 pF
+capacitor to ground.
+<pre>
+    +---+--+---+
+ 1A |1  +--+ 14| VCC
+ 1C |2       13| 4A
+ 1Y |3       12| 4C
+ 2A |4  1489 11| 4Y
+ 2C |5       10| 3A
+ 2Y |6        9| 3C
+GND |7        8| 3Y
+    +----------+
+</pre>
+<p>
+<a name="ULN2003"></a>
+<h2>ULN2003</h2>
+7-bit 50V 500mA TTL-input NPN darlington driver.
+<br>
+The drivers need no power supply; the VDD pin is the common cathode of the
+seven integrated protection diodes.
+<pre>
+    +---+--+---+             +---*---+
+ A0 |1  +--+ 16| /Y0         | A |/Y |
+ A1 |2       15| /Y1         +===*===+
+ A2 |3       14| /Y2         | 0 | Z |
+ A3 |4  ULN  13| /Y3         | 1 | 0 |
+ A4 |5  2003 12| /Y4         +---*---+
+ A5 |6       11| /Y5
+ A6 |7       10| /Y6
+GND |8        9| VDD
+    +----------+
+</pre>
+<p>
+<a name="UDN2585"></a>
+<h2>UDN2585</h2>
+7-bit 50V 500mA TTL-input PNP (high-side) darlington driver.
+<br>
+The drivers need no power supply; the GND pin is the common anode of the
+seven integrated protection diodes.
+<pre>
+    +---+--+---+             +---*---+
+ A0 |1  +--+ 16| /Y0         | A |/Y |
+ A1 |2       15| /Y1         +===*===+
+ A2 |3       14| /Y2         | 0 | Z |
+ A3 |4  UDN  13| /Y3         | 1 | 0 |
+ A4 |5  2585 12| /Y4         +---*---+
+ A5 |6       11| /Y5
+ A6 |7       10| /Y6
+VCC |8        9| GND
+    +----------+
+</pre>
+<p>
+<a name="26LS31"></a>
+<h2>26LS31</h2>
+4-bit 3-state RS422 line driver.
+<pre>
+    +---+--+---+
+ 1A |1  +--+ 16| VCC
+ 1Y |2       15| 4A
+/1Y |3       14| 4Y
+ CE |4  26LS 13| /4Y
+/2Y |5   31  12| /CE
+ 2Y |6       11| /3Y
+ 2A |7       10| 3Y
+GND |8        9| 3A
+    +----------+
+</pre>
+<p>
+<a name="26LS32"></a>
+<h2>26LS32</h2>
+Quad RS422 line receiver.
+<br>
+Note the unusual ORed output enables.
+<pre>
+    +---+--+---+             +-------+---+---*---+
+ B1 |1  +--+ 16| VCC         |  A-B  | OE|/OE| Y |
+ A1 |2       15| B4          +=======+===+===*===+
+ Y1 |3       14| A4          |&gt;+200mV| 1 | X | 1 |
+ OE |4  26LS 13| Y4          |&gt;+200mV| X | 0 | 1 |
+ Y2 |5   32  12| /OE         |&lt;-200mV| 1 | X | 0 |
+ A2 |6       11| Y3          |&lt;-200mV| X | 0 | 0 |
+ B2 |7       10| A3          |   X   | 0 | 1 | Z |
+GND |8        9| B3          +-------+---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="ULN2803"></a>
+<h2>ULN2803</h2>
+8-bit 50V 500mA TTL-input NPN darlington driver.
+<br>
+The drivers need no power supply; the VDD pin is the common cathode of the
+eight integrated protection diodes.
+<pre>
+    +---+--+---+             +---*---+
+ A0 |1  +--+ 18| /Y0         | A |/Y |
+ A1 |2       17| /Y1         +===*===+
+ A2 |3       16| /Y2         | 0 | Z |
+ A3 |4  ULN  15| /Y3         | 1 | 0 |
+ A4 |5  2803 14| /Y4         +---*---+
+ A5 |6       13| /Y5
+ A6 |7       12| /Y6
+ A7 |8       11| /Y7
+GND |9       10| VDD
+    +----------+
+</pre>
+<p>
+<a name="UCN5800"></a>
+<h2>UCN5800</h2>
+4-bit 50V 500mA TTL-input NPN darlington driver with input latches and
+output enable.
+<br>
+The VDD pin is the common cathode of the four integrated protection diodes.
+<pre>
+    +---+--+---+
+RST |1  +--+ 14| /OE
+ LE |2       13| VCC
+ D1 |3       12| /Q1
+ D2 |4  UCN  11| /Q2
+ D3 |5  5800 10| /Q3
+ D4 |6        9| /Q4
+GND |7        8| VDD
+    +----------+
+</pre>
+<p>
+<a name="UCN5801"></a>
+<h2>UCN5801</h2>
+8-bit 50V 500mA TTL-input NPN darlington driver with input latches and
+output enable.
+<br>
+The VDD pin is the common cathode of the eight integrated protection diodes.
+<pre>
+    +---+--+---+
+RST |1  +--+ 22| /OE
+ LE |2       21| VCC
+ D0 |3       20| /Q0
+ D1 |4       19| /Q1
+ D2 |5       18| /Q2
+ D3 |6  UCN  17| /Q3
+ D4 |7  5801 16| /Q4
+ D5 |8       15| /Q5
+ D6 |9       14| /Q6
+ D7 |10      13| /Q7
+GND |11      12| VDD
+    +----------+
+</pre>
+<p>
+<a name="UCN5810"></a>
+<h2>UCN5810</h2>
+10-bit serial-in 60V 40mA TTL-input PNP (high-side) darlington driver
+with output latches and output enable.
+<br>
+The VDD pin is the output supply voltage.
+<pre>
+    +---+--+---+
+ Q7 |1  +--+ 18| Q8
+ Q6 |2       17| Q9
+ Q5 |3       16| SOUT
+CLK |4       15| VDD
+GND |5  UCN  14| SIN
+VCC |6  5810 13| /OE
+ LE |7       12| Q0
+ Q4 |8       11| Q1
+ Q3 |9       10| Q2
+    +----------+
+</pre>
+<p>
+<a name="UCN5815"></a>
+<h2>UCN5815</h2>
+8-bit 60V 40mA TTL-input PNP (high-side) darlington driver with input
+latches and output enable.
+<br>
+The VDD pin is the output supply voltage.
+<pre>
+    +---+--+---+
+RST |1  +--+ 22| /OE
+ LE |2       21| VCC
+ D0 |3       20| Q0
+ D1 |4       19| Q1
+ D2 |5       18| Q2
+ D3 |6  UCN  17| Q3
+ D4 |7  5815 16| Q4
+ D5 |8       15| Q5
+ D6 |9       14| Q6
+ D7 |10      13| Q7
+GND |11      12| VDD
+    +----------+
+</pre>
+<p>
+<a name="UCN5821"></a>
+<a name="UCN5822"></a>
+<h2>UCN5821, UCN5822</h2>
+8-bit serial-in 50/80V 500mA TTL-input NPN darlington driver with output
+latches and output enable.
+<br>
+Maximum open collector voltage is 50V for UCN5821 and 80V for UCN5822.
+<pre>
+     +---+--+---+
+ CLK |1  +--+ 16| /Q0
+ SIN |2       15| /Q1
+ GND |3       14| /Q2
+ VCC |4  UCN  13| /Q3
+SOUT |5  5821 12| /Q4
+  LE |6  5822 11| /Q5
+ /OE |7       10| /Q6
+ GND |8        9| /Q7
+     +----------+
+</pre>
+<p>
+<a name="UCN5890"></a>
+<a name="UCN5891"></a>
+<a name="UCN5895"></a>
+<h2>UCN5890, UCN5891, UCN5895</h2>
+8-bit serial-in 50/80V 250/500mA TTL-input PNP (high-side) darlington
+driver with output latches and output enable.
+<br>
+Maximum open collector voltage is 50V for UCN5891 and UCN5895 and
+80V for UCN5890.  Output current is 250mA for UCN5895, 500mA for
+UCN5890 and UCN5891.  The VDD pin is the output supply voltage.
+<pre>
+    +---+--+---+
+GND |1  +--+ 16| SOUT
+CLK |2       15| VCC
+SIN |3       14| /OE
+ LE |4  UCN  13| VDD
+ Q0 |5  589x 12| Q7
+ Q1 |6       11| Q6
+ Q2 |7       10| Q5
+ Q3 |8        9| Q4
+    +----------+
+</pre>
+<p>
+<a name="DS8863"></a>
+<a name="DS8963"></a>
+<h2>DS8863, DS8963</h2>
+8-bit 10V/18V 500mA TTL-input NPN darlington driver.
+<br>
+Maximum open collector voltage is 10V for DS8863 and 18V for DS8963.
+<pre>
+    +---+--+---+             +---*---+
+/Y0 |1  +--+ 18| VCC         | A |/Y |
+ A0 |2       17| A7          +===*===+
+ A1 |3       16| /Y7         | 0 | Z |
+/Y1 |4  DS   15| A6          | 1 | 0 |
+/Y2 |5  8863 14| /Y6         +---*---+
+ A2 |6  8963 13| A5
+/Y3 |7       12| /Y5
+ A3 |8       11| A4
+GND |9       10| /Y4
+    +----------+
+</pre>
+<p>
+<a name="75173"></a>
+<h2>75173</h2>
+Quad RS485 line receiver.
+<br>
+Note the unusual ORed output enables.
+<pre>
+    +---+--+---+             +-------+---+---*---+
+ B1 |1  +--+ 16| VCC         |  A-B  | OE|/OE| Y |
+ A1 |2       15| B4          +=======+===+===*===+
+ Y1 |3       14| A4          |&gt;+200mV| 1 | X | 1 |
+ OE |4       13| Y4          |&gt;+200mV| X | 0 | 1 |
+ Y2 |5 75173 12| /OE         |&lt;-200mV| 1 | X | 0 |
+ A2 |6       11| Y3          |&lt;-200mV| X | 0 | 0 |
+ B2 |7       10| A3          |   X   | 0 | 1 | Z |
+GND |8        9| B3          +-------+---+---*---+
+    +----------+
+</pre>
+<p>
+<a name="75174"></a>
+<h2>75174</h2>
+Quad RS485 line driver.
+<pre>
+     +---+--+---+            +---+---*---+---+
+ 1A1 |1  +--+ 16| VCC        | A | EN| Y |/Y |
+ 1Y1 |2       15| 2A2        +===+===*===+===+
+/1Y1 |3       14| 2Y2        | 0 | 1 | 0 | 1 |
+ 1EN |4       13| /2Y2       | 1 | 1 | 1 | 0 |
+/1Y2 |5 75174 12| 2EN        | X | 0 | Z | Z |
+ 1Y2 |6       11| /2Y1       +---+---*---+---+
+ 1A2 |7       10| 2Y1
+ GND |8        9| 2A1
+     +----------+
+</pre>
+<p>
+<a name="75175"></a>
+<h2>75175</h2>
+Quad RS485 line receiver.
+<pre>
+    +---+--+---+             +-------+---*---+
+1B1 |1  +--+ 16| VCC         |  A-B  | OE| Y |
+1A1 |2       15| 2B2         +=======+===*===+
+1Y1 |3       14| 2A2         |&gt;+200mV| 1 | 1 |
+1OE |4       13| 2Y2         |&lt;-200mV| 1 | 0 |
+1Y2 |5 75175 12| 2OE         |   X   | 0 | Z |
+1A2 |6       11| 2Y1         +-------+---*---+
+1B2 |7       10| 2A1
+GND |8        9| 2B1
+    +----------+
+</pre>
+<p>
+<a name="75176"></a>
+<h2>75176</h2>
+RS485 line transceiver.
+<pre>
+    +---+--+---+             Receiver:           Transmitter:
+  Y |1  +--+  8| VCC         +-------+---*---+   +---+---*---+---+
+/OE |2        7| B           |  A-B  |/OE| Y |   | D |DEN| A | B |
+DEN |3  75176 6| A           +=======+===*===+   +===+===*===+===+
+  D |4        5| GND         |&gt;+200mV| 0 | 1 |   | 0 | 1 | 0 | 1 |
+    +----------+             |&lt;-200mV| 0 | 0 |   | 1 | 1 | 1 | 0 |
+                             |   X   | 1 | Z |   | X | 0 | Z | Z |
+                             +-------+---*---+   +---+---*---+---+
+</pre>
+<p>
+<a name="75188"></a>
+<h2>75188</h2>
+TTL to RS232 level shifter.
+<br>
+The outputs are at RS-232 levels, and sometimes are connected to ground
+through a small capacitor (up to 470 pF) to reduce slew-rate.
+Note that 1B is missing (and can be taken to be 1 at all times).
+Usually VDD=+12 and VEE=-12.
+<pre>
+    +---+--+---+          +---+---*-----+
+VEE |1  +--+ 14| VDD      | A | B |  Y  |
+ 1A |2       13| 4A       +===+===*=====+
+ 1Y |3       12| 4B       | 0 | 0 | VDD |
+ 2A |4  1488 11| 4Y       | 0 | 1 | VDD |
+ 2B |5       10| 3A       | 1 | 0 | VDD |
+ 2Y |6        9| 3B       | 1 | 1 | VEE |
+GND |7        8| 3Y       +---+---*-----+
+    +----------+
+</pre>
+<p>
+<a name="75189"></a>
+<h2>75189</h2>
+RS232 to TTL level shifter.
+<br>
+A inputs are RS232-level inputs, C inputs are response control, a TTL
+signal which could be used to adjust threshhold and hysteresis but is
+generally unnecessary and unused. It is often tied through a 300 - 470 pF
+capacitor to ground.
+<pre>
+    +---+--+---+
+ 1A |1  +--+ 14| VCC
+ 1C |2       13| 4A
+ 1Y |3       12| 4C
+ 2A |4  1489 11| 4Y
+ 2C |5       10| 3A
+ 2Y |6        9| 3C
+GND |7        8| 3Y
+    +----------+
+</pre>
+<p>
+<a name="75452"></a>
+<h2>75452</h2>
+Dual NAND line driver.
+<pre>
+    +---+--+---+
+ 1A |1  +--+  8| VCC
+ 1B |2        7| 2B
+ 1Y |3 75452  6| 2A
+GND |4        5| 2Y
+    +----------+
+</pre>
+<p>
+<hr><a href="index.html">Back to the GIICM index.</a>
+</body>
+</html>

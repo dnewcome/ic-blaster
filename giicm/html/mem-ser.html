@@ -1,0 +1,359 @@
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <link rel="stylesheet" type="text/css" href="../frank/frank.css">
+   <meta name="CVS" content="$Id$">
+   <meta name="description" content="GIICM">
+   <title>GIICM</title>
+</head><body><h1>Memory: Serial RAM, EEPROM and clocks</h1>
+<p>
+<hr>
+<a name="DS1202"></a>
+<h2>DS1202</h2>
+Real-time clock with 3-wire serial interface and 24 bytes RAM.
+<pre>
+    +---+--+---+
+    |1  +--+  8| VCC
+ X1 |2   DS   7| CLK
+ X2 |3  1202  6| DQ
+GND |4        5| /RST
+    +----------+
+</pre>
+<p>
+<a name="2401"></a>
+<h2>2401</h2>
+I2C 128x8 EEPROM with write protect.
+<br>
+Address is 1010xxx where x can be specified by the A0-2 inputs.
+<pre>
+    +---+--+---+
+ A0 |1  +--+  8| VCC
+ A1 |2        7| WP
+ A2 |3  2401  6| SCL
+GND |4        5| SDA
+    +----------+
+</pre>
+<p>
+<a name="2402"></a>
+<h2>2402</h2>
+I2C 256x8 EEPROM with write protect.
+<br>
+Address is 1010xxx where x can be specified by the A0-2 inputs.
+<pre>
+    +---+--+---+
+ A0 |1  +--+  8| VCC
+ A1 |2        7| WP
+ A2 |3  2402  6| SCL
+GND |4        5| SDA
+    +----------+
+</pre>
+<p>
+<a name="2404"></a>
+<h2>2404</h2>
+I2C 2x256x8 EEPROM with write protect.
+<br>
+Address is 1010xxy where x can be specified by the A1-2 inputs,
+and y selects the 256-byte bank to use.
+A0 has no function, but must be connected to GND or VCC.
+<pre>
+    +---+--+---+
+ A0 |1  +--+  8| VCC
+ A1 |2        7| WP
+ A2 |3  2404  6| SCL
+GND |4        5| SDA
+    +----------+
+</pre>
+<p>
+<a name="2408"></a>
+<h2>2408</h2>
+I2C 4x256x8 EEPROM with write protect.
+<br>
+Address is 1010xyy where x can be specified by the A2 input,
+and yy selects the 256-byte bank to use.
+A0-1 have no function, but must be connected to GND or VCC.
+<pre>
+    +---+--+---+
+ A0 |1  +--+  8| VCC
+ A1 |2        7| WP
+ A2 |3  2408  6| SCL
+GND |4        5| SDA
+    +----------+
+</pre>
+<p>
+<a name="2416"></a>
+<h2>2416</h2>
+I2C 8x256x8 EEPROM with write protect.
+<br>
+Address is 1010yyy where yyy selects the 256-byte bank to use.
+A0-2 have no function, but must be connected to GND or VCC.
+<pre>
+    +---+--+---+
+ A0 |1  +--+  8| VCC
+ A1 |2        7| WP
+ A2 |3  2416  6| SCL
+GND |4        5| SDA
+    +----------+
+</pre>
+<p>
+<a name="2432"></a>
+<h2>2432</h2>
+I2C 4kx8 EEPROM.
+<br>
+Address is 1010xxx where x can be specified by the A0-2 inputs.
+This device uses two address bytes instead of the normal one.
+<pre>
+    +---+--+---+
+ A0 |1  +--+  8| VCC
+ A1 |2        7|
+ A2 |3  2432  6| SCL
+GND |4        5| SDA
+    +----------+
+</pre>
+<p>
+<a name="2465"></a>
+<h2>2465</h2>
+I2C 8kx8 EEPROM with programmable block write protect.
+<br>
+Address is 1010xxx where x can be specified by the A0-2 inputs.
+This device uses two address bytes instead of the normal one.
+<pre>
+    +---+--+---+
+ A0 |1  +--+  8| VCC
+ A1 |2        7|
+ A2 |3  2465  6| SCL
+GND |4        5| SDA
+    +----------+
+</pre>
+<p>
+<a name="3735"></a>
+<h2>3735</h2>
+Serial 1134x32 EPROM with FPGA interface.
+<pre>
+          +---+--+---+
+     DATA |1  +--+  8| VCC
+      CLK |2        7| VPP
+RESET//OE |3  3735  6| /CEO
+      /CE |4        5| GND
+          +----------+
+</pre>
+<p>
+<a name="3765"></a>
+<h2>3765</h2>
+Serial 2048x32 EPROM with FPGA interface.
+<pre>
+          +---+--+---+
+     DATA |1  +--+  8| VCC
+      CLK |2        7| VPP
+RESET//OE |3  3765  6| /CEO
+      /CE |4        5| GND
+          +----------+
+</pre>
+<p>
+<a name="5911"></a>
+<h2>5911</h2>
+Serial 128x8/64x16 EEPROM.
+<pre>
+    +---+--+---+
+ CD |1  +--+  8| VCC
+CLK |2        7| RDY//BSY
+ DI |3  5911  6| x16//x8
+ DO |4        5| GND
+    +----------+
+</pre>
+<p>
+<a name="8570"></a>
+<h2>8570</h2>
+I2C 256x8 static RAM.
+<br>
+Address is 1010xxx where x can be specified by the A0-2 inputs.
+<pre>
+    +---+--+---+
+ A0 |1  +--+  8| VCC
+ A1 |2        7| GND
+ A2 |3  8570  6| SCL
+GND |4        5| SDA
+    +----------+
+</pre>
+<p>
+<a name="8571"></a>
+<h2>8571</h2>
+I2C 128x8 static RAM.
+<br>
+Address is 1010xxx where x can be specified by the A0-2 inputs.
+<pre>
+    +---+--+---+
+ A0 |1  +--+  8| VCC
+ A1 |2        7| GND
+ A2 |3  8571  6| SCL
+GND |4        5| SDA
+    +----------+
+</pre>
+<p>
+<a name="8572"></a>
+<a name="8581"></a>
+<h2>8572, 8581</h2>
+I2C 128x8 EEPROM.
+<br>
+Address is 1010xxx where x can be specified by the A0-2 inputs.
+<pre>
+    +---+--+---+
+ A0 |1  +--+  8| VCC
+ A1 |2  8572  7| GND
+ A2 |3  8581  6| SCL
+GND |4        5| SDA
+    +----------+
+</pre>
+<p>
+<a name="8582"></a>
+<h2>8582</h2>
+I2C 256x8 EEPROM.
+<br>
+Address is 1010xxx where x can be specified by the A0-2 inputs.
+<pre>
+    +---+--+---+
+ A0 |1  +--+  8| VCC
+ A1 |2        7| GND
+ A2 |3  8582  6| SCL
+GND |4        5| SDA
+    +----------+
+</pre>
+<p>
+<a name="8583"></a>
+<h2>8583</h2>
+I2C Clock/Calendar with 240x8 static RAM.
+<br>
+Address is 101000x where x can be specified by the A0 input.
+<pre>
+    +---+--+---+
+ X1 |1  +--+  8| VCC
+ X0 |2        7| /INT
+ A0 |3  8583  6| SCL
+GND |4        5| SDA
+    +----------+
+</pre>
+<p>
+<a name="8592"></a>
+<a name="8594"></a>
+<h2>8592, 8594</h2>
+I2C 2x256x8 EEPROM.
+<br>
+Address is 1010xxy where x can be specified by the A1-2 inputs,
+and y selects the 256-byte bank to use.
+A0 has no function, but must be connected to GND or VCC.
+<pre>
+    +---+--+---+
+ A0 |1  +--+  8| VCC
+ A1 |2        7|
+ A2 |3  8592  6| SCL
+GND |4        5| SDA
+    +----------+
+</pre>
+<p>
+<a name="8598"></a>
+<h2>8598</h2>
+I2C 4x256x8 EEPROM.
+<br>
+Address is 1010xyy where x can be specified by the A2 input,
+and yy selects the 256-byte bank to use.
+A0-1 have no function, but must be connected to GND or VCC.
+<pre>
+    +---+--+---+
+ A0 |1  +--+  8| VCC
+ A1 |2        7|
+ A2 |3  8598  6| SCL
+GND |4        5| SDA
+    +----------+
+</pre>
+<p>
+<a name="9306"></a>
+<h2>9306</h2>
+Serial 16x16 EEPROM.
+<pre>
+    +---+--+---+
+ CD |1  +--+  8| VCC
+CLK |2        7|
+ DI |3  9306  6|
+ DO |4        5| GND
+    +----------+
+</pre>
+<p>
+<a name="9346"></a>
+<h2>9346</h2>
+Serial 64x16 EEPROM.
+<pre>
+    +---+--+---+
+ CD |1  +--+  8| VCC
+CLK |2        7|
+ DI |3  9346  6|
+ DO |4        5| GND
+    +----------+
+</pre>
+<p>
+<a name="9356"></a>
+<h2>9356</h2>
+Serial 256x8/128x16 EEPROM.
+<pre>
+    +---+--+---+
+ CD |1  +--+  8| VCC
+CLK |2        7|
+ DI |3  9356  6| x16//x8
+ DO |4        5| GND
+    +----------+
+</pre>
+<p>
+<a name="9366"></a>
+<h2>9366</h2>
+Serial 512x8/256x16 EEPROM.
+<pre>
+    +---+--+---+
+ CD |1  +--+  8| VCC
+CLK |2        7|
+ DI |3  9366  6| x16//x8
+ DO |4        5| GND
+    +----------+
+</pre>
+<p>
+<a name="24164"></a>
+<h2>24164</h2>
+I2C 2kx8 EEPROM with write protect.
+<br>
+Address is 1010xxx where x can be specified by the A0-2 inputs.
+This device uses two address bytes instead of the normal one.
+<pre>
+    +---+--+---+
+ A0 |1  +--+  8| VCC
+ A1 |2        7| WP
+ A2 |3 24164  6| SCL
+GND |4        5| SDA
+    +----------+
+</pre>
+<p>
+<a name="24174"></a>
+<h2>24174</h2>
+I2C 2kx8 EEPROM with write protect and 16x8 OTP EPROM.
+<br>
+Address is 1010xxx where x can be specified by the A0-2 inputs.
+This device uses two address bytes instead of the normal one.
+<pre>
+    +---+--+---+
+ A0 |1  +--+  8| VCC
+ A1 |2        7| WP
+ A2 |3 24174  6| SCL
+GND |4        5| SDA
+    +----------+
+</pre>
+<p>
+<a name="37128"></a>
+<h2>37128</h2>
+Serial 4096x32 EPROM with FPGA interface.
+<pre>
+          +---+--+---+
+     DATA |1  +--+  8| VCC
+      CLK |2        7| VPP
+RESET//OE |3 37128  6| /CEO
+      /CE |4        5| GND
+          +----------+
+</pre>
+<p>
+<hr><a href="index.html">Back to the GIICM index.</a>
+</body>
+</html>

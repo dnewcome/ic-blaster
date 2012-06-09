@@ -1,0 +1,446 @@
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <link rel="stylesheet" type="text/css" href="../frank/frank.css">
+   <meta name="CVS" content="$Id$">
+   <meta name="description" content="GIICM">
+   <title>GIICM</title>
+</head><body><h1>4000 series CMOS IC's:  40100...40999</h1>
+The old but still much-used 4000 series logic IC's.
+
+<p>
+<hr>
+<a name="4580"></a>
+<h2>4580</h2>
+4x4-bit 3-state synchronous triple-port register file.
+<pre>
+      +-----+--+-----+
+  1Q3 |1    +--+   24| VCC
+  1Q2 |2           23| 1Q1
+  1RD |3           22| 1Q0
+  2Q0 |4           21| 2RD
+  2Q1 |5           20| D0
+  2Q2 |6           19| D1
+  2Q3 |7   40108   18| D2
+  WA0 |8           17| D3
+  WA1 |9           16| WCLK
+ 2RA1 |10          15| WR
+ 2RA0 |11          14| 1RA1
+  GND |12          13| 1RA0
+      +--------------+
+</pre>
+<p>
+<a name="40100"></a>
+<h2>40100</h2>
+32-bit bidirectional serial-in serial-out shift register with two AND
+gated clocks.
+<br>
+With /LOOP input low, data is rotated and serial data input ignored.
+<pre>
+      +---+--+---+
+      |1  +--+ 16| VCC
+/CLK2 |2       15|
+ CLK1 |3       14|
+   Q0 |4       13| L//R
+      |5 40100 12| Q31
+    L |6       11| D
+      |7       10|
+  GND |8        9| /LOOP
+      +----------+
+</pre>
+<p>
+<a name="40101"></a>
+<h2>40101</h2>
+9-bit odd/even parity generator/checker.
+<pre>
+    +---+--+---+
+ A0 |1  +--+ 14| VCC
+ A1 |2       13| A8
+ A2 |3       12| A7
+ A3 |4 40101 11| A6
+ A4 |5       10| A5
+ODD |6        9| EVEN
+GND |7        8| /EN
+    +----------+
+</pre>
+<p>
+<a name="40102"></a>
+<h2>40102</h2>
+8-bit (2-digit) synchronous decade down counter with synchronous and
+asynchronous load and reset.  Counter outputs only internally connected but
+ripple carry and zero detect outputs available.
+<pre>
+       +---+--+---+
+   CLK |1  +--+ 16| VCC
+  /RST |2       15| /SLD
+/CLKEN |3       14| /RCO
+    P0 |4       13| P7
+    P1 |5 40102 12| P6
+    P2 |6       11| P5
+    P3 |7       10| P4
+   GND |8        9| /ALD
+       +----------+
+</pre>
+<p>
+<a name="40103"></a>
+<h2>40103</h2>
+8-bit synchronous binary down counter with synchronous and asynchronous load
+and reset.  Counter outputs only internally connected but ripple carry and
+zero detect outputs available.
+<pre>
+       +---+--+---+
+   CLK |1  +--+ 16| VCC
+  /RST |2       15| /SLD
+/CLKEN |3       14| /RCO
+    P0 |4       13| P7
+    P1 |5 40103 12| P6
+    P2 |6       11| P5
+    P3 |7       10| P4
+   GND |8        9| /ALD
+       +----------+
+</pre>
+<p>
+<a name="40104"></a>
+<h2>40104</h2>
+4-bit 3-state bidirectional universal shift register.
+<pre>
+    +---+--+---+             +---+---*---------------+
+ OE |1  +--+ 16| VCC         | S1| S0| Function      |
+  D |2       15| Y0          +===+===*===============+
+ P0 |3       14| Y1          | 0 | 0 | Reset         |
+ P1 |4       13| Y2          | 0 | 1 | Shift right   |
+ P2 |5 40104 12| Y3          | 1 | 0 | Shift left    |
+ P3 |6       11| CLK         | 1 | 1 | Parallel load |
+  L |7       10| S1          +---+---*---------------+
+GND |8        9| S0
+    +----------+
+</pre>
+<p>
+<a name="40105"></a>
+<h2>40105</h2>
+16x4 3-state asynchronous FIFO with reset.
+<pre>
+      +---+--+---+
+   OE |1  +--+ 16| VCC
+/FULL |2       15| RD
+   WR |3       14| /EMPTY
+   D0 |4       13| Q0
+   D1 |5 40105 12| Q1
+   D2 |6       11| Q2
+   D3 |7       10| Q3
+  GND |8        9| RST
+      +----------+
+</pre>
+<p>
+<a name="40106"></a>
+<h2>40106</h2>
+Hex inverters with schmitt-trigger inputs.
+<br>
+0.9V typical input hysteresis at VCC=+5V and 2.3V at VCC=+10V.
+<pre>
+    +---+--+---+             +---*---+               _
+ 1A |1  +--+ 14| VCC         | A |/Y |          /Y = A
+/1Y |2       13| 6A          +===*===+
+ 2A |3       12| /6Y         | 0 | 1 |
+/2Y |4 40106 11| 5A          | 1 | 0 |
+ 3A |5       10| /5Y         +---*---+
+/3Y |6        9| 4A
+GND |7        8| /4Y
+    +----------+
+</pre>
+<p>
+<a name="40107"></a>
+<h2>40107</h2>
+Dual 2-input open-collector NAND gates with buffered output.
+<pre>
+    +---+--+---+             +---+---*---+           __
+ 1A |1  +--+  8| VCC         | A | B |/Y |      /Y = AB
+ 1B |2        7| 2B          +===+===*===+
+/1Y |3 40107  6| 2A          | 0 | 0 | Z |
+GND |4        5| /2Y         | 0 | 1 | Z |
+    +----------+             | 1 | 0 | Z |
+                             | 1 | 1 | 0 |
+                             +---+---*---+
+</pre>
+<p>
+<a name="40108"></a>
+<h2>40108</h2>
+4x4-bit 3-state synchronous triple-port register file.
+<pre>
+      +-----+--+-----+
+  1Q3 |1    +--+   24| VCC
+  1Q2 |2           23| 1Q1
+  1RD |3           22| 1Q0
+  2Q0 |4           21| 2RD
+  2Q1 |5           20| D0
+  2Q2 |6           19| D1
+  2Q3 |7   40108   18| D2
+  WA0 |8           17| D3
+  WA1 |9           16| WCLK
+ 2RA1 |10          15| WR
+ 2RA0 |11          14| 1RA1
+  GND |12          13| 1RA0
+      +--------------+
+</pre>
+<p>
+<a name="40109"></a>
+<h2>40109</h2>
+Quad 3-state noninverting buffer/level shifter.
+<br>
+VDD supplies the output stage, VCC the input stage.
+<pre>
+    +---+--+---+             +---+---*-----+
+VCC |1  +--+ 16| VDD         | A | OE|  Y  |
+1OE |2       15| 4OE         +===+===*=====+
+ 1A |3       14| 4A          | X | 0 |  Z  |
+ 1Y |4       13| 4Y          | 0 | 1 | GND |
+ 2Y |5 40109 12|             | 1 | 1 | VDD |
+ 2A |6       11| 3Y          +---+---*-----+
+2OE |7       10| 3A
+GND |8        9| 3OE
+    +----------+
+</pre>
+<p>
+<a name="40110"></a>
+<h2>40110</h2>
+4-bit asynchronous decade up/down counter with 7-segment decoder/common-
+cathode LED driver, ripple carry and borrow, separate up and down clocks,
+clock enable and output latch.
+<pre>
+       +---+--+---+
+    YA |1  +--+ 16| VCC
+    YG |2       15| YB
+    YF |3       14| YC
+/CLKEN |4       13| YD
+   RST |5 40110 12| YE
+    LE |6       11| BORROW
+ CLKDN |7       10| CARRY
+   GND |8        9| CLKUP
+       +----------+
+</pre>
+<p>
+<a name="40147"></a>
+<h2>40147</h2>
+10-to-4 line noninverting priority encoder.
+<pre>
+    +---+--+---+
+ A4 |1  +--+ 16| VCC
+ A5 |2       15| A0
+ A6 |3       14| Y3
+ A7 |4       13| A3
+ A8 |5 40147 12| A2
+ Y2 |6       11| A1
+ Y1 |7       10| A9
+GND |8        9| Y0
+    +----------+
+</pre>
+<p>
+<a name="40160"></a>
+<h2>40160</h2>
+4-bit synchronous decade counter with load, asynchronous reset, and ripple
+carry output.
+<pre>
+     +---+--+---+
+/RST |1  +--+ 16| VCC
+ CLK |2       15| RCO
+  P0 |3       14| Q0
+  P1 |4   74  13| Q1
+  P2 |5  160  12| Q2
+  P3 |6       11| Q3
+ ENP |7       10| ENT
+ GND |8        9| /LOAD
+     +----------+
+</pre>
+<p>
+<a name="40161"></a>
+<h2>40161</h2>
+4-bit synchronous binary counter with load, asynchronous reset, and ripple
+carry output.
+<pre>
+     +---+--+---+
+/RST |1  +--+ 16| VCC
+ CLK |2       15| RCO
+  P0 |3       14| Q0
+  P1 |4   74  13| Q1
+  P2 |5  161  12| Q2
+  P3 |6       11| Q3
+ ENP |7       10| ENT
+ GND |8        9| /LOAD
+     +----------+
+</pre>
+<p>
+<a name="40162"></a>
+<h2>40162</h2>
+4-bit synchronous decade counter with load, reset, and ripple carry output.
+<pre>
+     +---+--+---+
+/RST |1  +--+ 16| VCC
+ CLK |2       15| RCO
+  P0 |3       14| Q0
+  P1 |4   74  13| Q1
+  P2 |5  162  12| Q2
+  P3 |6       11| Q3
+ ENP |7       10| ENT
+ GND |8        9| /LOAD
+     +----------+
+</pre>
+<p>
+<a name="40163"></a>
+<h2>40163</h2>
+4-bit synchronous binary counter with load, reset, and ripple carry output.
+<pre>
+     +---+--+---+
+/RST |1  +--+ 16| VCC
+ CLK |2       15| RCO
+  P0 |3       14| Q0
+  P1 |4   74  13| Q1
+  P2 |5  163  12| Q2
+  P3 |6       11| Q3
+ ENP |7       10| ENT
+ GND |8        9| /LOAD
+     +----------+
+</pre>
+<p>
+<a name="40174"></a>
+<h2>40174</h2>
+6-bit D flip-flop with reset.
+<pre>
+     +---+--+---+            +----+---+---*---+
+/RST |1  +--+ 16| VCC        |/RST|CLK| D | Q |
+  Q0 |2       15| Q6         +====+===+===*===+
+  D0 |3       14| D5         |  0 | X | X | 0 |
+  D1 |4   74  13| D4         |  1 | / | 0 | 0 |
+  Q1 |5  174  12| Q4         |  1 | / | 1 | 1 |
+  D2 |6       11| D3         |  1 |!/ | X | - |
+  Q2 |7       10| Q3         +----+---+---*---+
+ GND |8        9| CLK
+     +----------+
+</pre>
+<p>
+<a name="40181"></a>
+<h2>40181</h2>
+4-bit 16-function arithmetic logic unit (ALU)
+<pre>
+    +---+--+---+
+/B0 |1  +--+ 24| VCC
+/A0 |2       23| /A1
+ S3 |3       22| /B1
+ S2 |4       21| /A2
+ S1 |5       20| /B2
+ S0 |6   74  19| /A3
+CIN |7  181  18| /B3
+  M |8       17| /G
+/F0 |9       16| COUT
+/F1 |10      15| /P
+/F2 |11      14| A=B
+GND |12      13| /F3
+    +----------+
+</pre>
+<p>
+<a name="40182"></a>
+<h2>40182</h2>
+Look-ahead carry generator
+Capable of anticipating a carry across four binary adders or group of adders.
+<br>
+Cascadable to perform full look-ahead across n-bit adders.
+<pre>
+    +---+--+---+
+/G1 |1  +--+ 16| VCC
+/P1 |2       15| /P2
+/G0 |3       14| /G2
+/P0 |4   74  13| Cn
+/G3 |5  182  12| Cn+X
+/P3 |6       11| Cn+Y
+ /P |7       10| /G
+GND |8        9| Cn+Z
+    +----------+
+</pre>
+<p>
+<a name="40192"></a>
+<h2>40192</h2>
+4-bit synchronous decade up/down counter with asynchronous load and reset,
+and separate up and down clocks, carry and borrow outputs.
+<pre>
+     +---+--+---+
+  P1 |1  +--+ 16| VCC
+  Q1 |2       15| P0
+  Q0 |3       14| RST
+DOWN |4   74  13| /BORROW
+  UP |5  192  12| /CARRY
+  Q2 |6       11| /LOAD
+  Q3 |7       10| P2
+ GND |8        9| P3
+     +----------+
+</pre>
+<p>
+<a name="40193"></a>
+<h2>40193</h2>
+4-bit synchronous binary up/down counter with asynchronous load and reset,
+and separate up and down clocks.  Carry and borrow outputs.
+<pre>
+     +---+--+---+
+  P1 |1  +--+ 16| VCC
+  Q1 |2       15| P0
+  Q0 |3       14| RST
+DOWN |4   74  13| /BORROW
+  UP |5  193  12| /CARRY
+  Q2 |6       11| /LOAD
+  Q3 |7       10| P2
+ GND |8        9| P3
+     +----------+
+</pre>
+<p>
+<a name="40194"></a>
+<h2>40194</h2>
+4-bit bidirectional universal shift register with asynchronous reset.
+<pre>
+     +---+--+---+            +---+---*---------------+
+/RST |1  +--+ 16| VCC        | S1| S0| Function      |
+   D |2       15| Q0         +===+===*===============+
+  P0 |3       14| Q1         | 0 | 0 | Hold          |
+  P1 |4 40194 13| Q2         | 0 | 1 | Shift right   |
+  P2 |5 74194 12| Q3         | 1 | 0 | Shift left    |
+  P3 |6       11| CLK        | 1 | 1 | Parallel load |
+   L |7       10| S1         +---+---*---------------+
+ GND |8        9| S0
+     +----------+
+</pre>
+<p>
+<a name="40208"></a>
+<h2>40208</h2>
+4x4-bit 3-state synchronous triple-port register file.
+<pre>
+      +-----+--+-----+
+  1Q3 |1    +--+   24| VCC
+  1Q2 |2           23| 1Q1
+  1RD |3           22| 1Q0
+  2Q0 |4           21| 2RD
+  2Q1 |5           20| D0
+  2Q2 |6           19| D1
+  2Q3 |7   40108   18| D2
+  WA0 |8           17| D3
+  WA1 |9           16| WCLK
+ 2RA1 |10          15| WR
+ 2RA0 |11          14| 1RA1
+  GND |12          13| 1RA0
+      +--------------+
+</pre>
+<p>
+<a name="40257"></a>
+<h2>40257</h2>
+8-to-4 line 3-state noninverting data selector/multiplexer.
+<pre>
+    +---+--+---+
+  S |1  +--+ 16| VCC
+1A0 |2       15| /EN
+1A1 |3       14| 4A0
+ 1Y |4   74  13| 4A1
+2A0 |5  257  12| 4Y
+2A1 |6       11| 3A0
+ 2Y |7       10| 3A1
+GND |8        9| 3Y
+    +----------+
+</pre>
+<p>
+<hr><a href="index.html">Back to the GIICM index.</a>
+</body>
+</html>

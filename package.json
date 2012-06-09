@@ -1,0 +1,13 @@
+{
+  "name": "news.js",
+  "version": "0.0.1",
+  "description": "Modeled after a popular news site.",
+  "keywords": ["app", "web"],
+  "repository": "git@dnewcome.unfuddle.com:dnewcome/workingon.git",
+  "author": "Dan Newcome <dnewcome@elevenprime.com> (http://newcome.wordpress.com)",
+  "dependencies": {
+    "jsdom": "*"
+  },
+  "devDependencies": {},
+  "main": "server"
+}

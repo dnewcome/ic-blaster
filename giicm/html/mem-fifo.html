@@ -1,0 +1,54 @@
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <link rel="stylesheet" type="text/css" href="../frank/frank.css">
+   <meta name="CVS" content="$Id$">
+   <meta name="description" content="GIICM">
+   <title>GIICM</title>
+</head><body><h1>Memory: FIFO's</h1>
+<p>
+<hr>
+<a name="DS2009"></a>
+<a name="DS2010"></a>
+<a name="DS2011"></a>
+<a name="DS2012"></a>
+<a name="DS2013"></a>
+<h2>DS2009, DS2010, DS2011, DS2012, DS2013</h2>
+512x9 (2009), 1024x9 (2010), 2048x9 (2011), 4096x9 (2012), 8192x9 (2013) FIFO.
+<pre>
+      +-----+--+-----+
+  /WR |1    +--+   28| VCC
+   D8 |2           27| D4
+   D3 |3           26| D5
+   D2 |4           25| D6
+   D1 |5           24| D7
+   D0 |6           23| /FL /RT
+  /XI |7           22| /RST
+/FULL |8   DS20xx  21| /EMPTY
+   Q0 |9           20| /XO /HF
+   Q1 |10          19| Q7
+   Q2 |11          18| Q6
+   Q3 |12          17| Q5
+   Q8 |13          16| Q4
+  GND |14          15| /RD
+      +--------------+
+</pre>
+<p>
+<a name="40105"></a>
+<h2>40105</h2>
+16x4 3-state asynchronous FIFO with reset.
+<pre>
+      +---+--+---+
+   OE |1  +--+ 16| VCC
+/FULL |2       15| RD
+   WR |3       14| /EMPTY
+   D0 |4       13| Q0
+   D1 |5 40105 12| Q1
+   D2 |6       11| Q2
+   D3 |7       10| Q3
+  GND |8        9| RST
+      +----------+
+</pre>
+<p>
+<hr><a href="index.html">Back to the GIICM index.</a>
+</body>
+</html>

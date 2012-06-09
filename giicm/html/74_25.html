@@ -1,0 +1,330 @@
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <link rel="stylesheet" type="text/css" href="../frank/frank.css">
+   <meta name="CVS" content="$Id$">
+   <meta name="description" content="GIICM">
+   <title>GIICM</title>
+</head><body><h1>742 series TTL IC's with integrated 25R resistors:  742xxx 7425xxx</h1>
+<p>
+Fast bus driver TTL IC's with integrated 25R series resistors for
+for damping when driving large capacitive loads.  Most also have
+center GND and VCC pins for reducing ground bounce.
+<p>
+<hr>
+<a name="742240"></a>
+<h2>742240</h2>
+Dual 4-bit 3-state inverting buffer/MOS driver with integrated 25R series
+output resistors.
+<pre>
+     +---+--+---+
+/1OE |1  +--+ 20| VCC
+ 1A1 |2       19| /2OE
+/2Y4 |3       18| /1Y1
+ 1A2 |4       17| 2A4
+/2Y3 |5  742  16| /1Y2
+ 1A3 |6  240  15| 2A3
+/2Y2 |7       14| /1Y3
+ 1A4 |8       13| 2A2
+/2Y1 |9       12| /1Y4
+ GND |10      11| 2A1
+     +----------+
+</pre>
+<p>
+<a name="742241"></a>
+<h2>742241</h2>
+Dual 4-bit 3-state noninverting buffer/MOS driver with integrated 25R series
+output resistors.
+<br>
+One active low, one active high output enable.
+<pre>
+     +---+--+---+
+/1OE |1  +--+ 20| VCC
+ 1A4 |2       19| 2OE
+ 2Y1 |3       18| 1Y1
+ 1A3 |4       17| 2A4
+ 2Y2 |5  742  16| 1Y2
+ 1A2 |6  241  15| 2A3
+ 2Y3 |7       14| 1Y3
+ 1A1 |8       13| 2A2
+ 2Y4 |9       12| 1Y4
+ GND |10      11| 2A1
+     +----------+
+</pre>
+<p>
+<a name="742244"></a>
+<h2>742244</h2>
+Dual 4-bit 3-state noninverting buffer/MOS driver with integrated 25R series
+output resistors.
+<pre>
+     +---+--+---+
+/1OE |1  +--+ 20| VCC
+ 1A1 |2       19| /2OE
+ 2Y4 |3       18| 1Y1
+ 1A2 |4       17| 2A4
+ 2Y3 |5  742  16| 1Y2
+ 1A3 |6  244  15| 2A3
+ 2Y2 |7       14| 1Y3
+ 1A4 |8       13| 2A2
+ 2Y1 |9       12| 1Y4
+ GND |10      11| 2A1
+     +----------+
+</pre>
+<p>
+<a name="742245"></a>
+<h2>742245</h2>
+8-bit 3-state noninverting bus transceiver with integrated 25R series
+output resistors.
+<br>
+Enable and direction pins control output enables.
+<pre>
+    +---+--+---+             +---+---*---+---+
+DIR |1  +--+ 20| VCC         |/EN|DIR| A | B |
+ A0 |2       19| /EN         +===+===*===+===+
+ A1 |3       18| B0          | 1 | X | Z | Z |
+ A2 |4       17| B1          | 0 | 0 | B | Z |
+ A3 |5  742  16| B2          | 0 | 1 | Z | A |
+ A4 |6  245  15| B3          +---+---*---+---+
+ A5 |7       14| B4
+ A6 |8       13| B5
+ A7 |9       12| B6
+GND |10      11| B7
+    +----------+
+</pre>
+<p>
+<a name="742410"></a>
+<h2>742410</h2>
+11-bit 3-state noninverting buffer/MOS driver with integrated 25R series
+output resistors.
+<pre>
+     +---+--+---+
+  A1 |1  +--+ 28| A6
+  A2 |2       27| A7
+  A3 |3       26| A8
+  A4 |4       25| A9
+  A5 |5       24| A10
+/OE1 |6       23| A11
+ VCC |7  742  22| GND
+ GND |8  410  21| GND
+/OE2 |9       20| Y11
+  Y5 |10      19| Y10
+  Y4 |11      18| Y9
+  Y3 |12      17| Y8
+  Y2 |13      16| Y7
+  Y1 |14      15| Y6
+     +----------+
+</pre>
+<p>
+<a name="742411"></a>
+<h2>742411</h2>
+11-bit 3-state inverting buffer/MOS driver with integrated 25R series
+output resistors.
+<pre>
+     +---+--+---+
+  A1 |1  +--+ 28| A6
+  A2 |2       27| A7
+  A3 |3       26| A8
+  A4 |4       25| A9
+  A5 |5       24| A10
+/OE1 |6       23| A11
+ VCC |7  742  22| GND
+ GND |8  411  21| GND
+/OE2 |9       20|/Y11
+ /Y5 |10      19|/Y10
+ /Y4 |11      18|/Y9
+ /Y3 |12      17|/Y8
+ /Y2 |13      16|/Y7
+ /Y1 |14      15|/Y6
+     +----------+
+</pre>
+<p>
+<a name="742574"></a>
+<h2>742574</h2>
+8-bit 3-state D flip-flop with integrated 25R series output resistors.
+<pre>
+    +---+--+---+             +---+---+---*---+
+/OE |1  +--+ 20| VCC         |/OE|CLK| D | Q |
+ D1 |2       19| Q1          +===+===+===*===+
+ D2 |3       18| Q2          | 1 | X | X | Z |
+ D3 |4       17| Q3          | 0 | / | 0 | 0 |
+ D4 |5  742  16| Q4          | 0 | / | 1 | 1 |
+ D5 |6  574  15| Q5          | 0 |!/ | X | - |
+ D6 |7       14| Q6          +---+---+---*---+
+ D7 |8       13| Q7
+ D8 |9       12| Q8
+GND |10      11| CLK
+    +----------+
+</pre>
+<p>
+<a name="742827"></a>
+<h2>742827</h2>
+10-bit 3-state noninverting buffer/MOS driver with integrated 25R series
+output resistors.
+<pre>
+     +---+--+---+
+/OE1 |1  +--+ 24| VCC
+  A1 |2       23| Y1
+  A2 |3       22| Y2
+  A3 |4       21| Y3
+  A4 |5       20| Y4
+  A5 |6  742  19| Y5
+  A6 |7  827  18| Y6
+  A7 |8       17| Y7
+  A8 |9       16| Y8
+  A9 |10      15| Y9
+ A10 |11      14| Y10
+ GND |12      13| /OE2
+     +----------+
+</pre>
+<p>
+<a name="742828"></a>
+<h2>742828</h2>
+10-bit 3-state inverting buffer/MOS driver with integrated 25R series
+output resistors.
+<pre>
+     +---+--+---+
+/OE1 |1  +--+ 24| VCC
+  A1 |2       23| /Y1
+  A2 |3       22| /Y2
+  A3 |4       21| /Y3
+  A4 |5       20| /Y4
+  A5 |6  742  19| /Y5
+  A6 |7  828  18| /Y6
+  A7 |8       17| /Y7
+  A8 |9       16| /Y8
+  A9 |10      15| /Y9
+ A10 |11      14| /Y10
+ GND |12      13| /OE2
+     +----------+
+</pre>
+<p>
+<a name="742952"></a>
+<h2>742952</h2>
+8-bit 3-state noninverting latched transceiver.
+<pre>
+      +---+--+---+
+   B8 |1  +--+ 24| VCC
+   B7 |2       23| A8
+   B6 |3       22| A7
+   B5 |4       21| A6
+   B4 |5       20| A5
+   B3 |6  742  19| A4
+   B2 |7  952  18| A3
+   B1 |8       17| A2
+/OEAB |9       16| A1
+CLKAB |10      15| /OEBA
+/CEAB |11      14| CLKBA
+  GND |12      13| /CEBA
+      +----------+
+</pre>
+<p>
+<a name="742953"></a>
+<h2>742953</h2>
+8-bit 3-state inverting latched transceiver.
+<pre>
+      +---+--+---+
+   B8 |1  +--+ 24| VCC
+   B7 |2       23| A8
+   B6 |3       22| A7
+   B5 |4       21| A6
+   B4 |5       20| A5
+   B3 |6  742  19| A4
+   B2 |7  953  18| A3
+   B1 |8       17| A2
+/OEAB |9       16| A1
+CLKAB |10      15| /OEBA
+/CEAB |11      14| CLKBA
+  GND |12      13| /CEBA
+      +----------+
+</pre>
+<p>
+<a name="7425240"></a>
+<h2>7425240</h2>
+Dual 4-bit 3-state inverting buffer/bus driver with integrated 25R series
+output resistors.  Increased drive to drive 25R bus.
+<pre>
+     +---+--+---+
+/1Y1 |1  +--+ 24| /1OE
+ GND |2       23| 1A1
+/1Y2 |3       22| 1A2
+/1Y3 |4       21| VCC
+ GND |5       20| 1A3
+/1Y4 |6 7425  19| 1A4
+/2Y1 |7  240  18| 2A1
+ GND |8       17| 2A2
+/2Y2 |9       16| VCC
+/2Y3 |10      15| 2A3
+ GND |11      14| 2A4
+/2Y4 |12      13| /2OE
+     +----------+
+</pre>
+<p>
+<a name="7425244"></a>
+<h2>7425244</h2>
+Dual 4-bit 3-state noninverting buffer/bus driver with integrated 25R series
+output resistors.  Increased drive to drive 25R bus.
+<pre>
+    +---+--+---+
+1Y1 |1  +--+ 24| /1OE
+GND |2       23| 1A1
+1Y2 |3       22| 1A2
+1Y3 |4       21| VCC
+GND |5       20| 1A3
+1Y4 |6 7425  19| 1A4
+2Y1 |7  240  18| 2A1
+GND |8       17| 2A2
+2Y2 |9       16| VCC
+2Y3 |10      15| 2A3
+GND |11      14| 2A4
+2Y4 |12      13| /2OE
+    +----------+
+</pre>
+<p>
+<a name="7425245"></a>
+<h2>7425245</h2>
+8-bit 3-state noninverting bus transceiver with integrated 25R series
+output resistors.  Increased drive to drive 25R bus.
+<br>
+Enable and direction pins control output enables.
+<pre>
+    +---+--+---+             +---+---*---+---+
+ A1 |1  +--+ 24| DIR         |/EN|DIR| A | B |
+GND |2       23| B1          +===+===*===+===+
+ A2 |3       22| B2          | 1 | X | Z | Z |
+ A3 |4       21| VCC         | 0 | 0 | B | Z |
+GND |5       20| B3          | 0 | 1 | Z | A |
+ A4 |6 7425  19| B4          +---+---*---+---+
+ A5 |7  245  18| B5
+GND |8       17| B6
+ A6 |9       16| VCC
+ A7 |10      15| B7
+GND |11      14| B8
+ A8 |12      13| /EN
+    +----------+
+</pre>
+<p>
+<a name="7425642"></a>
+<h2>7425642</h2>
+8-bit open-collector inverting bus transceiver.
+<br>
+Enable and direction pins control output enables.
+Increased drive to drive 25R bus.
+<pre>
+    +---+--+---+
+ A1 |1  +--+ 24| DIR
+GND |2       23| B1
+ A2 |3       22| B2
+ A3 |4       21| VCC
+GND |5       20| B3
+ A4 |6 7425  19| B4
+ A5 |7  642  18| B5
+GND |8       17| B6
+ A6 |9       16| VCC
+ A7 |10      15| B7
+GND |11      14| B8
+ A8 |12      13| /OE
+    +----------+
+</pre>
+<p>
+<hr><a href="index.html">Back to the GIICM index.</a>
+</body>
+</html>

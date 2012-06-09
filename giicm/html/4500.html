@@ -1,0 +1,415 @@
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <link rel="stylesheet" type="text/css" href="../frank/frank.css">
+   <meta name="CVS" content="$Id$">
+   <meta name="description" content="GIICM">
+   <title>GIICM</title>
+</head><body><h1>4000 series CMOS IC's:  4300...4599</h1>
+<p>The old but still much-used 4000 series logic IC's.
+<p><hr><a name="4316"></a><h2>4316</h2>Quad analog switches with enable input and dual power supply.<br>VEE supply may not be more positive than GND.
+<pre>
+    +---+--+---+
+ 1X |1  +--+ 16| VCC
+ 1Y |2       15| 1EN
+ 2Y |3       14| 4EN
+ 2X |4       13| 4X2
+ EN |5  4316 12| 4Y3
+ EN |6       11| 3Y
+ EN |7       10| 3X
+GND |8        9| VEE
+    +----------+
+</pre>
+
+<p><a name="4351"></a><h2>4351</h2>8-to-1 line analog multiplexer/demultiplexer with address latch and dualpower supply.<br>VEE supply may not be more positive than GND.
+<pre>
+    +---+--+---+
+1X0 |1  +--+ 18| VCC
+1X1 |2       17| X2
+2X1 |3       16| X1
+ 2Y |4       15| X0
+2X0 |5  4351 14| X3
+/EN |6       13| S0
+ EN |7       12| S1
+VEE |8       11| S2
+GND |9       10| LE
+    +----------+
+</pre>
+
+<p><a name="4352"></a><h2>4352</h2>8-to-2 line analog multiplexer/demultiplexer with address latch and dualpower supply.<br>VEE supply may not be more positive than GND.
+<pre>
+    +---+  +---+
+1X0 |1  +--+ 18| VCC
+1X2 |2       17| 2X2
+ 1Y |3       16| 2X1
+1X3 |4       15| 2Y
+1X1 |5  4352 14| 2X0
+/EN |6       13| 2X3
+ EN |7       12| S0
+VEE |8       11| S1
+GND |9       10| LE
+    +----------+
+</pre>
+
+<p><a name="4353"></a><h2>4353</h2>Triple 2-to-1 line analog multiplexer/demultiplexer with address latch anddual power supply.<br>VEE supply may not be more positive than GND.
+<pre>
+    +---+  +---+
+1X0 |1  +--+ 18| VCC
+1X1 |2       17| 1Y
+2X1 |3       16| 3Y
+ 2Y |4       15| 3X1
+2X0 |5  4353 14| 3X0
+/EN |6       13| 3S
+ EN |7       12| 1S
+VEE |8       11| 2S
+GND |9       10| LE
+    +----------+
+</pre>
+
+<p><a name="4500"></a><h2>4500</h2>Industrial Control Unit.<br>If you _really_ want to use this RRRRISC, try to get the 'MC14500B IndustrialControl Unit Handbook' from Motorola (sorry, no ISBN number).
+<pre>
+    +---+  +---+
+RST |1  +--+ 16| VCC
+ WR |2       15| RR
+  D |3       14| X0
+ I3 |4       13| X1
+ I2 |5  4500 12| JMP
+ I1 |6       11| RTN
+ I0 |7       10| FLG0
+GND |8        9| FLGF
+    +----------+
+</pre>
+
+<p><a name="4502"></a><h2>4502</h2>6-bit 3-state inverting buffer/line driver with NOR inputs.
+<pre>
+    +---+  +---+             +---+---+---+---+
+ A0 |1  +--+ 16| VCC         |/OE| A | B I/Y |
+/Y0 |2       15| A5          +===+===+===+===+
+ A1 |3       14| /Y5         | 1 | X | X I Z |
+/OE |4       13| A4          | 0 | 0 | 0 I 1 |
+/Y1 |5  4502 12| B           | 0 | 1 | 0 I 0 |
+ A2 |6       11| /Y4         | 0 | X | 1 I 0 |
+/Y2 |7       10| A3          +---+---+---+---+
+GND |8        9| /Y3
+    +----------+
+</pre>
+
+<p><a name="4503"></a><h2>4503</h2>2/4-bit 3-state noninverting buffer/line driver.
+<pre>
+     +---+  +---+            +---+---+---+
+/1OE |1  +--+ 16| VCC        |/OE| A I Y |
+ 1A1 |2       15| /2OE       +===+===+===+
+ 1Y1 |3       14| 2A2        | 1 | X I Z |
+ 1A2 |4       13| 2Y2        | 0 | 0 I 0 |
+ 1Y2 |5  4503 12| 2A1        | 0 | 1 I 1 |
+ 1A3 |6       11| 2Y1        +---+---+---+
+ 1Y3 |7       10| 1A4
+ GND |8        9| 1Y4
+     +----------+
+</pre>
+
+<p><a name="4508"></a><h2>4508</h2>Dual 4-bit 3-state transparent latch with reset.
+<pre>
+     +-----+  +-----+        +---+---+---+---+
+1RST |1    +--+   24| VCC    |/OE| LE| D I Q |
+ 1LE |2           23| 2Q3    +===+===+===+===+
+/1OE |3           22| 2D3    | 1 | X | X I Z |
+ 1D0 |4           21| 2Q2    | 0 | 0 | X I - |
+ 1Q0 |5           20| 2D2    | 0 | 1 | 0 I 0 |
+ 1D1 |6           19| 2Q1    | 0 | 1 | 1 I 1 |
+ 1Q1 |7    4508   18| 2D1    +---+---+---+---+
+ 1D2 |8           17| 2Q0
+ 1Q2 |9           16| 2D0
+ 1D3 |10          15| /2OE
+ 1Q3 |11          14| 2LE
+ GND |12          13| 2RST
+     +--------------+
+</pre>
+
+<p><a name="4510"></a><h2>4510</h2>4-bit synchronous decade up/down counter with asynchronous load, reset andripple carry output.
+<pre>
+     +---+  +---+
+  LD |1  +--+ 16| VCC
+  Q3 |2       15| CLK
+  P3 |3       14| Q2
+  P0 |4       13| P2
+/RCI |5  4510 12| P1
+  Q0 |6       11| Q1
+/RCO |7       10| UP//DN
+ GND |8        9| RST
+     +----------+
+</pre>
+
+<p><a name="4512"></a><h2>4512</h2>8-to-1 line 3-state data selector/multiplexer with AND inputs.
+<pre>
+    +---+  +---+
+ A0 |1  +--+ 16| VCC         Y = An./B
+ A1 |2       15| /OE
+ A2 |3       14| Y
+ A3 |4       13| S2
+ A4 |5  4512 12| S1
+ A5 |6       11| S0
+ A6 |7       10| /B
+GND |8        9| A7
+    +----------+
+</pre>
+
+<p><a name="4514"></a><h2>4514</h2>1-of-16 noninverting decoder/demultiplexer with address latches.
+<pre>
+    +---+  +---+
+ LE |1  +--+ 24| VCC
+ S0 |2       23| /EN
+ S1 |3       22| S3
+ Y7 |4       21| S2
+ Y6 |5       20| Y10
+ Y5 |6       19| Y11
+ Y4 |7  4514 18| Y8
+ Y3 |8       17| Y9
+ Y2 |9       16| Y15
+ Y1 |10      15| Y14
+ Y0 |11      14| Y13
+GND |12      13| Y12
+    +----------+
+</pre>
+
+<p><a name="4516"></a><h2>4516</h2>4-bit synchronous binary up/down counter with asynchronous load, reset andripple carry output.
+<pre>
+     +---+  +---+
+  LD |1  +--+ 16| VCC
+  Q3 |2       15| CLK
+  P3 |3       14| Q2
+  P0 |4       13| P2
+/RCI |5  4516 12| P1
+  Q0 |6       11| Q1
+/RCO |7       10| UP//DN
+ GND |8        9| RST
+     +----------+
+</pre>
+
+<p><a name="4518"></a><h2>4518</h2>Dual 4-bit asynchronous decade counters with reset and both active high andactive low clocks.
+<pre>
+      +---+  +---+
+ 1CLK |1  +--+ 16| VCC
+/1CLK |2       15| 2RST
+  1Q0 |3       14| 2Q3
+  1Q1 |4       13| 2Q2
+  1Q2 |5  4518 12| 2Q1
+  1Q3 |6       11| 2Q0
+ 1RST |7       10| /2CLK
+  GND |8        9| 2CLK
+      +----------+
+</pre>
+
+<p><a name="4521"></a><h2>4521</h2>24-bit asynchronous binary counter with oscillator and res For the buffer to be used, GND' et input,and one CMOS buffer with separate power supply.<br>Q0...Q17 outputs are missing. and VCC'must be connected to GND and VCC (optionally using series resistors).
+<pre>
+     +---+  +---+            +---+---+
+ Q24 |1  +--+ 16| VCC        | A I Y |
+ RST |2       15| Q23        +===+===+
+GND' |3       14| Q22        | 0 I 0 |
+   Y |4       13| Q21        | 1 I 1 |
+VCC' |5  4521 12| Q20        +---+---+
+   A |6       11| Q19
+  X0 |7       10| Q18
+ GND |8        9| X1
+     +----------+
+</pre>
+
+<p><a name="4527"></a><h2>4527</h2>4-bit synchronous decade rate multiplier.
+<pre>
+     +---+  +---+
+  Q9 |1  +--+ 16| VCC
+  D2 |2       15| D1
+  D3 |3       14| D0
+SET9 |4       13| RST
+  /Q |5  4527 12| CASC
+   Q |6       11| CIN
+COUT |7       10| STB
+ GND |8        9| CLK
+     +----------+
+</pre>
+
+<p><a name="4532"></a><h2>4532</h2>8-to-3 line noninverting priority encoder with cascade inputs.
+<pre>
+    +---+  +---+
+ A4 |1  +--+ 16| VCC
+ A5 |2       15| EO
+ A6 |3       14| GS
+ A7 |4       13| A3
+ EI |5  4532 12| A2
+ Y2 |6       11| A1
+ Y1 |7       10| A0
+GND |8        9| Y0
+    +----------+
+</pre>
+
+<p><a name="4536"></a><h2>4536</h2>24-bit programmable frequency divider/digital timer with oscillator,set and reset inputs.  Digitally programmable from 2^1 to 2^24.<br>Connect MONO via a &gt;10k resistor to ground for square wave output,or to a RC network (R to VCC) for a controlled output pulse width.Maximum guaranteed clock frequency is a pitiful 500kHz.
+<pre>
+        +---+  +---+
+    SET |1  +--+ 16| VCC
+    RST |2       15| MONO
+     X1 |3       14| /XEN
+     X0 |4       13| Q
+     X2 |5  4536 12| S3
+/DIV256 |6       11| S2
+  CLKEN |7       10| S1
+    GND |8        9| S0
+        +----------+
+</pre>
+
+<p><a name="4538"></a><h2>4538</h2>Dual precision monostable multivibrator with Schmitt-trigger inputs.<br>Retriggerable, resettable.For 74HC4538 the Cext pins may be grounded.
+<pre>
+       +---+  +---+
+ 1Cext |1  +--+ 16| VCC
+1RCext |2       15| 2Cext
+  1RST |3       14| 2RCext
+   1TR |4       13| 2RST
+  /1TR |5  4538 12| 2TR
+    1Q |6       11| /2TR
+   /1Q |7       10| 2Q
+   GND |8        9| /2Q
+       +----------+
+</pre>
+
+<p><a name="4543"></a><h2>4543</h2>BCD to 7-segment decoder/LCD driver with input latch.<br>
+The P (phase) input should be connected to the backplane of the LCD.
+<pre>
+    +---+  +---+
+ LE |1  +--+ 16| VCC
+ A2 |2       15| YF
+ A1 |3       14| YG
+ A3 |4       13| YE
+ A0 |5  4543 12| YD
+  @ |6       11| YC
+ BI |7       10| YB
+GND |8        9| YA
+    +----------+
+</pre>
+
+
+<p><a name="4555"></a><h2>4555</h2>Dual 1-of-4 noninverting decoder/demultiplexer.
+<pre>
+     +---+  +---+            +---+---+---+---+---+---+---+
+/1EN |1  +--+ 16| VCC        |/EN| S1| S0I Y0| Y1| Y2| Y3|
+ 1S0 |2       15| /2EN       +===+===+===+===+===+===+===+
+ 1S1 |3       14| 2S0        | 1 | X | X I 0 | 0 | 0 | 0 |
+ 1Y0 |4       13| 2S1        | 0 | 0 | 0 I 1 | 0 | 0 | 0 |
+ 1Y1 |5  4555 12| 2Y0        | 0 | 0 | 1 I 0 | 1 | 0 | 0 |
+ 1Y2 |6       11| 2Y1        | 0 | 1 | 0 I 0 | 0 | 1 | 0 |
+ 1Y3 |7       10| 2Y2        | 0 | 1 | 1 I 0 | 0 | 0 | 1 |
+ GND |8        9| 2Y3        +---+---+---+---+---+---+---+
+     +----------+
+</pre>
+
+<p><a name="4556"></a><h2>4556</h2>Dual 1-of-4 inverting decoder/demultiplexer.
+<pre>
+     +---+  +---+            +---+---+---+---+---+---+---+
+/1EN |1  +--+ 16| VCC        |/EN| S1| S0I/Y0|/Y1|/Y2|/Y3|
+ 1S0 |2       15| /2EN       +===+===+===+===+===+===+===+
+ 1S1 |3       14| 2S0        | 1 | X | X I 1 | 1 | 1 | 1 |
+/1Y0 |4       13| 2S1        | 0 | 0 | 0 I 0 | 1 | 1 | 1 |
+/1Y1 |5  4556 12| /2Y0       | 0 | 0 | 1 I 1 | 0 | 1 | 1 |
+/1Y2 |6       11| /2Y1       | 0 | 1 | 0 I 1 | 1 | 0 | 1 |
+/1Y3 |7       10| /2Y2       | 0 | 1 | 1 I 1 | 1 | 1 | 0 |
+ GND |8        9| /2Y3       +---+---+---+---+---+---+---+
+     +----------+
+</pre>
+
+<p><a name="4580"></a><h2>4580</h2>4x4-bit 3-state synchronous triple-port register file.
+<pre>
+     +-----+--+-----+
+ 1Q3 |1    +--+   24| VCC
+ 1Q2 |2           23| 1Q1
+ 1RD |3           22| 1Q0
+ 2Q0 |4           21| 2RD
+ 2Q1 |5           20| D0
+ 2Q2 |6           19| D1
+ 2Q3 |7   40108   18| D2
+ WA0 |8           17| D3
+ WA1 |9           16| WCLK
+2RA1 |10          15| WR
+2RA0 |11          14| 1RA1
+ GND |12          13| 1RA0
+     +--------------+
+</pre>
+
+<p><a name="4585"></a><h2>4585</h2>4-bit noninverting magnitude comparator with cascade inputs.
+<pre>
+     +---+  +---+
+  B2 |1  +--+ 16| VCC
+  A2 |2       15| A3
+OA=B |3       14| B3
+IA&gt;B |4       13| OA&gt;B
+IA&lt;B |5  4585 12| OA&lt;B
+IA=B |6       11| B0
+  A1 |7       10| A0
+ GND |8        9| B1
+     +----------+
+</pre>
+
+<p><a name="4599"></a><h2>4599</h2>1-of-8 addressable latch with readback and reset.
+<pre>
+    +---+  +---+
+ Q7 |1  +--+ 18| VCC
+RST |2       17| Q6
+  D |3       16| Q5
+/WR |4       15| Q4
+ A0 |5  4599 14| Q3
+ A1 |6       13| Q2
+ A2 |7       12| Q1
+ CE |8       11| Q0
+GND |9       10| /RD
+    +----------+
+</pre>
+
+<p><a name="14500"></a><h2>14500</h2>Industrial Control Unit.<br>If you _really_ want to use this RRRRISC, try to get the 'MC14500B IndustrialControl Unit Handbook' from Motorola (sorry, no ISBN number).
+<pre>
+    +---+--+---+
+RST |1  +--+ 16| VCC
+ WR |2       15| RR
+  D |3       14| X0
+ I3 |4       13| X1
+ I2 |5  4500 12| JMP
+ I1 |6       11| RTN
+ I0 |7       10| FLG0
+GND |8        9| FLGF
+        +----------+
+</pre>
+
+<p><a name="40108"></a><h2>40108</h2>4x4-bit 3-state synchronous triple-port register file.
+<pre>
+     +-----+--+-----+
+ 1Q3 |1    +--+   24| VCC
+ 1Q2 |2           23| 1Q1
+ 1RD |3           22| 1Q0
+ 2Q0 |4           21| 2RD
+ 2Q1 |5           20| D0
+ 2Q2 |6           19| D1
+ 2Q3 |7   40108   18| D2
+ WA0 |8           17| D3
+ WA1 |9           16| WCLK
+2RA1 |10          15| WR
+2RA0 |11          14| 1RA1
+ GND |12          13| 1RA0
+     +--------------+
+</pre>
+
+<p><a name="40208"></a><h2>40208</h2>4x4-bit 3-state synchronous triple-port register file.
+<pre>
+     +-----+--+-----+
+ 1Q3 |1    +--+   24| VCC
+ 1Q2 |2           23| 1Q1
+ 1RD |3           22| 1Q0
+ 2Q0 |4           21| 2RD
+ 2Q1 |5           20| D0
+ 2Q2 |6           19| D1
+ 2Q3 |7   40108   18| D2
+ WA0 |8           17| D3
+ WA1 |9           16| WCLK
+2RA1 |10          15| WR
+2RA0 |11          14| 1RA1
+ GND |12          13| 1RA0
+     +--------------+
+</pre>
+
+<hr><a href="index.html">Back to the GIICM index.</a>
+</body>
+</html>

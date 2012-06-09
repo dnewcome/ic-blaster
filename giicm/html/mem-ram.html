@@ -1,0 +1,526 @@
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <link rel="stylesheet" type="text/css" href="../frank/frank.css">
+   <meta name="CVS" content="$Id$">
+   <meta name="description" content="GIICM">
+   <title>GIICM</title>
+</head><body><h1>Memory: SRAM and DRAM</h1>
+<p>
+<hr>
+<a name="SIMM30"></a>
+<h2>SIMM30</h2>
+8/9-bit 30-pin Single Inline Memory Module.
+<br>
+If present, the parity (DP8) bit has separate data I/O and /CAS signals.
+At one time, SIMMs with soldered-on pins (called SIPs) were also available.
+Note: A11 is used as a battery connection in the DS2219 nonvolatile DRAM.
+<pre>
+ 1 VCC          16 D4
+ 2 /CAS         17 A8
+ 3 D0           18 A9
+ 4 A0           19 A10
+ 5 A1           20 D5
+ 6 D1           21 /WR
+ 7 A2           22 GND
+ 8 A3           23 D6
+ 9 GND          24 A11 BAT
+10 D2           25 D7
+11 A4           26 Q8
+12 A5           27 /RAS
+13 D3           28 /CAS8
+14 A6           29 DP8
+15 A7           30 VCC
+</pre>
+<p>
+<a name="SIMM72"></a>
+<h2>SIMM72</h2>
+32/36-bit 72-pin Single Inline Memory Module.
+<br>
+The DPn bits are the parity bits and aren't present on 32-bit SIMMs.
+'Odd' size SIMMs (512k, 2M, etc) have two banks, with RAS0/2 addressing
+the primary, and RAS1/3 the secondary bank.  RAS0/1 address the lower
+18 bits (D0-17) and RAS2/3 the upper 18 bits (D18-35), while the CAS
+lines can be used as byte-select.  The four PD bits are the presence
+and size-detect outputs.
+<pre>
+ 1 GND          19 A10          37 DP17         55 D12
+ 2 D0           20 D4           38 DP35         56 D30
+ 3 D18          21 D22          39 GND          57 D13
+ 4 D1           22 D5           40 /CAS0        58 D31
+ 5 D19          23 D23          41 /CAS2        59 VCC
+ 6 D2           24 D6           42 /CAS3        60 D32
+ 7 D20          25 D24          43 /CAS1        61 D14
+ 8 D3           26 D7           44 /RAS0        62 D33
+ 9 D21          27 D25          45 /RAS1        63 D15
+10 VCC          28 A7           46              64 D34
+11              29              47 /WE          65 D16
+12 A0           30 VCC          48              66
+13 A1           31 A8           49 D9           67 PD1
+14 A2           32 A9           50 D27          68 PD2
+15 A3           33 /RAS3        51 D10          69 PD3
+16 A4           34 /RAS2        52 D28          70 PD4
+17 A5           35 DP26         53 D11          71
+18 A6           36 DP8          54 D29          72 GND
+</pre>
+<p>
+<a name="DS1285"></a>
+<a name="DS1287"></a>
+<a name="DS1287A"></a>
+<h2>DS1285, DS1287, DS1287A</h2>
+Real-time clock with 50 bytes RAM.
+<br>
+DS1287(A) has built-in quartz crystal and lihium battery, and therefore
+the X1, X2 and VBAT pins are no-connect.  On the (older) DS1287 the /RCLR
+pin is no-connect as well.
+<pre>
+    +-----+--+-----+
+MOT |1    +--+   24| VCC
+ X1 |2           23| SQW
+ X2 |3           22|
+AD0 |4           21| /RCLR
+AD1 |5           20| VBAT
+AD2 |6   DS1285  19| /INT
+AD3 |7           18| /RST
+AD4 |8           17| DS
+AD5 |9           16| GND
+AD6 |10          15| R//W
+AD7 |11          14| AS
+GND |12          13| /CE
+    +--------------+
+</pre>
+<p>
+<a name="2114"></a>
+<h2>2114</h2>
+1kx4 SRAM.
+<pre>
+    +---+--+---+
+ A6 |1  +--+ 18| VCC
+ A5 |2       17| A7
+ A4 |3       16| A8
+ A3 |4       15| A9
+ A0 |5  2114 14| D1
+ A1 |6       13| D2
+ A2 |7       12| D3
+/CE |8       11| D4
+GND |9       10| /WE
+    +----------+
+</pre>
+<p>
+<a name="4116"></a>
+<h2>4116</h2>
+16kx1 DRAM.
+<br>
+Requires -5, +5 and +12V.
+<pre>
+     +---+--+---+
+ VEE |1  +--+ 16| GND
+   D |2       15| /CAS
+ /WE |3       14| Q
+/RAS |4  4116 13| A6
+  A0 |5       12| A3
+  A2 |6       11| A4
+  A1 |7       10| A5
+ VDD |8        9| VCC
+     +----------+
+</pre>
+<p>
+<a name="4164"></a>
+<h2>4164</h2>
+64kx1 DRAM.
+<pre>
+     +---+--+---+
+     |1  +--+ 16| GND
+   D |2       15| /CAS
+ /WE |3       14| Q
+/RAS |4  4164 13| A6
+  A0 |5       12| A3
+  A2 |6       11| A4
+  A1 |7       10| A5
+ VCC |8        9| A7
+     +----------+
+</pre>
+<p>
+<a name="4464"></a>
+<h2>4464</h2>
+64kx4 DRAM.
+<pre>
+     +---+--+---+
+ /OE |1  +--+ 18| GND
+  D0 |2       17| D3
+  D1 |3       16| /CAS
+ /WE |4       15| D2
+/RAS |5  4464 14| A0
+  A6 |6       13| A1
+  A5 |7       12| A2
+  A4 |8       11| A3
+ VCC |9       10| A7
+     +----------+
+</pre>
+<p>
+<a name="4580"></a>
+<h2>4580</h2>
+4x4-bit 3-state synchronous triple-port register file.
+<pre>
+      +-----+--+-----+
+  1Q3 |1    +--+   24| VCC
+  1Q2 |2           23| 1Q1
+  1RD |3           22| 1Q0
+  2Q0 |4           21| 2RD
+  2Q1 |5           20| D0
+  2Q2 |6           19| D1
+  2Q3 |7   40108   18| D2
+  WA0 |8           17| D3
+  WA1 |9           16| WCLK
+ 2RA1 |10          15| WR
+ 2RA0 |11          14| 1RA1
+  GND |12          13| 1RA0
+      +--------------+
+</pre>
+<p>
+<a name="5516"></a>
+<h2>5516</h2>
+2kx8 SRAM.
+<pre>
+    +-----+--+-----+
+ A7 |1    +--+   24| VCC
+ A6 |2           23| A8
+ A5 |3           22| A9
+ A4 |4           21| /WE
+ A3 |5           20| /OE
+ A2 |6           19| A10
+ A1 |7    5516   18| /CE
+ A0 |8           17| D7
+ D0 |9           16| D6
+ D1 |10          15| D5
+ D2 |11          14| D4
+GND |12          13| D3
+    +--------------+
+</pre>
+<p>
+<a name="5564"></a>
+<h2>5564</h2>
+8kx8 SRAM.
+<pre>
+    +-----+--+-----+
+    |1    +--+   28| VCC
+A12 |2           27| /WE
+ A7 |3           26| CE2
+ A6 |4           25| A8
+ A5 |5           24| A9
+ A4 |6           23| A11
+ A3 |7    5564   22| /OE
+ A2 |8           21| A10
+ A1 |9           20| /CE1
+ A0 |10          19| D7
+ D0 |11          18| D6
+ D1 |12          17| D5
+ D2 |13          16| D4
+GND |14          15| D3
+    +--------------+
+</pre>
+<p>
+<a name="6116"></a>
+<h2>6116</h2>
+2kx8 SRAM.
+<pre>
+    +-----+--+-----+
+ A7 |1    +--+   24| VCC
+ A6 |2           23| A8
+ A5 |3           22| A9
+ A4 |4           21| /WE
+ A3 |5           20| /OE
+ A2 |6           19| A10
+ A1 |7    5516   18| /CE
+ A0 |8           17| D7
+ D0 |9           16| D6
+ D1 |10          15| D5
+ D2 |11          14| D4
+GND |12          13| D3
+    +--------------+
+</pre>
+<p>
+<a name="6264"></a>
+<h2>6264</h2>
+8kx8 SRAM.
+<pre>
+    +-----+--+-----+
+    |1    +--+   28| VCC
+A12 |2           27| /WE
+ A7 |3           26| CE2
+ A6 |4           25| A8
+ A5 |5           24| A9
+ A4 |6           23| A11
+ A3 |7    5564   22| /OE
+ A2 |8           21| A10
+ A1 |9           20| /CE1
+ A0 |10          19| D7
+ D0 |11          18| D6
+ D1 |12          17| D5
+ D2 |13          16| D4
+GND |14          15| D3
+    +--------------+
+</pre>
+<p>
+<a name="6818"></a>
+<h2>6818</h2>
+Real-time clock with 50 bytes RAM.
+<pre>
+    +-----+--+-----+
+    |1    +--+   24| VCC
+ X1 |2           23| SQW
+ X2 |3           22|
+AD0 |4           21| /RCLR
+AD1 |5           20| VBAT
+AD2 |6   146818  19| /INT
+AD3 |7           18| /RST
+AD4 |8           17| DS
+AD5 |9           16| GND
+AD6 |10          15| R//W
+AD7 |11          14| AS
+GND |12          13| /CE
+    +--------------+
+</pre>
+<p>
+<a name="40108"></a>
+<h2>40108</h2>
+4x4-bit 3-state synchronous triple-port register file.
+<pre>
+      +-----+--+-----+
+  1Q3 |1    +--+   24| VCC
+  1Q2 |2           23| 1Q1
+  1RD |3           22| 1Q0
+  2Q0 |4           21| 2RD
+  2Q1 |5           20| D0
+  2Q2 |6           19| D1
+  2Q3 |7   40108   18| D2
+  WA0 |8           17| D3
+  WA1 |9           16| WCLK
+ 2RA1 |10          15| WR
+ 2RA0 |11          14| 1RA1
+  GND |12          13| 1RA0
+      +--------------+
+</pre>
+<p>
+<a name="40208"></a>
+<h2>40208</h2>
+4x4-bit 3-state synchronous triple-port register file.
+<pre>
+      +-----+--+-----+
+  1Q3 |1    +--+   24| VCC
+  1Q2 |2           23| 1Q1
+  1RD |3           22| 1Q0
+  2Q0 |4           21| 2RD
+  2Q1 |5           20| D0
+  2Q2 |6           19| D1
+  2Q3 |7   40108   18| D2
+  WA0 |8           17| D3
+  WA1 |9           16| WCLK
+ 2RA1 |10          15| WR
+ 2RA0 |11          14| 1RA1
+  GND |12          13| 1RA0
+      +--------------+
+</pre>
+<p>
+<a name="41256"></a>
+<a name="41257"></a>
+<h2>41256, 41257</h2>
+256kx1 DRAM.
+<pre>
+      +---+--+---+
+   A8 |1  +--+ 16| GND
+    D |2       15| /CAS
+  /WE |3       14| Q
+ /RAS |4 41256 13| A6
+   A0 |5 41257 12| A3
+   A2 |6       11| A4
+   A1 |7       10| A5
+  VCC |8        9| A7
+      +----------+
+</pre>
+<p>
+<a name="44256"></a>
+<a name="44258"></a>
+<h2>44256, 44258</h2>
+256kx4 DRAM.
+<pre>
+     +---+--+---+
+  D0 |1  +--+ 20| GND
+  D1 |2       19| D3
+ /WE |3       18| D2
+/RAS |4       17| /CAS
+     |5 44256 16| /OE
+  A0 |6 44258 15| A8
+  A1 |7       14| A7
+  A2 |8       13| A6
+  A3 |9       12| A5
+ VCC |10      11| A4
+     +----------+
+</pre>
+<p>
+<a name="55256"></a>
+<h2>55256</h2>
+32kx8 SRAM.
+<pre>
+    +-----+--+-----+
+A14 |1    +--+   28| VCC
+A12 |2           27| /WE
+ A7 |3           26| A13
+ A6 |4           25| A8
+ A5 |5           24| A9
+ A4 |6           23| A11
+ A3 |7   55256   22| /OE
+ A2 |8           21| A10
+ A1 |9           20| /CE
+ A0 |10          19| D7
+ D0 |11          18| D6
+ D1 |12          17| D5
+ D2 |13          16| D4
+GND |14          15| D3
+    +--------------+
+</pre>
+<p>
+<a name="146818"></a>
+<h2>146818</h2>
+Real-time clock with 50 bytes RAM.
+<pre>
+    +-----+--+-----+
+    |1    +--+   24| VCC
+ X1 |2           23| SQW
+ X2 |3           22|
+AD0 |4           21| /RCLR
+AD1 |5           20| VBAT
+AD2 |6   146818  19| /INT
+AD3 |7           18| /RST
+AD4 |8           17| DS
+AD5 |9           16| GND
+AD6 |10          15| R//W
+AD7 |11          14| AS
+GND |12          13| /CE
+    +--------------+
+</pre>
+<p>
+<a name="421000"></a>
+<a name="421001"></a>
+<a name="421002"></a>
+<a name="441000"></a>
+<h2>421000, 421001, 421002, 441000</h2>
+1Mx1 DRAM.
+<pre>
+     +---+--+---+
+   D |1  +--+ 18| GND
+ /WE |2       17| Q
+/RAS |3       16| /CAS
+     |4       15| A9
+  A0 |5   42  14| A8
+  A1 |6  100x 13| A7
+  A2 |7       12| A6
+  A3 |8       11| A5
+ VCC |9       10| A4
+     +----------+
+</pre>
+<p>
+<a name="424100"></a>
+<h2>424100 (DIP)</h2>
+4Mx1 DRAM.
+<pre>
+     +---+--+---+
+   D |1  +--+ 20| GND
+ /WE |2       19| Q
+/RAS |3       18| /CAS
+     |4       17|
+ A10 |5  424  16| A9
+  A0 |6  100  15| A8
+  A1 |7       14| A7
+  A2 |8       13| A6
+  A3 |9       12| A5
+ VCC |10      11| A4
+     +----------+
+</pre>
+<p>
+<a name="424100"></a>
+<h2>424100 (SO)</h2>
+4Mx1 DRAM.
+<pre>
+     +---+--+---+
+   D |1  +--+ 26| GND
+ /WE |2       25| Q
+/RAS |3       24| /CAS
+     |4       23|
+ A10 |5       22| A9
+     |          |
+     |  424100  |
+     |          |
+  A0 |9       18| A8
+  A1 |10      17| A7
+  A2 |11      16| A6
+  A3 |12      15| A5
+ VCC |13      14| A4
+     +----------+
+</pre>
+<p>
+<a name="424400"></a>
+<h2>424400 (SO)</h2>
+1Mx4 DRAM.
+<pre>
+     +---+--+---+
+  D0 |1  +--+ 26| GND
+  D1 |2       25| D3
+ /WE |3       24| D2
+/RAS |4       23| /CAS
+  A9 |5       22| /OE
+     |          |
+     |  424400  |
+     |          |
+  A0 |9       18| A8
+  A1 |10      17| A7
+  A2 |11      16| A6
+  A3 |12      15| A5
+ VCC |13      14| A4
+     +----------+
+</pre>
+<p>
+<a name="424400"></a>
+<h2>424400 (DIP)</h2>
+1Mx4 DRAM.
+<pre>
+     +---+--+---+
+  D0 |1  +--+ 20| GND
+  D1 |2       19| D3
+ /WE |3       18| D2
+/RAS |4       17| /CAS
+  A9 |5  424  16| /OE
+  A0 |6  400  15| A8
+  A1 |7       14| A7
+  A2 |8       13| A6
+  A3 |9       12| A5
+ VCC |10      11| A4
+     +----------+
+</pre>
+<p>
+<a name="551000"></a>
+<h2>551000</h2>
+128kx8 SRAM.
+<pre>
+    +-----+--+-----+
+    |1    +--+   32| VCC
+A16 |2           31| A15
+A14 |3           30| CE2
+A12 |4           29| /WE
+ A7 |5           28| A13
+ A6 |6           27| A8
+ A5 |7           26| A9
+ A4 |8   551000  25| A11
+ A3 |9           24| /OE
+ A2 |10          23| A10
+ A1 |11          22| /CE
+ A0 |12          21| D7
+ D0 |13          20| D6
+ D1 |14          19| D5
+ D2 |15          18| D4
+GND |16          17| D3
+    +--------------+
+</pre>
+<p>
+<hr><a href="index.html">Back to the GIICM index.</a>
+</body>
+</html>

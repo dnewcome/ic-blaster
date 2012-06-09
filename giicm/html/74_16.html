@@ -1,0 +1,1480 @@
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <link rel="stylesheet" type="text/css" href="../frank/frank.css">
+   <meta name="CVS" content="$Id$">
+   <meta name="description" content="GIICM">
+   <title>GIICM</title>
+</head><body><h1>7416 series wide TTL IC's:  7416xxx</h1>
+<p>
+Extra wide (16, 18 or 20 bits) look-alikes of common TTL bus-IC's.
+<p>
+<hr>
+<a name="7416240"></a>
+<h2>7416240</h2>
+Quad 4-bit 3-state inverting buffer/line driver.
+<pre>
+     +---+--+---+
+/1OE |1  +--+ 48| /2OE
+/1Y1 |2       47| 1A1
+/1Y2 |3       46| 1A2
+ GND |4       45| GND
+/1Y3 |5       44| 1A3
+/1Y4 |6       43| 1A4
+ VCC |7       42| VCC
+/2Y1 |8       41| 2A1
+/2Y2 |9       40| 2A2
+ GND |10      39| GND
+/2Y3 |11      38| 2A3
+/2Y4 |12 7416 37| 2A4
+/3Y1 |13  240 36| 3A1
+/3Y2 |14      35| 3A2
+ GND |15      34| GND
+/3Y3 |16      33| 3A3
+/3Y4 |17      32| 3A4
+ VCC |18      31| VCC
+/4Y1 |19      30| 4A1
+/4Y2 |20      29| 4A2
+ GND |21      28| GND
+/4Y3 |22      27| 4A3
+/4Y4 |23      26| 4A4
+/4OE |24      25| /3OE
+     +----------+
+</pre>
+<p>
+<a name="7416241"></a>
+<h2>7416241</h2>
+Quad 4-bit 3-state noninverting buffer/line driver.
+<br>
+Two active low, two active high output enables.
+<pre>
+     +---+--+---+
+/1OE |1  +--+ 48| 2OE
+ 1Y1 |2       47| 1A1
+ 1Y2 |3       46| 1A2
+ GND |4       45| GND
+ 1Y3 |5       44| 1A3
+ 1Y4 |6       43| 1A4
+ VCC |7       42| VCC
+ 2Y1 |8       41| 2A1
+ 2Y2 |9       40| 2A2
+ GND |10      39| GND
+ 2Y3 |11      38| 2A3
+ 2Y4 |12 7416 37| 2A4
+ 3Y1 |13  241 36| 3A1
+ 3Y2 |14      35| 3A2
+ GND |15      34| GND
+ 3Y3 |16      33| 3A3
+ 3Y4 |17      32| 3A4
+ VCC |18      31| VCC
+ 4Y1 |19      30| 4A1
+ 4Y2 |20      29| 4A2
+ GND |21      28| GND
+ 4Y3 |22      27| 4A3
+ 4Y4 |23      26| 4A4
+/4OE |24      25| 3OE
+     +----------+
+</pre>
+<p>
+<a name="7416244"></a>
+<h2>7416244</h2>
+Quad 4-bit 3-state noninverting buffer/line driver.
+<pre>
+     +---+--+---+
+/1OE |1  +--+ 48| /2OE
+ 1Y1 |2       47| 1A1
+ 1Y2 |3       46| 1A2
+ GND |4       45| GND
+ 1Y3 |5       44| 1A3
+ 1Y4 |6       43| 1A4
+ VCC |7       42| VCC
+ 2Y1 |8       41| 2A1
+ 2Y2 |9       40| 2A2
+ GND |10      39| GND
+ 2Y3 |11      38| 2A3
+ 2Y4 |12 7416 37| 2A4
+ 3Y1 |13  244 36| 3A1
+ 3Y2 |14      35| 3A2
+ GND |15      34| GND
+ 3Y3 |16      33| 3A3
+ 3Y4 |17      32| 3A4
+ VCC |18      31| VCC
+ 4Y1 |19      30| 4A1
+ 4Y2 |20      29| 4A2
+ GND |21      28| GND
+ 4Y3 |22      27| 4A3
+ 4Y4 |23      26| 4A4
+/4OE |24      25| /3OE
+     +----------+
+</pre>
+<p>
+<a name="7416245"></a>
+<h2>7416245</h2>
+Dual 8-bit 3-state noninverting bus transceiver.
+<pre>
+     +---+--+---+            +---+---*---+---+
+1DIR |1  +--+ 48| /1EN       |/EN|DIR| A | B |
+ 1B1 |2       47| 1A1        +===+===*===+===+
+ 1B2 |3       46| 1A2        | 1 | X | Z | Z |
+ GND |4       45| GND        | 0 | 0 | B | Z |
+ 1B3 |5       44| 1A3        | 0 | 1 | Z | A |
+ 1B4 |6       43| 1A4        +---+---*---+---+
+ VCC |7       42| VCC
+ 1B5 |8       41| 1A5
+ 1B6 |9       40| 1A6
+ GND |10      39| GND
+ 1B7 |11      38| 1A7
+ 1B8 |12 7416 37| 1A8
+ 2B1 |13  245 36| 2A1
+ 2B2 |14      35| 2A2
+ GND |15      34| GND
+ 2B3 |16      33| 2A3
+ 2B4 |17      32| 2A4
+ VCC |18      31| VCC
+ 2B5 |19      30| 2A5
+ 2B6 |20      29| 2A6
+ GND |21      28| GND
+ 2B7 |22      27| 2A7
+ 2B8 |23      26| 2A8
+2DIR |24      25| /2EN
+     +----------+
+</pre>
+<p>
+<a name="7416260"></a>
+<h2>7416260</h2>
+12-bit to 24-bit multiplexed D-type latch.
+<pre>
+     +---+--+---+
+/OEA |1  +--+ 56| /O2B
+LE1B |2       55| LA2B
+ 2B3 |3       54| 2B4
+ GND |4       53| GND
+ 2B2 |5       52| 2B5
+ 2B1 |6       51| 2B6
+ VCC |7       50| VCC
+  A1 |8       49| 2B7
+  A2 |9       48| 2B8
+  A3 |10      47| 2B9
+ GND |11      46| GND
+  A4 |12      45| 2B10
+  A5 |13      44| 2B11
+  A6 |14 7416 43| 2B12
+  A7 |15  260 42| 1B12
+  A8 |16      41| 1B11
+  A9 |17      40| 1B10
+ GND |18      39| GND
+ A10 |19      38| 1B9
+ A11 |20      37| 1B8
+ A12 |21      36| 1B7
+ VCC |22      35| VCC
+ 1B1 |23      34| 1B6
+ 1B2 |24      33| 1B5
+ GND |25      32| GND
+ 1B3 |26      31| 1B4
+LE2B |27      30| LA1B
+ SEL |28      29| /O1B
+     +----------+
+</pre>
+<p>
+<a name="7416373"></a>
+<h2>7416373</h2>
+Dual 8-bit 3-state transparent latches.
+<pre>
+     +---+--+---+            +---+---+---*---+
+/1OE |1  +--+ 48| 1LE        |/OE| LE| D | Q |
+ 1Q1 |2       47| 1D1        +===+===+===*===+
+ 1Q2 |3       46| 1D2        | 1 | X | X | Z |
+ GND |4       45| GND        | 0 | 0 | X | - |
+ 1Q3 |5       44| 1D3        | 0 | 1 | 0 | 0 |
+ 1Q4 |6       43| 1D4        | 0 | 1 | 1 | 1 |
+ VCC |7       42| VCC        +---+---+---*---+
+ 1Q5 |8       41| 1D5
+ 1Q6 |9       40| 1D6
+ GND |10      39| GND
+ 1Q7 |11      38| 1D7
+ 1Q8 |12 7416 37| 1D8
+ 2Q1 |13 373  36| 2D1
+ 2Q2 |14      35| 2D2
+ GND |15      34| GND
+ 2Q3 |16      33| 2D3
+ 2Q4 |17      32| 2D4
+ VCC |18      31| VCC
+ 2Q5 |19      30| 2D5
+ 2Q6 |20      29| 2D6
+ GND |21      28| GND
+ 2Q7 |22      27| 2D7
+ 2Q8 |23      26| 2D8
+/2OE |24      25| 2LE
+     +----------+
+</pre>
+<p>
+<a name="7416374"></a>
+<h2>7416374</h2>
+Dual 8-bit 3-state D flip-flops.
+<pre>
+     +---+--+---+            +---+---+---*---+
+/1OE |1  +--+ 48| 1CLK       |/OE|CLK| D | Q |
+ 1Q1 |2       47| 1D1        +===+===+===*===+
+ 1Q2 |3       46| 1D2        | 1 | X | X | Z |
+ GND |4       45| GND        | 0 | / | 0 | 0 |
+ 1Q3 |5       44| 1D3        | 0 | / | 1 | 1 |
+ 1Q4 |6       43| 1D4        | 0 |!/ | X | - |
+ VCC |7       42| VCC        +---+---+---*---+
+ 1Q5 |8       41| 1D5
+ 1Q6 |9       40| 1D6
+ GND |10      39| GND
+ 1Q7 |11      38| 1D7
+ 1Q8 |12 7416 37| 1D8
+ 2Q1 |13 374  36| 2D1
+ 2Q2 |14      35| 2D2
+ GND |15      34| GND
+ 2Q3 |16      33| 2D3
+ 2Q4 |17      32| 2D4
+ VCC |18      31| VCC
+ 2Q5 |19      30| 2D5
+ 2Q6 |20      29| 2D6
+ GND |21      28| GND
+ 2Q7 |22      27| 2D7
+ 2Q8 |23      26| 2D8
+/2OE |24      25| 2CLK
+     +----------+
+</pre>
+<p>
+<a name="7416470"></a>
+<h2>7416470</h2>
+Dual 8-bit 3-state noninverting registered transceiver.
+<pre>
+     +---+--+---+
+/1OA |1  +--+ 56| /1OB
+1CKA |2       55| 1CKB
+/1CA |3       54| /1CB
+ GND |4       53| GND
+ 1A1 |5       52| 1B1
+ 1A2 |6       51| 1B2
+ VCC |7       50| VCC
+ 1A3 |8       49| 1B3
+ 1A4 |9       48| 1B4
+ 1A5 |10      47| 1B5
+ GND |11      46| GND
+ 1A6 |12      45| 1B6
+ 1A7 |13      44| 1B7
+ 1A8 |14 7416 43| 1B8
+ 2A1 |15  470 42| 2B1
+ 2A2 |16      41| 2B2
+ 2A3 |17      40| 2B3
+ GND |18      39| GND
+ 2A4 |19      38| 2B4
+ 2A5 |20      37| 2B5
+ 2A6 |21      36| 2B6
+ VCC |22      35| VCC
+ 2A7 |23      34| 2B7
+ 2A8 |24      33| 2B8
+ GND |25      32| GND
+/2CA |26      31| /2CB
+2CKA |27      30| 2CKB
+/2OA |28      29| /2OB
+     +----------+
+</pre>
+<p>
+<a name="7416472"></a>
+<h2>7416472</h2>
+Dual 9-bit 3-state noninverting latched transceiver.
+<pre>
+     +---+--+---+
+/1OA |1  +--+ 56| /1OB
+/1LA |2       55| /1LB
+ 1A1 |3       54| 1B1
+ GND |4       53| GND
+ 1A2 |5       52| 1B2
+ 1A3 |6       51| 1B3
+ VCC |7       50| VCC
+ 1A4 |8       49| 1B4
+ 1A5 |9       48| 1B5
+ 1A6 |10      47| 1B6
+ GND |11      46| GND
+ 1A7 |12      45| 1B7
+ 1A8 |13      44| 1B8
+ 1A9 |14 7416 43| 1B9
+ 2A1 |15  472 42| 2B1
+ 2A2 |16      41| 2B2
+ 2A3 |17      40| 2B3
+ GND |18      39| GND
+ 2A4 |19      38| 2B4
+ 2A5 |20      37| 2B5
+ 2A6 |21      36| 2B6
+ VCC |22      35| VCC
+ 2A7 |23      34| 2B7
+ 2A8 |24      33| 2B8
+ GND |25      32| GND
+ 2A9 |26      31| 2B9
+/2LA |27      30| /2LB
+/2OA |28      29| /2OB
+     +----------+
+</pre>
+<p>
+<a name="7416474"></a>
+<h2>7416474</h2>
+Dual 9-bit 3-state noninverting registered transceiver.
+<pre>
+     +---+--+---+
+/1OB |1  +--+ 56| /1OA
+1CAB |2       55| 1CBA
+ 1A1 |3       54| 1B1
+ GND |4       53| GND
+ 1A2 |5       52| 1B2
+ 1A3 |6       51| 1B3
+ VCC |7       50| VCC
+ 1A4 |8       49| 1B4
+ 1A5 |9       48| 1B5
+ 1A6 |10      47| 1B6
+ GND |11      46| GND
+ 1A7 |12      45| 1B7
+ 1A8 |13      44| 1B8
+ 1A9 |14 7416 43| 1B9
+ 2A1 |15  474 42| 2B1
+ 2A2 |16      41| 2B2
+ 2A3 |17      40| 2B3
+ GND |18      39| GND
+ 2A4 |19      38| 2B4
+ 2A5 |20      37| 2B5
+ 2A6 |21      36| 2B6
+ VCC |22      35| VCC
+ 2A7 |23      34| 2B7
+ 2A8 |24      33| 2B8
+ GND |25      32| GND
+ 2A9 |26      31| 2B9
+2CAB |27      30| 2CBA
+/2OB |28      29| /2OA
+     +----------+
+</pre>
+<p>
+<a name="7416475"></a>
+<h2>7416475</h2>
+Dual 9-bit 3-state noninverting registered transceiver.
+<pre>
+     +---+--+---+
+/1OA |1  +--+ 56| /1OB
+1CKA |2       55| 1CKB
+ 1A1 |3       54| 1B1
+ GND |4       53| GND
+ 1A2 |5       52| 1B2
+ 1A3 |6       51| 1B3
+ VCC |7       50| VCC
+ 1A4 |8       49| 1B4
+ 1A5 |9       48| 1B5
+ 1A6 |10      47| 1B6
+ GND |11      46| GND
+ 1A7 |12      45| 1B7
+ 1A8 |13      44| 1B8
+ 1A9 |14 7416 43| 1B9
+ 2A1 |15  475 42| 2B1
+ 2A2 |16      41| 2B2
+ 2A3 |17      40| 2B3
+ GND |18      39| GND
+ 2A4 |19      38| 2B4
+ 2A5 |20      37| 2B5
+ 2A6 |21      36| 2B6
+ VCC |22      35| VCC
+ 2A7 |23      34| 2B7
+ 2A8 |24      33| 2B8
+ GND |25      32| GND
+ 2A9 |26      31| 2B9
+2CKA |27      30| 2CKB
+/2OA |28      29| /2OB
+     +----------+
+</pre>
+<p>
+<a name="7416500"></a>
+<h2>7416500</h2>
+18-bit 3-state noninverting latched/registered transceiver.
+<pre>
+     +---+--+---+
+OEAB |1  +--+ 56| GND
+LEAB |2       55| /CAB
+  A1 |3       54| B1
+ GND |4       53| GND
+  A2 |5       52| B2
+  A3 |6       51| B3
+ VCC |7       50| VCC
+  A4 |8       49| B4
+  A5 |9       48| B5
+  A6 |10      47| B6
+ GND |11      46| GND
+  A7 |12      45| B7
+  A8 |13      44| B8
+  A9 |14 7416 43| B9
+ A10 |15  500 42| B10
+ A11 |16      41| B11
+ A12 |17      40| B12
+ GND |18      39| GND
+ A13 |19      38| B13
+ A14 |20      37| B14
+ A15 |21      36| B15
+ VCC |22      35| VCC
+ A16 |23      34| B16
+ A17 |24      33| B17
+ GND |25      32| GND
+ A18 |26      31| B18
+/OBA |27      30| /CBA
+LEBA |28      29| GND
+     +----------+
+</pre>
+<p>
+<a name="7416501"></a>
+<h2>7416501</h2>
+18-bit 3-state noninverting latched/registered transceiver.
+<pre>
+     +---+--+---+
+OEAB |1  +--+ 56| GND
+LEAB |2       55| CLKAB
+  A1 |3       54| B1
+ GND |4       53| GND
+  A2 |5       52| B2
+  A3 |6       51| B3
+ VCC |7       50| VCC
+  A4 |8       49| B4
+  A5 |9       48| B5
+  A6 |10      47| B6
+ GND |11      46| GND
+  A7 |12      45| B7
+  A8 |13      44| B8
+  A9 |14 7416 43| B9
+ A10 |15  501 42| B10
+ A11 |16      41| B11
+ A12 |17      40| B12
+ GND |18      39| GND
+ A13 |19      38| B13
+ A14 |20      37| B14
+ A15 |21      36| B15
+ VCC |22      35| VCC
+ A16 |23      34| B16
+ A17 |24      33| B17
+ GND |25      32| GND
+ A18 |26      31| B18
+/OEA |27      30| CLKBA
+LEBA |28      29| GND
+     +----------+
+</pre>
+<p>
+<a name="7416540"></a>
+<h2>7416540</h2>
+Quad 4-bit 3-state inverting buffer/line drivers.
+<pre>
+     +---+--+---+
+/1O1 |1  +--+ 48| /1O2
+/1Y1 |2       47| 1A1
+/1Y2 |3       46| 1A2
+ GND |4       45| GND
+/1Y3 |5       44| 1A3
+/1Y4 |6       43| 1A4
+ VCC |7       42| VCC
+/1Y5 |8       41| 1A5
+/1Y6 |9       40| 1A6
+ GND |10      39| GND
+/1Y7 |11      38| 1A7
+/1Y8 |12 7416 37| 1A8
+/2Y1 |13  540 36| 2A1
+/2Y2 |14      35| 2A2
+ GND |15      34| GND
+/2Y3 |16      33| 2A3
+/2Y4 |17      32| 2A4
+ VCC |18      31| VCC
+/2Y5 |19      30| 2A5
+/2Y6 |20      29| 2A6
+ GND |21      28| GND
+/2Y7 |22      27| 2A7
+/2Y8 |23      26| 2A8
+/2O1 |24      25| /2O2
+     +----------+
+</pre>
+<p>
+<a name="7416541"></a>
+<h2>7416541</h2>
+Quad 4-bit 3-state noninverting buffer/line driver.
+<pre>
+     +---+--+---+
+/1O1 |1  +--+ 48| /1O2
+ 1Y1 |2       47| 1A1
+ 1Y2 |3       46| 1A2
+ GND |4       45| GND
+ 1Y3 |5       44| 1A3
+ 1Y4 |6       43| 1A4
+ VCC |7       42| VCC
+ 1Y5 |8       41| 1A5
+ 1Y6 |9       40| 1A6
+ GND |10      39| GND
+ 1Y7 |11      38| 1A7
+ 1Y8 |12 7416 37| 1A8
+ 2Y1 |13  541 36| 2A1
+ 2Y2 |14      35| 2A2
+ GND |15      34| GND
+ 2Y3 |16      33| 2A3
+ 2Y4 |17      32| 2A4
+ VCC |18      31| VCC
+ 2Y5 |19      30| 2A5
+ 2Y6 |20      29| 2A6
+ GND |21      28| GND
+ 2Y7 |22      27| 2A7
+ 2Y8 |23      26| 2A8
+/2O1 |24      25| /2O2
+     +----------+
+</pre>
+<p>
+<a name="7416543"></a>
+<h2>7416543</h2>
+Dual 8-bit 3-state noninverting registered transceiver.
+<pre>
+     +---+--+---+
+/1OA |1  +--+ 56| /1OB
+/1LA |2       55| /1LB
+/1CA |3       54| /1CB
+ GND |4       53| GND
+ 1A1 |5       52| 1B1
+ 1A2 |6       51| 1B2
+ VCC |7       50| VCC
+ 1A3 |8       49| 1B3
+ 1A4 |9       48| 1B4
+ 1A5 |10      47| 1B5
+ GND |11      46| GND
+ 1A6 |12      45| 1B6
+ 1A7 |13      44| 1B7
+ 1A8 |14 7416 43| 1B8
+ 2A1 |15  543 42| 2B1
+ 2A2 |16      41| 2B2
+ 2A3 |17      40| 2B3
+ GND |18      39| GND
+ 2A4 |19      38| 2B4
+ 2A5 |20      37| 2B5
+ 2A6 |21      36| 2B6
+ VCC |22      35| VCC
+ 2A7 |23      34| 2B7
+ 2A8 |24      33| 2B8
+ GND |25      32| GND
+/2CA |26      31| /2CB
+/2LA |27      30| /2LB
+/2OA |28      29| /2OB
+     +----------+
+</pre>
+<p>
+<a name="7416544"></a>
+<h2>7416544</h2>
+Dual 8-bit 3-state noninverting registered transceiver.
+<pre>
+     +---+--+---+
+/1OA |1  +--+ 56| /1OB
+/1LA |2       55| /1LB
+/1CA |3       54| /1CB
+ GND |4       53| GND
+ 1A1 |5       52| 1B1
+ 1A2 |6       51| 1B2
+ VCC |7       50| VCC
+ 1A3 |8       49| 1B3
+ 1A4 |9       48| 1B4
+ 1A5 |10      47| 1B5
+ GND |11      46| GND
+ 1A6 |12      45| 1B6
+ 1A7 |13      44| 1B7
+ 1A8 |14 7416 43| 1B8
+ 2A1 |15  544 42| 2B1
+ 2A2 |16      41| 2B2
+ 2A3 |17      40| 2B3
+ GND |18      39| GND
+ 2A4 |19      38| 2B4
+ 2A5 |20      37| 2B5
+ 2A6 |21      36| 2B6
+ VCC |22      35| VCC
+ 2A7 |23      34| 2B7
+ 2A8 |24      33| 2B8
+ GND |25      32| GND
+/2CA |26      31| /2CB
+/2LA |27      30| /2LB
+/2OA |28      29| /2OB
+     +----------+
+</pre>
+<p>
+<a name="7416600"></a>
+<h2>7416600</h2>
+18-bit 3-state noninverting latched/registered transceiver.
+<pre>
+     +---+--+---+
+/OAB |1  +--+ 56| /CEB
+LEAB |2       55| /CAB
+  A1 |3       54| B1
+ GND |4       53| GND
+  A2 |5       52| B2
+  A3 |6       51| B3
+ VCC |7       50| VCC
+  A4 |8       49| B4
+  A5 |9       48| B5
+  A6 |10      47| B6
+ GND |11      46| GND
+  A7 |12      45| B7
+  A8 |13      44| B8
+  A9 |14 7416 43| B9
+ A10 |15  600 42| B10
+ A11 |16      41| B11
+ A12 |17      40| B12
+ GND |18      39| GND
+ A13 |19      38| B13
+ A14 |20      37| B14
+ A15 |21      36| B15
+ VCC |22      35| VCC
+ A16 |23      34| B16
+ A17 |24      33| B17
+ GND |25      32| GND
+A18A |26      31| B18
+/OBA |27      30| /CBA
+LEBA |28      29| /CEA
+     +----------+
+</pre>
+<p>
+<a name="7416601"></a>
+<h2>7416601</h2>
+18-bit 3-state noninverting latched/registered transceiver.
+<pre>
+     +---+--+---+
+/OAB |1  +--+ 56| /CEB
+LEAB |2       55| /CAB
+  A1 |3       54| B1
+ GND |4       53| GND
+  A2 |5       52| B2
+  A3 |6       51| B3
+ VCC |7       50| VCC
+  A4 |8       49| B4
+  A5 |9       48| B5
+  A6 |10      47| B6
+ GND |11      46| GND
+  A7 |12      45| B7
+  A8 |13      44| B8
+  A9 |14 7416 43| B9
+ A10 |15  600 42| B10
+ A11 |16      41| B11
+ A12 |17      40| B12
+ GND |18      39| GND
+ A13 |19      38| B13
+ A14 |20      37| B14
+ A15 |21      36| B15
+ VCC |22      35| VCC
+ A16 |23      34| B16
+ A17 |24      33| B17
+ GND |25      32| GND
+A18A |26      31| B18
+/OBA |27      30| /CBA
+LEBA |28      29| /CEA
+     +----------+
+</pre>
+<p>
+<a name="7416620"></a>
+<h2>7416620</h2>
+Dual 8-bit 3-state inverting bus transceiver.
+<pre>
+     +---+--+---+
+1GAB |1  +--+ 48| /1GA
+ 1B1 |2       47| 1A1
+ 1B2 |3       46| 1A2
+ GND |4       45| GND
+ 1B3 |5       44| 1A3
+ 1B4 |6       43| 1A4
+ VCC |7       42| VCC
+ 1B5 |8       41| 1A5
+ 1B6 |9       40| 1A6
+ GND |10      39| GND
+ 1B7 |11      38| 1A7
+ 1B8 |12 7416 37| 1A8
+ 2B1 |13  620 36| 2A1
+ 2B2 |14      35| 2A2
+ GND |15      34| GND
+ 2B3 |16      33| 2A3
+ 2B4 |17      32| 2A4
+ VCC |18      31| VCC
+ 2B5 |19      30| 2A5
+ 2B6 |20      29| 2A6
+ GND |21      28| GND
+ 2B7 |22      27| 2A7
+ 2B8 |23      26| 2A8
+2GAB |24      25| /2GA
+     +----------+
+</pre>
+<p>
+<a name="7416623"></a>
+<h2>7416623</h2>
+Dual 8-bit 3-state noninverting bus transceiver.
+<pre>
+     +---+--+---+
+1OAB |1  +--+ 48| /1OA
+ 1B1 |2       47| 1A1
+ 1B2 |3       46| 1A2
+ GND |4       45| GND
+ 1B3 |5       44| 1A3
+ 1B4 |6       43| 1A4
+ VCC |7       42| VCC
+ 1B5 |8       41| 1A5
+ 1B6 |9       40| 1A6
+ GND |10      39| GND
+ 1B7 |11      38| 1A7
+ 1B8 |12 7416 37| 1A8
+ 2B1 |13  623 36| 2A1
+ 2B2 |14      35| 2A2
+ GND |15      34| GND
+ 2B3 |16      33| 2A3
+ 2B4 |17      32| 2A4
+ VCC |18      31| VCC
+ 2B5 |19      30| 2A5
+ 2B6 |20      29| 2A6
+ GND |21      28| GND
+ 2B7 |22      27| 2A7
+ 2B8 |23      26| 2A8
+2OAB |24      25| /2OA
+     +----------+
+</pre>
+<p>
+<a name="7416640"></a>
+<h2>7416640</h2>
+Dual 8-bit 3-state noninverting bus transceiver.
+<pre>
+     +---+--+---+            +---+---*---+---+
+1DIR |1  +--+ 48| /1EN       |/EN|DIR| A | B |
+ 1B1 |2       47| 1A1        +===+===*===+===+
+ 1B2 |3       46| 1A2        | 1 | X | Z | Z |
+ GND |4       45| GND        | 0 | 0 |/B | Z |
+ 1B3 |5       44| 1A3        | 0 | 1 | Z |/A |
+ 1B4 |6       43| 1A4        +---+---*---+---+
+ VCC |7       42| VCC
+ 1B5 |8       41| 1A5
+ 1B6 |9       40| 1A6
+ GND |10      39| GND
+ 1B7 |11      38| 1A7
+ 1B8 |12 7416 37| 1A8
+ 2B1 |13  640 36| 2A1
+ 2B2 |14      35| 2A2
+ GND |15      34| GND
+ 2B3 |16      33| 2A3
+ 2B4 |17      32| 2A4
+ VCC |18      31| VCC
+ 2B5 |19      30| 2A5
+ 2B6 |20      29| 2A6
+ GND |21      28| GND
+ 2B7 |22      27| 2A7
+ 2B8 |23      26| 2A8
+2DIR |24      25| /2EN
+     +----------+
+</pre>
+<p>
+<a name="7416646"></a>
+<h2>7416646</h2>
+Dual 8-bit 3-state noninverting registered transceiver.
+<pre>
+     +---+--+---+
+1DIR |1  +--+ 56| /1EN
+1CAB |2       55| 1CBA
+1SAB |3       54| 1SBA
+ GND |4       53| GND
+ 1A1 |5       52| 1B1
+ 1A2 |6       51| 1B2
+ VCC |7       50| VCC
+ 1A3 |8       49| 1B3
+ 1A4 |9       48| 1B4
+ 1A5 |10      47| 1B5
+ GND |11      46| GND
+ 1A6 |12      45| 1B6
+ 1A7 |13      44| 1B7
+ 1A8 |14 7416 43| 1B8
+ 2A1 |15  646 42| 2B1
+ 2A2 |16      41| 2B2
+ 2A3 |17      40| 2B3
+ GND |18      39| GND
+ 2A4 |19      38| 2B4
+ 2A5 |20      37| 2B5
+ 2A6 |21      36| 2B6
+ VCC |22      35| VCC
+ 2A7 |23      34| 2B7
+ 2A8 |24      33| 2B8
+ GND |25      32| GND
+2SAB |26      31| 2SBA
+2CAB |27      30| 2CBA
+2DIR |28      29| /2EN
+     +----------+
+</pre>
+<p>
+<a name="7416648"></a>
+<h2>7416648</h2>
+Dual 8-bit 3-state inverting registered transceiver.
+<pre>
+     +---+--+---+
+1DIR |1  +--+ 56| /1EN
+1CAB |2       55| 1CBA
+1SAB |3       54| 1SBA
+ GND |4       53| GND
+ 1A1 |5       52| 1B1
+ 1A2 |6       51| 1B2
+ VCC |7       50| VCC
+ 1A3 |8       49| 1B3
+ 1A4 |9       48| 1B4
+ 1A5 |10      47| 1B5
+ GND |11      46| GND
+ 1A6 |12      45| 1B6
+ 1A7 |13      44| 1B7
+ 1A8 |14 7416 43| 1B8
+ 2A1 |15  648 42| 2B1
+ 2A2 |16      41| 2B2
+ 2A3 |17      40| 2B3
+ GND |18      39| GND
+ 2A4 |19      38| 2B4
+ 2A5 |20      37| 2B5
+ 2A6 |21      36| 2B6
+ VCC |22      35| VCC
+ 2A7 |23      34| 2B7
+ 2A8 |24      33| 2B8
+ GND |25      32| GND
+2SAB |26      31| 2SBA
+2CAB |27      30| 2CBA
+2DIR |28      29| /2EN
+     +----------+
+</pre>
+<p>
+<a name="7416651"></a>
+<h2>7416651</h2>
+Dual 8-bit 3-state inverting registered transceiver.
+<pre>
+     +---+--+---+
+/1OA |1  +--+ 56| /1OB
+1CKA |2       55| 1CKB
+1SAB |3       54| 1SBA
+ GND |4       53| GND
+ 1A1 |5       52| 1B1
+ 1A2 |6       51| 1B2
+ VCC |7       50| VCC
+ 1A3 |8       49| 1B3
+ 1A4 |9       48| 1B4
+ 1A5 |10      47| 1B5
+ GND |11      46| GND
+ 1A6 |12      45| 1B6
+ 1A7 |13      44| 1B7
+ 1A8 |14 7416 43| 1B8
+ 2A1 |15  651 42| 2B1
+ 2A2 |16      41| 2B2
+ 2A3 |17      40| 2B3
+ GND |18      39| GND
+ 2A4 |19      38| 2B4
+ 2A5 |20      37| 2B5
+ 2A6 |21      36| 2B6
+ VCC |22      35| VCC
+ 2A7 |23      34| 2B7
+ 2A8 |24      33| 2B8
+ GND |25      32| GND
+2SAB |26      31| 2SBA
+2CKA |27      30| 2CKB
+/2OA |28      29| /2OB
+     +----------+
+</pre>
+<p>
+<a name="7416652"></a>
+<h2>7416652</h2>
+Dual 8-bit 3-state noninverting registered transceiver.
+<pre>
+     +---+--+---+
+1GAB |1  +--+ 56| /1GB
+1CAB |2       55| 1CBA
+1SAB |3       54| 1SBA
+ GND |4       53| GND
+ 1A1 |5       52| 1B1
+ 1A2 |6       51| 1B2
+ VCC |7       50| VCC
+ 1A3 |8       49| 1B3
+ 1A4 |9       48| 1B4
+ 1A5 |10      47| 1B5
+ GND |11      46| GND
+ 1A6 |12      45| 1B6
+ 1A7 |13      44| 1B7
+ 1A8 |14 7416 43| 1B8
+ 2A1 |15  652 42| 2B1
+ 2A2 |16      41| 2B2
+ 2A3 |17      40| 2B3
+ GND |18      39| GND
+ 2A4 |19      38| 2B4
+ 2A5 |20      37| 2B5
+ 2A6 |21      36| 2B6
+ VCC |22      35| VCC
+ 2A7 |23      34| 2B7
+ 2A8 |24      33| 2B8
+ GND |25      32| GND
+2SAB |26      31| 2SBA
+2CAB |27      30| 2CBA
+2GAB |28      29| /2GB
+     +----------+
+</pre>
+<p>
+<a name="7416657"></a>
+<h2>7416657</h2>
+Dual 8-bit 3-state noninverting bus transceiver with parity generator/checker.
+<pre>
+      +---+--+---+
+ /1OE |1  +--+ 56| 1DIR
+      |2       55| 1O//E
+/1ERR |3       54| 1PAR
+  GND |4       53| GND
+  1A0 |5       52| 1B0
+  1A1 |6       51| 1B1
+  VCC |7       50| VCC
+  1A2 |8       49| 1B2
+  1A3 |9       48| 1B3
+  1A4 |10      47| 1B4
+  GND |11      46| GND
+  1A5 |12      45| 1B5
+  1A6 |13      44| 1B6
+  1A7 |14 7416 43| 1B7
+  2A0 |15  657 42| 2B0
+  2A1 |16      41| 2B1
+  2A2 |17      40| 2B2
+  GND |18      39| GND
+  2A3 |19      38| 2B3
+  2A4 |20      37| 2B4
+  2A5 |21      36| 2B5
+  VCC |22      35| VCC
+  2A6 |23      34| 2B6
+  2A7 |24      33| 2B7
+  GND |25      32| GND
+/2ERR |26      31| 2PAR
+      |27      30| 2O//E
+ /2OE |28      29| 2DIR
+      +----------+
+</pre>
+<p>
+<a name="7416821"></a>
+<h2>7416821</h2>
+Dual 10-bit 3-state D flip-flops.
+<pre>
+     +---+--+---+            +---+---+---*---+
+/1OE |1  +--+ 56| 1CLK       |/OE|CLK| D | Q |
+ 1Q1 |2       55| 1D1        +===+===+===*===+
+ 1Q2 |3       54| 1D2        | 1 | X | X | Z |
+ GND |4       53| GND        | 0 | / | 0 | 0 |
+ 1Q3 |5       52| 1D3        | 0 | / | 1 | 1 |
+ 1Q4 |6       51| 1D4        | 0 |!/ | X | - |
+ VCC |7       50| VCC        +---+---+---*---+
+ 1Q5 |8       49| 1D5
+ 1Q6 |9       48| 1D6
+ 1Q7 |10      47| 1D7
+ GND |11      46| GND
+ 1Q8 |12      45| 1D8
+ 1Q9 |13      44| 1D9
+1Q10 |14 7416 43| 1D10
+ 2Q1 |15 821  42| 2D1
+ 2Q2 |16      41| 2D2
+ 2Q3 |17      40| 2D3
+ GND |18      39| GND
+ 2Q4 |19      38| 2D4
+ 2Q5 |20      37| 2D5
+ 2Q6 |21      36| 2D6
+ VCC |22      35| VCC
+ 2Q7 |23      34| 2D7
+ 2Q8 |24      33| 2D8
+ GND |25      32| GND
+ 2Q9 |26      31| 2D9
+2Q10 |27      30| 2D10
+/2OE |28      29| 2CLK
+     +----------+
+</pre>
+<p>
+<a name="7416823"></a>
+<h2>7416823</h2>
+Dual 9-bit 3-state D flip-flops with clock enable and reset.
+<pre>
+      +---+--+---+
+/1RST |1  +--+ 56| 1CLK
+ /1OE |2       55| /1CLKEN
+  1Q1 |3       54| 1D1
+  GND |4       53| GND
+  1Q2 |5       52| 1D2
+  1Q3 |6       51| 1D3
+  VCC |7       50| VCC
+  1Q4 |8       49| 1D4
+  1Q5 |9       48| 1D5
+  1Q6 |10      47| 1D6
+  GND |11      46| GND
+  1Q7 |12      45| 1D7
+  1Q8 |13      44| 1D8
+  1Q9 |14 7416 43| 1D9
+  2Q1 |15 823  42| 2D1
+  2Q2 |16      41| 2D2
+  2Q3 |17      40| 2D3
+  GND |18      39| GND
+  2Q4 |19      38| 2D4
+  2Q5 |20      37| 2D5
+  2Q6 |21      36| 2D6
+  VCC |22      35| VCC
+  2Q7 |23      34| 2D7
+  2Q8 |24      33| 2D8
+  GND |25      32| GND
+  2Q9 |26      31| 2D9
+ /2OE |27      30| /2CLKEN
+/2RST |28      29| 2CLK
+      +----------+
+</pre>
+<p>
+<a name="7416825"></a>
+<h2>7416825</h2>
+Dual 9-bit 3-state noninverting buffer/line driver.
+<pre>
+      +---+--+---+
+/1OE1 |1  +--+ 56| /1OE2
+  1Y1 |2       55| 1A1
+  1Y2 |3       54| 1A2
+  GND |4       53| GND
+  1Y3 |5       52| 1A3
+  1Y4 |6       51| 1A4
+  VCC |7       50| VCC
+  1Y5 |8       49| 1A5
+  1Y6 |9       48| 1A6
+  1Y7 |10      47| 1A7
+  GND |11      46| GND
+  1Y8 |12      45| 1A8
+  1Y9 |13      44| 1A9
+  GND |14 7416 43| GND
+  GND |15  825 42| GND
+  2Y1 |16      41| 2A1
+  2Y2 |17      40| 2A2
+  GND |18      39| GND
+  2Y3 |19      38| 2A3
+  2Y4 |20      37| 2A4
+  2Y5 |21      36| VCC
+  VCC |22      35| 2A5
+  2Y6 |23      34| 2A6
+  2Y7 |24      33| 2A7
+  GND |25      32| GND
+  2Y8 |26      31| 2A8
+  2Y9 |27      30| 2A9
+/2OE1 |28      29| /2OE2
+      +----------+
+</pre>
+<p>
+<a name="7416827"></a>
+<h2>7416827</h2>
+Dual 10-bit 3-state noninverting buffer/line driver.
+<pre>
+     +---+--+---+
+/1O1 |1  +--+ 56| /1O2
+ 1Y1 |2       55| 1A1
+ 1Y2 |3       54| 1A2
+ GND |4       53| GND
+ 1Y3 |5       52| 1A3
+ 1Y4 |6       51| 1A4
+ VCC |7       50| VCC
+ 1Y5 |8       49| 1A5
+ 1Y6 |9       48| 1A6
+ 1Y7 |10      47| 1A7
+ GND |11      46| GND
+ 1Y8 |12      45| 1A8
+ 1Y9 |13      44| 1A9
+1Y10 |14 7416 43| 1A10
+ 2Y1 |15  827 42| 2A1
+ 2Y2 |16      41| 2A2
+ 2Y3 |17      40| 2A3
+ GND |18      39| GND
+ 2Y4 |19      38| 2A4
+ 2Y5 |20      37| 2A5
+ 2Y6 |21      36| 2A6
+ VCC |22      35| VCC
+ 2Y7 |23      34| 2A7
+ 2Y8 |24      33| 2A8
+ GND |25      32| GND
+ 2Y9 |26      31| 2A9
+2Y10 |27      30| 2A10
+/2O1 |28      29| /2O2
+     +----------+
+</pre>
+<p>
+<a name="7416828"></a>
+<h2>7416828</h2>
+Dual 10-bit 3-state inverting buffer/line driver.
+<pre>
+     +---+--+---+
+/1O1 |1  +--+ 56| /1O2
+/1Y1 |2       55| 1A1
+/1Y2 |3       54| 1A2
+ GND |4       53| GND
+/1Y3 |5       52| 1A3
+/1Y4 |6       51| 1A4
+ VCC |7       50| VCC
+/1Y5 |8       49| 1A5
+/1Y6 |9       48| 1A6
+/1Y7 |10      47| 1A7
+ GND |11      46| GND
+/1Y8 |12      45| 1A8
+/1Y9 |13      44| 1A9
+1Y10 |14 7416 43| 1A10
+/2Y1 |15  828 42| 2A1
+/2Y2 |16      41| 2A2
+/2Y3 |17      40| 2A3
+ GND |18      39| GND
+/2Y4 |19      38| 2A4
+/2Y5 |20      37| 2A5
+/2Y6 |21      36| 2A6
+ VCC |22      35| VCC
+/2Y7 |23      34| 2A7
+/2Y8 |24      33| 2A8
+ GND |25      32| GND
+/2Y9 |26      31| 2A9
+2Y10 |27      30| 2A10
+/2O1 |28      29| /2O2
+     +----------+
+</pre>
+<p>
+<a name="7416833"></a>
+<h2>7416833</h2>
+Dual 8-bit 3-state noninverting bus transceiver with parity generator/checker
+and parity register.
+<pre>
+      +---+--+---+
+ /1OB |1  +--+ 56| /1OA
+ 1CLK |2       55| /1CL
+/1ERR |3       54| 1PAR
+  GND |4       53| GND
+  1A1 |5       52| 1B1
+  1A2 |6       51| 1B2
+  VCC |7       50| VCC
+  1A3 |8       49| 1B3
+  1A4 |9       48| 1B4
+  1A5 |10      47| 1B5
+  GND |11      46| GND
+  1A6 |12      45| 1B6
+  1A7 |13      44| 1B7
+  1A8 |14 7416 43| 1B8
+  2A1 |15  833 42| 2B1
+  2A2 |16      41| 2B2
+  2A3 |17      40| 2B3
+  GND |18      39| GND
+  2A4 |19      38| 2B4
+  2A5 |20      37| 2B5
+  2A6 |21      36| 2B6
+  VCC |22      35| VCC
+  2A7 |23      34| 2B7
+  2A8 |24      33| 2B8
+  GND |25      32| GND
+/2ERR |26      31| 2PAR
+ 2CLK |27      30| /2CL
+ /2OB |28      29| /2OA
+      +----------+
+</pre>
+<p>
+<a name="7416841"></a>
+<h2>7416841</h2>
+Dual 10-bit 3-state transparent latches.
+<pre>
+     +---+--+---+            +---+---+---*---+
+/1OE |1  +--+ 56| 1LE        |/OE| LE| D | Q |
+ 1Q1 |2       55| 1D1        +===+===+===*===+
+ 1Q2 |3       54| 1D2        | 1 | X | X | Z |
+ GND |4       53| GND        | 0 | 0 | X | - |
+ 1Q3 |5       52| 1D3        | 0 | 1 | 0 | 0 |
+ 1Q4 |6       51| 1D4        | 0 | 1 | 1 | 1 |
+ VCC |7       50| VCC        +---+---+---*---+
+ 1Q5 |8       49| 1D5
+ 1Q6 |9       48| 1D6
+ 1Q7 |10      47| 1D7
+ GND |11      46| GND
+ 1Q8 |12      45| 1D8
+ 1Q9 |13      44| 1D9
+1Q10 |14 7416 43| 1D10
+ 2Q1 |15 841  42| 2D1
+ 2Q2 |16      41| 2D2
+ 2Q3 |17      40| 2D3
+ GND |18      39| GND
+ 2Q4 |19      38| 2D4
+ 2Q5 |20      37| 2D5
+ 2Q6 |21      36| 2D6
+ VCC |22      35| VCC
+ 2Q7 |23      34| 2D7
+ 2Q8 |24      33| 2D8
+ GND |25      32| GND
+ 2Q9 |26      31| 2D9
+2Q10 |27      30| 2D10
+/2OE |28      29| 2LE
+     +----------+
+</pre>
+<p>
+<a name="7416853"></a>
+<h2>7416853</h2>
+Dual 8-bit 3-state noninverting bus transceiver with parity generator/checker
+and parity latch.
+<pre>
+      +---+--+---+
+ /1OB |1  +--+ 56| /1OA
+ /1LE |2       55| /1CL
+/1ERR |3       54| 1PAR
+  GND |4       53| GND
+  1A1 |5       52| 1B1
+  1A2 |6       51| 1B2
+  VCC |7       50| VCC
+  1A3 |8       49| 1B3
+  1A4 |9       48| 1B4
+  1A5 |10      47| 1B5
+  GND |11      46| GND
+  1A6 |12      45| 1B6
+  1A7 |13      44| 1B7
+  1A8 |14 7416 43| 1B8
+  2A1 |15  853 42| 2B1
+  2A2 |16      41| 2B2
+  2A3 |17      40| 2B3
+  GND |18      39| GND
+  2A4 |19      38| 2B4
+  2A5 |20      37| 2B5
+  2A6 |21      36| 2B6
+  VCC |22      35| VCC
+  2A7 |23      34| 2B7
+  2A8 |24      33| 2B8
+  GND |25      32| GND
+/2ERR |26      31| 2PAR
+ /2LE |27      30| /2CL
+ /2OB |28      29| /2OA
+      +----------+
+</pre>
+<p>
+<a name="7416861"></a>
+<h2>7416861</h2>
+Dual 10-bit 3-state noninverting bus transceiver.
+<pre>
+     +---+--+---+
+/1GB |1  +--+ 56| /1GA
+ 1B1 |2       55| 1A1
+ 1B2 |3       54| 1A2
+ GND |4       53| GND
+ 1B3 |5       52| 1A3
+ 1B4 |6       51| 1A4
+ VCC |7       50| VCC
+ 1B5 |8       49| 1A5
+ 1B6 |9       48| 1A6
+ 1B7 |10      47| 1A7
+ GND |11      46| GND
+ 1B8 |12      45| 1A8
+ 1B9 |13      44| 1A9
+1B10 |14 7416 43| 1A10
+ 2B1 |15  861 42| 2A1
+ 2B2 |16      41| 2A2
+ 2B3 |17      40| 2A3
+ GND |18      39| GND
+ 2B4 |19      38| 2A4
+ 2B5 |20      37| 2A5
+ 2B6 |21      36| 2A6
+ VCC |22      35| VCC
+ 2B7 |23      34| 2A7
+ 2B8 |24      33| 2A8
+ GND |25      32| GND
+ 2B9 |26      31| 2A9
+2B10 |27      30| 2A10
+/2GB |28      29| /2GA
+     +----------+
+</pre>
+<p>
+<a name="7416863"></a>
+<h2>7416863</h2>
+Dual 9-bit 3-state noninverting bus transceiver.
+<pre>
+     +---+--+---+
+/1GA |1  +--+ 56| /1GB
+ 1B1 |2       55| 1A1
+ 1B2 |3       54| 1A2
+ GND |4       53| GND
+ 1B3 |5       52| 1A3
+ 1B4 |6       51| 1A4
+ VCC |7       50| VCC
+ 1B5 |8       49| 1A5
+ 1B6 |9       48| 1A6
+ 1B7 |10      47| 1A7
+ GND |11      46| GND
+ 1B8 |12      45| 1A8
+ 1B9 |13      44| 1A9
+ GND |14 7416 43| GND
+ GND |15  863 42| GND
+ 2B1 |16      41| 2A1
+ 2B2 |17      40| 2A2
+ GND |18      39| GND
+ 2B3 |19      38| 2A3
+ 2B4 |20      37| 2A4
+ 2B5 |21      36| VCC
+ VCC |22      35| 2A5
+ 2B6 |23      34| 2A6
+ 2B7 |24      33| 2A7
+ GND |25      32| GND
+ 2B8 |26      31| 2A8
+ 2B9 |27      30| 2A9
+/2GA |28      29| /2GB
+     +----------+
+</pre>
+<p>
+<a name="7416952"></a>
+<h2>7416952</h2>
+Dual 8-bit 3-state noninverting latched transceiver.
+<pre>
+     +---+--+---+
+/1OA |1  +--+ 56| /1OB
+1CKA |2       55| 1CKB
+/1EA |3       54| /1EB
+ GND |4       53| GND
+ 1A1 |5       52| 1B1
+ 1A2 |6       51| 1B2
+ VCC |7       50| VCC
+ 1A3 |8       49| 1B3
+ 1A4 |9       48| 1B4
+ 1A5 |10      47| 1B5
+ GND |11      46| GND
+ 1A6 |12      45| 1B6
+ 1A7 |13      44| 1B7
+ 1A8 |14 7416 43| 1B8
+ 2A1 |15  952 42| 2B1
+ 2A2 |16      41| 2B2
+ 2A3 |17      40| 2B3
+ GND |18      39| GND
+ 2A4 |19      38| 2B4
+ 2A5 |20      37| 2B5
+ 2A6 |21      36| 2B6
+ VCC |22      35| VCC
+ 2A7 |23      34| 2B7
+ 2A8 |24      33| 2B8
+ GND |25      32| GND
+/2EA |26      31| /2EB
+2CKA |27      30| 2CKB
+/2OA |28      29| /2OB
+     +----------+
+</pre>
+<p>
+<a name="7416953"></a>
+<h2>7416953</h2>
+Dual 8-bit 3-state inverting latched transceiver.
+<pre>
+     +---+--+---+
+/1OA |1  +--+ 56| /1OB
+1CKA |2       55| 1CKB
+/1EA |3       54| /1EB
+ GND |4       53| GND
+ 1A1 |5       52| 1B1
+ 1A2 |6       51| 1B2
+ VCC |7       50| VCC
+ 1A3 |8       49| 1B3
+ 1A4 |9       48| 1B4
+ 1A5 |10      47| 1B5
+ GND |11      46| GND
+ 1A6 |12      45| 1B6
+ 1A7 |13      44| 1B7
+ 1A8 |14 7416 43| 1B8
+ 2A1 |15  952 42| 2B1
+ 2A2 |16      41| 2B2
+ 2A3 |17      40| 2B3
+ GND |18      39| GND
+ 2A4 |19      38| 2B4
+ 2A5 |20      37| 2B5
+ 2A6 |21      36| 2B6
+ VCC |22      35| VCC
+ 2A7 |23      34| 2B7
+ 2A8 |24      33| 2B8
+ GND |25      32| GND
+/2EA |26      31| /2EB
+2CKA |27      30| 2CKB
+/2OA |28      29| /2OB
+     +----------+
+</pre>
+<p>
+<a name="74162240"></a>
+<h2>74162240</h2>
+Quad 4-bit 3-state inverting buffer/MOS driver with integrated 25R series
+output resistors.
+<pre>
+     +---+--+---+
+/1OE |1  +--+ 48| /2OE
+/1Y1 |2       47| 1A1
+/1Y2 |3       46| 1A2
+ GND |4       45| GND
+/1Y3 |5       44| 1A3
+/1Y4 |6       43| 1A4
+ VCC |7       42| VCC
+/2Y1 |8       41| 2A1
+/2Y2 |9       40| 2A2
+ GND |10      39| GND
+/2Y3 |11      38| 2A3
+/2Y4 |12 7416 37| 2A4
+/3Y1 |13 2240 36| 3A1
+/3Y2 |14      35| 3A2
+ GND |15      34| GND
+/3Y3 |16      33| 3A3
+/3Y4 |17      32| 3A4
+ VCC |18      31| VCC
+/4Y1 |19      30| 4A1
+/4Y2 |20      29| 4A2
+ GND |21      28| GND
+/4Y3 |22      27| 4A3
+/4Y4 |23      26| 4A4
+/4OE |24      25| /3OE
+     +----------+
+</pre>
+<p>
+<a name="74162244"></a>
+<h2>74162244</h2>
+Quad 4-bit 3-state noninverting buffer/MOS driver with integrated 25R series
+output resistors.
+<pre>
+     +---+--+---+
+/1OE |1  +--+ 48| /2OE
+ 1Y1 |2       47| 1A1
+ 1Y2 |3       46| 1A2
+ GND |4       45| GND
+ 1Y3 |5       44| 1A3
+ 1Y4 |6       43| 1A4
+ VCC |7       42| VCC
+ 2Y1 |8       41| 2A1
+ 2Y2 |9       40| 2A2
+ GND |10      39| GND
+ 2Y3 |11      38| 2A3
+ 2Y4 |12 7416 37| 2A4
+ 3Y1 |13 2241 36| 3A1
+ 3Y2 |14      35| 3A2
+ GND |15      34| GND
+ 3Y3 |16      33| 3A3
+ 3Y4 |17      32| 3A4
+ VCC |18      31| VCC
+ 4Y1 |19      30| 4A1
+ 4Y2 |20      29| 4A2
+ GND |21      28| GND
+ 4Y3 |22      27| 4A3
+ 4Y4 |23      26| 4A4
+/4OE |24      25| /3OE
+     +----------+
+</pre>
+<p>
+<a name="74162260"></a>
+<h2>74162260</h2>
+12-bit to 24-bit multiplexed D-type latch/MOS driver.
+<pre>
+     +---+--+---+
+/OEA |1  +--+ 56| /O2B
+LE1B |2       55| LA2B
+ 2B3 |3       54| 2B4
+ GND |4       53| GND
+ 2B2 |5       52| 2B5
+ 2B1 |6       51| 2B6
+ VCC |7       50| VCC
+  A1 |8       49| 2B7
+  A2 |9       48| 2B8
+  A3 |10      47| 2B9
+ GND |11      46| GND
+  A4 |12      45| 2B10
+  A5 |13      44| 2B11
+  A6 |14 7416 43| 2B12
+  A7 |15 2260 42| 1B12
+  A8 |16      41| 1B11
+  A9 |17      40| 1B10
+ GND |18      39| GND
+ A10 |19      38| 1B9
+ A11 |20      37| 1B8
+ A12 |21      36| 1B7
+ VCC |22      35| VCC
+ 1B1 |23      34| 1B6
+ 1B2 |24      33| 1B5
+ GND |25      32| GND
+ 1B3 |26      31| 1B4
+LE2B |27      30| LA1B
+   S |28      29| /O1B
+     +----------+
+</pre>
+<p>
+<hr><a href="index.html">Back to the GIICM index.</a>
+</body>
+</html>

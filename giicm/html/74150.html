@@ -1,0 +1,638 @@
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <link rel="stylesheet" type="text/css" href="../frank/frank.css">
+   <meta name="CVS" content="$Id$">
+   <meta name="description" content="GIICM">
+   <title>GIICM</title>
+</head><body><h1>7400 series TTL IC's:  74150...74199</h1>
+<p>
+<hr>
+<a name="74150"></a>
+<h2>74150</h2>
+16-to-1 line inverting data selector/multiplexer.
+<pre>
+    +---+--+---+
+ D7 |1  +--+ 24| VCC
+ D6 |2       23| D8
+ D5 |3       22| D9
+ D4 |4       21| D10
+ D3 |5       20| D11
+ D2 |6   74  19| D12
+ D1 |7  150  18| D13
+ D0 |8       17| D14
+/EN |9       16| D15
+ /Y |10      15| S0
+ S3 |11      14| S1
+GND |12      13| S2
+    +----------+
+</pre>
+<p>
+<a name="74151"></a>
+<h2>74151</h2>
+8-to-1 line data selector/multiplexer with complementary outputs.
+<pre>
+    +---+--+---+
+ D3 |1  +--+ 16| VCC
+ D2 |2       15| D4
+ D1 |3       14| D5
+ D0 |4   74  13| D6
+  Y |5  151  12| D7
+ /Y |6       11| S0
+/EN |7       10| S1
+GND |8        9| S2
+    +----------+
+</pre>
+<p>
+<a name="74152"></a>
+<h2>74152</h2>
+8-to-1 line inverting data selector/multiplexer.
+<pre>
+    +---+--+---+
+ A4 |1  +--+ 14| VCC
+ A3 |2       13| A5
+ A2 |3   74  12| A6
+ A1 |4  152  11| A7
+ A0 |5       10| S0
+ /Y |6        9| S1
+GND |7        8| S1
+    +----------+
+</pre>
+<p>
+<a name="74153"></a>
+<h2>74153</h2>
+8-to-2 line noninverting data selector/multiplexer with separate enables.
+<pre>
+     +---+--+---+
+/1EN |1  +--+ 16| VCC
+  S1 |2       15| /2EN
+ 1A3 |3       14| S0
+ 1A2 |4   74  13| 2A3
+ 1A1 |5  153  12| 2A2
+ 1A0 |6       11| 2A1
+  1Y |7       10| 2A0
+ GND |8        9| 2Y
+     +----------+
+</pre>
+<p>
+<a name="74154"></a>
+<h2>74154</h2>
+1-of-16 inverting decoder/demultiplexer.
+<pre>
+     +---+--+---+
+ /Y0 |1  +--+ 24| VCC
+ /Y1 |2       23| S0
+ /Y2 |3       22| S1
+ /Y3 |4       21| S2
+ /Y4 |5       20| S3
+ /Y5 |6   74  19| /EN2
+ /Y6 |7  154  18| /EN1
+ /Y7 |8       17| /Y15
+ /Y8 |9       16| /Y14
+ /Y9 |10      15| /Y13
+/Y10 |11      14| /Y12
+ GND |12      13| /Y11
+     +----------+
+</pre>
+<p>
+<a name="74155"></a>
+<h2>74155</h2>
+2-of-8 inverting decoder/demultiplexer with separate enables.
+<pre>
+      +---+--+---+
+ 1EN1 |1  +--+ 16| VCC
+/1EN2 |2       15| /2EN1
+   S1 |3       14| /2EN2
+ /1Y3 |4   74  13| S0
+ /1Y2 |5  155  12| /2Y3
+ /1Y1 |6       11| /2Y2
+ /1Y0 |7       10| /2Y1
+  GND |8        9| /2Y0
+      +----------+
+</pre>
+<p>
+<a name="74156"></a>
+<h2>74156</h2>
+2-of-8 open-collector inverting decoder/demultiplexer with separate enables.
+<pre>
+      +---+--+---+
+ 1EN1 |1  +--+ 16| VCC
+/1EN2 |2       15| /2EN1
+   S1 |3       14| /2EN2
+ /1Y3 |4   74  13| S0
+ /1Y2 |5  156  12| /2Y3
+ /1Y1 |6       11| /2Y2
+ /1Y0 |7       10| /2Y1
+  GND |8        9| /2Y0
+      +----------+
+</pre>
+<p>
+<a name="74157"></a>
+<h2>74157</h2>
+8-to-4 line noninverting data selector/multiplexer.
+<pre>
+    +---+--+---+
+  S |1  +--+ 16| VCC
+1A0 |2       15| /EN
+1A1 |3       14| 4A0
+ 1Y |4   74  13| 4A1
+2A0 |5  157  12| 4Y
+2A1 |6       11| 3A0
+ 2Y |7       10| 3A1
+GND |8        9| 3Y
+    +----------+
+</pre>
+<p>
+<a name="74158"></a>
+<h2>74158</h2>
+4-of-8 inverting decoder/demultiplexer.
+<pre>
+    +---+--+---+
+  S |1  +--+ 16| VCC
+1A0 |2       15| /EN
+1A1 |3       14| 4A0
+/1Y |4   74  13| 4A1
+2A0 |5  158  12| /4Y
+2A1 |6       11| 3A0
+/2Y |7       10| 3A1
+GND |8        9| /3Y
+    +----------+
+</pre>
+<p>
+<a name="74159"></a>
+<h2>74159</h2>
+1-of-16 open-collector inverting decoder/demultiplexer.
+<pre>
+     +---+--+---+
+ /Y0 |1  +--+ 24| VCC
+ /Y1 |2       23| S0
+ /Y2 |3       22| S1
+ /Y3 |4       21| S2
+ /Y4 |5       20| S3
+ /Y5 |6   74  19| /EN2
+ /Y6 |7  159  18| /EN1
+ /Y7 |8       17| /Y15
+ /Y8 |9       16| /Y14
+ /Y9 |10      15| /Y13
+/Y10 |11      14| /Y12
+ GND |12      13| /Y11
+     +----------+
+</pre>
+<p>
+<a name="74160"></a>
+<h2>74160</h2>
+4-bit synchronous decade counter with load, asynchronous reset, and ripple
+carry output.
+<pre>
+     +---+--+---+
+/RST |1  +--+ 16| VCC
+ CLK |2       15| RCO
+  P0 |3       14| Q0
+  P1 |4   74  13| Q1
+  P2 |5  160  12| Q2
+  P3 |6       11| Q3
+ ENP |7       10| ENT
+ GND |8        9| /LOAD
+     +----------+
+</pre>
+<p>
+<a name="74161"></a>
+<h2>74161</h2>
+4-bit synchronous binary counter with load, asynchronous reset, and ripple
+carry output.
+<pre>
+     +---+--+---+
+/RST |1  +--+ 16| VCC
+ CLK |2       15| RCO
+  P0 |3       14| Q0
+  P1 |4   74  13| Q1
+  P2 |5  161  12| Q2
+  P3 |6       11| Q3
+ ENP |7       10| ENT
+ GND |8        9| /LOAD
+     +----------+
+</pre>
+<p>
+<a name="74162"></a>
+<h2>74162</h2>
+4-bit synchronous decade counter with load, reset, and ripple carry output.
+<pre>
+     +---+--+---+
+/RST |1  +--+ 16| VCC
+ CLK |2       15| RCO
+  P0 |3       14| Q0
+  P1 |4   74  13| Q1
+  P2 |5  162  12| Q2
+  P3 |6       11| Q3
+ ENP |7       10| ENT
+ GND |8        9| /LOAD
+     +----------+
+</pre>
+<p>
+<a name="74163"></a>
+<h2>74163</h2>
+4-bit synchronous binary counter with load, reset, and ripple carry output.
+<pre>
+     +---+--+---+
+/RST |1  +--+ 16| VCC
+ CLK |2       15| RCO
+  P0 |3       14| Q0
+  P1 |4   74  13| Q1
+  P2 |5  163  12| Q2
+  P3 |6       11| Q3
+ ENP |7       10| ENT
+ GND |8        9| /LOAD
+     +----------+
+</pre>
+<p>
+<a name="74164"></a>
+<h2>74164</h2>
+8-bit serial-in parallel-out shift register with asynchronous reset
+and two AND gated serial inputs.
+<pre>
+    +---+--+---+
+  D |1  +--+ 14| VCC
+  E |2       13| Q7
+ Q0 |3   74  12| Q6
+ Q1 |4  164  11| Q5
+ Q2 |5       10| Q4
+ Q3 |6        9| /RST
+GND |7        8| CLK
+    +----------+
+</pre>
+<p>
+<a name="74165"></a>
+<h2>74165</h2>
+8-bit parallel-in serial-out shift register with asynchronous parallel
+load and two OR gated clock inputs.
+<pre>
+       +---+--+---+
+SH//LD |1  +--+ 16| VCC
+  CLK1 |2       15| CLK2
+    P4 |3       14| P3
+    P5 |4   74  13| P2
+    P6 |5  165  12| P1
+    P7 |6       11| P0
+   /Q7 |7       10| D
+   GND |8        9| Q7
+       +----------+
+</pre>
+<p>
+<a name="74166"></a>
+<h2>74166</h2>
+8-bit parallel-in serial-out shift register with asynchronous reset
+and two OR gated clock inputs.
+<pre>
+     +---+--+---+
+   D |1  +--+ 16| VCC
+  P0 |2       15| SH//LD
+  P1 |3       14| P7
+  P2 |4   74  13| Q7
+  P3 |5  166  12| P6
+CLK1 |6       11| P5
+CLK2 |7       10| P4
+ GND |8        9| /RST
+     +----------+
+</pre>
+<p>
+<a name="74167"></a>
+<h2>74167</h2>
+4-bit synchronous decade rate multiplier.
+<br>
+Can perform fixed-rate or variable-rate frequency division.
+Output frequency is equal to input frequency multiplied by the rate input M
+and divided by 10.
+<pre>
+      +---+--+---+
+      |1  +--+ 16| VCC
+   B2 |2       15| B1
+   B3 |3       14| B0
+SET-9 |4   74  13| RST
+    Z |5  167  12| U/CAS
+    Y |6       11| ENin
+ENout |7       10| STRB
+  GND |8        9| CLK
+      +----------+
+</pre>
+<p>
+<a name="74168"></a>
+<h2>74168</h2>
+4-bit synchronous decade up/down counter with load and ripple carry output.
+<pre>
+     +---+--+---+
+U//D |1  +--+ 16| VCC
+ CLK |2       15| /RCO
+  P0 |3       14| Q0
+  P1 |4   74  13| Q1
+  P2 |5  168  12| Q2
+  P3 |6       11| Q3
+/ENP |7       10| /ENT
+ GND |8        9| /LOAD
+     +----------+
+</pre>
+<p>
+<a name="74169"></a>
+<h2>74169</h2>
+4-bit synchronous binary up/down counter with load and ripple carry output.
+<pre>
+     +---+--+---+
+U//D |1  +--+ 16| VCC
+ CLK |2       15| /RCO
+  P0 |3       14| Q0
+  P1 |4   74  13| Q1
+  P2 |5  169  12| Q2
+  P3 |6       11| Q3
+/ENP |7       10| /ENT
+ GND |8        9| /LOAD
+     +----------+
+</pre>
+<p>
+<a name="74170"></a>
+<h2>74170</h2>
+4x4-bit open-collector dual-port register file.
+<pre>
+    +---+--+---+
+ D2 |1  +--+ 16| VCC
+ D3 |2       15| D1
+ D4 |3       14| WA0
+RA1 |4   74  13| WA1
+RA0 |5  170  12| /WR
+ Q4 |6       11| /RD
+ Q3 |7       10| Q1
+GND |8        9| Q2
+    +----------+
+</pre>
+<p>
+<a name="74173"></a>
+<h2>74173</h2>
+4-bit 3-state D flip-flop with reset, dual clock enables and dual
+output enables.
+<pre>
+     +---+--+---+
+/OE1 |1  +--+ 16| VCC
+/OE2 |2       15| RST
+  Q0 |3       14| D0
+  Q1 |4   74  13| D1
+  Q2 |5  173  12| D2
+  Q3 |6       11| D3
+ CLK |7       10| /CLKEN1
+ GND |8        9| /CLKEN2
+     +----------+
+</pre>
+<p>
+<a name="74174"></a>
+<h2>74174</h2>
+6-bit D flip-flop with reset.
+<pre>
+     +---+--+---+            +----+---+---*---+
+/RST |1  +--+ 16| VCC        |/RST|CLK| D | Q |
+  Q0 |2       15| Q6         +====+===+===*===+
+  D0 |3       14| D5         |  0 | X | X | 0 |
+  D1 |4   74  13| D4         |  1 | / | 0 | 0 |
+  Q1 |5  174  12| Q4         |  1 | / | 1 | 1 |
+  D2 |6       11| D3         |  1 |!/ | X | - |
+  Q2 |7       10| Q3         +----+---+---*---+
+ GND |8        9| CLK
+     +----------+
+</pre>
+<p>
+<a name="74175"></a>
+<h2>74175</h2>
+4-bit D flip-flop with complementary outputs and reset.
+<pre>
+     +---+--+---+            +----+---+---*---+---+
+/RST |1  +--+ 16| VCC        |/RST|CLK| D | Q |/Q |
+  Q1 |2       15| Q4         +====+===+===*===+===+
+ /Q1 |3       14| /Q4        |  0 | X | X | 0 | 1 |
+  D1 |4   74  13| D4         |  1 | / | 0 | 0 | 1 |
+  D2 |5  175  12| D3         |  1 | / | 1 | 1 | 0 |
+ /Q2 |6       11| /Q3        |  1 |!/ | X | - | - |
+  Q2 |7       10| Q3         +----+---+---*---+---+
+ GND |8        9| CLK
+     +----------+
+</pre>
+<p>
+<a name="74180"></a>
+<h2>74180</h2>
+8-bit odd/even parity generator/checker with cascade inputs.
+<pre>
+      +---+--+---+
+   A0 |1  +--+ 14| VCC
+   A1 |2       13| A7
+ CASE |3   74  12| A6
+ CASO |4  180  11| A5
+ EVEN |5       10| A4
+  ODD |6        9| A3
+  GND |7        8| A2
+      +----------+
+</pre>
+<p>
+<a name="74181"></a>
+<h2>74181</h2>
+4-bit 16-function arithmetic logic unit (ALU)
+<pre>
+    +---+--+---+
+/B0 |1  +--+ 24| VCC
+/A0 |2       23| /A1
+ S3 |3       22| /B1
+ S2 |4       21| /A2
+ S1 |5       20| /B2
+ S0 |6   74  19| /A3
+CIN |7  181  18| /B3
+  M |8       17| /G
+/F0 |9       16| COUT
+/F1 |10      15| /P
+/F2 |11      14| A=B
+GND |12      13| /F3
+    +----------+
+</pre>
+<p>
+<a name="74182"></a>
+<h2>74182</h2>
+Look-ahead carry generator
+Capable of anticipating a carry across four binary adders or group of adders.
+<br>
+Cascadable to perform full look-ahead across n-bit adders.
+<pre>
+    +---+--+---+
+/G1 |1  +--+ 16| VCC
+/P1 |2       15| /P2
+/G0 |3       14| /G2
+/P0 |4   74  13| Cn
+/G3 |5  182  12| Cn+X
+/P3 |6       11| Cn+Y
+ /P |7       10| /G
+GND |8        9| Cn+Z
+    +----------+
+</pre>
+<p>
+<a name="74183"></a>
+<h2>74183</h2>
+Dual full adder.
+<pre>
+    +---+--+---+           +---+---+---*---+---+
+ 1A |1  +--+ 14| VCC       | CI| A | B | S | CO|
+    |2       13| 2A        +===+===+===*===+===+
+ 1B |3  74   12| 2B        | 0 | 0 | 0 | 0 | 0 |
+1CI |4  183  11| 2CI       | 0 | 0 | 1 | 1 | 0 |
+1CO |5       10| 2CO       | 0 | 1 | 0 | 1 | 0 |
+ 1S |6        9|           | 0 | 1 | 1 | 0 | 1 |
+GND |7        8| 2S        | 1 | 0 | 0 | 1 | 0 |
+    +----------+           | 1 | 0 | 1 | 0 | 1 |
+                           | 1 | 1 | 0 | 0 | 1 |
+                           | 1 | 1 | 1 | 1 | 1 |
+                           +---+---+---*---+---+
+</pre>
+<p>
+<a name="74190"></a>
+<h2>74190</h2>
+4-bit synchronous decade up/down counter with load and both carry out and
+ripple clock outputs.
+<pre>
+       +---+--+---+
+    P1 |1  +--+ 16| VCC
+    Q1 |2       15| P0
+    Q0 |3       14| CLK
+/CLKEN |4   74  13| /RCLK
+  D//U |5  190  12| /RCO
+    Q2 |6       11| /LOAD
+    Q3 |7       10| P2
+   GND |8        9| P3
+       +----------+
+</pre>
+<p>
+<a name="74191"></a>
+<h2>74191</h2>
+4-bit synchronous binary up/down counter with load and both carry out and
+ripple clock outputs.
+<pre>
+       +---+--+---+
+    P1 |1  +--+ 16| VCC
+    Q1 |2       15| P0
+    Q0 |3       14| CLK
+/CLKEN |4   74  13| /RCLK
+  D//U |5  191  12| /RCO
+    Q2 |6       11| /LOAD
+    Q3 |7       10| P2
+   GND |8        9| P3
+       +----------+
+</pre>
+<p>
+<a name="74192"></a>
+<h2>74192</h2>
+4-bit synchronous decade up/down counter with asynchronous load and reset,
+and separate up and down clocks, carry and borrow outputs.
+<pre>
+     +---+--+---+
+  P1 |1  +--+ 16| VCC
+  Q1 |2       15| P0
+  Q0 |3       14| RST
+DOWN |4   74  13| /BORROW
+  UP |5  192  12| /CARRY
+  Q2 |6       11| /LOAD
+  Q3 |7       10| P2
+ GND |8        9| P3
+     +----------+
+</pre>
+<p>
+<a name="74193"></a>
+<h2>74193</h2>
+4-bit synchronous binary up/down counter with asynchronous load and reset,
+and separate up and down clocks.  Carry and borrow outputs.
+<pre>
+     +---+--+---+
+  P1 |1  +--+ 16| VCC
+  Q1 |2       15| P0
+  Q0 |3       14| RST
+DOWN |4   74  13| /BORROW
+  UP |5  193  12| /CARRY
+  Q2 |6       11| /LOAD
+  Q3 |7       10| P2
+ GND |8        9| P3
+     +----------+
+</pre>
+<p>
+<a name="74194"></a>
+<h2>74194</h2>
+4-bit bidirectional universal shift register with asynchronous reset.
+<pre>
+     +---+--+---+            +---+---*---------------+
+/RST |1  +--+ 16| VCC        | S1| S0| Function      |
+   D |2       15| Q0         +===+===*===============+
+  P0 |3       14| Q1         | 0 | 0 | Hold          |
+  P1 |4 40194 13| Q2         | 0 | 1 | Shift right   |
+  P2 |5 74194 12| Q3         | 1 | 0 | Shift left    |
+  P3 |6       11| CLK        | 1 | 1 | Parallel load |
+   L |7       10| S1         +---+---*---------------+
+ GND |8        9| S0
+     +----------+
+</pre>
+<p>
+<a name="74195"></a>
+<h2>74195</h2>
+4-bit universal shift register with J-/K inputs and asynchronous reset.
+<pre>
+     +---+--+---+
+/RST |1  +--+ 16| VCC
+   J |2       15| Q0
+  /K |3       14| Q1
+  P0 |4   74  13| Q2
+  P1 |5  195  12| Q3
+  P2 |6       11| /Q3
+  P3 |7       10| CLK
+ GND |8        9| SH//LD
+     +----------+
+</pre>
+<p>
+<a name="74196"></a>
+<h2>74196</h2>
+4-bit asynchronous decade counter with /2 and /5 sections, load and reset.
+<pre>
+      +---+--+---+
+/LOAD |1  +--+ 14| VCC
+   Q2 |2       13| /RST
+   P2 |3   74  12| Q3
+   P0 |4  196  11| P3
+   Q0 |5       10| P1
+/CLK1 |6        9| Q1
+  GND |7        8| /CLK0
+      +----------+
+</pre>
+<p>
+<a name="74197"></a>
+<h2>74197</h2>
+4-bit asynchronous binary counter with /2 and /8 sections, load and reset.
+<pre>
+      +---+--+---+
+/LOAD |1  +--+ 14| VCC
+   Q2 |2       13| /RST
+   P2 |3   74  12| Q3
+   P0 |4  197  11| P3
+   Q0 |5       10| P1
+/CLK1 |6        9| Q1
+  GND |7        8| /CLK0
+      +----------+
+</pre>
+<p>
+<a name="74198"></a>
+<h2>74198</h2>
+8-bit bidirectional universal shift register with asynchronous reset.
+<pre>
+    +---+--+---+
+ S0 |1  +--+ 24| VCC
+  D |2       23| S1
+ P0 |3       22| Q7
+ Y0 |4       21| P7
+ P1 |5       20| Y7
+ Y1 |6   74  19| P6
+ P2 |7  198  18| Y6
+ Y2 |8       17| P5
+ P3 |9       16| Y5
+ Y3 |10      15| P4
+CLK |11      14| Y4
+GND |12      13| /RST
+    +----------+
+</pre>
+<p>
+<hr><a href="index.html">Back to the GIICM index.</a>
+</body>
+</html>

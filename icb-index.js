@@ -4,20 +4,24 @@ var assert = require('assert');
 var fs = require('fs');
 var util = require('util');
 
-var xmlstring = "";
 var library = [];
+var filesprocessed = 0;
 
-process.stdin.resume();
-process.stdin.setEncoding('utf8');
+var files = fs.readdirSync( __dirname + '/giicm/html' );
 
-process.stdin.on('data', function (chunk) {
-  xmlstring += chunk;
-});
+function done() {
+	if( filesprocessed == files.length ) {
+		console.log( JSON.stringify( library ) );
+	}
+}
+
+for( var i=0; i<files.length; i++ ) {
+	parse( fs.readFileSync( __dirname + '/giicm/html/' + files[i], 'utf-8'  ) ); 
+}
 
 
-process.stdin.on('end', function () {
-
-  jsdom.env( xmlstring, [ 'http://code.jquery.com/jquery-1.5.min.js' ],
+function parse( html ) {
+  jsdom.env( html, [ 'http://code.jquery.com/jquery-1.5.min.js' ],
     function(errors, window) {
 		var parts =  window.document.getElementsByTagName( "h2" ); 
 		var pinouts =  window.document.getElementsByTagName( "pre" ); 
@@ -37,6 +41,7 @@ process.stdin.on('end', function () {
 			}
 			library.push( { pn: part, desc: desc, pinout: pinout } );
 		}
-		console.log( library );
+		filesprocessed++;
+		done();
     });
-});
+}
