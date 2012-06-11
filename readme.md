@@ -13,7 +13,7 @@ mirrors of some generated HTML. I thought it would be nice to scrape these
 pages and store the data as JSON, which could be queried and printed to
 the console using node.js.
 
-# original IC data directory
+# Original GIICM data directory
 http://www.kingswood-consulting.co.uk/giicm/
 
 # Installing
@@ -22,7 +22,7 @@ symlink to icb and you should be good.
 
 # Usage
 
-$ icb <partnumber>
+    $ icb <partnumber>
 
 Note that the full part number must be given. No partial matches are made. I didn't need 
 this functionality so I didn't put it in there. Realistically all I do is search pinouts for 
