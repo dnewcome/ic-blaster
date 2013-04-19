@@ -1,1 +1,9 @@
-node icb-query.js $*
+#!/bin/bash
+
+# see if we are called via symlink
+if [ -h $0 ] 
+then
+	node $(dirname $(readlink $0))/icb-query.js $*
+else 
+	node icb-query.js $*
+fi
