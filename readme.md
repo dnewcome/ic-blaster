@@ -1,6 +1,22 @@
 # IC blaster
 
-IC Blaster is a commandline tool for viewing the GIICM datasheet archive
+IC Blaster is a commandline tool for viewing the GIICM IC datasheet archive
+
+# Installing
+
+Clone the repository, symlink to icb and you should be good. Try 
+[zpm](https://github.com/dnewcome/zpm) if you are
+feeling adventurous.
+
+# Usage
+
+    $ icb <partnumber>
+
+Note that the full part number must be given. No partial matches are made. I didn't need 
+this functionality so I didn't put it in there. Realistically all I do is search pinouts for 
+some common 74xx series chips so the rest of the pinouts are there just because. If anyone
+else ever finds this useful enough to extend it to search descriptions or anything else,
+that would be awesome.
 
 # Why?
 
@@ -16,19 +32,6 @@ the console using node.js.
 # Original GIICM data directory
 http://www.kingswood-consulting.co.uk/giicm/
 
-# Installing
-there are 3 files needed, database.json, icb, and icb-query.js. Put in the path or 
-symlink to icb and you should be good.
-
-# Usage
-
-    $ icb <partnumber>
-
-Note that the full part number must be given. No partial matches are made. I didn't need 
-this functionality so I didn't put it in there. Realistically all I do is search pinouts for 
-some common 74xx series chips so the rest of the pinouts are there just because. If anyone
-else ever finds this useful enough to extend it to search descriptions or anything else,
-that would be awesome.
 
 # Re-generating database
 Using icb-index.js will regenerate a json database from the html sources. 
