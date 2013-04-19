@@ -5,7 +5,7 @@ IC blaster gives you quick command line access to it.
 
 # Requirements
 
-    [Node.js](http://nodejs.org)
+[Node.js](http://nodejs.org)
 
 # Installing
 
