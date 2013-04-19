@@ -1,6 +1,7 @@
-# IC blaster
+# About 
 
-IC Blaster is a commandline tool for viewing the GIICM IC datasheet archive
+GIICM is an ASCII-formatted database of integrated circuit (chip) pinout data. 
+IC blaster gives you quick command line access to it.
 
 # Installing
 
@@ -12,7 +13,11 @@ feeling adventurous.
 
     $ icb <partnumber>
 
-Note that the full part number must be given. No partial matches are made. I didn't need 
+Note that the full part number must be given. No partial matches are made. 
+
+# Future work
+
+No partial part number matches are made. I didn't need 
 this functionality so I didn't put it in there. Realistically all I do is search pinouts for 
 some common 74xx series chips so the rest of the pinouts are there just because. If anyone
 else ever finds this useful enough to extend it to search descriptions or anything else,
@@ -30,9 +35,10 @@ pages and store the data as JSON, which could be queried and printed to
 the console using node.js.
 
 # Original GIICM data directory
-http://www.kingswood-consulting.co.uk/giicm/
 
+[http://www.kingswood-consulting.co.uk/giicm/](http://www.kingswood-consulting.co.uk/giicm/)
 
 # Re-generating database
+
 Using icb-index.js will regenerate a json database from the html sources. 
 
