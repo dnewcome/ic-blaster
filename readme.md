@@ -3,6 +3,10 @@
 GIICM is an ASCII-formatted database of integrated circuit (chip) pinout data. 
 IC blaster gives you quick command line access to it.
 
+# Requirements
+
+    [Node.js](http://nodejs.org)
+
 # Installing
 
 Clone the repository, symlink to icb and you should be good. Try 
