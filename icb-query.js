@@ -17,7 +17,7 @@ for(var i = 0; i < library.length; i++) {
 	re = new RegExp(term);
 
 	if (item.pn === term || re.test(item.desc) === true) {
-		console.log( library[i].desc );
-		console.log( library[i].pinout );
+		console.log(library[i].desc);
+		console.log(library[i].pinout);
 	}	
 }
